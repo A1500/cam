@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="fiso" xmlns="http://www.loushang.com/sca/1.0">
+	<!-- 留墓/定墓Domain-->
+	<component name="CemeFisApplyDomain">
+		<service name="CemeFisApplyDomain">
+			<interface.java interface="com.inspur.cams.fis.cemetery.domain.ICemeFisApplyDomain"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.cemetery.domain.support.CemeFisApplyDomain"/>	
+		<reference name="fisApplyInfoDomain"  target="FisApplyInfoDomain.FisApplyInfoDomain"/>
+		<reference name="fisDeadInfoDomain"  target="FisDeadInfoDomain.FisDeadInfoDomain"/>
+		<reference name="fisPersonalCustomDomain"  target="FisPersonalCustomDomain.FisPersonalCustomDomain"/>
+		<reference name="fisPersonalCustomHistoryDomain"  target="FisPersonalCustomHistoryDomain.FisPersonalCustomHistoryDomain"/>
+		<reference name="fisPersonalCustomRoleDomain"  target="FisPersonalCustomRoleDomain.FisPersonalCustomRoleDomain"/>
+		<reference name="fisCemeBookGraveDomain" target="FisCemeBookGraveDomain/FisCemeBookGraveDomain"/>
+		<reference name="fisCemeBuryDomain" target="FisCemeBuryDomain/FisCemeBuryDomain"/>
+		<reference name="fisCemeEpitaphDomain" target="FisCemeEpitaphDomain/FisCemeEpitaphDomain"/>
+		<reference name="fisUseServiceDomain"  target="FisUseServiceDomain.FisUseServiceDomain"/>
+		<reference name="fisUseGoodsDomain"  target="FisUseGoodsDomain.FisUseGoodsDomain"/>
+		<reference name="fisServiceOtherDomain"  target="FisServiceOtherDomain.FisServiceOtherDomain"/>
+		<reference name="fisFeeReducationDomain"  target="FisFeeReducationDomain.FisFeeReducationDomain"/>
+		<reference name="fisFeeInfoDomain"  target="FisFeeInfoDomain.FisFeeInfoDomain"/>
+		<reference name="fisFeeDetailDomain"  target="FisFeeDetailDomain.FisFeeDetailDomain"/>
+		<reference name="fisFeeTotalInfoDomain"  target="FisFeeTotalInfoDomain.FisFeeTotalInfoDomain"/>
+		<reference name="fisServiceEmplacingDomain"  target="FisServiceEmplacingDomain.FisServiceEmplacingDomain"/>
+		<reference name="fisServiceContinueEmplacingDomain"  target="FisServiceContinueEmplacingDomain.FisServiceContinueEmplacingDomain"/>
+		<reference name="fisServiceCurrentEmplacingDomain"  target="FisServiceCurrentEmplacingDomain.FisServiceCurrentEmplacingDomain"/>
+		<reference name="fisServiceMemoryDomain"  target="FisServiceMemoryDomain.FisServiceMemoryDomain"/>
+		<reference name="fisMemoryCustomDomain"  target="FisMemoryCustomDomain.FisMemoryCustomDomain"/>
+    	<reference name="fisResourceInfoDomain"  target="FisResourceInfoDomain.FisResourceInfoDomain"/>
+    	<reference name="fisEmplacingWreckageDomain"  target="FisEmplacingWreckageDomain.FisEmplacingWreckageDomain"/>
+	</component> 
+</composite>

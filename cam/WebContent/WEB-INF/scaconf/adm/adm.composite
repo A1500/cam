@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--婚姻电子地图表-->
+	<component name="admMarryDao">
+		<service name="admMarryDao">
+			<interface.java interface="com.inspur.cams.adm.marry.dao.IAdmMarryDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.adm.marry.dao.jdbc.AdmMarryDao"/>
+    </component>
+	<component name="admMarryDomain">
+		<service name="admMarryDomain">
+			<interface.java interface="com.inspur.cams.adm.marry.domain.IAdmMarryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.marry.domain.support.AdmMarryDomain"/>
+		<reference name="admMarryDao" target="admMarryDao/admMarryDao"/>
+	</component>
+	
+	<component name="admMarryService">
+		<service name="admMarryService">
+			<interface.java interface="com.inspur.cams.adm.marry.service.IAdmMarryService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.marry.service.support.AdmMarryService"/>
+	</component>
+	
+	<!--殡葬电子地图表-->
+	<component name="admFisDao">
+		<service name="admFisDao">
+			<interface.java interface="com.inspur.cams.adm.fis.dao.IAdmFisDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.adm.fis.dao.jdbc.AdmFisDao"/>
+    </component>
+	<component name="admFisDomain">
+		<service name="admFisDomain">
+			<interface.java interface="com.inspur.cams.adm.fis.domain.IAdmFisDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.fis.domain.support.AdmFisDomain"/>
+		<reference name="admFisDao" target="admFisDao/admFisDao"/>
+	</component>
+	
+	<component name="admFisService">
+		<service name="admFisService">
+			<interface.java interface="com.inspur.cams.adm.fis.service.IAdmFisService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.fis.service.support.AdmFisService"/>
+	</component>
+	
+	<!--士兵安置电子地图表-->
+	<component name="admPrsDao">
+		<service name="admPrsDao">
+			<interface.java interface="com.inspur.cams.adm.prs.dao.IAdmPrsDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.adm.prs.dao.jdbc.AdmPrsDao"/>
+    </component>
+	<component name="admPrsDomain">
+		<service name="admPrsDomain">
+			<interface.java interface="com.inspur.cams.adm.prs.domain.IAdmPrsDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.prs.domain.support.AdmPrsDomain"/>
+		<reference name="admPrsDao" target="admPrsDao/admPrsDao"/>
+	</component>
+	
+	<component name="admPrsService">
+		<service name="admPrsService">
+			<interface.java interface="com.inspur.cams.adm.prs.service.IAdmPrsService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.prs.service.support.AdmPrsService"/>
+	</component>
+	
+	<!--社会组织电子地图-->
+	<component name="admSorgDao">
+		<service name="admSorgDao">
+			<interface.java interface="com.inspur.cams.adm.sorg.dao.IAdmSorgDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.adm.sorg.dao.jdbc.AdmSorgDao"/>
+    </component>
+	<component name="admSorgDomain">
+		<service name="admSorgDomain">
+			<interface.java interface="com.inspur.cams.adm.sorg.domain.IAdmSorgDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.sorg.domain.support.AdmSorgDomain"/>
+		<reference name="admSorgDao" target="admSorgDao/admSorgDao"/>
+	</component>
+	
+	<component name="admSorgService">
+		<service name="admSorgService">
+			<interface.java interface="com.inspur.cams.adm.sorg.service.IAdmSorgService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.sorg.service.support.AdmSorgService"/>
+	</component>
+	
+	<!--社会优抚电子地图-->
+	<component name="admBptDao">
+		<service name="admBptDao">
+			<interface.java interface="com.inspur.cams.adm.bpt.dao.IAdmBptDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.adm.bpt.dao.jdbc.AdmBptDao"/>
+    </component>
+	<component name="admBptDomain">
+		<service name="admBptDomain">
+			<interface.java interface="com.inspur.cams.adm.bpt.domain.IAdmBptDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.bpt.domain.support.AdmBptDomain"/>
+		<reference name="admBptDao" target="admBptDao/admBptDao"/>
+	</component>
+	
+	<component name="admBptService">
+		<service name="admBptService">
+			<interface.java interface="com.inspur.cams.adm.bpt.service.IAdmBptService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.bpt.service.support.AdmBptService"/>
+	</component>
+	<!--登记电子地图-->
+	<component name="admReportMarryDao">
+		<service name="admReportMarryDao">
+			<interface.java interface="com.inspur.cams.adm.marry.dao.IAdmReportMarryDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.adm.marry.dao.jdbc.AdmReportMarryDao"/>
+    	</component>
+	<component name="admReportMarryDomain">
+		<service name="admReportMarryDomain">
+			<interface.java interface="com.inspur.cams.adm.marry.domain.IAdmReportMarryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.marry.domain.support.AdmReportMarryDomain"/>
+		<reference name="admReportMarryDao" target="admReportMarryDao/admReportMarryDao"/>
+	</component>
+	<component name="admReportMarryService">
+		<service name="admReportMarryService">
+			<interface.java interface="com.inspur.cams.adm.marry.service.IAdmReportMarryService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.marry.service.support.AdmReportMarryService"/>
+	</component>
+	<!--婚姻状况电子地图-->
+	<component name="admStatusMarryDao">
+		<service name="admStatusMarryDao">
+			<interface.java interface="com.inspur.cams.adm.marry.dao.IAdmStatusMarryDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.adm.marry.dao.jdbc.AdmStatusMarryDao"/>
+    	</component>
+	<component name="admStatusMarryDomain">
+		<service name="admStatusMarryDomain">
+			<interface.java interface="com.inspur.cams.adm.marry.domain.IAdmStatusMarryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.marry.domain.support.AdmStatusMarryDomain"/>
+		<reference name="admStatusMarryDao" target="admStatusMarryDao/admStatusMarryDao"/>
+	</component>
+	<component name="admStatusMarryService">
+		<service name="admStatusMarryService">
+			<interface.java interface="com.inspur.cams.adm.marry.service.IAdmStatusMarryService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.marry.service.support.AdmStatusMarryService"/>
+	</component>
+	<!--社会福利电子地图-->
+	<component name="admWealDao">
+		<service name="admWealDao">
+			<interface.java interface="com.inspur.cams.adm.weal.dao.IAdmWealDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.adm.weal.dao.jdbc.AdmWealDao"/>
+    	</component>
+	<component name="admWealDomain">
+		<service name="admWealDomain">
+			<interface.java interface="com.inspur.cams.adm.weal.domain.IAdmWealDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.weal.domain.support.AdmWealDomain"/>
+		<reference name="admWealDao" target="admWealDao/admWealDao"/>
+	</component>
+	<component name="admWealService">
+		<service name="admWealService">
+			<interface.java interface="com.inspur.cams.adm.weal.service.IAdmWealService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.weal.service.support.AdmWealService"/>
+	</component>
+	<!--灾害救助户数电子地图-->
+	<component name="admDisDao">
+		<service name="admDisDao">
+			<interface.java interface="com.inspur.cams.adm.dis.dao.IAdmDisDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.adm.dis.dao.jdbc.AdmDisDao"/>
+    	</component>
+	<component name="admDisDomain">
+		<service name="admDisDomain">
+			<interface.java interface="com.inspur.cams.adm.dis.domain.IAdmDisDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.dis.domain.support.AdmDisDomain"/>
+		<reference name="admDisDao" target="admDisDao/admDisDao"/>
+	</component>
+	<component name="admDisService">
+		<service name="admDisService">
+			<interface.java interface="com.inspur.cams.adm.dis.service.IAdmDisService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.dis.service.support.AdmDisService"/>
+	</component>
+	<!--灾害救助资金发放钱数电子地图-->
+	<component name="admDisAmountDao">
+		<service name="admDisAmountDao">
+			<interface.java interface="com.inspur.cams.adm.dis.dao.IAdmDisAmountDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.adm.dis.dao.jdbc.AdmDisAmountDao"/>
+    	</component>
+	<component name="admDisAmountDomain">
+		<service name="admDisAmountDomain">
+			<interface.java interface="com.inspur.cams.adm.dis.domain.IAdmDisAmountDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.dis.domain.support.AdmDisAmountDomain"/>
+		<reference name="admDisAmountDao" target="admDisAmountDao/admDisAmountDao"/>
+	</component>
+	<component name="admDisAmountService">
+		<service name="admDisAmountService">
+			<interface.java interface="com.inspur.cams.adm.dis.service.IAdmDisAmountService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.dis.service.support.AdmDisAmountService"/>
+	</component>
+	<!--社会救助低保电子地图-->
+	<component name="admDrelAidDao">
+		<service name="admDrelAidDao">
+			<interface.java interface="com.inspur.cams.adm.drel.dao.IAdmDrelAidDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.adm.drel.dao.jdbc.AdmDrelAidDao"/>
+    	</component>
+	<component name="admDrelAidDomain">
+		<service name="admDrelAidDomain">
+			<interface.java interface="com.inspur.cams.adm.drel.domain.IAdmDrelAidDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.drel.domain.support.AdmDrelAidDomain"/>
+		<reference name="admDrelAidDao" target="admDrelAidDao/admDrelAidDao"/>
+	</component>
+	<component name="admDrelAidService">
+		<service name="admDrelAidService">
+			<interface.java interface="com.inspur.cams.adm.drel.service.IAdmDrelAidService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.drel.service.support.AdmDrelAidService"/>
+	</component>
+	<!--社会救助五保电子地图-->
+	<component name="admDrelFiveDao">
+		<service name="admDrelFiveDao">
+			<interface.java interface="com.inspur.cams.adm.drel.dao.IAdmDrelFiveDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.adm.drel.dao.jdbc.AdmDrelFiveDao"/>
+    	</component>
+	<component name="admDrelFiveDomain">
+		<service name="admDrelFiveDomain">
+			<interface.java interface="com.inspur.cams.adm.drel.domain.IAdmDrelFiveDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.drel.domain.support.AdmDrelFiveDomain"/>
+		<reference name="admDrelFiveDao" target="admDrelFiveDao/admDrelFiveDao"/>
+	</component>
+
+	<component name="admDrelFiveService">
+		<service name="admDrelFiveService">
+			<interface.java interface="com.inspur.cams.adm.drel.service.IAdmDrelFiveService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.drel.service.support.AdmDrelFiveService"/>
+	</component>
+	<!--社会救助电子地图-->
+	<component name="admDrelDao">
+		<service name="admDrelDao">
+			<interface.java interface="com.inspur.cams.adm.drel.dao.IAdmDrelDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.adm.drel.dao.jdbc.AdmDrelDao"/>
+    	</component>
+	<component name="admDrelDomain">
+		<service name="admDrelDomain">
+			<interface.java interface="com.inspur.cams.adm.drel.domain.IAdmDrelDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.drel.domain.support.AdmDrelDomain"/>
+		<reference name="admDrelDao" target="admDrelDao/admDrelDao"/>
+	</component>
+
+	<component name="admDrelService">
+		<service name="admDrelService">
+			<interface.java interface="com.inspur.cams.adm.drel.service.IAdmDrelService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.drel.service.support.AdmDrelService"/>
+	</component>
+		<!--主业务数据电子地图-->
+	<component name="admSumDao">
+		<service name="admSumDao">
+			<interface.java interface="com.inspur.cams.adm.sum.dao.IAdmSumDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.adm.sum.dao.jdbc.AdmSumDao"/>
+    	</component>
+	<component name="admSumDomain">
+		<service name="admSumDomain">
+			<interface.java interface="com.inspur.cams.adm.sum.domain.IAdmSumDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.sum.domain.support.AdmSumDomain"/>
+		<reference name="admSumDao" target="admSumDao/admSumDao"/>
+	</component>
+
+	<component name="admSumService">
+		<service name="admSumService">
+			<interface.java interface="com.inspur.cams.adm.sum.service.IAdmSumService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.sum.service.support.AdmSumService"/>
+	</component>
+	<!--区划数量明细表-->
+	<component name="admNoteDao">
+		<service name="admNoteDao">
+			<interface.java interface="com.inspur.cams.adm.note.base.dao.IAdmNoteDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.adm.note.base.dao.jdbc.AdmNoteDao"/>
+    </component>
+	<component name="admNoteDomain">
+		<service name="admNoteDomain">
+			<interface.java interface="com.inspur.cams.adm.note.base.domain.IAdmNoteDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.adm.note.base.domain.support.AdmNoteDomain"/>
+		<reference name="admNoteDao" target="admNoteDao/admNoteDao"/>
+	</component>
+</composite>

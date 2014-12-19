@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="common" xmlns="http://www.loushang.com/sca/1.0">
+	<description>工作流列表查询</description>
+	<component name="taskInfoQueryDao">
+		<service name="taskInfoQueryDao">
+			<interface.java interface="com.inspur.cams.comm.workflow.taskinfo.dao.ITaskInfoQueryDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.workflow.taskinfo.dao.jdbc.TaskInfoQueryDao"/>
+	</component>
+	<component name="taskInfoQueryDomain">
+		<service name="taskInfoQueryDomain">
+			<interface.java interface="com.inspur.cams.comm.workflow.taskinfo.domain.ITaskInfoQueryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.workflow.taskinfo.domain.support.TaskInfoQueryDomain"/>
+		<reference name="taskInfoQueryDao" target="taskInfoQueryDao/taskInfoQueryDao"/>
+		<reference name="activityLimitDefDao" target="activityLimitDefDao/activityLimitDefDao"/>
+	</component>
+	
+</composite>

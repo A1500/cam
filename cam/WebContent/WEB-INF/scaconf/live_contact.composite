@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+<description>contact module</description>
+<!--定义公共服务组件-->
+<component name="pubUserInfo">
+<!--定义服务-->
+	    <service name="pubUserInfo">
+            <!--标识服务接口-->
+	    	<interface.java interface="org.loushang.live.common.IPubUserInfo"/>
+<!--标识服务发布方式，至少要定义一种发布方式，可以定义多种-->
+        	<binding.sca/>        	
+        </service>
+<!--定义属性，例如，可以为组件定义多个数据源，该数据源在/src/sca/datasource.properties 中配置-->
+        <property name="dataSourceConf" value="dataSource"/>
+<!--定义组件的实现，impl属性用来指定实现类-->
+        <implementation.java impl="org.loushang.live.common.PubUserInfo"/>	
+</component>
+
+
+<!--定义个人信息管理组件 start-->
+<component name="personUserDao">
+    <service name="personUserDao">
+    	<interface.java interface="org.loushang.live.contact.privacy.dao.IUserDao"/>
+       	<binding.sca/>
+    </service>
+    <property name="dataSourceConf" value="dataSource"/>
+    <implementation.java impl="org.loushang.live.contact.privacy.dao.UserDao"/>
+</component>
+<component name="personContactAddrDao">
+    <service name="personContactAddrDao">
+    	<interface.java interface="org.loushang.live.contact.privacy.dao.IContactAddrDao"/>
+       	<binding.sca/>
+    </service>
+    <property name="dataSourceConf" value="dataSource"/>
+    <implementation.java impl="org.loushang.live.contact.privacy.dao.ContactAddrDao"/>	
+</component>
+<component name="personAddressRefDao">
+    <service name="personAddressRefDao">
+    	<interface.java interface="org.loushang.live.contact.privacy.dao.IAddressRefDao"/>
+       	<binding.sca/>
+    </service>
+    <property name="dataSourceConf" value="dataSource"/>
+    <implementation.java impl="org.loushang.live.contact.privacy.dao.AddressRefDao"/>	
+</component>
+<component name="userImpl">
+    <service name="userImpl">
+    	<interface.java interface="org.loushang.live.contact.privacy.domain.IUser"/>
+       	<binding.sca/>
+   </service>
+    <implementation.java impl="org.loushang.live.contact.privacy.domain.UserImpl"/>	
+	<reference name="userDao" target="personUserDao/personUserDao"/>
+    <reference name="contactAddrDao" target="personContactAddrDao/personContactAddrDao"/>
+    <reference name="addressRefDao" target="personAddressRefDao/personAddressRefDao"/>
+    <reference name="pubUserInfo" target="pubUserInfo/pubUserInfo"/>  
+</component>
+<!--定义个人信息管理组件 end-->
+
+<!--定义联系人管理组件 start-->
+<component name="contactDao">
+	    <service name="contactService">
+	    	<interface.java interface="org.loushang.live.contact.contactlist.dao.IContactDao"/>
+        	<binding.sca/>        	
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.live.contact.contactlist.dao.ContactDao"/>	
+</component>
+<component name="groupDao">
+	    <service name="groupService">
+	    	<interface.java interface="org.loushang.live.contact.contactlist.dao.IGroupDao"/>
+        	<binding.sca/>        	
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.live.contact.contactlist.dao.GroupDao"/>	
+</component>
+<component name="contactGroupDao">
+	    <service name="contactGroupService">
+	    	<interface.java interface="org.loushang.live.contact.contactlist.dao.IContactGroupDao"/>
+        	<binding.sca/>        	
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.live.contact.contactlist.dao.ContactGroupDao"/>	
+</component>
+<component name="ContactDomain">
+	    <service name="ContactDomain">
+	    	<interface.java interface="org.loushang.live.contact.contactlist.domain.IContact"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.live.contact.contactlist.domain.ContactImpl"/>
+        <reference name="contactDao" target="contactDao/contactService"/>
+        <reference name="groupDao" target="groupDao/groupService"/>
+        <reference name="contactGroupDao" target="contactGroupDao/contactGroupService"/>
+        <reference name="userInfo" target="userImpl/userImpl"/>
+        <reference name="pubUserInfo" target="pubUserInfo/pubUserInfo"/>
+</component>
+<!--定义联系人管理组件 end-->
+
+<!--定义检索参与者组件-->
+<component name="partyImpl">
+	    <service name="partyImpl">
+	    	<interface.java interface="org.loushang.live.contact.contactlist.search.queryparty.domain.IParty"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.live.contact.contactlist.search.queryparty.domain.PartyImpl"/>
+<!--定义引用，target属性值为要引用的“组件名称/服务名称”-->
+        <reference name="userInfo" target="userImpl/userImpl"/>
+        <reference name="pubUserInfo" target="pubUserInfo/pubUserInfo"/>
+</component>
+
+
+<!--定义开通服务组件 start-->
+<component name="serviceSysGroupDao">
+<!--定义服务-->
+	    <service name="serviceSysGroupDao">
+            <!--标识服务接口-->
+	    	<interface.java interface="org.loushang.live.contact.register.dao.ISysGroupDao"/>
+<!--标识服务发布方式，至少要定义一种发布方式，可以定义多种-->
+        	<binding.sca/>        
+        </service>
+<!--定义属性，例如，可以为组件定义多个数据源，该数据源在/src/sca/datasource.properties 中配置-->
+        <property name="dataSourceConf" value="dataSource"/>
+<!--定义组件的实现，impl属性用来指定实现类-->
+        <implementation.java impl="org.loushang.live.contact.register.dao.SysGroupDao"/>	
+</component>
+
+<component name="serviceImpl">
+	    <service name="serviceImpl">
+	    	<interface.java interface="org.loushang.live.contact.register.domain.IService"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.live.contact.register.domain.ServiceImpl"/>
+<!--定义引用，target属性值为要引用的“组件名称/服务名称”-->
+        <reference name="sysGroupDao" target="serviceSysGroupDao/serviceSysGroupDao"/>
+        <reference name="pubUserInfo" target="pubUserInfo/pubUserInfo"/>
+        <reference name="userInfo" target="userImpl/userImpl"/>
+        <reference name="contactService" target="ContactDomain/ContactDomain"/>
+</component>
+<!--定义开通服务组件 end-->
+</composite>

@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.EmbeddedTableData">
+<Parameters>
+</Parameters>
+<ColumnNames><![CDATA[Isbn,,.,,Title,,.,,Author,,.,,Variety,,.,,Total,,.,,Remain,,.,,BookConcern,,.,,PrintDate,,.,,Position,,.,,InDate]]></ColumnNames>
+<ColumnTypes><![CDATA[java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.String]]></ColumnTypes>
+<RowData>
+<![CDATA[D3Raj'4DT/f@OBW4W/LZk+.nd_1aTr9Jjbk+XEKn2*q1*'S8l-K'efR:2MRZBFFd-=u"ETJ>
+g:N">j#/n\1PCD5#(I8Z0ZjpR^R
+')FP-/Lo"<0eCPL?/KJH<3>qRa>_T3hmll9QS$CmDh>%k
+V#d&\RJ8n]50DnM^f;:mLB6U[hJIs(`U2*04'i#"4s2*7k]jsr3M2=
+\K>TUHUkjH,LEdBpZP
+-<0]U5MIMnTa-Z#inb<HqJ8kmBmL%Acb0=_9LY?gC@1-*!P<`F\[>qehje!#:DiW0%D#H?fk
++I>Hbc-?
+\Xp7*=/M!SL.uqm=G[13Q)j_4#Ts@gK(82j'0[KnskAZ6]#j3M8^@=?uU@8A99Zd
+N?7taWor`c:FL$2r2lj.(;d%QF.]lA:6"R1
+DjPpqblQs>`\]$-Mb+a1#)0V4b$K3;<H#!:#_
+j^*olpS+":@f^M8Sg[q,nL=b>1]urG<<LUUmWZ%HED$5JBJDm^\PL!gNHBGItj
+2#*-Ij]JCY
+cA(r_%Di]t#3PfX2A_m&sU)Qj<DDSZb36PI'VNu^B)k@b%",:o["':)=FSH.!?F@uJ;/eL"+
+1s<bGV.9o%(5WLEI
+>>6FK/ic^g=5+\p.Fl4rt'fo[#`3JL=oYPK@a`)t1OsZL2&YF"@N2^Lg
+i__);oU/S(SH(K/pU>M`3$V7O5ImNlGON^G1W$*N=I.
+#`&j4a;>56qZ_5;=oL*KS4F1;V\Bd
+^ceWD)%21?nSRr%q#]'MJ9f,6*2dPBLI)=4HZmngK+C=2Pb_QO'M@WRdc.tre2Y)nA9L/]
+pT
+W#DZ:JRg)b-9-@\,^R0,(mk]SXB1PG>c'?Mfp<()Ge%6Y%OYN\E*.$PW1(nsI"^;9P.>ITSq
+3dR0]a"&lpVDtM/BqZ/hQJ38
+I%46:+:Y0Xgc3qc]*kWg^&:8(^G2-(Z>WiO+?e`)Vd,CY2tA
+T6&.',aXFNLtmETJVdulI9IH:nf<B0;tasli0R69@XHnOMhOlrD
+^b]000[[%5)%dUDlA5Oui
+.n='XF;L35E_]>jgP~
+
+]]>
+</RowData>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings orientation="1" shrinkToFit="false" headerHeight="0.0" footerHeight="0.0">
+<Margin top="0.27" left="0.7499999999999999" bottom="0.27" right="0.7499999999999999" />
+</ReportSettings>
+<ReportPageAttr>
+</ReportPageAttr>
+<ReportParameterAttr>
+<Parameters>
+<Parameter>
+<Attributes name="Isbn"
+ displayName="Isbn编号"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="Title"
+ displayName="书籍名称"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="Variety"
+ displayName="书籍类别"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[数据库系统]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="程序设计、软件工程" value="程序设计、软件工程"/>
+<Dict key="数据库系统" value="数据库系统"/>
+<Dict key="微处理机" value="微处理机"/>
+<Dict key="语义、词汇、词义" value="语义、词汇、词义"/>
+<Dict key="计算机软件" value="计算机软件"/>
+<Dict key="数据库系统" value="数据库系统"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="Author"
+ displayName="作者"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="BookConcern"
+ displayName="出版社名"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="PrintDate"
+ displayName="出版日期"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.DateCellEditorDef"><Attributes allowBlank="true" />
+<Attribute format="yyyy-MM-dd" />
+</CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="InDate"
+ displayName="入库时间"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.DateCellEditorDef"><Attributes allowBlank="true" />
+<Attribute format="yyyy-MM-dd" />
+</CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="Position"
+ displayName="书架位置"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="Total"
+ displayName="总藏书量"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.NumberCellEditorDef"><Attributes allowBlank="true" />
+<Attribute maxIntegerLength="32" maxDecimalLength="16" allowDecimals="false" allowNegative="false" minValue="-1.7976931348623157E308" maxValue="1.7976931348623157E308" />
+</CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="Remain"
+ displayName="馆内剩余"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.NumberCellEditorDef"><Attributes allowBlank="true" />
+<Attribute maxIntegerLength="32" maxDecimalLength="16" allowDecimals="false" allowNegative="false" minValue="-1.7976931348623157E308" maxValue="1.7976931348623157E308" />
+</CellEditorDef>
+</Parameter>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="1" userDefineWindow="true" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+<WorkSheet>
+<ReportSettings shrinkToFit="false" headerHeight="0.0" footerHeight="0.0">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[72,72,62,62,72,60,62,62,62]]>
+</ColumnWidth>
+<CellElementList>
+<C c="1" r="0" cs="2" s="0"><O t="S"><![CDATA[图书管理系统]]></O>
+</C>
+<C c="1" r="1" cs="2" s="1"><O t="S"><![CDATA[——书籍管理]]></O>
+</C>
+<C c="1" r="2" s="2"><O t="S"><![CDATA[Isbn编号]]></O>
+</C>
+<C c="2" r="2" cs="2" s="3"><O t="PR" >
+<ParameterRef name="Isbn" />
+</O>
+</C>
+<C c="4" r="2" s="3"></C>
+<C c="5" r="2" s="2"><O t="S"><![CDATA[作者]]></O>
+</C>
+<C c="6" r="2" cs="3" s="3"><O t="PR" >
+<ParameterRef name="Author" />
+</O>
+</C>
+<C c="1" r="3" s="2"><O t="S"><![CDATA[书籍类别]]></O>
+</C>
+<C c="2" r="3" cs="2" s="3"><O t="PR" >
+<ParameterRef name="Variety" />
+</O>
+</C>
+<C c="4" r="3" s="3"></C>
+<C c="5" r="3" s="2"><O t="S"><![CDATA[总藏书量]]></O>
+</C>
+<C c="6" r="3" s="3"><O t="PR" >
+<ParameterRef name="Total" />
+</O>
+</C>
+<C c="7" r="3" s="2"><O t="S"><![CDATA[馆内剩余]]></O>
+</C>
+<C c="8" r="3" s="3"><O t="PR" >
+<ParameterRef name="Remain" />
+</O>
+</C>
+<C c="1" r="4" s="2"><O t="S"><![CDATA[书籍名称]]></O>
+</C>
+<C c="2" r="4" cs="3" s="3"><O t="PR" >
+<ParameterRef name="Title" />
+</O>
+</C>
+<C c="5" r="4" s="2"><O t="S"><![CDATA[入库时间]]></O>
+</C>
+<C c="6" r="4" cs="2" s="3"><O t="PR" >
+<ParameterRef name="InDate" />
+</O>
+</C>
+<C c="8" r="4" s="3"></C>
+<C c="1" r="5" s="2"><O t="S"><![CDATA[出版日期]]></O>
+</C>
+<C c="2" r="5" cs="2" s="3"><O t="PR" >
+<ParameterRef name="PrintDate" />
+</O>
+</C>
+<C c="4" r="5" s="3"></C>
+<C c="5" r="5" s="2"><O t="S"><![CDATA[书架位置]]></O>
+</C>
+<C c="6" r="5" cs="3" s="3"><O t="PR" >
+<ParameterRef name="Position" />
+</O>
+</C>
+<C c="1" r="6" s="2"><O t="S"><![CDATA[出版社名]]></O>
+</C>
+<C c="2" r="6" cs="3" s="3"><O t="PR" >
+<ParameterRef name="BookConcern" />
+</O>
+</C>
+<C c="5" r="6" s="3"></C>
+<C c="6" r="6" s="3"></C>
+<C c="7" r="6" s="3"></C>
+<C c="8" r="6" s="3"></C>
+<C c="1" r="7" s="3"></C>
+<C c="2" r="7" s="3"></C>
+<C c="3" r="7" s="3"></C>
+<C c="4" r="7" s="3"></C>
+<C c="5" r="7" s="3"></C>
+<C c="6" r="7" s="3"><O t="PB" >
+<ParameterButton name="查询" type="0" />
+</O>
+</C>
+<C c="7" r="7" s="3"></C>
+<C c="8" r="7" s="3"></C>
+</CellElementList>
+</WorkSheet>
+<PP class="com.fr.report.parameter.CustomParameterProcessor">
+<UnitProcessorMap>
+<ParameterUnitProcessor parameter="Remain">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($Remain=='',nofilter,$Remian)]]></Attributes></Formula></UP>
+</ParameterUnitProcessor>
+<ParameterUnitProcessor parameter="Variety">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($Variety=='',nofilter,$Variety)]]></Attributes><Result type="String">数据库系统</Result></Formula></UP>
+</ParameterUnitProcessor>
+<ParameterUnitProcessor parameter="PrintDate">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($PrintDate=='',nofilter,$PrintDate)]]></Attributes></Formula></UP>
+</ParameterUnitProcessor>
+<ParameterUnitProcessor parameter="Author">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($Author=='',nofilter,$Author)]]></Attributes></Formula></UP>
+</ParameterUnitProcessor>
+<ParameterUnitProcessor parameter="Position">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($Position=='',nofilter,$Position)]]></Attributes></Formula></UP>
+</ParameterUnitProcessor>
+<ParameterUnitProcessor parameter="BookConcern">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($BookConcern=='',nofilter,$BookConcern)]]></Attributes></Formula></UP>
+</ParameterUnitProcessor>
+<ParameterUnitProcessor parameter="Isbn">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($Isbn=='',nofilter,$Isbn)]]></Attributes></Formula></UP>
+</ParameterUnitProcessor>
+<ParameterUnitProcessor parameter="InDate">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($InDate=='',nofilter,$InDate)]]></Attributes></Formula></UP>
+</ParameterUnitProcessor>
+<ParameterUnitProcessor parameter="Total">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($Total=='',nofilter,$Total)]]></Attributes></Formula></UP>
+</ParameterUnitProcessor>
+<ParameterUnitProcessor parameter="Title">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($Title=='',nofilter,$Title)]]></Attributes></Formula></UP>
+</ParameterUnitProcessor>
+</UnitProcessorMap>
+</PP>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[19,19,19,22]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[90,156,120,90,70,70,90,100,81,90,85,85]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="10" s="4"><O t="S"><![CDATA[图书管理系统——书籍管理]]></O>
+</C>
+<C c="0" r="2" s="5"></C>
+<C c="1" r="2" s="5"></C>
+<C c="2" r="2" s="5"></C>
+<C c="3" r="2" s="5"></C>
+<C c="4" r="2" s="5"></C>
+<C c="5" r="2" s="5"></C>
+<C c="6" r="2" s="5"></C>
+<C c="7" r="2" s="5"></C>
+<C c="8" r="2" s="5"></C>
+<C c="9" r="2" s="5"></C>
+<C c="0" r="3" s="6"><O t="S"><![CDATA[Isbn 编 号]]></O>
+</C>
+<C c="1" r="3" s="7"><O t="S"><![CDATA[书 籍 名 称]]></O>
+</C>
+<C c="2" r="3" s="7"><O t="S"><![CDATA[书 籍 类 别]]></O>
+</C>
+<C c="3" r="3" s="7"><O t="S"><![CDATA[作 者]]></O>
+</C>
+<C c="4" r="3" s="7"><O t="S"><![CDATA[总藏书量]]></O>
+</C>
+<C c="5" r="3" s="8"><O t="S"><![CDATA[馆内剩余]]></O>
+</C>
+<C c="6" r="3" s="7"><O t="S"><![CDATA[出 版 日 期]]></O>
+</C>
+<C c="7" r="3" s="7"><O t="S"><![CDATA[出 版 社 名]]></O>
+</C>
+<C c="8" r="3" s="9"><O t="S"><![CDATA[入 库 时 间]]></O>
+</C>
+<C c="9" r="3" s="8"><O t="S"><![CDATA[书 架 位 置]]></O>
+</C>
+<C c="0" r="4" s="10"><O t="DSColumn"><Attributes dsName="ds1" columnName="Isbn" />
+<Condition class="com.fr.data.condition.ListCondition"><JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Isbn]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="Isbn"
+ displayName="Isbn编号"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Variety]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="Variety"
+ displayName="书籍类别"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[数据库系统]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="程序设计、软件工程" value="程序设计、软件工程"/>
+<Dict key="数据库系统" value="数据库系统"/>
+<Dict key="微处理机" value="微处理机"/>
+<Dict key="语义、词汇、词义" value="语义、词汇、词义"/>
+<Dict key="计算机软件" value="计算机软件"/>
+<Dict key="数据库系统" value="数据库系统"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Author]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="Author"
+ displayName="作者"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Title]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="Title"
+ displayName="书籍名称"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Total]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="Total"
+ displayName="总藏书量"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.NumberCellEditorDef"><Attributes allowBlank="true" />
+<Attribute maxIntegerLength="32" maxDecimalLength="16" allowDecimals="false" allowNegative="false" minValue="-1.7976931348623157E308" maxValue="1.7976931348623157E308" />
+</CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Remain]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="Remain"
+ displayName="馆内剩余"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.NumberCellEditorDef"><Attributes allowBlank="true" />
+<Attribute maxIntegerLength="32" maxDecimalLength="16" allowDecimals="false" allowNegative="false" minValue="-1.7976931348623157E308" maxValue="1.7976931348623157E308" />
+</CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[BookConcern]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="BookConcern"
+ displayName="出版社名"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Position]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="Position"
+ displayName="书架位置"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[PrintDate]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="PrintDate"
+ displayName="出版日期"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.DateCellEditorDef"><Attributes allowBlank="true" />
+<Attribute format="yyyy-MM-dd" />
+</CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[InDate]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="InDate"
+ displayName="入库时间"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.DateCellEditorDef"><Attributes allowBlank="true" />
+<Attribute format="yyyy-MM-dd" />
+</CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+</Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+<CellWriteAttr>
+</CellWriteAttr>
+</C>
+<C c="1" r="4" s="11"><O t="DSColumn"><Attributes dsName="ds1" columnName="Title" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="2" r="4" s="11"><O t="DSColumn"><Attributes dsName="ds1" columnName="Variety" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="3" r="4" s="11"><O t="DSColumn"><Attributes dsName="ds1" columnName="Author" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="4" r="4" s="12"><O t="DSColumn"><Attributes dsName="ds1" columnName="Total" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="5" r="4" s="13"><O t="DSColumn"><Attributes dsName="ds1" columnName="Remain" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="6" r="4" s="11"><O t="DSColumn"><Attributes dsName="ds1" columnName="PrintDate" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="7" r="4" s="11"><O t="DSColumn"><Attributes dsName="ds1" columnName="BookConcern" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="8" r="4" s="14"><O t="DSColumn"><Attributes dsName="ds1" columnName="InDate" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="9" r="4" s="15"><O t="DSColumn"><Attributes dsName="ds1" columnName="Position" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="0" r="6" cs="10" s="16"><O t="S"><![CDATA[“图书管理系统——书籍管理”功能应用说明：]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="0" r="7" cs="10" s="17"><O t="S"><![CDATA[1、复杂参数查询]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="0" r="8" cs="10" s="17"><O t="S"><![CDATA[     该报表中包含多个参数，选择相关参数，可查询需要结果。]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="0" r="9" cs="10" s="17"><O t="S"><![CDATA[2、同时输入为空，所有数据全部显示。]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="0" r="10" cs="10" s="18"><O t="S"><![CDATA[     该报表中，当所有参数都不选择，点击“查询”，所有图书信息会全部显示。]]></O>
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style>
+<FRFont name="SimSun" style="1" size="14" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="4">
+<FRFont name="SimSun" style="1" size="14" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0" vertical_alignment="3" imageLayout="2">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style vertical_alignment="3" imageLayout="2">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="1" size="14" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ImageBackground"
+ specifiedImageWidth="-1.0"
+ specifiedImageHeight="-1.0"
+ layout="2">
+<Image width="271" height="20">
+<![CDATA[mDD3s_Ctrm_#OF0>K!!9WJ6!OQ7+.ZoaQ9>0E]d2laNppWiE)!WiGp)li!RsTDPW,0?[QWIV
+_g1pu1d?NUQ%!281S82*R8))W+4
+iebJi;<TD!-WQ)u!;iUeW~
+
+]]>
+</Image>
+</Background>
+<Border><Top style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

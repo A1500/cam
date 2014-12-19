@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="cams.prs" xmlns="http://www.loushang.com/sca/1.0">
+    <description>demo module</description>
+    <component name="PrsRetiredSoldiersDao">
+	    <service name="PrsRetiredSoldiersDao">
+	    	<interface.java interface="com.inspur.cams.prs.prsretiredsoldiers.dao.IPrsRetiredSoldiersDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.prs.prsretiredsoldiers.dao.PrsRetiredSoldiersDao"/>
+    </component>
+    <component name="PrsSoldiersArmyDao">
+	    <service name="PrsSoldiersArmyCurd">
+	    	<interface.java interface="com.inspur.cams.prs.prssoldiersarmy.dao.IPrsSoldiersArmyDao"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.prs.prssoldiersarmy.dao.PrsSoldiersArmyDao"/>	
+    </component>
+    <component name="PrsSoldiersPlacementDao">
+	    <service name="PrsSoldiersPlacementCurd">
+	    	<interface.java interface="com.inspur.cams.prs.prssoldiersplacement.dao.IPrsSoldiersPlacementDao"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.prs.prssoldiersplacement.dao.PrsSoldiersPlacementDao"/>	
+    </component>
+    <component name="PrsSoldiersTrainDao">
+	    <service name="PrsSoldiersTrainCurd">
+	    	<interface.java interface="com.inspur.cams.prs.prssoldierstrain.dao.IPrsSoldiersTrainDao"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.prs.prssoldierstrain.dao.PrsSoldiersTrainDao"/>	
+    </component>
+    
+    <component name="PrsAwardsMeritoriousDao">
+	    <service name="PrsAwardsMeritoriousCurd">
+	    	<interface.java interface="com.inspur.cams.prs.prsawardsmeritorious.dao.IPrsAwardsMeritoriousDao"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.prs.prsawardsmeritorious.dao.PrsAwardsMeritoriousDao"/>	
+    </component>
+    
+    <component name="PrsRetiredSoldiersDomain">
+	    <service name="PrsRetiredSoldiersService">
+	    	<interface.java interface="com.inspur.cams.prs.prsretiredsoldiers.domain.IPrsRetiredSoldiersDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.prs.prsretiredsoldiers.domain.PrsRetiredSoldiersDomain"/>	
+    	<reference name="prsRetiredSoldiersDao"  target="PrsRetiredSoldiersDao.PrsRetiredSoldiersDao"/>
+    	<reference name="prsSoldiersArmyDao" target="PrsSoldiersArmyDao.PrsSoldiersArmyCurd"/>
+    	<reference name="prsSoldiersPlacementDao" target="PrsSoldiersPlacementDao.PrsSoldiersPlacementCurd"/>
+    	<reference name="prsSoldiersTrainDao" target="PrsSoldiersTrainDao.PrsSoldiersTrainCurd"/>
+    	<reference name="prsAwardsMeritoriousDao" target="PrsAwardsMeritoriousDao.PrsAwardsMeritoriousCurd"/>
+    </component> 
+    <!--问题处理信息管理Dao-->
+      <component name="PrsProblemDealDao">
+	    <service name="PrsProblemDealDao">
+	    	<interface.java interface="com.inspur.cams.prs.prsproblemdeal.dao.IPrsProblemDealDao"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.prs.prsproblemdeal.dao.PrsProblemDealDao"/>	
+    </component>
+     <!--问题处理信息历史管理Dao-->
+      <component name="PrsProblemHistoryDao">
+	    <service name="PrsProblemHistoryDao">
+	    	<interface.java interface="com.inspur.cams.prs.prsproblemhistory.dao.IPrsProblemHistoryDao"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.prs.prsproblemhistory.dao.PrsProblemHistoryDao"/>	
+    </component>
+    <!--问题处理信息历史管理Domain-->
+     <component name="PrsProblemHistoryDomain">
+	    <service name="PrsProblemHistoryDomain">
+	    	<interface.java interface="com.inspur.cams.prs.prsproblemhistory.domain.IPrsProblemHistoryDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.prs.prsproblemhistory.domain.PrsProblemHistoryDomain"/>	
+    	<reference name="prsProblemHistoryDao"  target="PrsProblemHistoryDao.PrsProblemHistoryDao"/>
+    </component> 
+    <!--问题处理信息管理Domain-->
+     <component name="PrsProblemDealDomain">
+	    <service name="PrsProblemDealDomain">
+	    	<interface.java interface="com.inspur.cams.prs.prsproblemdeal.domain.IPrsProblemDealDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.prs.prsproblemdeal.domain.PrsProblemDealDomain"/>	
+    	<reference name="prsProblemDealDao"  target="PrsProblemDealDao.PrsProblemDealDao"/>
+    	<reference name="prsProblemHistoryDao"  target="PrsProblemHistoryDao.PrsProblemHistoryDao"/>
+        <reference name="prsAttachmentDao"  target="PrsAttachmentDao.PrsAttachmentDao"/>
+    </component> 
+    <!--政策法规信息表Dao-->
+      <component name="PrsPoliciesRegulationsDao">
+	    <service name="PrsPoliciesRegulationsDao">
+	    	<interface.java interface="com.inspur.cams.prs.prspoliciesregulations.dao.IPrsPoliciesRegulationsDao"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.prs.prspoliciesregulations.dao.PrsPoliciesRegulationsDao"/>	
+    </component>
+    <!--附件信息Dao-->
+      <component name="PrsAttachmentDao">
+	    <service name="PrsAttachmentDao">
+	    	<interface.java interface="com.inspur.cams.prs.prsattachment.dao.IPrsAttachmentDao"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.prs.prsattachment.dao.PrsAttachmentDao"/>	
+    </component>
+    <!--附件信息Domain-->
+     <component name="PrsAttachmentDomain">
+	    <service name="PrsAttachmentDomain">
+	    	<interface.java interface="com.inspur.cams.prs.prsattachment.domain.IPrsAttachmentDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.prs.prsattachment.domain.PrsAttachmentDomain"/>	
+    	<reference name="prsAttachmentDao"  target="PrsAttachmentDao.PrsAttachmentDao"/>
+    </component> 
+    <!--政策法规信息表Domain-->
+     <component name="PrsPoliciesRegulationsDomain">
+	    <service name="PrsPoliciesRegulationsDomain">
+	    	<interface.java interface="com.inspur.cams.prs.prspoliciesregulations.domain.IPrsPoliciesRegulationsDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.prs.prspoliciesregulations.domain.PrsPoliciesRegulationsDomain"/>	
+    	<reference name="prsPoliciesRegulationsDao"  target="PrsPoliciesRegulationsDao.PrsPoliciesRegulationsDao"/>
+    	<reference name="prsAttachmentDao"  target="PrsAttachmentDao.PrsAttachmentDao"/>
+    </component> 
+</composite>

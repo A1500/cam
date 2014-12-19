@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg onload="init(evt)" width="100%" height="100%" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<script type="text/javascript" xlink:href="../../../../skins/js/L5-chart_5.0.1.js"></script>	
+	<script type="text/javascript">
+	<![CDATA[
+    	function init(evt){
+    		pie=new PieChart();
+    		pie.setTitle("低保五保中各类别统计"); 
+				var records = ds.getAllRecords();
+				var chartDatas = new Array();
+			//	alert("length:"+records.length);
+			//	var a=records[0].get("OLDNUM");
+			//	alert("record1:"+(a==0));
+				if(records.length>0) {
+					for(var i=0;i<records.length;i++){
+						var value = records[i].get("BPTNUM");
+						var name = "优抚对象："+value+"人";
+						if(value==0){
+							chartDatas.push({name:"优抚对象：0人",value:"0"});
+						}else{
+							chartDatas.push({name:name,value:value});
+						}
+						 
+						value = records[i].get("NOTBPTTYPE");
+						name = "残疾人："+value+"人";
+						if(value==0){
+							chartDatas.push({name:"残疾人：0人",value:"0"});
+						}else{
+							chartDatas.push({name:name,value:value});
+						}
+						//chartDatas.push({name:"老年人",value:0});
+						
+						value = records[i].get("OLDNUM");
+						name = "老年人："+value+"人";
+						if(value==0){
+							//alert(1161);
+							chartDatas.push({name:"老年人：0人",value:"0"});
+							//alert(33333);
+						}else{
+							//alert(222);
+							chartDatas.push({name:name,value:value});
+						}
+					}
+				} else {
+					chartDatas.push({name:"未查询到符合条件的数据",value:"0"});
+				}
+			pie.setChartData(chartDatas);
+			var colors = new Array("#FF9966","#C2A00E", "#3399CC","#FF6999","#71A214",  "#CC99FF", "#00CC99", "#C2CC0E", "#FFCC66","#71CC14", "#CC68CC", "#66FFCC","#FFFF00");
+		    pie.setColors(colors);
+			pie.show(true,false);
+		}
+    ]]></script>
+</svg>

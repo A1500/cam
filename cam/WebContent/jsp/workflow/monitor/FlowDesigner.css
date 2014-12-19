@@ -1,0 +1,13 @@
+/* CSS file */
+global
+{
+	fontFamily:Arial; 
+    fontSize:12;
+}
+.customTextAlignLabel {
+   textAlign: left;
+}
+
+ToolTip{
+	fontSize:14;
+}

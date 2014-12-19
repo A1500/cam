@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	
+	<!--发放物资明细表-->
+	<component name="disReliefDoleMeteDetailDao">
+		<service name="disReliefDoleMeteDetailDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisReliefDoleMeteDetailDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisReliefDoleMeteDetailDao"/>
+    </component>
+	<component name="disReliefDoleMeteDetailDomain">
+		<service name="disReliefDoleMeteDetailDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisReliefDoleMeteDetailDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisReliefDoleMeteDetailDomain"/>
+		<reference name="disReliefDoleMeteDetailDao" target="disReliefDoleMeteDetailDao/disReliefDoleMeteDetailDao"/>
+	</component>
+	<!--发放使用资金/物资记录表-->
+	<component name="disReliefDoleUseDao">
+		<service name="disReliefDoleUseDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisReliefDoleUseDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisReliefDoleUseDao"/>
+    </component>
+	<component name="disReliefDoleUseDomain">
+		<service name="disReliefDoleUseDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisReliefDoleUseDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisReliefDoleUseDomain"/>
+		<reference name="disReliefDoleUseDao" target="disReliefDoleUseDao/disReliefDoleUseDao"/>
+	</component>
+</composite>

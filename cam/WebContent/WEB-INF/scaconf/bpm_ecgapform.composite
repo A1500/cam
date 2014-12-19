@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="ecgapform" xmlns="http://www.loushang.com/sca/1.0">
+	<component name="relationDefDao">
+		<service name="relationDefDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.formdef.dao.IRelationDefDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formdef.dao.FormRelationDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>	
+	<component name="formDataDao">
+		<service name="formDataDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.formdata.dao.IFormDataDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formdata.dao.FormDataDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="formBasicMappingInfoDao">
+		<service name="formBasicMappingInfoDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.formdef.dao.IFormBasicMappingInfoDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formdef.dao.FormBasicMappingInfoDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="formBasicQueryTemplateDao">
+		<service name="formBasicQueryTemplateDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.formdef.dao.IFormBasicQueryTemplateDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formdef.dao.FormBasicQueryTemplateDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="formDefDomain">
+		<service name="formDefDomain">
+			<interface.java interface="org.loushang.workflow.ecgapform.formdef.domain.IFormDef"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formdef.domain.FormDefDomain"/>
+		<reference name="formDefDao" target="formDefDao/formDefDao"/>
+		<reference name="widgetDefDao" target="widgetDefDao/widgetDefDao"/>
+		<reference name="fieldDefDao" target="fieldDefDao/fieldDefDao"/>
+		<reference name="tableDefDao" target="tableDefDao/tableDefDao"/>
+		<reference name="formBasicMappingInfoDao" target="formBasicMappingInfoDao/formBasicMappingInfoDao"/>
+		<reference name="formBasicQueryTemplateDao" target="formBasicQueryTemplateDao/formBasicQueryTemplateDao"/>
+		<reference name="formFieldExpandDao" target="formFieldExpandDao/formFieldExpandDao"/>
+	</component>	
+	<component name="formRenderDomain">
+		<service name="formRenderDomain">
+			<interface.java interface="org.loushang.workflow.ecgapform.formrender.domain.IFormRender"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formrender.domain.BaseFormRenderDomain"/>
+		<reference name="widgetDefDao" target="widgetDefDao/widgetDefDao"/>
+		<reference name="relationDefDao" target="relationDefDao/relationDefDao"/>
+		<reference name="formDataDomain" target="formDataDomain/formDataDomain"/>
+		<reference name="formDefDomain" target="formDefDomain/formDefDomain"/>
+	    <reference name="formRelevantDomain" target="formRelevantDomain/formRelevantDomain"/>
+	    <reference name="actionDefDomain" target="actionDefDomain/actionDefDomain"/>
+	    <reference name="assignmentDao" target="assignmentDao/assignmentDao"/>
+	</component>	
+	<component name="dicService">
+		<service name="dicService">
+			<interface.java interface="org.loushang.workflow.ecgapform.ext.IDictionaryService"/>
+			<binding.sca/>
+		</service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="common.DicItem"/>
+	</component>
+	
+	<component name="ecgapFormExtendJsConfigDomain">
+		<service name="ecgapFormExtendJsConfigDomain">
+			<interface.java interface="org.loushang.workflow.ecgapform.ecgapformextendjsconfig.domain.IEcgapFormExtendJsConfig"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.ecgapformextendjsconfig.domain.support.EcgapFormExtendJsConfigImpl"/>
+	</component>	
+	
+	<!--formRelevant-->
+	
+	<component name="actDefActionDao">
+		<service name="actDefActionDao">
+			<interface.java interface="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.IActDefActionDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.support.ActDefActionJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="actDefActionYiBanDao">
+		<service name="actDefActionYiBanDao">
+			<interface.java interface="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.IActDefActionYiBanDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.support.ActDefActionYiBanJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>	
+	<component name="actDefActionEndDao">
+		<service name="actDefActionEndDao">
+			<interface.java interface="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.IActDefActionEndDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.support.ActDefActionEndJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>		
+	<component name="actionDependDao">
+		<service name="actionDependDao">
+			<interface.java interface="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.IActionDependDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.support.ActionDependJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>	
+	<component name="actDefFormAclDao">
+		<service name="actDefFormAclDao">
+			<interface.java interface="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.IActDefFormAclDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.support.ActDefFormAclJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="actDefFormDao">
+		<service name="actDefFormDao">
+			<interface.java interface="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.IActDefFormDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.support.ActDefFormJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+		<component name="actDefPrintTemplateDao">
+		<service name="actDefPrintTemplateDao">
+			<interface.java interface="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.IActDefPrintTemplateDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.support.ActDefPrintTemplateJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="actDefSuggestDao">
+		<service name="actDefSuggestDao">
+			<interface.java interface="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.IActDefSuggestDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.ecgapformrelevant.dao.support.ActDefSuggestJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="formRelevantDomain">
+		<service name="formRelevantDomain">
+			<interface.java interface="org.loushang.workflow.processdefinition.ecgapformrelevant.domain.IFormRelevant"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.ecgapformrelevant.domain.support.FormRelevantImpl"/>
+		<reference name="actDefActionDao" target="actDefActionDao/actDefActionDao"/>
+		<reference name="actDefFormAclDao" target="actDefFormAclDao/actDefFormAclDao"/>
+		<reference name="actDefFormDao" target="actDefFormDao/actDefFormDao"/>
+		<reference name="actionDependDao" target="actionDependDao/actionDependDao"/>
+	</component>
+
+	<!--Form Mapping-->
+	
+	<component name="formMappingDefDomain">
+		<service name="formMappingDefDomain">
+			<interface.java interface="org.loushang.workflow.ecgapform.formmappingdef.domain.IFormMappingDef"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formmappingdef.domain.support.FormMappingDef"/>
+	</component>
+	
+	<!--Form Data-->
+	
+	<component name="tableDefDao">
+		<service name="tableDefDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.formdef.dao.ITableDefDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formdef.dao.FormTableDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="fieldDefDao">
+		<service name="fieldDefDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.formdef.dao.IFieldDefDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formdef.dao.FormTableFieldDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="widgetDefDao">
+		<service name="widgetDefDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.formdef.dao.IWidgetDefDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formdef.dao.WidgetDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>	
+	<component name="formDefDao">
+		<service name="formDefDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.formdef.dao.IFormDefDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formdef.dao.FormDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="formFieldExpandDao">
+		<service name="formFieldExpandDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.formdef.dao.IFormFieldExpandDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formdef.dao.FormFieldExpandDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="suggestDataDao">
+		<service name="suggestDataDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.formdata.dao.ISuggestDataDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formdata.dao.SuggestDataJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>	
+	<component name="formDataDomain">
+		<service name="formDataDomain">
+			<interface.java interface="org.loushang.workflow.ecgapform.formdata.domain.IFormData"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formdata.domain.FormDataDomain"/>
+		<reference name="tableDefDao" target="tableDefDao/tableDefDao"/>
+		<reference name="fieldDefDao" target="fieldDefDao/fieldDefDao"/>
+		<reference name="formDataDao" target="formDataDao/formDataDao"/>
+		<reference name="widgetDefDao" target="widgetDefDao/widgetDefDao"/>
+		<reference name="suggestDataDao" target="suggestDataDao/suggestDataDao"/>
+		<reference name="formDefDomain" target="formDefDomain/formDefDomain"/>
+	</component>
+	
+	<!--Action-->
+	
+	<component name="actionLogDao">
+		<service name="actionLogDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.actionlog.dao.IActionLogDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.actionlog.dao.support.ActionLogJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="actionDomain">
+		<service name="actionDomain">
+			<interface.java interface="org.loushang.workflow.ecgapform.action.domain.IAction"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.action.domain.support.ActionImpl"/>
+		<reference name="activityDao" target="activityDao/activityDao"/>
+		<reference name="processDao" target="processDao/processDao"/>
+		<reference name="assignmentDao" target="assignmentDao/assignmentDao"/>
+		<reference name="activityDefDao" target="activityDefDao/activityDefDao"/>
+	</component>	
+	<component name="actionDefDao">
+		<service name="actionDefDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.actiondef.dao.IActionDefDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.actiondef.dao.support.ActionDefJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="actionDefDomain">
+		<service name="actionDefDomain">
+			<interface.java interface="org.loushang.workflow.ecgapform.actiondef.domain.IActionDef"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.actiondef.domain.support.ActionDefImpl"/>
+		<reference name="actionDefDao" target="actionDefDao/actionDefDao"/>
+		<reference name="actionGroupDefDao" target="actionGroupDefDao/actionGroupDefDao"/>
+	</component>	
+	<component name="actionGroupDefDao">
+		<service name="actionGroupDefDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.actiongroupdef.dao.IActionGroupDefDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.actiongroupdef.dao.support.ActionGroupDefJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="actionGroupDefDomain">
+		<service name="actionGroupDefDomain">
+			<interface.java interface="org.loushang.workflow.ecgapform.actiongroupdef.domain.IActionGroupDef"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.actiongroupdef.domain.support.ActionGroupDefImpl"/>
+		<reference name="actionGroupDefDao" target="actionGroupDefDao/actionGroupDefDao"/>
+		<reference name="actionDefDao" target="actionDefDao/actionDefDao"/>
+	</component>
+	<component name="formRelationDynaTableDao">
+		<service name="formRelationDynaTableDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.formrelationdynatable.dao.IFormRelationDynaTableDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formrelationdynatable.dao.FormRelationDynaTableDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="formRelationDynaTableDomain">
+		<service name="formRelationDynaTableDomain">
+			<interface.java interface="org.loushang.workflow.ecgapform.formrelationdynatable.domain.IFormRelationDynaTable"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.formrelationdynatable.domain.FormRelationDynaTableDomain"/>
+		<reference name="formRelationDynaTableDao" target="formRelationDynaTableDao/formRelationDynaTableDao"/>
+	</component>
+	
+	
+	<!--subjectrelationformfield-->
+	
+	<!-- 系统全局层次任务列表ecgap表单域来源定义 -->
+	<component name="sysSubjectScFieldDefDao">
+		<service name="sysSubjectScFieldDefDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.subjectrelationformfield.dao.ISysSubjectScFieldDefDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.subjectrelationformfield.dao.support.SysSubjectScFieldDefJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	
+	<!-- 流程定义层次任务列表ecgap表单域来源定义 -->
+	<component name="procSubjectScFieldDefDao">
+		<service name="procSubjectScFieldDefDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.subjectrelationformfield.dao.IProcSubjectScFieldDefDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.subjectrelationformfield.dao.support.ProcSubjectScFieldDefJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	
+	<!-- 流程类型层次任务列表ecgap表单域来源定义 -->
+	<component name="procTypeSubjectScFieldDefDao">
+		<service name="procTypeSubjectScFieldDefDao">
+			<interface.java interface="org.loushang.workflow.ecgapform.subjectrelationformfield.dao.IProcTypeSubjectScFieldDefDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.ecgapform.subjectrelationformfield.dao.support.ProcTypeSubjectScFieldDefJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+</composite>	

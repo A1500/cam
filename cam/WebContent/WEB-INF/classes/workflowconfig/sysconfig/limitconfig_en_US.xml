@@ -1,0 +1,4 @@
+<!--Limit execution class configuration for process and activity-->
+	<limit>
+		<agent id="submit" name="Auto Submit" agent-class="org.loushang.workflow.engine.limit.agent.support.AutoSubmitLimitAgent"  description="Auto submit to the next activity" />		
+	</limit>

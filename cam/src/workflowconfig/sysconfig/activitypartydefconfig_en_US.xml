@@ -1,0 +1,68 @@
+<!--Activity participant definition rule configuration-->
+<participant-option>
+		<!--configuration option for organization-->
+	<select-item key="commonly" display-name="General"
+		use-mode="organization">
+		<select-type key="unit" name="Organization" select-type="radio"
+			select-url="wfStruCmd.cmd?method=getSelectRootForService&amp;organType=1,2,6,8&amp;isCheckBox=0&amp;isIncludeSelf=0&amp;isTree=1&amp;rootId=1"
+			select-url-forNode="wfStruCmd.cmd?method=getHelpTreeNodeForService&amp;organType=1,2,6,8&amp;isCheckBox=0&amp;isIncludeSubCorporation=1&amp;isIncludeStruPath=null&amp;isExact=null&amp;showOrganType=null&amp;rootId="
+			is-applet-win="1" />
+		<select-type key="organType" name="Organization Type"
+			select-url="wfOrganTypeForService.cmd?" is-applet-win="1" />
+		<select-type key="role" name="Role Type"  select-type="radio" select-url="wFEmployeeSeeRoleCmd.cmd?method=choicerootForService" select-url-forNode="wFEmployeeSeeRoleCmd.cmd?method=choicenodeForService" is-applet-win="1" />
+	</select-item>	
+		<!--configuration option for creator-->
+	<select-item key="creator" display-name="Creator" use-mode="organization">
+		<select-type key="self" name="Creator Self" select-url="" />
+		<select-type key="directleader" name="Creator's Manager"
+			select-url="" />
+		<select-type key="directunderling" name="Creator's Subordinate"
+			select-url="" />
+		<select-type key="branch" name="Creator's Affiliated Department"
+			select-url="" />
+		<select-type key="allUpperLeading" name="Creator's all Superior Leaders"
+			select-url="" />
+		<select-type key="corpOrganType"
+			name="Organization Type of Creator's Affiliated Corporate"
+			select-url="wfOrganTypeForService.cmd?" is-applet-win="1" />
+		<select-type key="upperCorpOrganType"
+			name="Organization Type of Superior Corporate of Creator's Affiliated Corporate"
+			select-url="wfOrganTypeForService.cmd?" is-applet-win="1" />
+		<select-type key="lowerCorpOrganType"
+			name="Organization Type of Subordinate Corporate of Creator's Affiliated Corporate"
+			select-url="wfOrganTypeForService.cmd?" is-applet-win="1" />
+	</select-item>	
+		<!--configuration option for sender-->
+	<select-item key="sender" display-name="Sender" use-mode="organization">
+		<select-type key="self" name="Sender Self" select-url="" />
+		<select-type key="directleader" name="Sender's Manager"
+			select-url="" />
+		<select-type key="directunderling" name="Sender's Subordinate"
+			select-url="" />
+		<select-type key="branch" name="Sender's Affiliated Department"
+			select-url="" />
+		<select-type key="allUpperLeading" name="Sender's all Superior Leaders"
+			select-url="" />
+		<select-type key="deptOrganType" name="Organization Type of Sender's Department"
+			select-url="wfOrganTypeForService.cmd?" is-applet-win="1" />
+		<select-type key="upperCorpOrganType"
+			name="Organization Type of Superior Corporate of Sender's Affiliated Corporate"
+			select-url="wfOrganTypeForService.cmd?" is-applet-win="1" />
+		<select-type key="lowerCorpOrganType"
+			name="Organization Type of Subordinate Corporate of Sender's Affiliated Corporate"
+			select-url="wfOrganTypeForService.cmd?" is-applet-win="1" />
+		<select-type key="corpOrganParamOrganType" name="Organanization Type of Organ Param(WF_ORGAN_REF) of Sender's Corporation"
+			select-url="wfOrganTypeForService.cmd?" is-applet-win="1" />
+	</select-item>				
+		<!--configuration option for history activity-->
+	<select-item key="historyactselect" display-name="History Activity Handler"
+		use-mode="historyact">
+		<select-type key="self" name="Handler Self" select-url="" />
+		<select-type key="leader" name="Handler's Superior Leader"
+			select-url="" />
+		<select-type key="underling" name="Handler's Subordinate"
+			select-url="" />
+		<select-type key="corpOrganType"
+			name="OrganType of Handler's Affiliated Corporate" />
+	</select-item>
+</participant-option>

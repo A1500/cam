@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select * from Stscore
+]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="false" headerHeight="0.0" footerHeight="0.0">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[]]>
+</ColumnWidth>
+<FloatElementList>
+<com.fr.report.FloatElement>
+<Location column="0" row="0" leftDistance="0" topDistance="18" width="575.0" height="303.0" />
+<O t="ChartPainter"><Background name="ColorBackground"
+ color="-1">
+</Background>
+<Title>
+<Text>
+<O t="S"><![CDATA[At  least scores of students]]></O>
+</Text>
+<TextAttributes isVerticalText="0" textDirection="0" rotation="0">
+<Border style="0" color="-16777216" />
+<Background name="NullBackground" />
+<FRFont name="SimSun" style="1" size="16" />
+</TextAttributes>
+</Title>
+<Legend isVisible="true" position="4" legendNum="10" iconBorderColor="-16777216">
+<Border style="1" color="-16777216" />
+<Background name="ColorBackground"
+ color="-1">
+</Background>
+<FRFont name="SimSun" style="0" size="12" />
+</Legend>
+<ChartDescriptor>
+<Style index="0" class="com.fr.chart.style.HBarChartStyle">
+<Values isShowValues="false" shownShallow="true">
+<Format class="java.text.DecimalFormat"><![CDATA[#0]]>
+</Format>
+<TextAttributes isVerticalText="0" textDirection="0" rotation="0">
+<Border style="0" color="-16777216" />
+<Background name="NullBackground" />
+<FRFont name="SimSun" style="0" size="12" />
+</TextAttributes>
+</Values>
+<Plot>
+<Border style="1" color="-11355685" />
+<GridLine style="0" color="-11355685" />
+<Background name="ColorBackground"
+ color="-2166532">
+</Background>
+</Plot>
+<CategoryStyle isStacked="false" bgStagger="true" isHorizontal="true">
+<Axis class="com.fr.chart.axis.CategoryAxis" axisLineColor="-16777216" labelVisible="true" stagger="false" isVerticalText="0" textDirection="0" labelRotation="0" tickMarkType="1">
+<Title>
+<Text>
+<O t="S"><![CDATA[]]></O>
+</Text>
+<TextAttributes isVerticalText="0" textDirection="0" rotation="0">
+<Border style="0" color="-16777216" />
+<Background name="NullBackground" />
+<FRFont name="SimSun" style="0" size="12" />
+</TextAttributes>
+</Title>
+<FRFont name="SimSun" style="0" size="12" />
+</Axis>
+<Axis class="com.fr.chart.axis.ValueAxis" axisLineColor="-16777216" labelVisible="true" stagger="false" isVerticalText="0" textDirection="0" labelRotation="0" tickMarkType="1">
+<Title>
+<Text>
+<O t="S"><![CDATA[]]></O>
+</Text>
+<TextAttributes isVerticalText="0" textDirection="0" rotation="0">
+<Border style="0" color="-16777216" />
+<Background name="NullBackground" />
+<FRFont name="SimSun" style="0" size="12" />
+</TextAttributes>
+</Title>
+<FRFont name="SimSun" style="0" size="12" />
+</Axis>
+</CategoryStyle>
+<BarStyle isDrawBorder="false" is3D="false" isCubic3D="false" is3DSimulation="true" isTransparency="true" isCasCade="false" barSpacePecent="0.7000000000000001" offSetPecent="0.6" borderLineColor="-16777216" /></Style>
+<Color index="0" color="-4176614" />
+<Color index="1" color="-12468447" />
+<Color index="2" color="-14903360" />
+<Color index="3" color="-4550131" />
+<Color index="4" color="-11170039" />
+<Color index="5" color="-7657472" />
+<Color index="6" color="-4164582" />
+<Color index="7" color="-14565521" />
+<Color index="8" color="-14900289" />
+<Color index="9" color="-8930803" />
+<Color index="10" color="-4797692" />
+<Color index="11" color="-6926256" />
+<Color index="12" color="-6513445" />
+<Color index="13" color="-11709051" />
+<Color index="14" color="-3417188" />
+<Color index="15" color="-10192838" />
+<Color index="17" color="-1852844" />
+<Color index="16" color="-1848428" />
+<Color index="19" color="-1862501" />
+<Color index="18" color="-7574220" />
+<Color index="21" color="-5551285" />
+<Color index="20" color="-2858133" />
+<Color index="23" color="-2384684" />
+<Color index="22" color="-8045508" />
+<Color index="25" color="-8567948" />
+<Color index="24" color="-3380116" />
+<Color index="27" color="-4203620" />
+<Color index="26" color="-11514491" />
+<Color index="29" color="-6073469" />
+<Color index="28" color="-8674477" />
+<Color index="31" color="-12936926" />
+<Color index="30" color="-6750071" />
+<Color index="34" color="-7625901" />
+<Color index="35" color="-10192838" />
+<Color index="32" color="-6408907" />
+<Color index="33" color="-4928406" />
+<Color index="38" color="-9145163" />
+<Color index="39" color="-11709051" />
+<Color index="36" color="-1848428" />
+<Color index="37" color="-6513445" />
+<Marker index="0" class="com.fr.chart.style.marker.DiamondFilledMarker" />
+<Marker index="1" class="com.fr.chart.style.marker.StarMarker" />
+<Marker index="2" class="com.fr.chart.style.marker.SquareFilledMarker" />
+<Marker index="3" class="com.fr.chart.style.marker.XMarker" />
+<Marker index="4" class="com.fr.chart.style.marker.TriangleFilledMarker" />
+<Marker index="5" class="com.fr.chart.style.marker.CrossMarker" />
+<Marker index="6" class="com.fr.chart.style.marker.PlusSignMarker" />
+<Marker index="7" class="com.fr.chart.style.marker.CircleFilledMarker" />
+<Marker index="8" class="com.fr.chart.style.marker.MinusSignMarker" />
+<Marker index="9" class="com.fr.chart.style.marker.DiamondMarker" />
+<Marker index="10" class="com.fr.chart.style.marker.SquareMarker" />
+<Marker index="11" class="com.fr.chart.style.marker.TriangleMarker" />
+<Marker index="12" class="com.fr.chart.style.marker.CircleMarker" />
+</ChartDescriptor>
+<Border style="0" color="-16777216" />
+<ChartDataDefinition>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name><![CDATA[ds1]]></Name>
+</TableData>
+<OnChangeColumnArray>
+<SortColumn name="ClassNo">
+<SortOrder order="1" />
+</SortColumn>
+<SortColumn name="Course">
+<SortOrder order="1" />
+</SortColumn>
+</OnChangeColumnArray>
+<ChartSummaryColumnArray>
+<ChartSummaryColumn name="Grade" function="com.fr.data.util.function.MinFunction">
+</ChartSummaryColumn>
+</ChartSummaryColumnArray>
+</ChartDataDefinition>
+</O>
+<Style index="0" /></com.fr.report.FloatElement>
+</FloatElementList>
+<CellElementList>
+<C c="0" r="1"><HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.ListCondition"></Condition>
+<HighlightAction class="com.fr.report.highlight.RowHeightHighlightAction">
+</HighlightAction>
+</Highlight></HighlightList></C>
+<C c="1" r="1"><O t="DSColumn"><Attributes dsName="ds1" columnName="Course" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.ListCondition"></Condition>
+<HighlightAction class="com.fr.report.highlight.RowHeightHighlightAction">
+</HighlightAction>
+</Highlight></HighlightList><Expand dir="1" />
+</C>
+<C c="0" r="2"><O t="DSColumn"><Attributes dsName="ds1" columnName="ClassNo" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.ListCondition"></Condition>
+<HighlightAction class="com.fr.report.highlight.RowHeightHighlightAction">
+</HighlightAction>
+</Highlight></HighlightList><Expand dir="0" />
+</C>
+<C c="1" r="2"><O t="DSColumn"><Attributes dsName="ds1" columnName="Grade" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.SummaryGrouper"><FN><![CDATA[com.fr.data.util.function.MinFunction]]></FN></RG><Result><![CDATA[$$$]]></Result></O>
+<HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.ListCondition"></Condition>
+<HighlightAction class="com.fr.report.highlight.RowHeightHighlightAction">
+</HighlightAction>
+</Highlight></HighlightList></C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-1">
+</Background>
+<Border><Top style="1" /><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+</StyleList>
+</WorkBook>

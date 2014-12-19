@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="initData" default="main" basedir=".">
+	<target name="init-properties" description="属性初始化">
+		<property file="initDatabase.properties" />
+		<property name="lib.dir" value="WEB-INF/lib" />
+		<path id="local.class.path">
+			<fileset dir="${lib.dir}" includes="**/*.jar,**/*.zip" />
+		</path>
+	</target>
+
+	<target depends="init-properties" name="createDB" description="创建数据库表">
+		<echo message="开始创建数据库表..." />
+		<sql keepformat="true" encoding="UTF-8" driver="${driverClass}" url="${url}" userid="${userName}" password="${password}" classpathref="local.class.path" onerror="abort">
+			<fileset dir="sql/${dbtype}/1_bsp/INIT/1_Create">
+				<include name="*.sql" />
+			</fileset>
+			<fileset dir="sql/${dbtype}/2_bpm/INIT/1_Create">
+				<include name="*.sql"/>
+			</fileset>
+			<fileset dir="sql/${dbtype}/3_portal/INIT/1_Create">
+				<include name="*.sql" />
+			</fileset>
+			<fileset dir="sql/${dbtype}/5_common_help/INIT/1_Create">
+				<include name="*.sql" />
+			</fileset>		
+			<fileset dir="sql/${dbtype}/6_cms/INIT/1_Create">
+				<include name="*.sql" />
+			</fileset>
+			<fileset dir="sql/${dbtype}/7_live/INIT/1_Create">
+				<include name="*.sql" />
+			</fileset>
+			<fileset dir="sql/${dbtype}/8_demo/framework/INIT/1_Create">
+				<include name="*.sql" />
+			</fileset>
+			
+		</sql>
+	<echo message="数据库表全部创建成功！" />
+	</target>
+	<target depends="init-properties" name="initDB" description="初始化数据库数据">
+		<echo message="开始初始化数据..." />
+		<sql driver="${driverClass}" keepformat="true" encoding="UTF-8" url="${url}" userid="${userName}" password="${password}" classpathref="local.class.path" onerror="abort">
+			<fileset dir="sql/${dbtype}/1_bsp/INIT/2_Data">
+				<include name="*.sql" />
+			</fileset>
+			<fileset dir="sql/${dbtype}/2_bpm/INIT/2_Data">
+				<include name="*.sql" />
+			</fileset>
+			<fileset dir="sql/${dbtype}/3_portal/INIT/2_Data">
+				<include name="*.sql" />
+			</fileset>
+			<fileset dir="sql/${dbtype}/5_common_help/INIT/2_Data">
+				<include name="*.sql" />
+			</fileset>
+			<fileset dir="sql/${dbtype}/7_live/INIT/2_Data">
+				<include name="*.sql" />
+			</fileset>
+			<fileset dir="sql/${dbtype}/8_demo/framework/INIT/2_Data">
+				<include name="*.sql" />
+			</fileset>
+			<fileset dir="sql/${dbtype}/8_demo/workflow/INIT/2_Data">
+				<include name="*.sql" />
+			</fileset>			
+		</sql>
+		<echo message="初始化数据成功！" />
+	</target>
+	<target name="main" description="==>初始化数据库">
+		<antcall target="createDB" />
+		<antcall target="initDB" />
+		<!--antcall target="initTestData"/-->
+	</target>
+</project>

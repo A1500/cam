@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="ComPhoto" xmlns="http://www.loushang.com/sca/1.0">
+    <description>ComPhoto</description>   
+    
+    <component name="ComPhotoDao">
+	    <service name="ComPhotoCurd">
+	    	<interface.java interface="com.inspur.cams.comm.comphoto.dao.IComPhotoDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.comm.comphoto.dao.ComPhotoDao"/>	
+    </component>
+    <component name="ComPhotoDomain">
+	    <service name="ComPhotoService">
+	    	<interface.java interface="com.inspur.cams.comm.comphoto.domain.IComPhotoDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.comm.comphoto.domain.ComPhotoDomain"/>
+        <reference name="comPhotoDao" target="ComPhotoDao.ComPhotoCurd"/>
+    </component>
+</composite>

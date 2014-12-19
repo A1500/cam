@@ -1,0 +1,59 @@
+/*********最大化widget容器*********/
+.l-portal-maxwidgetcontainer{
+    padding:10px 10px 0 10px;
+}
+
+/*********portal*********/
+.l-portal .l-panel-dd-spacer {
+    margin-bottom:10px;
+}
+
+/*********portal列布局*********/
+.l-portal-column{
+    padding:10px 5px 0 10px;
+}
+
+/*********portlet*********/
+.l-portlet {
+    margin-bottom:10px;
+    align:left;
+}
+
+/*********portlet体部*********/
+.l-portlet .l-panel-ml {
+    padding-left:2px;
+}
+
+.l-portlet .l-panel-mr {
+    padding-right:2px;
+}
+
+.l-portlet .l-panel-mc {
+    padding-top:2px;
+}
+
+.l-portlet .l-panel-bwrap {
+	overflow: visible;
+}
+
+.l-portlet .l-panel-body {
+	overflow: visible;
+	position:static;
+	background:white;
+}
+
+/*********portlet底部*********/
+.l-portlet .l-panel-bl {
+    padding-left:2px;
+}
+
+.l-portlet .l-panel-br {
+    padding-right:2px;
+}
+
+.l-portlet .l-panel-bc .l-panel-footer {
+    padding-bottom:2px;
+}
+.l-portlet .l-panel-nofooter .l-panel-bc {
+    height:2px;
+}

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--假矫装配企业业务表-->
+	<component name="wealFitApplysDomain">
+		<service name="wealFitApplysDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealFitApplyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealFitApplysDomain"/>	
+	</component>
+	<!--假矫装配企业变更备案明细表-->
+	<component name="wealFitChangerecordDetailDomain">
+		<service name="wealFitChangerecordDetailDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealFitChangerecordDetailDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealFitChangerecordDetailDomain"/>	
+	</component>
+	<!--假矫装配企业变更备案表-->
+	<component name="wealFitChangerecordDomain">
+		<service name="wealFitChangerecordDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealFitChangerecordDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealFitChangerecordDomain"/>	
+	</component>
+	<!--假矫装配企业设施信息表-->
+	<component name="wealFitDeviceDomain">
+		<service name="wealFitDeviceDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealFitDeviceDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealFitDeviceDomain"/>	
+	</component>
+	<!--假矫装配企业（业务类别：认定、年检、换证）业务信息表-->
+	<component name="wealFitInfoDomain">
+		<service name="wealFitInfoDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealFitInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealFitInfoDomain"/>	
+	</component>
+	<!--假矫装配企业注销备案信息-->
+	<component name="wealFitLogoffDomain">
+		<service name="wealFitLogoffDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealFitLogoffDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealFitLogoffDomain"/>	
+	</component>
+	<!--假矫装配企业注销备案信息-->
+	<component name="wealFitProductivepowerDomain">
+		<service name="wealFitProductivepowerDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealFitProductivepowerDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealFitProductivepowerDomain"/>
+		<reference name="wealFitApplysDomain" target="wealFitApplysDomain/wealFitApplysDomain"/>	
+	</component>
+	<!--假矫装配企业当前状态表-->
+	<component name="wealFitStatusDomain">
+		<service name="wealFitStatusDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealFitStatusDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealFitStatusDomain"/>	
+	</component>
+	<!--职工信息表-->
+	<component name="wealWorkerDomain">
+		<service name="wealWorkerDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealWorkerDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealWorkerDomain"/>	
+	</component>
+	<!--证书最大号表-->
+	<component name="wealComfortNoDomain">
+		<service name="wealComfortNoDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealComfortNoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealComfortNoDomain"/>	
+	</component>
+	<component name="wealCertDomain">
+		<service name="wealCertDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealCertDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealCertDomain"/>	
+	</component>
+	<!--职工表dao-->
+	<component name="wealWorkerDao">
+		<service name="wealWorkerDao">
+			<interface.java interface="com.inspur.cams.welfare.base.dao.IWealWorkerDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.welfare.base.dao.support.WealWorkerDao"/>
+	</component>
+	<!--设施表dao-->
+	<component name="wealFitDeviceDao">
+		<service name="wealFitDeviceDao">
+			<interface.java interface="com.inspur.cams.welfare.base.dao.IWealFitDeviceDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.welfare.base.dao.support.WealFitDeviceDao"/>
+	</component>
+	<!--生产能力表dao-->
+	<component name="wealFitProductivepowerDao">
+		<service name="wealFitProductivepowerDao">
+			<interface.java interface="com.inspur.cams.welfare.base.dao.IWealFitProductivepowerDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.welfare.base.dao.support.WealFitProductivepowerDao"/>
+	</component>
+</composite>

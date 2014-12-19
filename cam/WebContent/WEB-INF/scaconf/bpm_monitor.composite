@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="workflow" xmlns="http://www.loushang.com/sca/1.0">
+    <description>workflow module</description>
+
+    <component name="processMonitorDomain">
+		<service name="processMonitorDomain">
+			<interface.java interface="org.loushang.workflow.monitor.domain.IProcessMonitor"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.monitor.domain.support.ProcessMonitorImpl"/>
+	</component>
+	    
+</composite>

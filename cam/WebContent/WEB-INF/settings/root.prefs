@@ -1,0 +1,9 @@
+#Mon Sep 28 21:02:33 CST 2009
+/jsonlimitlength=800
+/peimitinternel=org.loushang.portal.permit.PortalPermitL5
+/preventSqlInjection=true
+/upload.sizeMax=20M 
+#productModel ture:product model,false:developing model
+/productModel=false
+# true:use relative path, false: use absolute path
+/useRelativePath=false

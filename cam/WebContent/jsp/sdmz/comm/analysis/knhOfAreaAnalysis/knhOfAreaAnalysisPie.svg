@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg onload="init(evt)" width="1140%" height="1140%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<script type="text/javascript" xlink:href="../../../../../skins/js/L5-chart_5.0.1.js"></script>	
+	<script type="text/javascript">
+	<![CDATA[
+    	function init(evt){
+    		pie=new PieChart();
+    		pie.setTitle("统计指定救助类型的困难户在各个街镇的分布情况"); 
+				var records = ds.getAllRecords();
+				var chartDatas = new Array();
+				if(records.length>0) {
+					for(var i=0;i<records.length;i++ ) {
+						var value = records[i].get("NUM");
+						var name = records[i].get("MC")+"，"+value+"户";
+						chartDatas.push({name:name,value:value});
+					}
+				} else {
+					chartDatas.push({name:"未查询到符合条件的数据",value:"0"});
+				}
+				pie.setChartData(chartDatas);
+				var colors = new Array("#FF9966","#C2A00E", "#3399CC","#FF6999","#71A214",  "#CC99FF", "#00CC99", "#C2CC0E", "#FFCC66","#71CC14", "#CC68CC", "#66FFCC","#FFFF00");
+	    	pie.setColors(colors);
+	    	//pie.addEvent("onmouseover","alert('you onmouseover pie')");
+	    	//pie.modifyEvent("onmouseover","alert('you modify onmouseover me')");	
+	    	//pie.addPieClickEvt("alert('you click me2');");
+				pie.show(true,false);
+		}  	
+    ]]></script>
+</svg>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+    <description>demo module</description>
+
+<component name="SerCategoryDao">
+	    <service name="SerCategoryCrud">
+	    	<interface.java interface="org.loushang.live.servicesubscribe.category.dao.IServiceCategoryDao"/>
+        	<binding.sca/>        	
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.live.servicesubscribe.category.dao.ServiceCategoryDao"/>	
+    </component>
+    <component name="SerCategoryDomain">
+	    <service name="SerCategoryService">
+	    	<interface.java interface="org.loushang.live.servicesubscribe.category.domain.IServiceCategory"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.live.servicesubscribe.category.domain.ServiceCategoryImpl"/>
+        <reference name="categoryDao" target="SerCategoryDao/SerCategoryCrud"/>
+    </component>
+    
+    
+
+<component name="SubscribeRecordsDao">
+    <service name="SubscribeRecordsCurd">
+    	<interface.java interface="org.loushang.live.servicesubscribe.subscription.dao.ISubscribeRecordsDao"/>
+       	<binding.sca/>
+    </service>
+    <property name="dataSourceConf" value="dataSource"/>
+    <implementation.java impl="org.loushang.live.servicesubscribe.subscription.dao.SubscribeRecordsDao"/>
+</component>
+
+<component name="SubscribeRecordsDomain">
+    <service name="SubscribeRecordsService">
+    	<interface.java interface="org.loushang.live.servicesubscribe.subscription.domain.ISubscribeRecords"/>
+       	<binding.sca/>
+   </service>
+    <implementation.java impl="org.loushang.live.servicesubscribe.subscription.domain.SubscribeRecordsImpl"/>	
+
+	<reference name="subscribeRecordsDao" target="SubscribeRecordsDao/SubscribeRecordsCurd"/>
+	<reference name="party" target="partyImpl/partyImpl"/>
+	<reference name="pubUserInfo" target="pubUserInfo/pubUserInfo"/>
+</component>     
+    
+   
+   <component name="DeliveryModeDao">
+    <service name="DeliveryModeDao">
+    	<interface.java interface="org.loushang.live.servicesubscribe.service.dao.IDeliveryModeDao"/>
+       	<binding.sca/>
+    </service>
+    <property name="dataSourceConf" value="dataSource"/>
+    <implementation.java impl="org.loushang.live.servicesubscribe.service.dao.DeliveryModeDao"/>
+</component>
+   
+     <component name="DModeDao">
+    <service name="DModeDao">
+    	<interface.java interface="org.loushang.live.servicesubscribe.service.dao.IDModeDao"/>
+       	<binding.sca/>
+    </service>
+    <property name="dataSourceConf" value="dataSource"/>
+    <implementation.java impl="org.loushang.live.servicesubscribe.service.dao.DModeDao"/>
+</component>
+   
+
+<component name="ServiceDao">
+	    <service name="ServiceDao">
+	    	<interface.java interface="org.loushang.live.servicesubscribe.service.dao.IServiceDao"/>
+        	<binding.sca/>        	
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.live.servicesubscribe.service.dao.ServiceDao"/>	
+    </component>
+
+<component name="ExecutionFrequencyDao">
+    <service name="ExecutionFrequencyDao">
+    	<interface.java interface="org.loushang.live.servicesubscribe.service.dao.IExecutionFrequencyDao"/>
+       	<binding.sca/>
+    </service>
+    <property name="dataSourceConf" value="dataSource"/>
+    <implementation.java impl="org.loushang.live.servicesubscribe.service.dao.ExecutionFrequencyDao"/>
+</component>
+
+<component name="DeliveryModeImpl">
+    <service name="DeliveryModeImpl">
+    	<interface.java interface="org.loushang.live.servicesubscribe.service.domain.IDeliveryMode"/>
+       	<binding.sca/>
+   </service>
+    <implementation.java impl="org.loushang.live.servicesubscribe.service.domain.DeliveryModeImpl"/>	 
+	<reference name="deliveryModeDao" target="DeliveryModeDao/DeliveryModeDao"/>
+</component>
+
+<component name="DModeImpl">
+    <service name="DModeImpl">
+    	<interface.java interface="org.loushang.live.servicesubscribe.service.domain.IDMode"/>
+       	<binding.sca/>
+   </service>
+    <implementation.java impl="org.loushang.live.servicesubscribe.service.domain.DModeImpl"/>	 
+	<reference name="dmodeDao" target="DModeDao/DModeDao"/>
+</component>
+
+<component name="ServiceImpl">
+    <service name="ServiceImpl">
+    	<interface.java interface="org.loushang.live.servicesubscribe.service.domain.IService"/>
+       	<binding.sca/>
+   </service>
+    <implementation.java impl="org.loushang.live.servicesubscribe.service.domain.ServiceImpl"/>	 
+	<reference name="serviceDao" target="ServiceDao/ServiceDao"/>
+</component>
+
+<component name="ExecuteFrequencyImpl">
+    <service name="ExecuteFrequencyImpl">
+    	<interface.java interface="org.loushang.live.servicesubscribe.service.domain.IExecuteFrequency"/>
+       	<binding.sca/>
+   </service>
+    <implementation.java impl="org.loushang.live.servicesubscribe.service.domain.ExecuteFrequencyImpl"/>	 
+	<reference name="executeFrequency" target="ExecutionFrequencyDao/ExecutionFrequencyDao"/>
+</component>
+</composite>

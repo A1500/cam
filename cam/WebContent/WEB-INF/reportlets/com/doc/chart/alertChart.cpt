@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="Sheet1">
+<TableDataMap>
+<NameTableData name="Simple">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[Select * from StScore]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="false" headerHeight="0.33" footerHeight="0.33">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="false" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[]]>
+</ColumnWidth>
+<FloatElementList>
+<com.fr.report.FloatElement>
+<Location column="0" row="2" leftDistance="38" topDistance="5" width="500.0" height="270.0" />
+<O t="ChartPainter"><Background name="ColorBackground"
+ color="-1">
+</Background>
+<Title>
+<Text>
+<O t="S"><![CDATA[]]></O>
+</Text>
+<TextAttributes isVerticalText="0" textDirection="0" rotation="0">
+<Border style="0" color="-16777216" />
+<Background name="NullBackground" />
+<FRFont name="SimSun" style="0" size="12" />
+</TextAttributes>
+</Title>
+<Legend isVisible="true" position="4" legendNum="10" iconBorderColor="-16777216">
+<Border style="1" color="-16777216" />
+<Background name="ColorBackground"
+ color="-1">
+</Background>
+<FRFont name="SimSun" style="0" size="12" />
+</Legend>
+<ChartDescriptor>
+<Style index="0" class="com.fr.chart.style.BarChartStyle">
+<Values isShowValues="false" shownShallow="true">
+<Format class="java.text.DecimalFormat"><![CDATA[#0]]>
+</Format>
+<TextAttributes isVerticalText="0" textDirection="0" rotation="0">
+<Border style="0" color="-16777216" />
+<Background name="NullBackground" />
+<FRFont name="SimSun" style="0" size="12" />
+</TextAttributes>
+</Values>
+<Plot>
+<Border style="1" color="-11355685" />
+<GridLine style="0" color="-11355685" />
+<Background name="ColorBackground"
+ color="-5513489">
+</Background>
+</Plot>
+<CategoryStyle isStacked="false" bgStagger="false" isHorizontal="false">
+<Axis class="com.fr.chart.axis.CategoryAxis" axisLineColor="-16777216" labelVisible="true" stagger="false" isVerticalText="0" textDirection="0" labelRotation="0" tickMarkType="1">
+<Title>
+<Text>
+<O t="S"><![CDATA[]]></O>
+</Text>
+<TextAttributes isVerticalText="0" textDirection="0" rotation="0">
+<Border style="0" color="-16777216" />
+<Background name="NullBackground" />
+<FRFont name="SimSun" style="0" size="12" />
+</TextAttributes>
+</Title>
+<FRFont name="SimSun" style="0" size="12" />
+</Axis>
+<Axis class="com.fr.chart.axis.ValueAxis" axisLineColor="-16777216" labelVisible="true" stagger="false" isVerticalText="0" textDirection="0" labelRotation="0" tickMarkType="1">
+<Title>
+<Text>
+<O t="S"><![CDATA[]]></O>
+</Text>
+<TextAttributes isVerticalText="0" textDirection="0" rotation="0">
+<Border style="0" color="-16777216" />
+<Background name="NullBackground" />
+<FRFont name="SimSun" style="0" size="12" />
+</TextAttributes>
+</Title>
+<FRFont name="SimSun" style="0" size="12" />
+<AxisAlert startValue="80.0" endValue="80.0" />
+</Axis>
+</CategoryStyle>
+<BarStyle isDrawBorder="true" is3D="false" isCubic3D="false" is3DSimulation="true" isTransparency="false" isCasCade="false" barSpacePecent="0.6" offSetPecent="0.6" borderLineColor="-16777216" /></Style>
+<Color index="0" color="-4176614" />
+<Color index="1" color="-12468447" />
+<Color index="2" color="-14903360" />
+<Color index="3" color="-4550131" />
+<Color index="4" color="-3451900" />
+<Color index="5" color="-7620096" />
+<Color index="6" color="-4164582" />
+<Color index="7" color="-14565521" />
+<Color index="8" color="-14900289" />
+<Color index="9" color="-8930803" />
+<Color index="10" color="-4797692" />
+<Color index="11" color="-4928214" />
+<Marker index="0" class="com.fr.chart.style.marker.DiamondFilledMarker" />
+<Marker index="1" class="com.fr.chart.style.marker.StarMarker" />
+<Marker index="2" class="com.fr.chart.style.marker.SquareFilledMarker" />
+<Marker index="3" class="com.fr.chart.style.marker.XMarker" />
+<Marker index="4" class="com.fr.chart.style.marker.TriangleFilledMarker" />
+<Marker index="5" class="com.fr.chart.style.marker.CrossMarker" />
+<Marker index="6" class="com.fr.chart.style.marker.PlusSignMarker" />
+<Marker index="7" class="com.fr.chart.style.marker.CircleFilledMarker" />
+<Marker index="8" class="com.fr.chart.style.marker.MinusSignMarker" />
+<Marker index="9" class="com.fr.chart.style.marker.DiamondMarker" />
+<Marker index="10" class="com.fr.chart.style.marker.SquareMarker" />
+<Marker index="11" class="com.fr.chart.style.marker.TriangleMarker" />
+<Marker index="12" class="com.fr.chart.style.marker.CircleMarker" />
+</ChartDescriptor>
+<Border style="1" color="-16777216" />
+<ChartDataDefinition>
+<TableData class="com.fr.data.impl.NameTableData">
+<Name><![CDATA[Simple]]></Name>
+</TableData>
+<OnChangeColumnArray>
+<SortColumn name="ClassNo">
+<SortOrder order="1" />
+</SortColumn>
+<SortColumn name="Course">
+<SortOrder order="1" />
+</SortColumn>
+</OnChangeColumnArray>
+<ChartSummaryColumnArray>
+<ChartSummaryColumn name="Grade" function="com.fr.data.util.function.AverageFunction">
+</ChartSummaryColumn>
+</ChartSummaryColumnArray>
+</ChartDataDefinition>
+</O>
+<Style index="0" /></com.fr.report.FloatElement>
+</FloatElementList>
+<CellElementList>
+</CellElementList>
+</Report>
+<StyleList>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-1">
+</Background>
+<Border><Top style="1" /><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+</StyleList>
+</WorkBook>

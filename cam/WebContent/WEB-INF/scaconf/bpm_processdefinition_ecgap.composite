@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="workflow" xmlns="http://www.loushang.com/sca/1.0">
+    <description>workflow module</description>
+    
+   	<component name="activityExternalDefDao">
+		<service name="activityExternalDefDao">
+			<interface.java interface="org.loushang.workflow.processdefinition.ext.ecgap.dao.IActivityExternalDefDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.ext.ecgap.dao.support.ActivityExternalDefJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	
+</composite>

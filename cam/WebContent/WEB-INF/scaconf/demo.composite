@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+    <description>demo module</description>
+    <component name="PlanDao">
+	    <service name="PlanDao">
+	    	<interface.java interface="org.loushang.demo.plan.ILsPlanDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.demo.plan.LsPlanDao"/>
+    </component>
+    <component name="TaskDao">
+	    <service name="TaskDao">
+	    	<interface.java interface="org.loushang.demo.plan.ILsTaskDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.demo.plan.LsTaskDao"/>	
+    </component>
+    <component name="PlanDomain">
+	    <service name="PlanDomain">
+	    	<interface.java interface="org.loushang.demo.plan.ILsPlanDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.demo.plan.LsPlanDomain"/>	
+        <reference name="planDao" target="PlanDao.PlanDao"/>
+        <reference name="taskDao" target="TaskDao.TaskDao"/>
+    </component>
+	<component name="CoDao">
+	    <service name="CoDao">
+	    	<interface.java interface="org.loushang.demo.co.ICoDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.demo.co.CoDao"/>
+    </component>
+    
+    <component name="CoLineDao">
+	    <service name="CoLineDao">
+	    	<interface.java interface="org.loushang.demo.co.ICoLineDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.demo.co.CoLineDao"/>	
+    </component>
+    
+     <component name="CoDomain">
+	    <service name="CoDomain">
+	    	<interface.java interface="org.loushang.demo.co.ICoDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.demo.co.CoDomain"/>	
+        <reference name="coDao"  target="CoDao.CoDao"/>
+        <reference name="coLineDao" target="CoLineDao.CoLineDao"/>
+    </component>
+    
+    <component name="FactDao">
+	    <service name="FactCrud">
+	    	<interface.java interface="org.loushang.demo.fact.IFactDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.demo.fact.FactDao"/>	
+    </component>
+    <component name="FactDomain">
+	    <service name="FactService">
+	    	<interface.java interface="org.loushang.demo.fact.IFactDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.demo.fact.FactDomain"/>
+        <reference name="FactDao" target="FactDao.FactCrud"/>
+    </component>
+    
+    <component name="student">
+	    <service name="studentrpc">
+	    	<interface.java interface="org.loushang.demo.student.StudentInterface"/>
+        	<binding.jsonrpc/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.demo.student.StudentDao"/>
+        <reference name="FactDao" target="FactDao.FactCrud"/>
+    </component>
+    <component name="webservice">
+	    <service name="test">
+	    	<interface.java interface="org.loushang.demo.co.IWebServiceTest"/>
+        	<binding.ws/>
+        	<binding.sca/>
+        </service>
+		<implementation.java impl="org.loushang.demo.co.WebServiceTestImpl"/>
+    </component>
+    
+</composite>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--救助信息表-->
+	<component name="disReliefInfoDao">
+		<service name="disReliefInfoDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisReliefInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisReliefInfoDao"/>
+    </component>
+	<component name="disReliefInfoDomain">
+		<service name="disReliefInfoDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisReliefInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisReliefInfoDomain"/>
+		<reference name="disReliefInfoDao" target="disReliefInfoDao/disReliefInfoDao"/>
+		<reference name="disReliefDoleDao" target="disReliefDoleDao/disReliefDoleDao"/>
+		<reference name="disReliefDoleDetailDao" target="disReliefDoleDetailDao/disReliefDoleDetailDao"/>
+		<reference name="disReliefBatchDetailDao" target="disReliefBatchDetailDao/disReliefBatchDetailDao"/>
+		<reference name="disReliefDoleMeteDetailDao" target="disReliefDoleMeteDetailDao/disReliefDoleMeteDetailDao"/>
+		<reference name="disReliefDoleUseDao" target="disReliefDoleUseDao/disReliefDoleUseDao"/>
+		<reference name="disFundsSourceDao" target="disFundsSourceDao/disFundsSourceDao"/>
+		<reference name="disDetailBatchSourceDao" target="disDetailBatchSourceDao/disDetailBatchSourceDao"/>
+	</component>
+	
+	<!--救助批次流程历史审批表-->
+	<component name="disReliefBatchCheckHistoryDao">
+		<service name="disReliefBatchCheckHistoryDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisReliefBatchCheckHistoryDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisReliefBatchCheckHistoryDao"/>
+    </component>
+	<component name="disReliefBatchCheckHistoryDomain">
+		<service name="disReliefBatchCheckHistoryDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisReliefBatchCheckHistoryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisReliefBatchCheckHistoryDomain"/>
+		<reference name="disReliefBatchCheckHistoryDao" target="disReliefBatchCheckHistoryDao/disReliefBatchCheckHistoryDao"/>
+	</component>
+	
+	<!--救助批次表明细-->
+	<component name="disReliefBatchDetailDao">
+		<service name="disReliefBatchDetailDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisReliefBatchDetailDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisReliefBatchDetailDao"/>
+    </component>
+	<component name="disReliefBatchDetailDomain">
+		<service name="disReliefBatchDetailDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisReliefBatchDetailDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisReliefBatchDetailDomain"/>
+		<reference name="disReliefBatchDetailDao" target="disReliefBatchDetailDao/disReliefBatchDetailDao"/>
+		<reference name="disReliefInfoDao" target="disReliefInfoDao/disReliefInfoDao"/>
+		<reference name="disReliefBatchCheckHistoryDao" target="disReliefBatchCheckHistoryDao/disReliefBatchCheckHistoryDao"/>
+	</component>
+	
+	<!--救助批次表-->
+	<component name="disReliefBatchDao">
+		<service name="disReliefBatchDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisReliefBatchDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisReliefBatchDao"/>
+    </component>
+	<component name="disReliefBatchDomain">
+		<service name="disReliefBatchDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisReliefBatchDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisReliefBatchDomain"/>
+		<reference name="disReliefBatchDao" target="disReliefBatchDao/disReliefBatchDao"/>
+		<reference name="disReliefBatchDetailDao" target="disReliefBatchDetailDao/disReliefBatchDetailDao"/>
+		<reference name="disReliefInfoDao" target="disReliefInfoDao/disReliefInfoDao"/>
+	</component>
+	<!--发放流水表-->
+	<component name="disReliefDoleDao">
+		<service name="disReliefDoleDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisReliefDoleDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisReliefDoleDao"/>
+    </component>
+	<component name="disReliefDoleDomain">
+		<service name="disReliefDoleDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisReliefDoleDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisReliefDoleDomain"/>
+		<reference name="disReliefDoleDao" target="disReliefDoleDao/disReliefDoleDao"/>
+		<reference name="disReliefDoleDetailDao" target="disReliefDoleDetailDao/disReliefDoleDetailDao"/>
+		<reference name="disReliefDoleMeteDetailDao" target="disReliefDoleMeteDetailDao/disReliefDoleMeteDetailDao"/>
+	</component>
+	<!--发放明细表-->
+	<component name="disReliefDoleDetailDao">
+		<service name="disReliefDoleDetailDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisReliefDoleDetailDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisReliefDoleDetailDao"/>
+    </component>
+	<component name="disReliefDoleDetailDomain">
+		<service name="disReliefDoleDetailDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisReliefDoleDetailDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisReliefDoleDetailDomain"/>
+		<reference name="disReliefDoleDetailDao" target="disReliefDoleDetailDao/disReliefDoleDetailDao"/>
+	</component>
+</composite>

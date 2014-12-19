@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Report class="com.fr.report.WorkSheet">
+<Version>6.2</Version>
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select * from Sale]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="false" headerHeight="0.33" footerHeight="0.33">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="false" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[72,72,60]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="2" rs="2" s="0"><O type="BiasTextPainter">
+<IsBackSlash value="false"/>
+<![CDATA[    Products|      Names]]>
+</O>
+
+</C>
+<C c="2" r="0" s="1"><O t="DSColumn"><Attributes dsName="ds1" columnName="ProType" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="1" />
+</C>
+<C c="2" r="1" s="1"><O t="DSColumn"><Attributes dsName="ds1" columnName="Product" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="1" />
+</C>
+<C c="0" r="2" rs="2" s="1"><O t="DSColumn"><Attributes dsName="ds1" columnName="Region" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="1" r="2" s="1"><O t="DSColumn"><Attributes dsName="ds1" columnName="Manager" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="2" r="2" s="1"><O t="DSColumn"><Attributes dsName="ds1" columnName="Amount" />
+<RG class="com.fr.report.cellElement.core.SummaryGrouper"><FN><![CDATA[com.fr.data.util.function.SumFunction]]></FN></RG></O>
+</C>
+<C c="1" r="3" s="2"><O t="S"><![CDATA[Sub Total:]]></O>
+</C>
+<C c="2" r="3" s="3"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(C3)]]></Attributes></O>
+</C>
+<C c="0" r="4" cs="2" s="4"><O t="S"><![CDATA[Total:]]></O>
+</C>
+<C c="2" r="4" s="5"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(C3)]]></Attributes></O>
+</C>
+<C c="4" r="6"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="9" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="5" r="10"><O t="S"><![CDATA[]]></O>
+</C>
+</CellElementList>
+<WorkSheetAttr />
+<StyleList>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" /><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" /><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-3342337">
+</Background>
+<Border><Bottom style="1" /><Right style="1" /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-3342337">
+</Background>
+<Border><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="Times New Roman" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-3342337">
+</Background>
+<Border><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+<Style>
+<FRFont name="Times New Roman" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-3342337">
+</Background>
+<Border><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+</StyleList>
+</Report>

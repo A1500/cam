@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.EmbeddedTableData">
+<Parameters>
+</Parameters>
+<ColumnNames><![CDATA[ID,,.,,NAME,,.,,RECORDDATE,,.,,AMOUNT]]></ColumnNames>
+<ColumnTypes><![CDATA[java.lang.String,java.lang.String,java.lang.String,java.lang.String]]></ColumnTypes>
+<RowData>
+<![CDATA[D37C"_CuBefAS>QFp9=#<W\,WAV#1-X$GZ2lBpu9D>XW\[qRia%oA;EO+7]R!$#t(6f[%me9
+E^<.VFBTq]$%-ru@a&?oV3DY'P:
+qT9$%Y:Mb\45.qOR5RKto#r!\NjBdNQ`%7D4@MY`LNT)k
+JQ\'QYo;lHs*(E5++E.7@HncIhH9NoON!M6IgcJTS2?mAO!et0;D3!
+=YFI.-\l[1C,M2-i+D
+FsBjCKt<5Ke&aAhhmcF%Lns*%"#]'60%k"Tu4qt/q7V\!r~
+
+]]>
+</RowData>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings orientation="1" shrinkToFit="false" headerHeight="0.33" footerHeight="0.33">
+<Margin top="0.27" left="0.7499999999999999" bottom="0.27" right="0.7499999999999999" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[52,53,59,51]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="4" s="0"><O t="S"><![CDATA[企 业 员 工 业 绩 统 计 表]]></O>
+</C>
+<C c="0" r="3" rs="2" s="1"><O t="S"><![CDATA[序号]]></O>
+</C>
+<C c="1" r="3" rs="2" s="1"><O t="S"><![CDATA[员工姓名]]></O>
+</C>
+<C c="2" r="3" rs="2" s="1"><O t="S"><![CDATA[业绩累计]]></O>
+</C>
+<C c="3" r="3" s="1"><O t="S"><![CDATA[业绩数额]]></O>
+</C>
+<C c="3" r="4" s="1"><O t="Formula" class="Formula" ><Attributes><![CDATA[=range(1, 12)]]></Attributes></O>
+<HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.ListCondition"></Condition>
+<HighlightAction class="com.fr.report.highlight.ValueHighlightAction">
+<O t="Formula" class="Formula" ><Attributes><![CDATA[=CONCATENATE($$$,"月")]]></Attributes></O>
+</HighlightAction>
+</Highlight></HighlightList><Expand dir="1" />
+</C>
+<C c="0" r="5" s="1"><O t="DSColumn"><Attributes dsName="ds1" columnName="ID" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="1" r="5" s="1"><O t="DSColumn"><Attributes dsName="ds1" columnName="NAME" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="2" r="5" s="2"><O t="DSColumn"><Attributes dsName="ds1" columnName="AMOUNT" />
+<RG class="com.fr.report.cellElement.core.SummaryGrouper"><FN><![CDATA[com.fr.data.util.function.SumFunction]]></FN></RG></O>
+<HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.ListCondition"></Condition>
+<HighlightAction class="com.fr.report.highlight.ValueHighlightAction">
+<O t="Formula" class="Formula" ><Attributes><![CDATA[="￥"+$$$]]></Attributes></O>
+</HighlightAction>
+</Highlight></HighlightList></C>
+<C c="3" r="5" s="2"><O t="DSColumn"><Attributes dsName="ds1" columnName="AMOUNT" />
+<Condition class="com.fr.data.condition.FormulaCondition"><Formula>
+<![CDATA[=TOINTEGER(MID(RECORDDATE,6,2))==D5]]>
+</Formula>
+</Condition>
+<RG class="com.fr.report.cellElement.core.SummaryGrouper"><FN><![CDATA[com.fr.data.util.function.SumFunction]]></FN></RG><Result><![CDATA[$$$]]></Result></O>
+<HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.ListCondition"></Condition>
+<HighlightAction class="com.fr.report.highlight.ValueHighlightAction">
+<O t="Formula" class="Formula" ><Attributes><![CDATA[=if($$$==0,"","￥"+$$$)]]></Attributes></O>
+</HighlightAction>
+</Highlight></HighlightList></C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="4">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

@@ -1,0 +1,42 @@
+.banner {
+	background-image:url( ../images/purple/banner.jpg ) !important;
+}
+.top-zs_01{
+	background-image:url( ../images/purple/top-zs_01.png ) !important;
+}
+.top-zs_02{
+	background-image:url( ../images/purple/top-zs_02.gif ) !important;
+}
+.topbj{
+	background-image:url( ../images/purple/topbj.jpg ) !important;
+}
+.l-panel-header {
+	color: #414178;
+	border: 1px solid #bfbfe7;
+	border-bottom: 0px;
+	background: transparent
+		url(../images/purple/white-top-bottom.gif) repeat-x 0 -1px;
+}
+.l-panel-body{
+	border: 1px solid #bfbfe7;
+}
+.dot{
+	bgcolor:"#e4e4f3"
+}
+.l-tool {
+	background:url("../images/purple/tool-sprites.gif") no-repeat 
+}
+.l-tool-toggle  {
+background-position:0 -60px;
+}
+.l-tool-maximize {
+background-position:0 -30px;
+}
+.l-tool-refresh  {
+background-position:0 -225px;
+}
+.topwel{
+height:28;
+color:white;
+background-image:url( ../images/purple/topbj.jpg ) !important;
+}

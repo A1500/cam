@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="Sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select * from sale]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="false" headerHeight="0.33" footerHeight="0.33">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="false" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[72,72,79]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="2" rs="2" s="0"><O type="BiasTextPainter">
+<IsBackSlash value="false"/>
+<![CDATA[product   |    manager]]>
+</O>
+
+</C>
+<C c="2" r="0" cs="2" s="1"><O t="DSColumn"><Attributes dsName="ds1" columnName="ProType" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="1" />
+</C>
+<C c="2" r="1" s="2"><O t="DSColumn"><Attributes dsName="ds1" columnName="Product" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="1" />
+</C>
+<C c="3" r="1" s="3"><O t="S"><![CDATA[Total]]></O>
+</C>
+<C c="0" r="2" rs="2" s="4"><O t="DSColumn"><Attributes dsName="ds1" columnName="Region" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="1" r="2" s="4"><O t="DSColumn"><Attributes dsName="ds1" columnName="Manager" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="2" r="2" s="5"><O t="DSColumn"><Attributes dsName="ds1" columnName="Amount" />
+<RG class="com.fr.report.cellElement.core.SummaryGrouper"><FN><![CDATA[com.fr.data.util.function.SumFunction]]></FN></RG></O>
+</C>
+<C c="3" r="2" s="3"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(C3)]]></Attributes></O>
+</C>
+<C c="1" r="3" s="6"><O t="S"><![CDATA[Sum:]]></O>
+</C>
+<C c="2" r="3" s="7"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(C3)]]></Attributes></O>
+</C>
+<C c="3" r="3" s="3"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(D3)]]></Attributes></O>
+</C>
+<C c="4" r="3"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="4" r="5"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="4" r="6"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="3" r="7"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="5" r="7"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="0" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="2" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="3" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="4" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="5" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="6" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="7" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="8" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="0" r="9"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="9"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="2" r="9"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="3" r="9"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="7" r="9"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="7" r="10"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="7" r="12"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="6" r="13"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="6" r="15"><O t="S"><![CDATA[]]></O>
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" /><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" /><Right style="1" /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" /><Bottom style="1" /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-52">
+</Background>
+<Border><Top style="1" /><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" /><Left style="1" /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-3342337">
+</Background>
+<Border><Bottom style="1" /><Right style="1" /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-3342337">
+</Background>
+<Border><Bottom style="1" /><Left style="1" /></Border>
+</Style>
+</StyleList>
+</WorkBook>

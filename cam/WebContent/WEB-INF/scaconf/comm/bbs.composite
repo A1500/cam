@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--帖子表-->
+	<component name="pubPostDao">
+		<service name="pubPostDao">
+			<interface.java interface="com.inspur.cams.comm.bbs.dao.IPubPostDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.bbs.dao.jdbc.PubPostDao"/>
+    </component>
+	<component name="pubPostDomain">
+		<service name="pubPostDomain">
+			<interface.java interface="com.inspur.cams.comm.bbs.domain.IPubPostDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.bbs.domain.support.PubPostDomain"/>
+		<reference name="pubPostDao" target="pubPostDao/pubPostDao"/>
+		<reference name="pubPostReplyDao" target="pubPostReplyDao/pubPostReplyDao"/>
+	</component>
+	<!--帖子回复表-->
+	<component name="pubPostReplyDao">
+		<service name="pubPostReplyDao">
+			<interface.java interface="com.inspur.cams.comm.bbs.dao.IPubPostReplyDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.bbs.dao.jdbc.PubPostReplyDao"/>
+    </component>
+	<component name="pubPostReplyDomain">
+		<service name="pubPostReplyDomain">
+			<interface.java interface="com.inspur.cams.comm.bbs.domain.IPubPostReplyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.bbs.domain.support.PubPostReplyDomain"/>
+		<reference name="pubPostReplyDao" target="pubPostReplyDao/pubPostReplyDao"/>
+		<reference name="pubPostDao" target="pubPostDao/pubPostDao"/>
+	</component>
+	<!--帖子附件表-->
+	<component name="pubPostAttachmentDao">
+		<service name="pubPostAttachmentDao">
+			<interface.java interface="com.inspur.cams.comm.bbs.dao.IPubPostAttachmentDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.bbs.dao.jdbc.PubPostAttachmentDao"/>
+    </component>
+	<component name="pubPostAttachmentDomain">
+		<service name="pubPostAttachmentDomain">
+			<interface.java interface="com.inspur.cams.comm.bbs.domain.IPubPostAttachmentDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.bbs.domain.support.PubPostAttachmentDomain"/>
+		<reference name="pubPostAttachmentDao" target="pubPostAttachmentDao/pubPostAttachmentDao"/>
+	</component>
+</composite>

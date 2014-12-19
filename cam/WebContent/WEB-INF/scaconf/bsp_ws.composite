@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="bspws" xmlns="http://www.loushang.com/sca/1.0">
+    <description>receiveService module</description> 
+    <component name="OrganReceive">
+	    <service name="OrganReceive">
+	    	<interface.java interface="org.loushang.bsp.share.organization.provider.IOrganReceiver"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.share.organization.provider.OrganReceiverImpl"/>
+    </component>
+    <component name="EmployeeReceive">
+	    <service name="EmployeeReceive">
+	    	<interface.java interface="org.loushang.bsp.share.organization.provider.IEmployeeReceiver"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.share.organization.provider.EmployeeReceiverImpl"/>
+    </component>  
+    </composite>

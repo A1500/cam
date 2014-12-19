@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--社会福利企业业务表-->
+	<component name="wealUnitApplysDomain">
+		<service name="wealUnitApplysDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealUnitApplyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealUnitApplysDomain"/>	
+	</component>
+	<!--社会福利企业业务信息表-->
+	<component name="wealUnitInfoDomain">
+		<service name="wealUnitInfoDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealUnitInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealUnitInfoDomain"/>	
+	</component>
+	<!--社会福利企业状态表-->
+	<component name="wealUnitStatusDomain">
+		<service name="wealUnitStatusDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealUnitStatusDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealUnitStatusDomain"/>	
+	</component>
+	<!--职工信息表-->
+	<component name="wealWorkerDomain">
+		<service name="wealWorkerDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealWorkerDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealWorkerDomain"/>	
+	</component>
+	<!--证书最大号表-->
+	<component name="wealComfortNoDomain">
+		<service name="wealComfortNoDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealComfortNoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealComfortNoDomain"/>	
+	</component>
+	<!--wealFitChangerecordDomain-->
+	<component name="wealFitChangerecordDomain">
+		<service name="wealFitChangerecordDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealFitChangerecordDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealFitChangerecordDomain"/>	
+	</component>
+	<!--wealFitChangerecordDetailDomain-->
+	<component name="wealFitChangerecordDetailDomain">
+		<service name="wealFitChangerecordDetailDomain">
+			<interface.java interface="com.inspur.cams.welfare.base.domain.IWealFitChangerecordDetailDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.base.domain.support.WealFitChangerecordDetailDomain"/>	
+	</component>
+</composite>

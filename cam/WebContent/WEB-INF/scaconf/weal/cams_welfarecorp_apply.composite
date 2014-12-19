@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--社会福利企业业务表-->
+	<component name="unitApplyDomain">
+		<service name="unitApplyDomain">
+			<interface.java interface="com.inspur.cams.welfare.welfarecorp.apply.domain.IUnitApplyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.welfarecorp.apply.domain.support.UnitApplyDomain"/>
+		<reference name="wealUnitApplysDomain" target="wealUnitApplysDomain/wealUnitApplysDomain"/>
+		<reference name="wealUnitInfoDomain" target="wealUnitInfoDomain/wealUnitInfoDomain"/>	
+		<reference name="wealUnitStatusDomain" target="wealUnitStatusDomain/wealUnitStatusDomain"/>
+		<reference name="wealWorkerDomain" target="wealWorkerDomain/wealWorkerDomain"/>
+		<reference name="wealComfortNoDomain" target="wealComfortNoDomain/wealComfortNoDomain"/>
+		<reference name="wealCertDomain" target="wealCertDomain/wealCertDomain"/>
+	</component>
+	<!--职工信息查询-->
+	<component name="unitWorkerQueryDomain">
+		<service name="unitWorkerQueryDomain">
+			<interface.java interface="com.inspur.cams.welfare.welfarecorp.apply.domain.IUnitWorkerQueryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.welfarecorp.apply.domain.support.UnitWorkerQueryDomain"/>
+		<reference name="wealWorkerDomain" target="wealWorkerDomain/wealWorkerDomain"/>
+	</component>
+	<!--业务表查询domain-->
+	<component name="unitApplyQueryDomain">
+		<service name="unitApplyQueryDomain">
+			<interface.java interface="com.inspur.cams.welfare.welfarecorp.apply.domain.IUnitApplyQueryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.welfarecorp.apply.domain.support.UnitApplyQueryDomain"/>
+		<reference name="wealUnitApplysDomain" target="wealUnitApplysDomain/wealUnitApplysDomain"/>
+		<reference name="wealUnitStatusDomain" target="wealUnitStatusDomain/wealUnitStatusDomain"/>
+	</component>
+	<!--福利企业历史数据采集-->
+	<component name="unitHistoryDomain">
+		<service name="unitHistoryDomain">
+			<interface.java interface="com.inspur.cams.welfare.welfarecorp.history.domain.IUnitHistoryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.welfarecorp.history.domain.support.UnitHistoryDomain"/>
+		<reference name="wealUnitApplysDomain" target="wealUnitApplysDomain/wealUnitApplysDomain"/>
+		<reference name="wealUnitInfoDomain" target="wealUnitInfoDomain/wealUnitInfoDomain"/>	
+		<reference name="wealUnitStatusDomain" target="wealUnitStatusDomain/wealUnitStatusDomain"/>
+		<reference name="wealFitProductivepowerDao" target="wealFitProductivepowerDao/wealFitProductivepowerDao"/>
+		<reference name="wealWorkerDao" target="wealWorkerDao/wealWorkerDao"/>
+		<reference name="wealCertDomain" target="wealCertDomain/wealCertDomain"/>
+	</component>
+	<!--福利企业变更-->
+	<component name="unitChangeDomain">
+		<service name="unitChangeDomain">
+			<interface.java interface="com.inspur.cams.welfare.welfarecorp.change.domain.IUnitChangeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.welfarecorp.change.domain.support.UnitChangeDomain"/>
+		<reference name="wealUnitStatusDomain" target="wealUnitStatusDomain/wealUnitStatusDomain"/>
+		<reference name="wealUnitApplysDomain" target="wealUnitApplysDomain/wealUnitApplysDomain"/>
+		<reference name="wealFitChangerecordDomain" target="wealFitChangerecordDomain/wealFitChangerecordDomain"/>
+		<reference name="wealFitChangerecordDetailDomain" target="wealFitChangerecordDetailDomain/wealFitChangerecordDetailDomain"/>
+		<reference name="wealCertDomain" target="wealCertDomain/wealCertDomain"/>
+	</component>
+</composite>

@@ -1,0 +1,26 @@
+
+body { font-family:Verdana; font-size:14px; margin:0;}
+.container {margin:0 auto; width:100%;}
+.top{margin-bottom:5px;}
+.top-right { float:left; width:40%; height:548px;}
+.top-left { float:right; width:30%; height:548px;}
+.top-center { width:100%; height:548px; }
+
+.center { height:250px; margin-bottom:5px;}
+.center-right { float:right; width:35%; height:250px; }
+.center-left {float:left; width: 50%}
+.center-center { width: 100%}
+
+.bottom { height:100px; margin-bottom:5px;}
+
+
+
+.top-left-t { height:150px;  margin-bottom:5px;}
+.top-left-c { height:194px;  margin-bottom:5px;}
+.top-left-b { height:150px;}
+
+
+.top-center-top { height:600px;  margin-bottom:5px;}
+.top-center-bottom { height:150px; }
+.top-center-b-l { float:right; width:50%; height:150px;}
+.top-center-b-r { width:100%;}

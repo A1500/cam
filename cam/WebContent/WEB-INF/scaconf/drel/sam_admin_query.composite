@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<composite name="adminQuery" xmlns="http://www.loushang.com/sca/1.0">
+	 <component name="SamAdminQueryDao">
+	    <service name="SamAdminQueryDao">
+	    	<interface.java interface="com.inspur.cams.drel.admin.dao.ISamAdminQueryDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.admin.dao.jdbc.SamAdminQueryDao"/>
+	</component>
+</composite>

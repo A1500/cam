@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Total]]></O>
+</Parameter>
+</Parameters>
+<Attributes isCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select * from Book order by [?cname|Total?]  desc]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings orientation="1" shrinkToFit="false" headerHeight="0.0" footerHeight="0.0">
+<Margin top="0.27" left="0.7499999999999999" bottom="0.27" right="0.7499999999999999" />
+</ReportSettings>
+<ReportPageAttr>
+</ReportPageAttr>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="false" delayPlaying="true" windowPosition="1" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+<WorkSheet>
+<ReportSettings shrinkToFit="false" headerHeight="0.0" footerHeight="0.0">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[72,72,62,62,72,60,62,62,62]]>
+</ColumnWidth>
+<CellElementList>
+</CellElementList>
+</WorkSheet>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<Header reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Footer>
+<RowHeight defaultValue="19">
+<![CDATA[19,19,19,19,22]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[90,175,120,90,80,80,90,100,90,85,85]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="9" s="0"><O t="S"><![CDATA[图书管理系统——书籍管理]]></O>
+</C>
+<C c="0" r="1" s="1"><O t="S"><![CDATA[查询日期：]]></O>
+</C>
+<C c="1" r="1" s="1"><O t="Formula" class="Formula" ><Attributes><![CDATA[= today()]]></Attributes></O>
+</C>
+<C c="2" r="1" s="2"></C>
+<C c="3" r="1" s="2"></C>
+<C c="4" r="1" s="2"></C>
+<C c="5" r="1" s="2"></C>
+<C c="6" r="1" s="2"></C>
+<C c="7" r="1" s="2"></C>
+<C c="8" r="1" s="2"></C>
+<C c="0" r="3" cs="9" s="3"></C>
+<C c="0" r="4" s="4"><O t="S"><![CDATA[ISBN 编 号]]></O>
+<NameJavaScriptGroup>
+<NameJavaScript name="按升序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Isbn]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+<NameJavaScript name="按降序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book1.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Isbn]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+</NameJavaScriptGroup>
+</C>
+<C c="1" r="4" s="5"><O t="S"><![CDATA[书 籍 名 称]]></O>
+<NameJavaScriptGroup>
+<NameJavaScript name="按升序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Title]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+<NameJavaScript name="按降序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book1.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Title]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+</NameJavaScriptGroup>
+</C>
+<C c="2" r="4" s="5"><O t="S"><![CDATA[书 籍 类 别]]></O>
+<NameJavaScriptGroup>
+<NameJavaScript name="按升序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Variety]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+<NameJavaScript name="按降序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book1.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Variety]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+</NameJavaScriptGroup>
+</C>
+<C c="3" r="4" s="5"><O t="S"><![CDATA[作 者]]></O>
+<NameJavaScriptGroup>
+<NameJavaScript name="按升序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Author]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+<NameJavaScript name="按降序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book1.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Author]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+</NameJavaScriptGroup>
+</C>
+<C c="4" r="4" s="5"><O t="S"><![CDATA[总藏书量]]></O>
+<NameJavaScriptGroup>
+<NameJavaScript name="按升序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Total]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+<NameJavaScript name="按降序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book1.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Total]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+</NameJavaScriptGroup>
+</C>
+<C c="5" r="4" s="6"><O t="S"><![CDATA[馆内剩余]]></O>
+<NameJavaScriptGroup>
+<NameJavaScript name="按升序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Remain]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+<NameJavaScript name="按降序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book1.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Remain]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+</NameJavaScriptGroup>
+</C>
+<C c="6" r="4" s="5"><O t="S"><![CDATA[出 版 日 期]]></O>
+<NameJavaScriptGroup>
+<NameJavaScript name="按升序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[PrintDate]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+<NameJavaScript name="按降序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book1.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[PrintDate]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+</NameJavaScriptGroup>
+</C>
+<C c="7" r="4" s="5"><O t="S"><![CDATA[出 版 社 名]]></O>
+<NameJavaScriptGroup>
+<NameJavaScript name="按升序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[BookConcern]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+<NameJavaScript name="按降序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book1.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[BookConcern]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+</NameJavaScriptGroup>
+</C>
+<C c="8" r="4" s="5"><O t="S"><![CDATA[书 架 位 置]]></O>
+<NameJavaScriptGroup>
+<NameJavaScript name="按升序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Position]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+<NameJavaScript name="按降序排列">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/book1.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="cname"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Position]]></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+</NameJavaScriptGroup>
+</C>
+<C c="0" r="5" s="7"><O t="DSColumn"><Attributes dsName="ds1" columnName="Isbn" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+<CellWriteAttr>
+</CellWriteAttr>
+</C>
+<C c="1" r="5" s="8"><O t="DSColumn"><Attributes dsName="ds1" columnName="Title" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="2" r="5" s="8"><O t="DSColumn"><Attributes dsName="ds1" columnName="Variety" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="3" r="5" s="8"><O t="DSColumn"><Attributes dsName="ds1" columnName="Author" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="4" r="5" s="9"><O t="DSColumn"><Attributes dsName="ds1" columnName="Total" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="5" r="5" s="10"><O t="DSColumn"><Attributes dsName="ds1" columnName="Remain" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="6" r="5" s="8"><O t="DSColumn"><Attributes dsName="ds1" columnName="PrintDate" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="7" r="5" s="8"><O t="DSColumn"><Attributes dsName="ds1" columnName="BookConcern" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="8" r="5" s="8"><O t="DSColumn"><Attributes dsName="ds1" columnName="Position" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="0" r="7" cs="9" s="11"><O t="S"><![CDATA[“图书管理系统——书籍管理”功能应用说明：]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="0" r="8" cs="9" s="12"><O t="S"><![CDATA[1、BS动态网页排序]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="0" r="9" cs="9" s="12"><O t="S"><![CDATA[     该表中，点击“总藏书量”、“出版日期”等标题，弹出升降序排列方式，选择任一排列方式，则页面按该排序方式重新排列。]]></O>
+</C>
+<C c="0" r="10" cs="9" s="13"><O t="S"><![CDATA[     如点击“馆内剩余”，再选择“按升序排序”，则全部书籍按照馆内图书剩余量由少至多进行排列显示。]]></O>
+</C>
+<C c="1" r="13"></C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="14" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="1" size="12" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ImageBackground"
+ specifiedImageWidth="-1.0"
+ specifiedImageHeight="-1.0"
+ layout="2">
+<Image width="271" height="20">
+<![CDATA[mDD3s_Ctrm_#OF0>K!!9WJ6!OQ7+.ZoaQ9>0E]d2laNppWiE)!WiGp)li!RsTDPW,0?[QWIV
+_g1pu1d?NUQ%!281S82*R8))W+4
+iebJi;<TD!-WQ)u!;iUeW~
+
+]]>
+</Image>
+</Background>
+<Border><Top style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" foreground="-16776961" underline="1" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" foreground="-16776961" underline="1" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" foreground="-16776961" underline="1" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

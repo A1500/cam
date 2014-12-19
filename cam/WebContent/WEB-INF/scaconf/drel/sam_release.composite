@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="SamReleaseSummaryDao" xmlns="http://www.loushang.com/sca/1.0">
+	<component name="SamReleaseSummaryDao">
+		<service name="SamReleaseSummaryDao">
+			<interface.java interface="com.inspur.cams.drel.funds.release.dao.ISamReleaseSummaryDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.funds.release.dao.support.SamReleaseSummaryDao"/>
+	</component>
+	<component name="SamReleaseDetailDao">
+		<service name="SamReleaseDetailDao">
+			<interface.java interface="com.inspur.cams.drel.funds.release.dao.ISamReleaseDetailDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.funds.release.dao.support.SamReleaseDetailDao"/>
+	</component>
+
+	<component name="SamReleaseSummaryDomain">
+		<service name="SamReleaseSummaryDomain">
+			<interface.java interface="com.inspur.cams.drel.funds.release.domain.ISamReleaseSummaryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.funds.release.domain.support.SamReleaseSummaryDomain"/>
+		<reference name="samReleaseSummaryDao" target="SamReleaseSummaryDao/SamReleaseSummaryDao"/>
+		<reference name="samReleaseDetailDao" target="SamReleaseDetailDao/SamReleaseDetailDao"/>
+	</component>
+	<component name="SamReleaseDetailDomain">
+		<service name="SamReleaseDetailDomain">
+			<interface.java interface="com.inspur.cams.drel.funds.release.domain.ISamReleaseDetailDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.funds.release.domain.support.SamReleaseDetailDomain"/>
+		<reference name="samReleaseDetailDao" target="SamReleaseDetailDao/SamReleaseDetailDao"/>
+	</component>
+		
+	<!--银行账户信息Dao -->	
+	 <component name="SamBankAccountDao">
+	    <service name="SamBankAccountDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamBankAccountDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamBankAccountDao"/>
+	</component>
+	<!--银行账户信息Domain -->	
+	 <component name="SamBankAccountDomain">
+	    <service name="SamBankAccountDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamBankAccountDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamBankAccountDomain"/>
+        <reference name="samBankAccountDao" target="SamBankAccountDao/SamBankAccountDao"/>
+	</component>
+		
+	<!--家庭信息Dao -->	
+	 <component name="BaseinfoFamilyDao">
+	    <service name="BaseinfoFamilyDao">
+	    	<interface.java interface="com.inspur.cams.comm.baseinfo.dao.IBaseinfoFamilyDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.comm.baseinfo.dao.jdbc.BaseinfoFamilyDao"/>
+	</component>
+	<!--家庭信息Domain -->	
+	 <component name="BaseinfoFamilyDomain">
+	    <service name="BaseinfoFamilyDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.IBaseinfoFamilyDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.BaseinfoFamilyDomain"/>
+        <reference name="baseinfoFamilyDao" target="BaseinfoFamilyDao/BaseinfoFamilyDao"/>
+	</component>
+		
+	<!--家庭信息_归档Dao -->	
+	 <component name="BaseinfoFamilyArchiveDao">
+	    <service name="BaseinfoFamilyArchiveDao">
+	    	<interface.java interface="com.inspur.cams.drel.archive.baseinfofamilyarchive.dao.IBaseinfoFamilyArchiveDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.baseinfofamilyarchive.dao.jdbc.BaseinfoFamilyArchiveDao"/>
+	</component>
+	<!--家庭信息_归档Domain -->	
+	 <component name="BaseinfoFamilyArchiveDomain">
+	    <service name="BaseinfoFamilyArchiveDomain">
+	    	<interface.java interface="com.inspur.cams.drel.archive.baseinfofamilyarchive.domain.IBaseinfoFamilyArchiveDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.baseinfofamilyarchive.domain.support.BaseinfoFamilyArchiveDomain"/>
+        <reference name="baseinfoFamilyArchiveDao" target="BaseinfoFamilyArchiveDao/BaseinfoFamilyArchiveDao"/>
+	</component>
+		
+	<!--人员信息_归档Dao -->	
+	 <component name="BaseinfoPeopleArchiveDao">
+	    <service name="BaseinfoPeopleArchiveDao">
+	    	<interface.java interface="com.inspur.cams.drel.archive.baseinfopeoplearchive.dao.IBaseinfoPeopleArchiveDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.baseinfopeoplearchive.dao.jdbc.BaseinfoPeopleArchiveDao"/>
+	</component>
+	<!--人员信息_归档Domain -->	
+	 <component name="BaseinfoPeopleArchiveDomain">
+	    <service name="BaseinfoPeopleArchiveDomain">
+	    	<interface.java interface="com.inspur.cams.drel.archive.baseinfopeoplearchive.domain.IBaseinfoPeopleArchiveDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.baseinfopeoplearchive.domain.support.BaseinfoPeopleArchiveDomain"/>
+        <reference name="baseinfoPeopleArchiveDao" target="BaseinfoPeopleArchiveDao/BaseinfoPeopleArchiveDao"/>
+	</component>
+		
+	<!--资金发放统计Dao -->	
+	 <component name="SamReleaseStatDao">
+	    <service name="SamReleaseStatDao">
+	    	<interface.java interface="com.inspur.cams.drel.funds.release.dao.ISamReleaseStatDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.funds.release.dao.support.SamReleaseStatDao"/>
+	</component>
+	<!--资金发放统计Domain -->	
+	 <component name="SamReleaseStatDomain">
+	    <service name="SamReleaseStatDomain">
+	    	<interface.java interface="com.inspur.cams.drel.funds.release.domain.ISamReleaseStatDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.funds.release.domain.support.SamReleaseStatDomain"/>
+        <reference name="samReleaseStatDao" target="SamReleaseStatDao/SamReleaseStatDao"/>
+	</component>
+</composite>

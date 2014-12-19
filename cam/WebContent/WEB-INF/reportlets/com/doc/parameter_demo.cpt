@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select ClassNo,Name,Sex,Course,Grade from StScore]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="false" headerHeight="0.33" footerHeight="0.33">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+<Background name="NullBackground" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+<Parameter>
+<Attributes name="Max"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[100]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="Course"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[English]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.TableDataDictionary">
+<TableDataDictAttr keyColumnIndex="1" valueColumnIndex="1">
+<TableData class="com.fr.data.impl.NameTableData">
+<Name><![CDATA[Course]]></Name>
+</TableData>
+</TableDataDictAttr>
+</Dict></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="Point_System"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[100]]></O>
+<CellEditorDef class="com.fr.report.cellElement.NumberCellEditorDef"><Attributes allowBlank="true" />
+<Attribute maxIntegerLength="32" maxDecimalLength="16" allowDecimals="false" allowNegative="false" minValue="0.0" maxValue="100.0" />
+</CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="ClassNo"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Class1]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.TableDataDictionary">
+<TableDataDictAttr keyColumnIndex="1" valueColumnIndex="1">
+<TableData class="com.fr.data.impl.NameTableData">
+<Name><![CDATA[ClassNo]]></Name>
+</TableData>
+</TableDataDictAttr>
+</Dict></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="Min"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[0]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="1" userDefineWindow="true" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+<WorkSheet>
+<ReportSettings shrinkToFit="false" headerHeight="0.33" footerHeight="0.33">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[72,72,72,72,114]]>
+</ColumnWidth>
+<CellElementList>
+<C c="4" r="0"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="5" r="0"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="6" r="0"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="7" r="0"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="8" r="0"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="4" r="1" s="0"><O t="S"><![CDATA[ClassNo]]></O>
+</C>
+<C c="5" r="1" cs="3"><O t="PR" >
+<ParameterRef name="ClassNo" />
+</O>
+</C>
+<C c="8" r="1"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="9" r="1"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="4" r="2" s="0"><O t="S"><![CDATA[Course]]></O>
+</C>
+<C c="5" r="2" cs="3" s="1"><O t="PR" >
+<ParameterRef name="Course" />
+</O>
+</C>
+<C c="8" r="2"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="9" r="2"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="4" r="3" s="0"><O t="S"><![CDATA[Grade from]]></O>
+</C>
+<C c="5" r="3" s="1"><O t="PR" >
+<ParameterRef name="Min" />
+</O>
+</C>
+<C c="6" r="3" s="0"><O t="S"><![CDATA[to]]></O>
+</C>
+<C c="7" r="3" s="1"><O t="PR" >
+<ParameterRef name="Max" />
+</O>
+</C>
+<C c="8" r="3"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="4" r="4" s="0"><O t="S"><![CDATA[Point Stytem]]></O>
+</C>
+<C c="5" r="4" cs="3" s="1"><O t="PR" >
+<ParameterRef name="Point_System" />
+</O>
+</C>
+<C c="8" r="4"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="4" r="5"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="5" r="5"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="6" r="5"><O t="PB" >
+<ParameterButton name="查询" type="0" />
+</O>
+</C>
+<C c="7" r="5"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="8" r="5"><O t="S"><![CDATA[]]></O>
+</C>
+</CellElementList>
+</WorkSheet>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[80,109,92,92,99,90]]>
+</ColumnWidth>
+<CellElementList>
+<C c="6" r="1"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="2" s="2"><O t="S"><![CDATA[Class]]></O>
+</C>
+<C c="2" r="2" s="2"><O t="S"><![CDATA[Name]]></O>
+</C>
+<C c="3" r="2" s="2"><O t="S"><![CDATA[Sex]]></O>
+</C>
+<C c="4" r="2" s="2"><O t="S"><![CDATA[Course]]></O>
+</C>
+<C c="5" r="2" s="2"><O t="Formula" class="Formula" ><Attributes><![CDATA[="Grade("+$Point_System+")"]]></Attributes></O>
+</C>
+<C c="6" r="2"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="3" s="1"><O t="DSColumn"><Attributes dsName="ds1" columnName="ClassNo" />
+<Condition class="com.fr.data.condition.ListCondition"><JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[ClassNo]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="ClassNo"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[Class2]]></O>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Course]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="Course"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[English]]></O>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+</Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="2" r="3" s="1"><O t="DSColumn"><Attributes dsName="ds1" columnName="Name" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="3" r="3" s="1"><O t="DSColumn"><Attributes dsName="ds1" columnName="Sex" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="4" r="3" s="1"><O t="DSColumn"><Attributes dsName="ds1" columnName="Course" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="5" r="3" s="1"><O t="DSColumn"><Attributes dsName="ds1" columnName="Grade" />
+<Condition class="com.fr.data.condition.ListCondition"><JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Grade]]></CNAME><Compare op="3">
+<Parameter>
+<Attributes name="Min"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[0]]></O>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Grade]]></CNAME><Compare op="5">
+<Parameter>
+<Attributes name="Max"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[100]]></O>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+</Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[=($$$/100)*$Point_System]]></Result></O>
+<Expand dir="0" />
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" /><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" /><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-103">
+</Background>
+<Border><Top style="1" /><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+</StyleList>
+</WorkBook>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<composite name="exchange" xmlns="http://www.loushang.com/sca/1.0">
+	 <component name="DataExChangeMarry">
+	    <service name="DataExChangeMarry">
+	    	<interface.java interface="com.inspur.cams.dataexchange.marry.domain.IDataExChangeMarry"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+       	 <implementation.java impl="com.inspur.cams.dataexchange.marry.domain.support.DataExChangeMarry"/>
+        <reference name="marryregDomain" target="MarryregDomain/MarryregDomain"/>
+        <reference name="dataExChangeLoginHandle" target="DataExChangeLoginHandle/DataExChangeLoginHandle"/>
+         <reference name="dataExChangeLogDao" target="dataExChangeLogDao/dataExChangeLogDao"/>
+	</component>
+	
+	 <component name="DataExChangeFis">
+	    <service name="DataExChangeFis">
+	    	<interface.java interface="com.inspur.cams.dataexchange.fis.domain.IDataExChangeFis"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+       	 <implementation.java impl="com.inspur.cams.dataexchange.fis.domain.support.DataExChangeFis"/>
+         <reference name="dataExChangeLoginHandle" target="DataExChangeLoginHandle/DataExChangeLoginHandle"/>
+         <reference name="dataExChangeLogDao" target="dataExChangeLogDao/dataExChangeLogDao"/>
+	</component>
+	
+	<component name="DataExChangeLoginHandle">
+	    <service name="DataExChangeLoginHandle">
+	    	<interface.java interface="com.inspur.cams.dataexchange.util.IDataExChangeLoginHandle"/>
+        	<binding.sca/>
+        </service>
+       	 <implementation.java impl="com.inspur.cams.dataexchange.util.DataExChangeLoginHandle"/>
+	</component>
+	
+	<component name="dataExChangeLogDao">
+		<service name="dataExChangeLogDao">
+			<interface.java interface="com.inspur.cams.dataexchange.log.IDataExChangeLogDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dataexchange.log.DataExChangeLogDao"/>
+	</component>
+</composite>

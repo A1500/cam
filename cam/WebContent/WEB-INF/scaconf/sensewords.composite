@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="aaahelpUrl" xmlns="http://www.loushang.com/sca/1.0">
+    <description>sensewords</description>
+	<component name="SenseWordDao">
+	    <service name="SenseWordDao">
+	    	<interface.java interface="org.loushang.live.sensewords.dao.ISenseWordDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.live.sensewords.dao.SenseWordDao"/>	
+    </component>
+    
+    
+    <component name="SenseWordImpl">
+	    <service name="SenseWordImpl">
+	    	<interface.java interface="org.loushang.live.sensewords.domain.ISenseWord"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.live.sensewords.domain.SenseWordImpl"/>	
+        <reference name="senseWordDao" target="SenseWordDao.SenseWordDao"/>
+        <reference name="pubUserInfo" target="pubUserInfo/pubUserInfo"/>
+    </component>
+
+<!--标签的SCA组件-->
+	<component name="signDao">
+	    <service name="signDao">
+	    	<interface.java interface="org.loushang.live.sign.dao.ISignDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.live.sign.dao.SignDao"/>	
+    </component>
+    
+    
+    <component name="SignImpl">
+	    <service name="SignImpl">
+	    	<interface.java interface="org.loushang.live.sign.domain.ISign"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.live.sign.domain.SignImpl"/>	
+        <reference name="signDao" target="signDao/signDao"/>
+        <reference name="pubUserInfo" target="pubUserInfo/pubUserInfo"/>
+    </component>
+    
+ </composite>

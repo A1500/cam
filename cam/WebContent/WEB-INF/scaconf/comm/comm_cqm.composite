@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--模型-->
+	<component name="cqmModuleDao">
+		<service name="cqmModuleDao">
+			<interface.java interface="com.inspur.comm.cqm.base.dao.ICqmModuleDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.comm.cqm.base.dao.jdbc.CqmModuleDao"/>
+    </component>
+	<component name="cqmModuleDomain">
+		<service name="cqmModuleDomain">
+			<interface.java interface="com.inspur.comm.cqm.base.domain.ICqmModuleDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.comm.cqm.base.domain.support.CqmModuleDomain"/>
+		<reference name="cqmModuleDao" target="cqmModuleDao/cqmModuleDao"/>
+	</component>
+	<!--视图-->
+	<component name="cqmViewDao">
+		<service name="cqmViewDao">
+			<interface.java interface="com.inspur.comm.cqm.base.dao.ICqmViewDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.comm.cqm.base.dao.jdbc.CqmViewDao"/>
+    </component>
+	<component name="cqmViewDomain">
+		<service name="cqmViewDomain">
+			<interface.java interface="com.inspur.comm.cqm.base.domain.ICqmViewDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.comm.cqm.base.domain.support.CqmViewDomain"/>
+		<reference name="cqmViewDao" target="cqmViewDao/cqmViewDao"/>
+		<reference name="cqmColDomain" target="cqmColDomain/cqmColDomain"/>
+	</component>
+	<!--属性-->
+	<component name="cqmColDao">
+		<service name="cqmColDao">
+			<interface.java interface="com.inspur.comm.cqm.base.dao.ICqmColDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.comm.cqm.base.dao.jdbc.CqmColDao"/>
+    </component>
+	<component name="cqmColDomain">
+		<service name="cqmColDomain">
+			<interface.java interface="com.inspur.comm.cqm.base.domain.ICqmColDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.comm.cqm.base.domain.support.CqmColDomain"/>
+		<reference name="cqmColDao" target="cqmColDao/cqmColDao"/>
+	</component>
+	<!--指标-->
+	<component name="cqmIndexDao">
+		<service name="cqmIndexDao">
+			<interface.java interface="com.inspur.comm.cqm.base.dao.ICqmIndexDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.comm.cqm.base.dao.jdbc.CqmIndexDao"/>
+    </component>
+	<component name="cqmIndexDomain">
+		<service name="cqmIndexDomain">
+			<interface.java interface="com.inspur.comm.cqm.base.domain.ICqmIndexDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.comm.cqm.base.domain.support.CqmIndexDomain"/>
+		<reference name="cqmIndexDao" target="cqmIndexDao/cqmIndexDao"/>
+	</component>
+	<!--视图模型关联表-->
+	<component name="cqmViewRelDao">
+		<service name="cqmViewRelDao">
+			<interface.java interface="com.inspur.comm.cqm.base.dao.ICqmViewRelDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.comm.cqm.base.dao.jdbc.CqmViewRelDao"/>
+    </component>
+	<component name="cqmViewRelDomain">
+		<service name="cqmViewRelDomain">
+			<interface.java interface="com.inspur.comm.cqm.base.domain.ICqmViewRelDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.comm.cqm.base.domain.support.CqmViewRelDomain"/>
+		<reference name="cqmViewRelDao" target="cqmViewRelDao/cqmViewRelDao"/>
+	</component>
+	<!--自定义统计报表-->
+	<component name="cqmReportDao">
+		<service name="cqmReportDao">
+			<interface.java interface="com.inspur.comm.cqm.base.dao.ICqmReportDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.comm.cqm.base.dao.jdbc.CqmReportDao"/>
+    </component>
+	<component name="cqmReportDomain">
+		<service name="cqmReportDomain">
+			<interface.java interface="com.inspur.comm.cqm.base.domain.ICqmReportDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.comm.cqm.base.domain.support.CqmReportDomain"/>
+		<reference name="cqmReportDao" target="cqmReportDao/cqmReportDao"/>
+		<reference name="cqmIndexDomain" target="cqmIndexDomain/cqmIndexDomain"/>
+		<reference name="cqmUseViewDomain" target="cqmUseViewDomain/cqmUseViewDomain"/>
+		<reference name="cqmUseColDomain" target="cqmUseColDomain/cqmUseColDomain"/>
+		<reference name="cqmUseConditionDomain" target="cqmUseConditionDomain/cqmUseConditionDomain"/>
+	</component>
+	<!--自定义报表使用视图-->
+	<component name="cqmUseViewDao">
+		<service name="cqmUseViewDao">
+			<interface.java interface="com.inspur.comm.cqm.base.dao.ICqmUseViewDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.comm.cqm.base.dao.jdbc.CqmUseViewDao"/>
+    </component>
+	<component name="cqmUseViewDomain">
+		<service name="cqmUseViewDomain">
+			<interface.java interface="com.inspur.comm.cqm.base.domain.ICqmUseViewDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.comm.cqm.base.domain.support.CqmUseViewDomain"/>
+		<reference name="cqmUseViewDao" target="cqmUseViewDao/cqmUseViewDao"/>
+	</component>
+	<!--自定义报表使用列-->
+	<component name="cqmUseColDao">
+		<service name="cqmUseColDao">
+			<interface.java interface="com.inspur.comm.cqm.base.dao.ICqmUseColDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.comm.cqm.base.dao.jdbc.CqmUseColDao"/>
+    </component>
+	<component name="cqmUseColDomain">
+		<service name="cqmUseColDomain">
+			<interface.java interface="com.inspur.comm.cqm.base.domain.ICqmUseColDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.comm.cqm.base.domain.support.CqmUseColDomain"/>
+		<reference name="cqmUseColDao" target="cqmUseColDao/cqmUseColDao"/>
+	</component>
+	<!--自定义报表查询列过滤-->
+	<component name="cqmUseSearchDao">
+		<service name="cqmUseSearchDao">
+			<interface.java interface="com.inspur.comm.cqm.base.dao.ICqmUseSearchDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.comm.cqm.base.dao.jdbc.CqmUseSearchDao"/>
+    </component>
+	<component name="cqmUseSearchDomain">
+		<service name="cqmUseSearchDomain">
+			<interface.java interface="com.inspur.comm.cqm.base.domain.ICqmUseSearchDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.comm.cqm.base.domain.support.CqmUseSearchDomain"/>
+		<reference name="cqmUseSearchDao" target="cqmUseSearchDao/cqmUseSearchDao"/>
+	</component>
+	<!--自定义报表查询查询条件-->
+	<component name="cqmUseConditionDao">
+		<service name="cqmUseConditionDao">
+			<interface.java interface="com.inspur.comm.cqm.base.dao.ICqmUseConditionDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.comm.cqm.base.dao.jdbc.CqmUseConditionDao"/>
+    </component>
+	<component name="cqmUseConditionDomain">
+		<service name="cqmUseConditionDomain">
+			<interface.java interface="com.inspur.comm.cqm.base.domain.ICqmUseConditionDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.comm.cqm.base.domain.support.CqmUseConditionDomain"/>
+		<reference name="cqmUseConditionDao" target="cqmUseConditionDao/cqmUseConditionDao"/>
+	</component>
+</composite>

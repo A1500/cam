@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--社会组织评估类型-->
+	<component name="somAssessTypeDomain">
+		<service name="somAssessTypeDomain">
+			<interface.java interface="com.inspur.cams.sorg.assess.assesstype.domain.ISomAssessTypeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.assess.assesstype.domain.SomAssessTypeDomain"/>	
+	</component>
+	<!--社会组织评估-->
+	<component name="somAssessDomain">
+		<service name="somAssessDomain">
+			<interface.java interface="com.inspur.cams.sorg.assess.assess.domain.ISomAssessDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.assess.assess.domain.SomAssessDomain"/>	
+	</component>
+</composite>

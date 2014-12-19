@@ -1,0 +1,15 @@
+;Delphi-generated INF file for ISEditPhoto.ocx
+[Add.Code]
+ISEditPhoto.ocx=ISEditPhoto.ocx
+ISEditPhotoDll.dll=ISEditPhotoDll.dll
+
+[ISEditPhoto.ocx]
+file=ISEditPhoto.cab
+clsid={B5E53D86-656C-4A44-A1BB-00C80523F0E0}
+RegisterServer=yes
+FileVersion=1,0,0,2
+
+[ISEditPhotoDll.dll]
+file=ISEditPhoto.cab
+FileVersion=1,0,0,1
+DestDir=11

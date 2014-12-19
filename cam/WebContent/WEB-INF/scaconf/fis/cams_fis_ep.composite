@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="fiso" xmlns="http://www.loushang.com/sca/1.0">
+	<!--   公墓补录 Dao-->
+	<component name="FisCemeDao">
+		<service name="FisCemeDao">
+			<interface.java interface="com.inspur.cams.fis.ep.base.dao.IFisCemeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ep.base.dao.jdbc.FisCemeDao"/>
+    </component> 
+    <!--   公墓公墓历史审批事项 Dao-->
+	<component name="FisCemeItemsDao">
+		<service name="FisCemeItemsDao">
+			<interface.java interface="com.inspur.cams.fis.ep.base.dao.IFisCemeItemsDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ep.base.dao.jdbc.FisCemeItemsDao"/>
+    </component> 
+    <!--   公墓政府部门批准 Dao-->
+	<component name="FisCemeGovApprovalDao">
+		<service name="FisCemeGovApprovalDao">
+			<interface.java interface="com.inspur.cams.fis.ep.base.dao.IFisCemeGovApprovalDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ep.base.dao.jdbc.FisCemeGovApprovalDao"/>
+    </component> 
+    <!--   公墓土地证 Dao-->
+	<component name="FisCemeLandcardDao">
+		<service name="FisCemeLandcardDao">
+			<interface.java interface="com.inspur.cams.fis.ep.base.dao.IFisCemeLandcardDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ep.base.dao.jdbc.FisCemeLandcardDao"/>
+    </component> 
+    <!--   公墓补录Domain-->
+	<component name="FisCemeDomain">
+		<service name="FisCemeDomain">
+			<interface.java interface="com.inspur.cams.fis.ep.base.domain.IFisCemeDomain"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ep.base.domain.support.FisCemeDomain"/>
+    	<reference name="fiscemeDao" target="FisCemeDao/FisCemeDao"/>
+    	<reference name="fisCemeItemsDao" target="FisCemeItemsDao/FisCemeItemsDao"/>
+    	<reference name="fisCemeGovApprovalDao" target="FisCemeGovApprovalDao/FisCemeGovApprovalDao"/>
+    	<reference name="fisCemeLandcardDao" target="FisCemeLandcardDao/FisCemeLandcardDao"/>
+    </component> 
+    
+    <!--   公墓年检基本信息  Dao-->
+	<component name="FisCemeCheckInfoDao">
+		<service name="FisCemeCheckInfoDao">
+			<interface.java interface="com.inspur.cams.fis.ep.base.dao.IFisCemeCheckInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ep.base.dao.jdbc.FisCemeCheckInfoDao"/>
+    </component>
+    
+        <!--   公墓年检得分信息  Dao-->
+    <!--
+	<component name="FisCemeCheckScoreDao">
+		<service name="FisCemeCheckScoreDao">
+			<interface.java interface="com.inspur.cams.fis.ep.base.dao.IFisCemeCheckScoreDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ep.base.dao.jdbc.FisCemeCheckScoreDao"/>
+    </component>
+    -->
+      
+    <!--   公墓年检 公墓年检审核记录  Dao-->
+	<component name="FisCemeCheckAuditDao">
+		<service name="FisCemeCheckAuditDao">
+			<interface.java interface="com.inspur.cams.fis.ep.base.dao.IFisCemeCheckAuditDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ep.base.dao.jdbc.FisCemeCheckAuditDao"/>
+    </component>
+    
+    <!--   公墓年检 公墓年检附件  Dao-->
+	<component name="FisCemeAccessoriesDao">
+		<service name="FisCemeAccessoriesDao">
+			<interface.java interface="com.inspur.cams.fis.ep.base.dao.IFisCemeAccessoriesDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ep.base.dao.jdbc.FisCemeAccessoriesDao"/>
+    </component>
+    
+    
+    <!--   公墓年检 公墓结果  Dao-->
+	<component name="FisCemeCheckResultDao">
+		<service name="FisCemeCheckResultDao">
+			<interface.java interface="com.inspur.cams.fis.ep.base.dao.IFisCemeCheckResultDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ep.base.dao.jdbc.FisCemeCheckResultDao"/>
+    </component>
+    
+    <!--   公墓年检 工作流  Dao-->
+	<component name="FisCemeCheckWfDao">
+		<service name="FisCemeCheckWfDao">
+			<interface.java interface="com.inspur.cams.fis.ep.base.dao.IFisCemeCheckWfDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ep.base.dao.jdbc.FisCemeCheckWfDao"/>
+    </component>
+    
+    <!--   公墓年检 Domain-->
+    <!--
+	<component name="FisCemeCheckDomain">
+		<service name="FisCemeCheckDomain">
+			<interface.java interface="com.inspur.cams.fis.ep.base.domain.IFisCemeCheckDomain"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ep.base.domain.support.FisCemeCheckDomain"/>
+    	<reference name="fisCemeCheckWfDao" target="FisCemeCheckWfDao/FisCemeCheckWfDao"/>
+    	<reference name="fisCemeCheckResultDao" target="FisCemeCheckResultDao/FisCemeCheckResultDao"/>
+    	<reference name="fisCemeCheckAuditDao" target="FisCemeCheckAuditDao/FisCemeCheckAuditDao"/>
+    	<reference name="fisCemeAccessoriesDao" target="FisCemeAccessoriesDao/FisCemeAccessoriesDao"/>
+    	<reference name="fisCemeCheckInfoDao" target="FisCemeCheckInfoDao/FisCemeCheckInfoDao"/>
+    	<reference name="fisCemeCheckScoreDao" target="FisCemeCheckScoreDao/FisCemeCheckScoreDao"/>
+    	<reference name="fisCemeDao" target="FisCemeDao/FisCemeDao"/>
+    </component> 
+    -->
+    
+	
+</composite>	

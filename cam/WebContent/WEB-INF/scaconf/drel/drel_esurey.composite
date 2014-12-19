@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="SamEsureyFamilyDao" xmlns="http://www.loushang.com/sca/1.0">
+<!--经济核对_家庭申报信息Dao-->
+		<component name="SamEsureyFamilyDao">
+	    <service name="SamEsureyFamilyDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureyFamilyDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureyFamilyDao"/>
+    </component>
+<!--经济核对_人员申报信息Dao-->
+		<component name="SamEsureyPeopleDao">
+	    <service name="SamEsureyPeopleDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureyPeopleDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureyPeopleDao"/>
+    </component>    
+<!--经济核对_家庭申报信息Domain-->    
+    <component name="SamEsureyFamilyDomain">
+	    <service name="SamEsureyFamilyDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureyFamilyDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureyFamilyDomain"/>
+        <reference name="samEsureyPeopleDao" target="SamEsureyPeopleDao/SamEsureyPeopleDao"/>
+        <reference name="samEsureyFamilyDao" target="SamEsureyFamilyDao/SamEsureyFamilyDao"/>
+        <reference name="samEsureySocialDomain" target="SamEsureySocialDomain/SamEsureySocialDomain"/>
+        <reference name="samEsureyRelationDomain" target="SamEsureyRelationDomain/SamEsureyRelationDomain"/>
+        <reference name="samEsureyHouseDomain" target="SamEsureyHouseDomain/SamEsureyHouseDomain"/>
+        <reference name="samEsureyBusinessDomain" target="SamEsureyBusinessDomain/SamEsureyBusinessDomain"/>
+        <reference name="samEsureyCarDomain" target="SamEsureyCarDomain/SamEsureyCarDomain"/>
+        <reference name="samEsureyTaxDomain" target="SamEsureyTaxDomain/SamEsureyTaxDomain"/>
+        <reference name="samEsureyBankDomain" target="SamEsureyBankDomain/SamEsureyBankDomain"/>
+        <reference name="samEsureySecuritiesDomain" target="SamEsureySecuritiesDomain/SamEsureySecuritiesDomain"/>
+        <reference name="samEsureyInsuranceDomain" target="SamEsureyInsuranceDomain/SamEsureyInsuranceDomain"/>
+        <reference name="samEsureyHousingFundDomain" target="SamEsureyHousingFundDomain/SamEsureyHousingFundDomain"/>
+        <reference name="samEsureyPeopleEstateDomain" target="SamEsureyPeopleEstateDomain/SamEsureyPeopleEstateDomain"/>
+    </component>
+<!--经济核对_人员申报信息Domain-->    	
+     <component name="SamEsureyPeopleDomain">
+	    <service name="SamEsureyPeopleDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureyPeopleDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureyPeopleDomain"/>
+        <reference name="samEsureyPeopleDao" target="SamEsureyPeopleDao/SamEsureyPeopleDao"/>
+        <reference name="samEsureyFamilyDomain" target="SamEsureyFamilyDomain/SamEsureyFamilyDomain"/>
+        <reference name="samEsureySocialDomain" target="SamEsureySocialDomain/SamEsureySocialDomain"/>
+        <reference name="samEsureyRelationDomain" target="SamEsureyRelationDomain/SamEsureyRelationDomain"/>
+        <reference name="samEsureyHouseDomain" target="SamEsureyHouseDomain/SamEsureyHouseDomain"/>
+        <reference name="samEsureyBusinessDomain" target="SamEsureyBusinessDomain/SamEsureyBusinessDomain"/>
+        <reference name="samEsureyCarDomain" target="SamEsureyCarDomain/SamEsureyCarDomain"/>
+        <reference name="samEsureyTaxDomain" target="SamEsureyTaxDomain/SamEsureyTaxDomain"/>
+        <reference name="samEsureyBankDomain" target="SamEsureyBankDomain/SamEsureyBankDomain"/>
+        <reference name="samEsureySecuritiesDomain" target="SamEsureySecuritiesDomain/SamEsureySecuritiesDomain"/>
+        <reference name="samEsureyInsuranceDomain" target="SamEsureyInsuranceDomain/SamEsureyInsuranceDomain"/>
+        <reference name="samEsureyHousingFundDomain" target="SamEsureyHousingFundDomain/SamEsureyHousingFundDomain"/>
+        <reference name="samEsureyPeopleEstateDomain" target="SamEsureyPeopleEstateDomain/SamEsureyPeopleEstateDomain"/>
+	</component>
+<!--申报信息_抚养关系Dao-->
+		<component name="SamEsureyRelationDao">
+	    <service name="SamEsureyRelationDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureyRelationDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureyRelationDao"/>
+    </component>
+<!--申报信息_抚养关系Domain-->    	
+     <component name="SamEsureyRelationDomain">
+	    <service name="SamEsureyRelationDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureyRelationDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureyRelationDomain"/>
+        <reference name="samEsureyRelationDao" target="SamEsureyRelationDao/SamEsureyRelationDao"/>
+	</component>    
+<!--经济核对_外部单位填报信息Dao-->
+		<component name="SamEsureyFeedbackDao">
+	    <service name="SamEsureyFeedbackDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureyFeedbackDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureyFeedbackDao"/>
+    </component>
+<!--经济核对_外部单位填报信息Domain-->    	
+     <component name="SamEsureyFeedbackDomain">
+	    <service name="SamEsureyFeedbackDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureyFeedbackDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureyFeedbackDomain"/>
+        <reference name="samEsureyFeedbackDao" target="SamEsureyFeedbackDao/SamEsureyFeedbackDao"/>
+	</component>
+	
+	<!--经济核对_社保信息Dao-->
+		<component name="SamEsureySocialDao">
+	    <service name="SamEsureySocialDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureySocialDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureySocialDao"/>
+    </component>
+	<!--经济核对_社保信息Domain-->    	
+     <component name="SamEsureySocialDomain">
+	    <service name="SamEsureySocialDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureySocialDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureySocialDomain"/>
+        <reference name="samEsureySocialDao" target="SamEsureySocialDao/SamEsureySocialDao"/>
+	</component>
+	
+	<!--经济核对_房管信息Dao-->
+		<component name="SamEsureyHouseDao">
+	    <service name="SamEsureyHouseDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureyHouseDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureyHouseDao"/>
+    </component>
+	<!--经济核对_房管信息Domain-->    	
+     <component name="SamEsureyHouseDomain">
+	    <service name="SamEsureyHouseDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureyHouseDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureyHouseDomain"/>
+        <reference name="samEsureyHouseDao" target="SamEsureyHouseDao/SamEsureyHouseDao"/>
+	</component>
+	
+	<!--经济核对_工商信息Dao-->
+		<component name="SamEsureyBusinessDao">
+	    <service name="SamEsureyBusinessDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureyBusinessDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureyBusinessDao"/>
+    </component>
+	<!--经济核对_工商信息Domain-->    	
+     <component name="SamEsureyBusinessDomain">
+	    <service name="SamEsureyBusinessDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureyBusinessDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureyBusinessDomain"/>
+        <reference name="samEsureyBusinessDao" target="SamEsureyBusinessDao/SamEsureyBusinessDao"/>
+	</component>
+	
+	<!--经济核对_公安信息Dao-->
+		<component name="SamEsureyCarDao">
+	    <service name="SamEsureyCarDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureyCarDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureyCarDao"/>
+    </component>
+	<!--经济核对_公安信息Domain-->    	
+     <component name="SamEsureyCarDomain">
+	    <service name="SamEsureyCarDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureyCarDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureyCarDomain"/>
+        <reference name="samEsureyCarDao" target="SamEsureyCarDao/SamEsureyCarDao"/>
+	</component>
+	
+	<!--经济核对_ 国税信息Dao-->
+		<component name="SamEsureyTaxDao">
+	    <service name="SamEsureyTaxDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureyTaxDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureyTaxDao"/>
+    </component>
+	<!--经济核对_国税信息Domain-->    	
+     <component name="SamEsureyTaxDomain">
+	    <service name="SamEsureyTaxDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureyTaxDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureyTaxDomain"/>
+        <reference name="samEsureyTaxDao" target="SamEsureyTaxDao/SamEsureyTaxDao"/>
+	</component>
+	
+	<!--经济核对_ 银行信息Dao-->
+		<component name="SamEsureyBankDao">
+	    <service name="SamEsureyBankDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureyBankDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureyBankDao"/>
+    </component>
+	<!--经济核对_银行信息Domain-->    	
+     <component name="SamEsureyBankDomain">
+	    <service name="SamEsureyBankDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureyBankDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureyBankDomain"/>
+        <reference name="samEsureyBankDao" target="SamEsureyBankDao/SamEsureyBankDao"/>
+	</component>
+	
+	<!--经济核对_ 证监信息Dao-->
+		<component name="SamEsureySecuritiesDao">
+	    <service name="SamEsureySecuritiesDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureySecuritiesDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureySecuritiesDao"/>
+    </component>
+	<!--经济核对_证监信息Domain-->    	
+     <component name="SamEsureySecuritiesDomain">
+	    <service name="SamEsureySecuritiesDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureySecuritiesDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureySecuritiesDomain"/>
+        <reference name="samEsureySecuritiesDao" target="SamEsureySecuritiesDao/SamEsureySecuritiesDao"/>
+	</component>
+	
+	<!--经济核对_ 保监信息Dao-->
+		<component name="SamEsureyInsuranceDao">
+	    <service name="SamEsureyInsuranceDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureyInsuranceDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureyInsuranceDao"/>
+    </component>
+	<!--经济核对_保监信息Domain-->    	
+     <component name="SamEsureyInsuranceDomain">
+	    <service name="SamEsureyInsuranceDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureyInsuranceDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureyInsuranceDomain"/>
+        <reference name="samEsureyInsuranceDao" target="SamEsureyInsuranceDao/SamEsureyInsuranceDao"/>
+	</component>
+	
+	<!--经济核对_ 公积金信息Dao-->
+		<component name="SamEsureyHousingFundDao">
+	    <service name="SamEsureyHousingFundDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureyHousingFundDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureyHousingFundDao"/>
+    </component>
+	<!--经济核对_公积金信息Domain-->    	
+     <component name="SamEsureyHousingFundDomain">
+	    <service name="SamEsureyHousingFundDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureyHousingFundDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureyHousingFundDomain"/>
+        <reference name="samEsureyHousingFundDao" target="SamEsureyHousingFundDao/SamEsureyHousingFundDao"/>
+	</component>
+	
+	<!--经济核对_核对流水Dao-->
+		<component name="SamEsureySurveyDao">
+	    <service name="SamEsureySurveyDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureySurveyDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureySurveyDao"/>
+    </component>
+	<!--经济核对_核对流水Domain-->    	
+     <component name="SamEsureySurveyDomain">
+	    <service name="SamEsureySurveyDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureySurveyDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureySurveyDomain"/>
+        <reference name="samEsureySurveyDao" target="SamEsureySurveyDao/SamEsureySurveyDao"/>
+        <reference name="samEsureyOrganConfigDao" target="SamEsureyOrganConfigDao/SamEsureyOrganConfigDao"/>
+        <reference name="samEsureyFamilyDao" target="SamEsureyFamilyDao/SamEsureyFamilyDao"/>
+        <reference name="samEsureyFeedbackDao" target="SamEsureyFeedbackDao/SamEsureyFeedbackDao"/>
+	</component>
+<!--经济核对_财产收入申报信息-->
+		<component name="SamEsureyPeopleEstateDao">
+	    <service name="SamEsureyPeopleEstateDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureyPeopleEstateDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureyPeopleEstateDao"/>
+    </component>
+<!--经济核对_财产收入申报信息-->    	
+     <component name="SamEsureyPeopleEstateDomain">
+	    <service name="SamEsureyPeopleEstateDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureyPeopleEstateDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureyPeopleEstateDomain"/>
+        <reference name="samEsureyPeopleEstateDao" target="SamEsureyPeopleEstateDao/SamEsureyPeopleEstateDao"/>
+        <reference name="samEsureySocialDao" target="SamEsureySocialDao/SamEsureySocialDao"/>
+        <reference name="samEsureyHouseDao" target="SamEsureyHouseDao/SamEsureyHouseDao"/>
+        <reference name="samEsureyCarDao" target="SamEsureyCarDao/SamEsureyCarDao"/>
+        <reference name="samEsureyBankDao" target="SamEsureyBankDao/SamEsureyBankDao"/>
+        <reference name="samEsureySecuritiesDao" target="SamEsureySecuritiesDao/SamEsureySecuritiesDao"/>
+	</component>    	
+<!--经济核对_外部单位配置-->
+		<component name="SamEsureyOrganConfigDao">
+	    <service name="SamEsureyOrganConfigDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureyOrganConfigDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureyOrganConfigDao"/>
+    </component>
+<!--经济核对_外部单位配置-->    	
+     <component name="SamEsureyOrganConfigDomain">
+	    <service name="SamEsureyOrganConfigDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureyOrganConfigDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureyOrganConfigDomain"/>
+        <reference name="samEsureyOrganConfigDao" target="SamEsureyOrganConfigDao/SamEsureyOrganConfigDao"/>
+	</component>  
+<!--经济核对_低保标准设置-->
+		<component name="SamLowStandardsDao">
+	    <service name="SamLowStandardsDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamLowStandardsDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamLowStandardsDao"/>
+    </component>
+<!--经济核对_低保标准设置-->    	
+     <component name="SamLowStandardsDomain">
+	    <service name="SamLowStandardsDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamLowStandardsDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamLowStandardsDomain"/>
+        <reference name="samLowStandardsDao" target="SamLowStandardsDao/SamLowStandardsDao"/>
+	</component>  	 	
+<!--经济核对_家庭经济状况审核汇总-->
+		<component name="SamEsureyFamilySumDao">
+	    <service name="SamEsureyFamilySumDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureyFamilySumDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureyFamilySumDao"/>
+    </component>
+<!--经济核对_家庭经济状况审核汇总-->    	
+     <component name="SamEsureyFamilySumDomain">
+	    <service name="SamEsureyFamilySumDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureyFamilySumDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureyFamilySumDomain"/>
+        <reference name="samEsureyFamilySumDao" target="SamEsureyFamilySumDao/SamEsureyFamilySumDao"/>
+	</component>   
+	<!--经济核对_人员经济状况审核汇总-->
+		<component name="SamEsureyPeopleSumDao">
+	    <service name="SamEsureyPeopleSumDao">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.dao.ISamEsureyPeopleSumDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.SamEsureyPeopleSumDao"/>
+    </component>
+<!--经济核对_人员经济状况审核汇总-->    	
+     <component name="SamEsureyPeopleSumDomain">
+	    <service name="SamEsureyPeopleSumDomain">
+	    	<interface.java interface="com.inspur.cams.drel.esurey.domain.ISamEsureyPeopleSumDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.SamEsureyPeopleSumDomain"/>
+        <reference name="samEsureyPeopleSumDao" target="SamEsureyPeopleSumDao/SamEsureyPeopleSumDao"/>
+	</component>  	 	 	
+</composite>

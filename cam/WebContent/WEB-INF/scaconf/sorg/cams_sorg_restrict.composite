@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+<component name="somRestrictPeopleDao">
+	    <service name="somRestrictPeopleDao">
+	    	<interface.java interface="com.inspur.cams.sorg.restrict.dao.ISomRestrictPeopleDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.restrict.dao.jdbc.SomRestrictPeopleDao"/>
+    </component>
+    <component name="somRestrictPeopleDetailDao">
+	    <service name="somRestrictPeopleDetailDao">
+	    	<interface.java interface="com.inspur.cams.sorg.restrict.dao.ISomRestrictPeopleDetailDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.restrict.dao.jdbc.SomRestrictPeopleDetailDao"/>
+    </component>
+
+     <component name="somRestrictPeopleDomain">
+	    <service name="somRestrictPeopleDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.restrict.domain.ISomRestrictPeopleDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.restrict.domain.support.SomRestrictPeopleDomain"/>
+        <reference name="somRestrictPeopleDao" target="somRestrictPeopleDao/somRestrictPeopleDao"/>
+    </component>
+     <component name="somRestrictPeopleDetailDomain">
+	    <service name="somRestrictPeopleDetailDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.restrict.domain.ISomRestrictPeopleDetailDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.restrict.domain.support.SomRestrictPeopleDetailDomain"/>
+        <reference name="somRestrictPeopleDetailDao" target="somRestrictPeopleDetailDao/somRestrictPeopleDetailDao"/>
+        <reference name="somRestrictPeopleDomain" target="somRestrictPeopleDomain/somRestrictPeopleDomain"/>
+    </component>
+</composite>

@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+       <!--单位信息查询-->
+ 	<component name="iJcmAllUnitQueryDao">
+		<service name="iJcmAllUnitQueryDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IJcmAllUnitQueryDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.JcmAllUnitQueryDao"/>
+    </component>
+	<component name="jcmAllUnitQueryDomain">
+		<service name="jcmAllUnitQueryDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IJcmAllUnitQueryDomain"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.JcmAllUnitQueryDomain"/>
+    </component>
+	<!--人员信息管理-->
+	<component name="jcmPeopleInfoDao">
+		<service name="jcmPeopleInfoDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IJcmPeopleInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.JcmPeopleInfoDao"/>
+    </component>
+	<component name="jcmPeopleInfoDomain">
+		<service name="jcmPeopleInfoDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IJcmPeopleInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.JcmPeopleInfoDomain"/>
+		<reference name="jcmPeopleInfoDao" target="jcmPeopleInfoDao/jcmPeopleInfoDao"/>
+		<reference name="jcmPeopleResumeDao" target="jcmPeopleResumeDao/jcmPeopleResumeDao"/>
+		<reference name="jcmPeopleCompanyDao" target="jcmPeopleCompanyDao/jcmPeopleCompanyDao"/>
+		<reference name="jcmPeopleExamDao" target="jcmPeopleExamDao/jcmPeopleExamDao"/>
+	</component>
+	<!--单位信息管理-->
+	<component name="jcmCompanyProfileDao">
+		<service name="jcmCompanyProfileDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IJcmCompanyProfileDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.JcmCompanyProfileDao"/>
+    </component>
+	<component name="jcmCompanyProfileDomain">
+		<service name="jcmCompanyProfileDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IJcmCompanyProfileDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.JcmCompanyProfileDomain"/>
+		<reference name="jcmCompanyProfileDao" target="jcmCompanyProfileDao/jcmCompanyProfileDao"/>
+		<reference name="jcmUserInfoDao" target="jcmUserInfoDao/jcmUserInfoDao"/>
+		<reference name="jcmCompanyMoneyDao" target="jcmCompanyMoneyDao/jcmCompanyMoneyDao"/>
+		<reference name="jcmOfficeEquipmentDao" target="jcmOfficeEquipmentDao/jcmOfficeEquipmentDao"/>
+	</component>
+	<!--办公设备-->
+	<component name="jcmOfficeEquipmentDao">
+		<service name="jcmOfficeEquipmentDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IJcmOfficeEquipmentDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.JcmOfficeEquipmentDao"/>
+    </component>
+	<component name="jcmOfficeEquipmentDomain">
+		<service name="jcmOfficeEquipmentDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IJcmOfficeEquipmentDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.JcmOfficeEquipmentDomain"/>
+		<reference name="jcmOfficeEquipmentDao" target="jcmOfficeEquipmentDao/jcmOfficeEquipmentDao"/>
+	</component>
+	<!--单位调整-->
+	<component name="jcmCompanyChangeDao">
+		<service name="jcmCompanyChangeDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IJcmCompanyChangeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.JcmCompanyChangeDao"/>
+    </component>
+	<component name="jcmCompanyChangeDomain">
+		<service name="jcmCompanyChangeDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IJcmCompanyChangeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.JcmCompanyChangeDomain"/>
+		<reference name="jcmCompanyChangeDao" target="jcmCompanyChangeDao/jcmCompanyChangeDao"/>
+	</component>
+	<!--人员工作单位-->
+	<component name="jcmPeopleCompanyDao">
+		<service name="jcmPeopleCompanyDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IJcmPeopleCompanyDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.JcmPeopleCompanyDao"/>
+    </component>
+	<component name="jcmPeopleCompanyDomain">
+		<service name="jcmPeopleCompanyDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IJcmPeopleCompanyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.JcmPeopleCompanyDomain"/>
+		<reference name="jcmPeopleCompanyDao" target="jcmPeopleCompanyDao/jcmPeopleCompanyDao"/>
+	</component>
+	<!--人员培训-->
+	<component name="jcmPeopleExamDao">
+		<service name="jcmPeopleExamDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IJcmPeopleExamDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.JcmPeopleExamDao"/>
+    </component>
+	<component name="jcmPeopleExamDomain">
+		<service name="jcmPeopleExamDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IJcmPeopleExamDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.JcmPeopleExamDomain"/>
+		<reference name="jcmPeopleExamDao" target="jcmPeopleExamDao/jcmPeopleExamDao"/>
+	</component>
+	<!--人员照片-->
+	<component name="comPhotoDao">
+		<service name="comPhotoDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IComPhotoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.ComPhotoDao"/>
+    </component>
+	<component name="comPhotoDomain">
+		<service name="comPhotoDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IComPhotoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.ComPhotoDomain"/>
+		<reference name="comPhotoDao" target="comPhotoDao/comPhotoDao"/>
+	</component>
+	<!--政策法规-->
+	<component name="jcmPoliciesRegulationsDao">
+		<service name="jcmPoliciesRegulationsDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IJcmPoliciesRegulationsDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.JcmPoliciesRegulationsDao"/>
+    </component>
+	<component name="jcmPoliciesRegulationsDomain">
+		<service name="jcmPoliciesRegulationsDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IJcmPoliciesRegulationsDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.JcmPoliciesRegulationsDomain"/>
+		<reference name="jcmPoliciesRegulationsDao" target="jcmPoliciesRegulationsDao/jcmPoliciesRegulationsDao"/>
+	</component>
+	<!--人员简历-->
+	<component name="jcmPeopleResumeDao">
+		<service name="jcmPeopleResumeDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IJcmPeopleResumeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.JcmPeopleResumeDao"/>
+    </component>
+	<component name="jcmPeopleResumeDomain">
+		<service name="jcmPeopleResumeDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IJcmPeopleResumeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.JcmPeopleResumeDomain"/>
+		<reference name="jcmPeopleResumeDao" target="jcmPeopleResumeDao/jcmPeopleResumeDao"/>
+	</component>
+	<!--工作经费-->
+	<component name="jcmCompanyMoneyDao">
+		<service name="jcmCompanyMoneyDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IJcmCompanyMoneyDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.JcmCompanyMoneyDao"/>
+    </component>
+	<component name="jcmCompanyMoneyDomain">
+		<service name="jcmCompanyMoneyDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IJcmCompanyMoneyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.JcmCompanyMoneyDomain"/>
+		<reference name="jcmCompanyMoneyDao" target="jcmCompanyMoneyDao/jcmCompanyMoneyDao"/>
+	</component>
+	<!--单位历史-->
+	<component name="jcmCompanyHisDao">
+		<service name="jcmCompanyHisDao">
+			<interface.java interface="com.inspur.jcm..dao.IJcmCompanyHisDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.jcm..dao.jdbc.JcmCompanyHisDao"/>
+    </component>
+	<component name="jcmCompanyHisDomain">
+		<service name="jcmCompanyHisDomain">
+			<interface.java interface="com.inspur.jcm..domain.IJcmCompanyHisDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.jcm..domain.support.JcmCompanyHisDomain"/>
+		<reference name="jcmCompanyHisDao" target="jcmCompanyHisDao/jcmCompanyHisDao"/>
+	</component>
+	<!--用户-->
+	<component name="jcmUserInfoDao">
+		<service name="jcmUserInfoDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IJcmUserInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.JcmUserInfoDao"/>
+    </component>
+	<component name="jcmUserInfoDomain">
+		<service name="jcmUserInfoDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IJcmUserInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.JcmUserInfoDomain"/>
+		<reference name="jcmUserInfoDao" target="jcmUserInfoDao/jcmUserInfoDao"/>
+	</component>
+	<!--办公设备类别-->
+	<component name="dicOfficeEquipmentTypeDao">
+		<service name="dicOfficeEquipmentTypeDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IDicOfficeEquipmentTypeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.DicOfficeEquipmentTypeDao"/>
+    </component>
+	<component name="dicOfficeEquipmentTypeDomain">
+		<service name="dicOfficeEquipmentTypeDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IDicOfficeEquipmentTypeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.DicOfficeEquipmentTypeDomain"/>
+		<reference name="dicOfficeEquipmentTypeDao" target="dicOfficeEquipmentTypeDao/dicOfficeEquipmentTypeDao"/>
+	</component>
+	<!--单位经费类别-->
+	<component name="dicCompanyMoneyTypeDao">
+		<service name="dicCompanyMoneyTypeDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IDicCompanyMoneyTypeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.DicCompanyMoneyTypeDao"/>
+    </component>
+	<component name="dicCompanyMoneyTypeDomain">
+		<service name="dicCompanyMoneyTypeDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IDicCompanyMoneyTypeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.DicCompanyMoneyTypeDomain"/>
+		<reference name="dicCompanyMoneyTypeDao" target="dicCompanyMoneyTypeDao/dicCompanyMoneyTypeDao"/>
+	</component>
+	<!--单位所属类别-->
+	<component name="dicCompanyTypeDao">
+		<service name="dicCompanyTypeDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IDicCompanyTypeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.DicCompanyTypeDao"/>
+    </component>
+	<component name="dicCompanyTypeDomain">
+		<service name="dicCompanyTypeDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IDicCompanyTypeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.DicCompanyTypeDomain"/>
+		<reference name="dicCompanyTypeDao" target="dicCompanyTypeDao/dicCompanyTypeDao"/>
+		<reference name="dicCompanyMoneyTypeDao" target="dicCompanyMoneyTypeDao/dicCompanyMoneyTypeDao"/>
+		<reference name="dicOfficeEquipmentTypeDao" target="dicOfficeEquipmentTypeDao/dicOfficeEquipmentTypeDao"/>
+	</component>
+	<!--字典维护-->
+	<component name="dicJcmManageDao">
+		<service name="dicJcmManageDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IDicJcmManageDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.DicJcmManageDao"/>
+    </component>
+	<component name="dicJcmManageDomain">
+		<service name="dicJcmManageDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IDicJcmManageDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.DicJcmManageDomain"/>
+		<reference name="dicJcmManageDao" target="dicJcmManageDao/dicJcmManageDao"/>
+	</component>
+	<!--字典详细信息-->
+	<component name="dicJcmDetailsDao">
+		<service name="dicJcmDetailsDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IDicJcmDetailsDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.DicJcmDetailsDao"/>
+    </component>
+	<component name="dicJcmDetailsDomain">
+		<service name="dicJcmDetailsDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IDicJcmDetailsDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.DicJcmDetailsDomain"/>
+		<reference name="dicJcmDetailsDao" target="dicJcmDetailsDao/dicJcmDetailsDao"/>
+	</component>
+	<!--字典管理-->
+	<component name="jcmDicDao">
+		<service name="jcmDicDao">
+			<interface.java interface="com.inspur.cams.jcm.dao.IJcmDicDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.jcm.dao.jdbc.JcmDicDao"/>
+    </component>
+	<component name="jcmDicDomain">
+		<service name="jcmDicDomain">
+			<interface.java interface="com.inspur.cams.jcm.domain.IJcmDicDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.jcm.domain.support.JcmDicDomain"/>
+		<reference name="jcmDicDao" target="jcmDicDao/jcmDicDao"/>
+	</component>
+
+	<!--人员调动-->
+	<component name="jcmPeopleTransferManageDao">
+		<service name="jcmPeopleTransferManageDao">
+			<interface.java 		interface="com.inspur.cams.jcm.dao.IJcmPeopleTransferManageDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java 		impl="com.inspur.cams.jcm.dao.jdbc.JcmPeopleTransferManageDao"/>
+    	</component>
+		<component name="jcmPeopleTransferManageDomain">
+		<service name="jcmPeopleTransferManageDomain">
+			<interface.java 		interface="com.inspur.cams.jcm.domain.IJcmPeopleTransferManageDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java 		impl="com.inspur.cams.jcm.domain.support.JcmPeopleTransferManageDomain"/>
+		<reference name="jcmPeopleTransferManageDao" 		target="jcmPeopleTransferManageDao/jcmPeopleTransferManageDao"/>
+	</component>
+</composite>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="bsp_user" xmlns="http://www.loushang.com/sca/1.0">
+    <description>user</description>
+    <component name="UserDao">
+	    <service name="UserDao">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.user.dao.IUserDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.permit.pap.user.dao.jdbc.UserJdbcDao"/>
+    </component>
+    <component name="UserEmployeeDao">
+	    <service name="UserEmployeeDao">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.user.dao.IUserEmployeeDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.permit.pap.user.dao.jdbc.UserEmployeeDao"/>
+    </component>
+
+    <component name="UserDomain">
+	    <service name="UserDomain">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.user.domain.IUserDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.permit.pap.user.domain.support.UserDomainImpl"/>
+        <reference name="userDao" target="UserDao/UserDao"/>
+        <reference name="userEmployeeDao" target="UserEmployeeDao/UserEmployeeDao"/>
+        <reference name="struDomain" target="StruDomain/StruDomain"/>
+        <reference name="operationDao" target="OperationDao/OperationDao"/>
+        <reference name="roleDao" target="RoleDao/RoleDao"/>
+        <reference name="userDataPermitDao" target="UserDataPermitDao/UserDataPermitDao"/>
+        <reference name="roleTargetDao" target="RoleTargetJdbcDao/RoleTargetJdbcDao"/>
+        <reference name="userPolicyDao" target="UserPolicyJdbcDao/UserPolicyJdbcDao"/>
+        <reference name="bspEncoder" target="BspEncoder/BspEncoder"/>
+        <reference name="globalPolicyDao" target="GlobalPolicyJdbcDao/GlobalPolicyJdbcDao"/>
+        <reference name="proxyPermissionDao" target="ProxyPermissionDao/ProxyPermissionDao"/>
+        <reference name="userProxyDao" target="UserProxyDao/UserProxyDao"/>
+   </component>
+
+    <component name="ProxyDomain">
+	    <service name="ProxyDomain">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.userproxy.domain.IProxy"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.permit.pap.userproxy.domain.impl.ProxyDomain"/>
+        <reference name="userProxyDao" target="UserProxyDao/UserProxyDao"/>
+        <reference name="proxyPermissionDao" target="ProxyPermissionDao/ProxyPermissionDao"/>
+		<reference name="proxyPermissionItemDao" target="ProxyPermissionItemDao/ProxyPermissionItemDao"/>
+		<reference name="funcDao" target="FunctionDao/FunctionDao"/>
+		<reference name="moduleDao" target="ModuleDao/ModuleDao"/>
+		<reference name="userDomain" target="UserDomain/UserDomain"/>
+		<reference name="menuTypeDomain" target="MenuTypeDomain/MenuTypeDomain"/>
+   </component>
+
+    <component name="UserProxyDao">
+	    <service name="UserProxyDao">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.userproxy.dao.IUserProxyDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.permit.pap.userproxy.dao.jdbc.UserProxyDao"/>
+    </component>
+      <component name="UserRoleDao">
+	    <service name="UserRoleDao">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.userproxy.dao.IUserRoleDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.permit.pap.userproxy.dao.jdbc.UserRoleDao"/>
+    </component>
+    <component name="ProxyPermissionDao">
+	    <service name="ProxyPermissionDao">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.userproxy.dao.IProxyPermissionDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.permit.pap.userproxy.dao.jdbc.ProxyPermissionDao"/>
+    </component>
+    <component name="ProxyPermissionItemDao">
+	    <service name="ProxyPermissionItemDao">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.userproxy.dao.IProxyPermissionItemDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.permit.pap.userproxy.dao.jdbc.ProxyPermissionItemDao"/>
+    </component>
+
+    <component name="UserTypeDao">
+	    <service name="UserTypeDao">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.user.dao.IUserTypeDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.permit.pap.user.dao.jdbc.UserTypeJdbcDao"/>
+    </component>
+
+    <component name="GlobalPolicyJdbcDao">
+	    <service name="GlobalPolicyJdbcDao">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.user.dao.IGlobalPolicyDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.permit.pap.user.dao.jdbc.GlobalPolicyJdbcDao"/>
+    </component>
+
+    <component name="PwdHistJdbcDao">
+	    <service name="PwdHistJdbcDao">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.user.dao.IPwdHistDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.permit.pap.user.dao.jdbc.PwdHistJdbcDao"/>
+    </component>
+
+    <component name="UserDataPermitDao">
+	    <service name="UserDataPermitDao">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.user.dao.IUserDataPermitDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.permit.pap.user.dao.jdbc.UserDataPermitJdbcDao"/>
+    </component>
+
+    <component name="GlobalPolicyDomainImpl">
+	    <service name="GlobalPolicyDomainImpl">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.user.domain.IGlobalPolicyDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.permit.pap.user.domain.support.GlobalPolicyDomainImpl"/>
+        <reference name="globalPolicyDao" target="GlobalPolicyJdbcDao/GlobalPolicyJdbcDao"/>
+        <reference name="pwdHistDao" target="PwdHistJdbcDao/PwdHistJdbcDao"/>
+   </component>
+
+    <component name="UserPolicyJdbcDao">
+	    <service name="UserPolicyJdbcDao">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.user.dao.IUserPolicyDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.permit.pap.user.dao.jdbc.UserPolicyJdbcDao"/>
+    </component>
+
+    <component name="pubLdapSynUsersDao">
+	    <service name="pubLdapSynUsersDao">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.ldap.dao.IPubLdapSynUsersDao"/>
+        	<binding.sca/>
+        </service>
+       <implementation.java impl="org.loushang.bsp.permit.pap.ldap.dao.PubLdapSynUsersDao"/>
+    </component>
+
+   <component name="pubLdapSynUsersDomain">
+	    <service name="pubLdapSynUsersDomain">
+	    	<interface.java interface="org.loushang.bsp.permit.pap.ldap.domain.IPubLdapSynUsers"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+       <implementation.java impl="org.loushang.bsp.permit.pap.ldap.domain.PubLdapSynUsersImpl"/>
+        <reference name="UserDao" target="UserDao/UserDao"/>
+        <reference name="pubLdapSynUsersDao" target="pubLdapSynUsersDao/pubLdapSynUsersDao"/>
+        <reference name="UserEmployeeDao" target="UserEmployeeDao/UserEmployeeDao"/>
+        <reference name="userPolicyJdbcDao" target="UserPolicyJdbcDao/UserPolicyJdbcDao"/>
+    </component>
+        <component name="UserService">
+	    <service name="UserService">
+	    	<interface.java interface="org.loushang.bsp.share.permit.security.provider.IUserService"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.share.permit.security.provider.UserServiceImpl"/>
+    </component>
+
+    <component name="EaiUserDomain">
+	    <service name="EaiUserDomain">
+	    	<interface.java interface="org.loushang.bsp.eai.pap.user.domain.IUserDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.eai.pap.user.domain.support.UserDomainImpl"/>
+        <reference name="userDao" target="EaiUserDao/EaiUserDao"/>
+        <reference name="userEmployeeDao" target="UserEmployeeDao/UserEmployeeDao"/>
+        <reference name="userSsoDao" target="EaiUserSsoDao/EaiUserSsoDao"/>
+        <reference name="userPolicyDao" target="UserPolicyJdbcDao/UserPolicyJdbcDao"/>
+        <reference name="bspEncoder" target="BspEncoder/BspEncoder"/>
+        <reference name="globalPolicyDao" target="GlobalPolicyJdbcDao/GlobalPolicyJdbcDao"/>
+        <reference name="struDomain" target="StruDomain/StruDomain"/>
+         <reference name="operationDao" target="EaiOperationDao/EaiOperationDao"/>
+   </component>
+
+   <component name="EaiUserDao">
+	    <service name="EaiUserDao">
+	    	<interface.java interface="org.loushang.bsp.eai.pap.user.dao.IUserDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.eai.pap.user.dao.jdbc.UserJdbcDao"/>
+    </component>
+
+    <component name="EaiUserSsoDao">
+	    <service name="EaiUserSsoDao">
+	    	<interface.java interface="org.loushang.bsp.eai.pap.user.dao.IUserSsoDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.eai.pap.user.dao.jdbc.UserSsoJdbcDao"/>
+    </component>
+
+   <component name="EaiUserSsoDomain">
+	    <service name="EaiUserSsoDomain">
+	    	<interface.java interface="org.loushang.bsp.eai.pap.user.domain.IUserSsoDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.eai.pap.user.domain.support.UserSsoDomainImpl"/>
+        <reference name="userSsoDao" target="EaiUserSsoDao/EaiUserSsoDao"/>
+   </component>
+   
+   <component name="userReceiver">
+	    <service name="userReceiver">
+	    	<interface.java interface="org.loushang.bsp.share.permit.security.provider.IUserReceiver"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+       <implementation.java impl="org.loushang.bsp.share.permit.security.provider.UserReceiverImpl"/>
+   </component>
+   
+   </composite>

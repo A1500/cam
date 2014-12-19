@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<description>Plan module</description>
+	<component name="HelpDao">
+		<service name="HelpDao">
+			<interface.java interface="com.inspur.sdmz.jzfa.dao.IPlanDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.sdmz.jzfa.dao.jdbc.PlanDao"/>
+	</component>
+	<component name="DetailDao">
+		<service name="DetailDao">
+			<interface.java interface="com.inspur.sdmz.jzfa.dao.IDetailDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.sdmz.jzfa.dao.jdbc.DetailDao"/>
+	</component>
+	<component name="ComPlanOrganDao">
+		<service name="ComPlanOrganDao">
+			<interface.java interface="com.inspur.sdmz.jzfa.dao.IComPlanOrganDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.sdmz.jzfa.dao.jdbc.ComPlanOrganDao"/>
+	</component>
+    <component name="HelpDomain">
+	    <service name="HelpService">
+	    	<interface.java interface="com.inspur.sdmz.jzfa.domain.IPlanDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.sdmz.jzfa.domain.support.PlanDomain"/>
+        <reference name="helpDao" target="HelpDao.HelpDao"/>
+        <reference name="detailDao" target="DetailDao.DetailDao"/>
+        <reference name="comPlanOrganDao" target="ComPlanOrganDao.ComPlanOrganDao"/>
+    </component>
+</composite>

@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<composite name="BaseInfoFamilyDao" xmlns="http://www.loushang.com/sca/1.0">
+	<!--城市低保domain -->
+	 <component name="samCityApplyDomain">
+	    <service name="samCityApplyDomain">
+	    	<interface.java interface="com.inspur.cams.drel.application.city.domain.ISamCityApplyDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.application.city.domain.support.SamCityApplyDomain"/>
+        <reference name="samApplyInfoDomain" target="samApplyInfoDomain/samApplyInfoDomain"/>
+        <reference name="baseinfoDomain" target="baseinfoDomain/baseinfoDomain"/>
+        <reference name="samFamilyTreatmentDomain" target="samFamilyTreatmentDomain/samFamilyTreatmentDomain"/>
+        <reference name="samFamilyAssistanceDomain" target="samFamilyAssistanceDomain/samFamilyAssistanceDomain"/>
+		
+        <reference name="samPeopleTypeDomain" target="samPeopleTypeDomain/samPeopleTypeDomain"/>
+        <reference name="samPeopleExtendDomain" target="samPeopleExtendDomain/samPeopleExtendDomain"/>
+        <reference name="samPeopleDiseaseDomain" target="samPeopleDiseaseDomain/samPeopleDiseaseDomain"/>
+        <reference name="samPeopleDisabilityDomain" target="samPeopleDisabilityDomain/samPeopleDisabilityDomain"/>
+        <reference name="samPeopleEduDomain" target="samPeopleEduDomain/samPeopleEduDomain"/>
+        <reference name="samPeopleIncomeDomain" target="samPeopleIncomeDomain/samPeopleIncomeDomain"/>
+        <reference name="samPeopleJobsDomain" target="samPeopleJobsDomain/samPeopleJobsDomain"/>
+        <reference name="samPeopleInsuranceDomain" target="samPeopleInsuranceDomain/samPeopleInsuranceDomain"/>
+		
+        <reference name="samApplyNoticeDomain" target="samApplyNoticeDomain/samApplyNoticeDomain"/>
+        <reference name="samApplyDiscussionDomain" target="samApplyDiscussionDomain/samApplyDiscussionDomain"/>
+        <reference name="samApplySurveyDomain" target="samApplySurveyDomain/samApplySurveyDomain"/>
+        <reference name="samApplyOptionsHisDomain" target="samApplyOptionsHisDomain/samApplyOptionsHisDomain"/>
+        <reference name="samCardNoDomain" target="samCardNoDomain/samCardNoDomain"/>
+        <reference name="samLowStandardsDomain" target="SamLowStandardsDomain/SamLowStandardsDomain"/>
+         <reference name="samBankAccountDomain" target="SamBankAccountDomain/SamBankAccountDomain"/>
+		<reference name="ensureToClientDomain" target="ensureToClientDomain/ensureToClientDomain"/>
+	</component>
+	<!--农村低保domain -->
+	<component name="samCountryApplyDomain">
+	    <service name="samCountryApplyDomain">
+	    	<interface.java interface="com.inspur.cams.drel.application.country.domain.ISamCountryApplyDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.application.country.domain.support.SamCountryApplyDomain"/>
+        <reference name="samApplyInfoDomain" target="samApplyInfoDomain/samApplyInfoDomain"/>
+        <reference name="baseinfoDomain" target="baseinfoDomain/baseinfoDomain"/>
+        <reference name="samFamilyTreatmentDomain" target="samFamilyTreatmentDomain/samFamilyTreatmentDomain"/>
+        <reference name="samFamilyAssistanceDomain" target="samFamilyAssistanceDomain/samFamilyAssistanceDomain"/>
+		
+        <reference name="samPeopleTypeDomain" target="samPeopleTypeDomain/samPeopleTypeDomain"/>
+        <reference name="samPeopleExtendDomain" target="samPeopleExtendDomain/samPeopleExtendDomain"/>
+        <reference name="samPeopleDiseaseDomain" target="samPeopleDiseaseDomain/samPeopleDiseaseDomain"/>
+        <reference name="samPeopleDisabilityDomain" target="samPeopleDisabilityDomain/samPeopleDisabilityDomain"/>
+        <reference name="samPeopleEduDomain" target="samPeopleEduDomain/samPeopleEduDomain"/>
+        <reference name="samPeopleIncomeDomain" target="samPeopleIncomeDomain/samPeopleIncomeDomain"/>
+        <reference name="samPeopleJobsDomain" target="samPeopleJobsDomain/samPeopleJobsDomain"/>
+        <reference name="samPeopleInsuranceDomain" target="samPeopleInsuranceDomain/samPeopleInsuranceDomain"/>
+		
+        <reference name="samApplyNoticeDomain" target="samApplyNoticeDomain/samApplyNoticeDomain"/>
+        <reference name="samApplyDiscussionDomain" target="samApplyDiscussionDomain/samApplyDiscussionDomain"/>
+        <reference name="samApplySurveyDomain" target="samApplySurveyDomain/samApplySurveyDomain"/>
+        <reference name="samApplyOptionsHisDomain" target="samApplyOptionsHisDomain/samApplyOptionsHisDomain"/>
+        <reference name="samCardNoDomain" target="samCardNoDomain/samCardNoDomain"/>
+ 	<reference name="samBankAccountDomain" target="SamBankAccountDomain/SamBankAccountDomain"/>
+	</component>
+	<!--五保domain -->
+	<component name="samFiveApplyDomain">
+	    <service name="samFiveApplyDomain">
+	    	<interface.java interface="com.inspur.cams.drel.application.five.domain.ISamFiveApplyDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.application.five.domain.support.SamFiveApplyDomain"/>
+        <reference name="samApplyInfoDomain" target="samApplyInfoDomain/samApplyInfoDomain"/>
+        <reference name="baseinfoDomain" target="baseinfoDomain/baseinfoDomain"/>
+        <reference name="samFamilyTreatmentDomain" target="samFamilyTreatmentDomain/samFamilyTreatmentDomain"/>
+        <reference name="samFamilyAssistanceDomain" target="samFamilyAssistanceDomain/samFamilyAssistanceDomain"/>
+		
+        <reference name="samPeopleTypeDomain" target="samPeopleTypeDomain/samPeopleTypeDomain"/>
+        <reference name="samPeopleExtendDomain" target="samPeopleExtendDomain/samPeopleExtendDomain"/>
+        <reference name="samPeopleDiseaseDomain" target="samPeopleDiseaseDomain/samPeopleDiseaseDomain"/>
+        <reference name="samPeopleDisabilityDomain" target="samPeopleDisabilityDomain/samPeopleDisabilityDomain"/>
+        <reference name="samPeopleEduDomain" target="samPeopleEduDomain/samPeopleEduDomain"/>
+        <reference name="samPeopleIncomeDomain" target="samPeopleIncomeDomain/samPeopleIncomeDomain"/>
+        <reference name="samPeopleJobsDomain" target="samPeopleJobsDomain/samPeopleJobsDomain"/>
+        <reference name="samPeopleInsuranceDomain" target="samPeopleInsuranceDomain/samPeopleInsuranceDomain"/>
+		
+        <reference name="samApplyNoticeDomain" target="samApplyNoticeDomain/samApplyNoticeDomain"/>
+        <reference name="samApplyDiscussionDomain" target="samApplyDiscussionDomain/samApplyDiscussionDomain"/>
+        <reference name="samApplySurveyDomain" target="samApplySurveyDomain/samApplySurveyDomain"/>
+        <reference name="samApplyOptionsHisDomain" target="samApplyOptionsHisDomain/samApplyOptionsHisDomain"/>
+        <reference name="samCardNoDomain" target="samCardNoDomain/samCardNoDomain"/>
+	 <reference name="samBankAccountDomain" target="SamBankAccountDomain/SamBankAccountDomain"/>
+	</component>
+	<!--城市低保变更domain -->	
+	  <component name="samCityChangeDomain">
+	    <service name="samCityChangeDomain">
+	    	<interface.java interface="com.inspur.cams.drel.application.city.domain.ISamCityChangeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.application.city.domain.support.SamCityChangeDomain"/>
+        <reference name="samApplyInfoDomain" target="samApplyInfoDomain/samApplyInfoDomain"/>
+        <reference name="baseinfoDomain" target="baseinfoDomain/baseinfoDomain"/>
+        <reference name="samFamilyTreatmentDomain" target="samFamilyTreatmentDomain/samFamilyTreatmentDomain"/>
+        <reference name="samFamilyAssistanceDomain" target="samFamilyAssistanceDomain/samFamilyAssistanceDomain"/>
+		
+        <reference name="samPeopleExtendDomain" target="samPeopleExtendDomain/samPeopleExtendDomain"/>
+        <reference name="samPeopleDiseaseDomain" target="samPeopleDiseaseDomain/samPeopleDiseaseDomain"/>
+        <reference name="samPeopleDisabilityDomain" target="samPeopleDisabilityDomain/samPeopleDisabilityDomain"/>
+        <reference name="samPeopleEduDomain" target="samPeopleEduDomain/samPeopleEduDomain"/>
+        <reference name="samPeopleIncomeDomain" target="samPeopleIncomeDomain/samPeopleIncomeDomain"/>
+        <reference name="samPeopleJobsDomain" target="samPeopleJobsDomain/samPeopleJobsDomain"/>
+        <reference name="samPeopleInsuranceDomain" target="samPeopleInsuranceDomain/samPeopleInsuranceDomain"/>
+		
+        <reference name="samApplyNoticeDomain" target="samApplyNoticeDomain/samApplyNoticeDomain"/>
+        <reference name="samApplyDiscussionDomain" target="samApplyDiscussionDomain/samApplyDiscussionDomain"/>
+        <reference name="samApplySurveyDomain" target="samApplySurveyDomain/samApplySurveyDomain"/>
+        <reference name="samApplyOptionsHisDomain" target="samApplyOptionsHisDomain/samApplyOptionsHisDomain"/>
+        <reference name="ensureToClientDomain" target="ensureToClientDomain/ensureToClientDomain"/>
+ 	 <reference name="samBankAccountDomain" target="SamBankAccountDomain/SamBankAccountDomain"/>
+	</component>
+	<!--农村低保变更domain -->	
+	  <component name="samCountryChangeDomain">
+	    <service name="samCountryChangeDomain">
+	    	<interface.java interface="com.inspur.cams.drel.application.country.domain.ISamCountryChangeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.application.country.domain.support.SamCountryChangeDomain"/>
+        <reference name="samApplyInfoDomain" target="samApplyInfoDomain/samApplyInfoDomain"/>
+        <reference name="baseinfoDomain" target="baseinfoDomain/baseinfoDomain"/>
+        <reference name="samFamilyTreatmentDomain" target="samFamilyTreatmentDomain/samFamilyTreatmentDomain"/>
+        <reference name="samFamilyAssistanceDomain" target="samFamilyAssistanceDomain/samFamilyAssistanceDomain"/>
+		
+        <reference name="samPeopleExtendDomain" target="samPeopleExtendDomain/samPeopleExtendDomain"/>
+        <reference name="samPeopleDiseaseDomain" target="samPeopleDiseaseDomain/samPeopleDiseaseDomain"/>
+        <reference name="samPeopleDisabilityDomain" target="samPeopleDisabilityDomain/samPeopleDisabilityDomain"/>
+        <reference name="samPeopleEduDomain" target="samPeopleEduDomain/samPeopleEduDomain"/>
+        <reference name="samPeopleIncomeDomain" target="samPeopleIncomeDomain/samPeopleIncomeDomain"/>
+        <reference name="samPeopleJobsDomain" target="samPeopleJobsDomain/samPeopleJobsDomain"/>
+        <reference name="samPeopleInsuranceDomain" target="samPeopleInsuranceDomain/samPeopleInsuranceDomain"/>
+		
+        <reference name="samApplyNoticeDomain" target="samApplyNoticeDomain/samApplyNoticeDomain"/>
+        <reference name="samApplyDiscussionDomain" target="samApplyDiscussionDomain/samApplyDiscussionDomain"/>
+        <reference name="samApplySurveyDomain" target="samApplySurveyDomain/samApplySurveyDomain"/>
+        <reference name="samApplyOptionsHisDomain" target="samApplyOptionsHisDomain/samApplyOptionsHisDomain"/>
+	  <reference name="samBankAccountDomain" target="SamBankAccountDomain/SamBankAccountDomain"/>
+	</component>
+	<!--五保变更domain -->	
+	  <component name="samFiveChangeDomain">
+	    <service name="samFiveChangeDomain">
+	    	<interface.java interface="com.inspur.cams.drel.application.five.domain.ISamFiveChangeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.application.five.domain.support.SamFiveChangeDomain"/>
+        <reference name="samApplyInfoDomain" target="samApplyInfoDomain/samApplyInfoDomain"/>
+        <reference name="baseinfoDomain" target="baseinfoDomain/baseinfoDomain"/>
+        <reference name="samFamilyTreatmentDomain" target="samFamilyTreatmentDomain/samFamilyTreatmentDomain"/>
+        <reference name="samFamilyAssistanceDomain" target="samFamilyAssistanceDomain/samFamilyAssistanceDomain"/>
+		
+        <reference name="samPeopleExtendDomain" target="samPeopleExtendDomain/samPeopleExtendDomain"/>
+        <reference name="samPeopleDiseaseDomain" target="samPeopleDiseaseDomain/samPeopleDiseaseDomain"/>
+        <reference name="samPeopleDisabilityDomain" target="samPeopleDisabilityDomain/samPeopleDisabilityDomain"/>
+        <reference name="samPeopleEduDomain" target="samPeopleEduDomain/samPeopleEduDomain"/>
+        <reference name="samPeopleIncomeDomain" target="samPeopleIncomeDomain/samPeopleIncomeDomain"/>
+        <reference name="samPeopleJobsDomain" target="samPeopleJobsDomain/samPeopleJobsDomain"/>
+        <reference name="samPeopleInsuranceDomain" target="samPeopleInsuranceDomain/samPeopleInsuranceDomain"/>
+	  <reference name="samBankAccountDomain" target="SamBankAccountDomain/SamBankAccountDomain"/>	
+        <reference name="samApplyNoticeDomain" target="samApplyNoticeDomain/samApplyNoticeDomain"/>
+        <reference name="samApplyDiscussionDomain" target="samApplyDiscussionDomain/samApplyDiscussionDomain"/>
+        <reference name="samApplySurveyDomain" target="samApplySurveyDomain/samApplySurveyDomain"/>
+        <reference name="samApplyOptionsHisDomain" target="samApplyOptionsHisDomain/samApplyOptionsHisDomain"/>
+	</component>
+	
+	<!--城市低保历史domain -->
+	 <component name="samCityHisDomain">
+	    <service name="samCityHisDomain">
+	    	<interface.java interface="com.inspur.cams.drel.his.city.domain.ISamCityHisDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.his.city.domain.support.SamCityHisDomain"/>
+        <reference name="samApplyInfoDomain" target="samApplyInfoDomain/samApplyInfoDomain"/>
+        <reference name="baseinfoDomain" target="baseinfoDomain/baseinfoDomain"/>
+        <reference name="samFamilyTreatmentDomain" target="samFamilyTreatmentDomain/samFamilyTreatmentDomain"/>
+        <reference name="samFamilyAssistanceDomain" target="samFamilyAssistanceDomain/samFamilyAssistanceDomain"/>
+		
+        <reference name="samApplyNoticeDomain" target="samApplyNoticeDomain/samApplyNoticeDomain"/>
+        <reference name="samApplyDiscussionDomain" target="samApplyDiscussionDomain/samApplyDiscussionDomain"/>
+        <reference name="samApplySurveyDomain" target="samApplySurveyDomain/samApplySurveyDomain"/>
+         <reference name="samBankAccountDomain" target="SamBankAccountDomain/SamBankAccountDomain"/>
+	</component>
+	
+	<!--农村低保历史domain -->
+	 <component name="samCountryHisDomain">
+	    <service name="samCountryHisDomain">
+	    	<interface.java interface="com.inspur.cams.drel.his.country.domain.ISamCountryHisDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.his.country.domain.support.SamCountryHisDomain"/>
+        <reference name="samApplyInfoDomain" target="samApplyInfoDomain/samApplyInfoDomain"/>
+        <reference name="baseinfoDomain" target="baseinfoDomain/baseinfoDomain"/>
+        <reference name="samFamilyTreatmentDomain" target="samFamilyTreatmentDomain/samFamilyTreatmentDomain"/>
+        <reference name="samFamilyAssistanceDomain" target="samFamilyAssistanceDomain/samFamilyAssistanceDomain"/>
+		
+        <reference name="samApplyNoticeDomain" target="samApplyNoticeDomain/samApplyNoticeDomain"/>
+        <reference name="samApplyDiscussionDomain" target="samApplyDiscussionDomain/samApplyDiscussionDomain"/>
+        <reference name="samApplySurveyDomain" target="samApplySurveyDomain/samApplySurveyDomain"/>
+          <reference name="samBankAccountDomain" target="SamBankAccountDomain/SamBankAccountDomain"/>
+	</component>
+	
+	<!--农村五保历史domain -->
+	 <component name="samFiveHisDomain">
+	    <service name="samFiveHisDomain">
+	    	<interface.java interface="com.inspur.cams.drel.his.five.domain.ISamFiveHisDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.his.five.domain.support.SamFiveHisDomain"/>
+        <reference name="samApplyInfoDomain" target="samApplyInfoDomain/samApplyInfoDomain"/>
+        <reference name="baseinfoDomain" target="baseinfoDomain/baseinfoDomain"/>
+        <reference name="samFamilyTreatmentDomain" target="samFamilyTreatmentDomain/samFamilyTreatmentDomain"/>
+        <reference name="samFamilyAssistanceDomain" target="samFamilyAssistanceDomain/samFamilyAssistanceDomain"/>
+		
+        <reference name="samApplyNoticeDomain" target="samApplyNoticeDomain/samApplyNoticeDomain"/>
+        <reference name="samApplyDiscussionDomain" target="samApplyDiscussionDomain/samApplyDiscussionDomain"/>
+        <reference name="samApplySurveyDomain" target="samApplySurveyDomain/samApplySurveyDomain"/>
+          <reference name="samBankAccountDomain" target="SamBankAccountDomain/SamBankAccountDomain"/>
+	</component>
+	
+	<!--家庭待遇信息Dao -->	
+	 <component name="samFamilyTreatmentDao">
+	    <service name="samFamilyTreatmentDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamFamilyTreatmentDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamFamilyTreatmentDao"/>
+	</component>
+	<!--家庭待遇信息Domain -->	
+	 <component name="samFamilyTreatmentDomain">
+	    <service name="samFamilyTreatmentDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamFamilyTreatmentDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamFamilyTreatmentDomain"/>
+        <reference name="samFamilyTreatmentDao" target="samFamilyTreatmentDao/samFamilyTreatmentDao"/>
+        <reference name="samTreatmentAdjustDomain" target="samTreatmentAdjustDomain/samTreatmentAdjustDomain"/>
+	</component>	
+	
+	<!--待遇调整记录Dao -->	
+	 <component name="samTreatmentAdjustDao">
+	    <service name="samTreatmentAdjustDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamTreatmentAdjustDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamTreatmentAdjustDao"/>
+	</component>
+	<!--待遇调整记录Domain -->	
+	 <component name="samTreatmentAdjustDomain">
+	    <service name="samTreatmentAdjustDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamTreatmentAdjustDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamTreatmentAdjustDomain"/>
+        <reference name="samTreatmentAdjustDao" target="samTreatmentAdjustDao/samTreatmentAdjustDao"/>
+	</component>
+	<!--救助基本信息Domain -->	
+	 <component name="samFamilyAssistanceDomain">
+	    <service name="samFamilyAssistanceDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamFamilyAssistanceDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamFamilyAssistanceDomain"/>
+        <reference name="samFamilyAssistanceDao" target="samFamilyAssistanceDao/samFamilyAssistanceDao"/>
+	</component>
+	
+	<!--人员扩展信息Dao -->	
+	 <component name="samPeopleExtendDao">
+	    <service name="samPeopleExtendDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamPeopleExtendDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamPeopleExtendDao"/>
+	</component>
+	<!--人员扩展信息Domain -->	
+	 <component name="samPeopleExtendDomain">
+	    <service name="samPeopleExtendDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamPeopleExtendDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamPeopleExtendDomain"/>
+        <reference name="samPeopleExtendDao" target="samPeopleExtendDao/samPeopleExtendDao"/>
+	</component>
+	
+	<!--人员类型信息Dao -->	
+	 <component name="samPeopleTypeDao">
+	    <service name="samPeopleTypeDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamPeopleTypeDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamPeopleTypeDao"/>
+	</component>
+	<!--人员类型信息Domain -->	
+	 <component name="samPeopleTypeDomain">
+	    <service name="samPeopleTypeDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamPeopleTypeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamPeopleTypeDomain"/>
+        <reference name="samPeopleTypeDao" target="samPeopleTypeDao/samPeopleTypeDao"/>
+	</component>
+	
+	<!--人员患病信息Dao -->	
+	 <component name="samPeopleDiseaseDao">
+	    <service name="samPeopleDiseaseDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamPeopleDiseaseDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamPeopleDiseaseDao"/>
+	</component>
+	<!--人员患病信息Domain -->	
+	 <component name="samPeopleDiseaseDomain">
+	    <service name="samPeopleDiseaseDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamPeopleDiseaseDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamPeopleDiseaseDomain"/>
+        <reference name="samPeopleDiseaseDao" target="samPeopleDiseaseDao/samPeopleDiseaseDao"/>
+	</component>
+	
+	<!--人员残疾信息Dao -->	
+	 <component name="samPeopleDisabilityDao">
+	    <service name="samPeopleDisabilityDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamPeopleDisabilityDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamPeopleDisabilityDao"/>
+	</component>
+	<!--人员残疾信息Domain -->	
+	 <component name="samPeopleDisabilityDomain">
+	    <service name="samPeopleDisabilityDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamPeopleDisabilityDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamPeopleDisabilityDomain"/>
+        <reference name="samPeopleDisabilityDao" target="samPeopleDisabilityDao/samPeopleDisabilityDao"/>
+	</component>
+	
+	<!--人员教育信息Dao -->	
+	 <component name="samPeopleEduDao">
+	    <service name="samPeopleEduDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamPeopleEduDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamPeopleEduDao"/>
+	</component>
+	<!--人员教育信息Domain -->	
+	 <component name="samPeopleEduDomain">
+	    <service name="samPeopleEduDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamPeopleEduDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamPeopleEduDomain"/>
+        <reference name="samPeopleEduDao" target="samPeopleEduDao/samPeopleEduDao"/>
+	</component>
+	
+	<!--人员就业信息Dao -->	
+	 <component name="samPeopleJobsDao">
+	    <service name="samPeopleJobsDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamPeopleJobsDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamPeopleJobsDao"/>
+	</component>
+	<!--人员就业信息Domain -->	
+	 <component name="samPeopleJobsDomain">
+	    <service name="samPeopleJobsDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamPeopleJobsDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamPeopleJobsDomain"/>
+        <reference name="samPeopleJobsDao" target="samPeopleJobsDao/samPeopleJobsDao"/>
+	</component>
+	
+	<!--人员收入信息Dao -->	
+	 <component name="samPeopleIncomeDao">
+	    <service name="samPeopleIncomeDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamPeopleIncomeDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamPeopleIncomeDao"/>
+	</component>
+	<!--人员收入信息Domain -->	
+	 <component name="samPeopleIncomeDomain">
+	    <service name="samPeopleIncomeDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamPeopleIncomeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamPeopleIncomeDomain"/>
+        <reference name="samPeopleIncomeDao" target="samPeopleIncomeDao/samPeopleIncomeDao"/>
+	</component>
+	
+	<!--人员保险信息Dao -->	
+	 <component name="samPeopleInsuranceDao">
+	    <service name="samPeopleInsuranceDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamPeopleInsuranceDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamPeopleInsuranceDao"/>
+	</component>
+	<!--人员保险信息Domain -->	
+	 <component name="samPeopleInsuranceDomain">
+	    <service name="samPeopleInsuranceDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamPeopleInsuranceDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamPeopleInsuranceDomain"/>
+        <reference name="samPeopleInsuranceDao" target="samPeopleInsuranceDao/samPeopleInsuranceDao"/>
+	</component>	
+	<!--低保申请审批信息Dao -->	
+	 <component name="samApplyInfoDao">
+	    <service name="samApplyInfoDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamApplyInfoDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamApplyInfoDao"/>
+	</component>
+	<!--低保申请审批信息Domain -->	
+	 <component name="samApplyInfoDomain">
+	    <service name="samApplyInfoDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamApplyInfoDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamApplyInfoDomain"/>
+        <reference name="samApplyInfoDao" target="samApplyInfoDao/samApplyInfoDao"/>
+        <reference name="baseinfoDomain" target="baseinfoDomain/baseinfoDomain"/>
+        <reference name="samFamilyTreatmentDomain" target="samFamilyTreatmentDomain/samFamilyTreatmentDomain"/>
+	</component>
+	
+	<!--公示结果Dao -->	
+	 <component name="samApplyNoticeDao">
+	    <service name="samApplyNoticeDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamApplyNoticeDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamApplyNoticeDao"/>
+	</component>
+	<!--公示结果Domain -->	
+	 <component name="samApplyNoticeDomain">
+	    <service name="samApplyNoticeDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamApplyNoticeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamApplyNoticeDomain"/>
+        <reference name="samApplyNoticeDao" target="samApplyNoticeDao/samApplyNoticeDao"/>
+	</component>
+	
+	<!--评议结果Dao -->	
+	 <component name="samApplyDiscussionDao">
+	    <service name="samApplyDiscussionDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamApplyDiscussionDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamApplyDiscussionDao"/>
+	</component>
+	<!--评议结果Domain -->	
+	 <component name="samApplyDiscussionDomain">
+	    <service name="samApplyDiscussionDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamApplyDiscussionDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamApplyDiscussionDomain"/>
+        <reference name="samApplyDiscussionDao" target="samApplyDiscussionDao/samApplyDiscussionDao"/>
+	</component>	
+	
+	<!--入户调查Dao -->	
+	 <component name="samApplySurveyDao">
+	    <service name="samApplySurveyDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamApplySurveyDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamApplySurveyDao"/>
+	</component>
+	<!--入户调查Domain -->	
+	 <component name="samApplySurveyDomain">
+	    <service name="samApplySurveyDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamApplySurveyDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamApplySurveyDomain"/>
+        <reference name="samApplySurveyDao" target="samApplySurveyDao/samApplySurveyDao"/>
+	</component>
+
+	<!--申请审批历史意见Dao -->	
+	 <component name="samApplyOptionsHisDao">
+	    <service name="samApplyOptionsHisDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamApplyOptionsHisDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamApplyOptionsHisDao"/>
+	</component>
+	<!--申请审批历史意见Domain -->	
+	 <component name="samApplyOptionsHisDomain">
+	    <service name="samApplyOptionsHisDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamApplyOptionsHisDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamApplyOptionsHisDomain"/>
+        <reference name="samApplyOptionsHisDao" target="samApplyOptionsHisDao/samApplyOptionsHisDao"/>
+	</component>
+	
+		
+	<!--申请材料Dao -->	
+	 <component name="samApplyFilesDao">
+	    <service name="samApplyFilesDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamApplyFilesDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamApplyFilesDao"/>
+	</component>
+	<!--申请材料Domain -->	
+	 <component name="samApplyFilesDomain">
+	    <service name="samApplyFilesDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamApplyFilesDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamApplyFilesDomain"/>
+        <reference name="samApplyFilesDao" target="samApplyFilesDao/samApplyFilesDao"/>
+	</component>
+	
+	
+	<!--家庭房产Dao -->	
+	 <component name="samFamilyHouseDao">
+	    <service name="samFamilyHouseDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamFamilyHouseDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamFamilyHouseDao"/>
+	</component>
+	<!--家庭房产Domain -->	
+	 <component name="samFamilyHouseDomain">
+	    <service name="samFamilyHouseDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamFamilyHouseDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamFamilyHouseDomain"/>
+        <reference name="samFamilyHouseDao" target="samFamilyHouseDao/samFamilyHouseDao"/>
+	</component>
+	
+	<!--家庭财产信息Dao -->	
+	 <component name="samFamilyEstateDao">
+	    <service name="samFamilyEstateDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamFamilyEstateDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamFamilyEstateDao"/>
+	</component>
+	<!--家庭财产信息Domain -->	
+	 <component name="samFamilyEstateDomain">
+	    <service name="samFamilyEstateDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamFamilyEstateDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamFamilyEstateDomain"/>
+        <reference name="samFamilyEstateDao" target="samFamilyEstateDao/samFamilyEstateDao"/>
+	</component>
+	
+	<!--家庭赡扶抚养义务人员信息Dao -->	
+	 <component name="samFamilySupportDao">
+	    <service name="samFamilySupportDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamFamilySupportDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamFamilySupportDao"/>
+	</component>
+	<!--家庭赡扶抚养义务人员信息Domain -->	
+	 <component name="samFamilySupportDomain">
+	    <service name="samFamilySupportDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamFamilySupportDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamFamilySupportDomain"/>
+        <reference name="samFamilySupportDao" target="samFamilySupportDao/samFamilySupportDao"/>
+	</component>
+
+	<!--救助项目Dao -->	
+	 <component name="samAssistanceItemDao">
+	    <service name="samAssistanceItemDao">
+	    	<interface.java interface="com.inspur.cams.drel.config.assistance.dao.ISamAssistanceItemDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.config.assistance.dao.jdbc.SamAssistanceItemDao"/>
+	</component>
+	<!--救助项目Domain -->	
+	 <component name="samAssistanceItemDomain">
+	    <service name="samAssistanceItemDomain">
+	    	<interface.java interface="com.inspur.cams.drel.config.assistance.domain.ISamAssistanceItemDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.config.assistance.domain.support.SamAssistanceItemDomain"/>
+        <reference name="samAssistanceItemDao" target="samAssistanceItemDao/samAssistanceItemDao"/>
+	</component>		
+		
+	<!--分类施保配置Dao -->	
+	 <component name="samAssistanceClassDao">
+	    <service name="samAssistanceClassDao">
+	    	<interface.java interface="com.inspur.cams.drel.config.assistance.dao.ISamAssistanceClassDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.config.assistance.dao.jdbc.SamAssistanceClassDao"/>
+	</component>
+	<!--分类施保配置Domain -->	
+	 <component name="samAssistanceClassDomain">
+	    <service name="samAssistanceClassDomain">
+	    	<interface.java interface="com.inspur.cams.drel.config.assistance.domain.ISamAssistanceClassDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.config.assistance.domain.support.SamAssistanceClassDomain"/>
+        <reference name="samAssistanceClassDao" target="samAssistanceClassDao/samAssistanceClassDao"/>
+	</component>
+    <component name="samSpecialAssistanceItemDao">
+	    <service name="samSpecialAssistanceItemDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamSpecialAssistanceItemDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamSpecialAssistanceItemDao"/>
+    </component> 
+    <component name="samSpecialAssistanceItemDomain">
+	    <service name="samSpecialAssistanceItemDomain">
+	    	<interface.java interface="com.inspur.cams.drel.sam.domain.ISamSpecialAssistanceItemDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamSpecialAssistanceItemDomain"/>
+        <reference name="samSpecialAssistanceItemDao" target="samSpecialAssistanceItemDao/samSpecialAssistanceItemDao"/>
+    </component> 
+    
+        <component name="samSupportOrganDao">
+	    <service name="samSupportOrganDao">
+	    	<interface.java interface="com.inspur.cams.drel.organ.dao.ISamSupportOrganDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.organ.dao.jdbc.SamSupportOrganDao"/>
+    </component> 
+    <component name="samSupportOrganDomain">
+	    <service name="samSupportOrganDomain">
+	    	<interface.java interface="com.inspur.cams.drel.organ.domain.ISamSupportOrganDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.organ.domain.support.SamSupportOrganDomain"/>
+        <reference name="samSupportOrganDao" target="samSupportOrganDao/samSupportOrganDao"/>
+    </component> 
+	
+	<!--低保证号Dao -->	
+	<component name="samCardNoDao">
+		<service name="samCardNoDao">
+			<interface.java interface="com.inspur.cams.drel.sam.dao.ISamCardNoDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamCardNoDao"/>
+	</component>
+	<!--低保证号Domain -->	
+	<component name="samCardNoDomain">
+		<service name="samCardNoDomain">
+			<interface.java interface="com.inspur.cams.drel.sam.domain.ISamCardNoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamCardNoDomain"/>
+		<reference name="samCardNoDao" target="samCardNoDao/samCardNoDao"/>
+	</component>
+	
+	<!--身份代码Dao -->	
+	<component name="samIdCardDao">
+		<service name="samIdCardDao">
+			<interface.java interface="com.inspur.cams.drel.sam.dao.ISamIdCardDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamIdCardDao"/>
+	</component>
+	<!--身份代码Domain -->	
+	<component name="samIdCardDomain">
+		<service name="samIdCardDomain">
+			<interface.java interface="com.inspur.cams.drel.sam.domain.ISamIdCardDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.sam.domain.support.SamIdCardDomain"/>
+		<reference name="samIdCardDao" target="samIdCardDao/samIdCardDao"/>
+	</component>
+	
+	
+	
+	
+	<!--城市低保domain -->
+	 <component name="SamApplyFromEnsureyDomain">
+	    <service name="SamApplyFromEnsureyDomain">
+	    	<interface.java interface="com.inspur.cams.drel.application.comm.domain.ISamApplyFromEnsureyDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.application.comm.domain.support.SamApplyFromEnsureyDomain"/>
+        <reference name="samApplyInfoDomain" target="samApplyInfoDomain/samApplyInfoDomain"/>
+        <reference name="baseinfoDomain" target="baseinfoDomain/baseinfoDomain"/>
+	</component>
+	<component name="samFamilyAssistanceArchiveDao">
+		<service name="samFamilyAssistanceArchiveDao">
+			<interface.java interface="com.inspur.cams.drel.archive.samfamilyassistancearchive.dao.ISamFamilyAssistanceArchiveDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.archive.samfamilyassistancearchive.dao.jdbc.SamFamilyAssistanceArchiveDao"/>
+    </component>
+	<component name="samFamilyAssistanceArchiveDomain">
+		<service name="samFamilyAssistanceArchiveDomain">
+			<interface.java interface="com.inspur.cams.drel.archive.samfamilyassistancearchive.domain.ISamFamilyAssistanceArchiveDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.archive.samfamilyassistancearchive.domain.support.SamFamilyAssistanceArchiveDomain"/>
+		<reference name="samFamilyAssistanceArchiveDao" target="samFamilyAssistanceArchiveDao/samFamilyAssistanceArchiveDao"/>
+	</component>
+	<component name="samFamilyHouseArchiveDao">
+		<service name="samFamilyHouseArchiveDao">
+			<interface.java interface="com.inspur.cams.drel.archive.samfamilyhousearchive.dao.ISamFamilyHouseArchiveDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.archive.samfamilyhousearchive.dao.jdbc.SamFamilyHouseArchiveDao"/>
+    </component>
+	<component name="samFamilyHouseArchiveDomain">
+		<service name="samFamilyHouseArchiveDomain">
+			<interface.java interface="com.inspur.cams.drel.archive.samfamilyhousearchive.domain.ISamFamilyHouseArchiveDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.archive.samfamilyhousearchive.domain.support.SamFamilyHouseArchiveDomain"/>
+		<reference name="samFamilyHouseArchiveDao" target="samFamilyHouseArchiveDao/samFamilyHouseArchiveDao"/>
+	</component>
+	<component name="samFamilyEstateArchiveDao">
+		<service name="samFamilyEstateArchiveDao">
+			<interface.java interface="com.inspur.cams.drel.archive.samfamilyestatearchive.dao.ISamFamilyEstateArchiveDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.archive.samfamilyestatearchive.dao.jdbc.SamFamilyEstateArchiveDao"/>
+    </component>
+	<component name="samFamilyEstateArchiveDomain">
+		<service name="samFamilyEstateArchiveDomain">
+			<interface.java interface="com.inspur.cams.drel.archive.samfamilyestatearchive.domain.ISamFamilyEstateArchiveDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.archive.samfamilyestatearchive.domain.support.SamFamilyEstateArchiveDomain"/>
+		<reference name="samFamilyEstateArchiveDao" target="samFamilyEstateArchiveDao/samFamilyEstateArchiveDao"/>
+	</component>
+	<component name="samFamilySupportArchiveDao">
+		<service name="samFamilySupportArchiveDao">
+			<interface.java interface="com.inspur.cams.drel.archive.samfamilysupportarchive.dao.ISamFamilySupportArchiveDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.archive.samfamilysupportarchive.dao.jdbc.SamFamilySupportArchiveDao"/>
+    </component>
+	<component name="samFamilySupportArchiveDomain">
+		<service name="samFamilySupportArchiveDomain">
+			<interface.java interface="com.inspur.cams.drel.archive.samfamilysupportarchive.domain.ISamFamilySupportArchiveDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.archive.samfamilysupportarchive.domain.support.SamFamilySupportArchiveDomain"/>
+		<reference name="samFamilySupportArchiveDao" target="samFamilySupportArchiveDao/samFamilySupportArchiveDao"/>
+	</component>	
+	
+	<!--归档人员信息Dao -->	
+	 <component name="baseinfoPeopleArchiveDao">
+	    <service name="baseinfoPeopleArchiveDao">
+	    	<interface.java interface="com.inspur.cams.drel.archive.baseinfopeoplearchive.dao.IBaseinfoPeopleArchiveDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.baseinfopeoplearchive.dao.jdbc.BaseinfoPeopleArchiveDao"/>
+	</component>
+	<!--归档人员信息Domain -->	
+	 <component name="baseinfoPeopleArchiveDomain">
+	    <service name="baseinfoPeopleArchiveDomain">
+	    	<interface.java interface="com.inspur.cams.drel.archive.baseinfopeoplearchive.domain.IBaseinfoPeopleArchiveDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.baseinfopeoplearchive.domain.support.BaseinfoPeopleArchiveDomain"/>
+        <reference name="baseinfoPeopleArchiveDao" target="baseinfoPeopleArchiveDao/baseinfoPeopleArchiveDao"/>
+	</component>
+
+	<!--归档人员扩展信息Dao -->	
+	 <component name="samPeopleExtendArchiveDao">
+	    <service name="samPeopleExtendArchiveDao">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeopleextendarchive.dao.ISamPeopleExtendArchiveDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeopleextendarchive.dao.jdbc.SamPeopleExtendArchiveDao"/>
+	</component>
+	<!--归档人员扩展信息Domain -->	
+	 <component name="samPeopleExtendArchiveDomain">
+	    <service name="samPeopleExtendArchiveDomain">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeopleextendarchive.domain.ISamPeopleExtendArchiveDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeopleextendarchive.domain.support.SamPeopleExtendArchiveDomain"/>
+        <reference name="samPeopleExtendArchiveDao" target="samPeopleExtendArchiveDao/samPeopleExtendArchiveDao"/>
+	</component>
+	
+	<!--归档人员类型信息Dao -->	
+	 <component name="samPeopleTypeArchiveDao">
+	    <service name="samPeopleTypeArchiveDao">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeopletypearchive.dao.ISamPeopleTypeArchiveDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeopletypearchive.dao.jdbc.SamPeopleTypeArchiveDao"/>
+	</component>
+	<!--归档人员类型信息Domain -->	
+	 <component name="samPeopleTypeArchiveDomain">
+	    <service name="samPeopleTypeArchiveDomain">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeopletypearchive.domain.ISamPeopleTypeArchiveDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeopletypearchive.domain.support.SamPeopleTypeArchiveDomain"/>
+        <reference name="samPeopleTypeArchiveDao" target="samPeopleTypeArchiveDao/samPeopleTypeArchiveDao"/>
+	</component>
+	
+	<!--归档人员患病信息Dao -->	
+	 <component name="samPeopleDiseaseArchiveDao">
+	    <service name="samPeopleDiseaseArchiveDao">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeoplediseasearchive.dao.ISamPeopleDiseaseArchiveDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeoplediseasearchive.dao.jdbc.SamPeopleDiseaseArchiveDao"/>
+	</component>
+	<!--归档人员患病信息Domain -->	
+	 <component name="samPeopleDiseaseArchiveDomain">
+	    <service name="samPeopleDiseaseArchiveDomain">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeoplediseasearchive.domain.ISamPeopleDiseaseArchiveDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeoplediseasearchive.domain.support.SamPeopleDiseaseArchiveDomain"/>
+        <reference name="samPeopleDiseaseArchiveDao" target="samPeopleDiseaseArchiveDao/samPeopleDiseaseArchiveDao"/>
+	</component>
+	
+	<!--归档人员残疾信息Dao -->	
+	 <component name="samPeopleDisabilityArchiveDao">
+	    <service name="samPeopleDisabilityArchiveDao">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeopledisabilityarchive.dao.ISamPeopleDisabilityArchiveDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeopledisabilityarchive.dao.jdbc.SamPeopleDisabilityArchiveDao"/>
+	</component>
+	<!--归档人员残疾信息Domain -->	
+	 <component name="samPeopleDisabilityArchiveDomain">
+	    <service name="samPeopleDisabilityArchiveDomain">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeopledisabilityarchive.domain.ISamPeopleDisabilityArchiveDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeopledisabilityarchive.domain.support.SamPeopleDisabilityArchiveDomain"/>
+        <reference name="samPeopleDisabilityArchiveDao" target="samPeopleDisabilityArchiveDao/samPeopleDisabilityArchiveDao"/>
+	</component>
+	
+	<!--归档人员教育信息Dao -->	
+	 <component name="samPeopleEduArchiveDao">
+	    <service name="samPeopleEduArchiveDao">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeopleeduarchive.dao.ISamPeopleEduArchiveDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeopleeduarchive.dao.jdbc.SamPeopleEduArchiveDao"/>
+	</component>
+	<!--归档人员教育信息Domain -->	
+	 <component name="samPeopleEduArchiveDomain">
+	    <service name="samPeopleEduArchiveDomain">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeopleeduarchive.domain.ISamPeopleEduArchiveDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeopleeduarchive.domain.support.SamPeopleEduArchiveDomain"/>
+        <reference name="samPeopleEduArchiveDao" target="samPeopleEduArchiveDao/samPeopleEduArchiveDao"/>
+	</component>
+	
+	<!--归档人员就业信息Dao -->	
+	 <component name="samPeopleJobsArchiveDao">
+	    <service name="samPeopleJobsArchiveDao">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeoplejobsarchive.dao.ISamPeopleJobsArchiveDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeoplejobsarchive.dao.jdbc.SamPeopleJobsArchiveDao"/>
+	</component>
+	<!--归档人员就业信息Domain -->	
+	 <component name="samPeopleJobsArchiveDomain">
+	    <service name="samPeopleJobsArchiveDomain">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeoplejobsarchive.domain.ISamPeopleJobsArchiveDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeoplejobsarchive.domain.support.SamPeopleJobsArchiveDomain"/>
+        <reference name="samPeopleJobsArchiveDao" target="samPeopleJobsArchiveDao/samPeopleJobsArchiveDao"/>
+	</component>
+	
+	<!--归档人员收入信息Dao -->	
+	 <component name="samPeopleIncomeArchiveDao">
+	    <service name="samPeopleIncomeArchiveDao">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeopleincomearchive.dao.ISamPeopleIncomeArchiveDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeopleincomearchive.dao.jdbc.SamPeopleIncomeArchiveDao"/>
+	</component>
+	<!--归档人员收入信息Domain -->	
+	 <component name="samPeopleIncomeArchiveDomain">
+	    <service name="samPeopleIncomeArchiveDomain">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeopleincomearchive.domain.ISamPeopleIncomeArchiveDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeopleincomearchive.domain.support.SamPeopleIncomeArchiveDomain"/>
+        <reference name="samPeopleIncomeArchiveDao" target="samPeopleIncomeArchiveDao/samPeopleIncomeArchiveDao"/>
+	</component>
+	
+	<!--归档人员保险信息Dao -->	
+	 <component name="samPeopleInsuranceArchiveDao">
+	    <service name="samPeopleInsuranceArchiveDao">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeopleinsurancearchive.dao.ISamPeopleInsuranceArchiveDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeopleinsurancearchive.dao.jdbc.SamPeopleInsuranceArchiveDao"/>
+	</component>
+	<!--归档人员保险信息Domain -->	
+	 <component name="samPeopleInsuranceArchiveDomain">
+	    <service name="samPeopleInsuranceArchiveDomain">
+	    	<interface.java interface="com.inspur.cams.drel.archive.sampeopleinsurancearchive.domain.ISamPeopleInsuranceArchiveDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.archive.sampeopleinsurancearchive.domain.support.SamPeopleInsuranceArchiveDomain"/>
+        <reference name="samPeopleInsuranceArchiveDao" target="samPeopleInsuranceArchiveDao/samPeopleInsuranceArchiveDao"/>
+	</component>
+	<!--基本情况统计Domain -->	
+	 <component name="samBaseCaseReportDomain">
+	    <service name="samBaseCaseReportDomain">
+	    	<interface.java interface="com.inspur.cams.drel.report.domain.ISamBaseCaseReportDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.report.domain.support.SamBaseCaseReportDomain"/>
+        <reference name="samBaseCaseReportDao" target="samBaseCaseReportDao/samBaseCaseReportDao"/>
+	</component>
+	<!--基本情况统计Dao -->	
+	 <component name="samBaseCaseReportDao">
+	    <service name="samBaseCaseReportDao">
+	    	<interface.java interface="com.inspur.cams.drel.report.dao.ISamBaseCaseReportDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.report.dao.jdbc.SamBaseCaseReportDao"/>
+	</component>
+</composite>

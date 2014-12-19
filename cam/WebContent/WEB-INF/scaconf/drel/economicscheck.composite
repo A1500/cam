@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="economicscheck" xmlns="http://www.loushang.com/sca/1.0">
+	<description>economicscheck module</description>
+	<component name="esureyCheckDao">
+		<service name="IesureyCheckDao">
+			<interface.java interface="com.inspur.cams.drel.esurey.dao.IesureyCheckDao"/>
+			<binding.sca/>
+	    </service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.esureyCheckDao"/>	
+	</component>
+	
+	<component name="ExternalCheckDao">
+		<service name="IExternalCheckDao">
+			<interface.java interface="com.inspur.cams.drel.esurey.dao.IExternalCheckDao"/>
+			<binding.sca/>
+	    </service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.esurey.dao.jdbc.ExternalCheckDao"/>	
+	</component>
+	
+	<component name="esureyDomain">
+		<service name="esureyDomain">
+		    <interface.java interface="com.inspur.cams.drel.esurey.domain.IesureyDomain"/>
+	        <binding.sca/>
+	    </service>
+	    <implementation.java impl="com.inspur.cams.drel.esurey.domain.support.esureyDomain"/>
+		<reference name="economicscheckDao" target="esureyCheckDao.IesureyCheckDao"/>
+		<reference name="externalcheckDao" target="ExternalCheckDao.IExternalCheckDao"/>
+	</component>
+</composite>

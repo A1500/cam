@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+
+	<component name="samLowApplyInfoDao">
+		<service name="samLowApplyInfoDao">
+			<interface.java interface="com.inspur.cams.drel.application.cityLow.dao.ISamLowApplyInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.application.cityLow.dao.jdbc.SamLowApplyInfoDao"/>
+    </component>
+	<component name="samLowApplyInfoDomain">
+		<service name="samLowApplyInfoDomain">
+			<interface.java interface="com.inspur.cams.drel.application.cityLow.domain.ISamLowApplyInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.application.cityLow.domain.support.SamLowApplyInfoDomain"/>
+		<reference name="samLowApplyInfoDao" target="samLowApplyInfoDao/samLowApplyInfoDao"/>
+	</component>
+	
+	<component name="samLowPeoplePropertyDao">
+		<service name="samLowPeoplePropertyDao">
+			<interface.java interface="com.inspur.cams.drel.application.cityLow.dao.ISamLowPeoplePropertyDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.application.cityLow.dao.jdbc.SamLowPeoplePropertyDao"/>
+    </component>
+	<component name="samLowPeoplePropertyDomain">
+		<service name="samLowPeoplePropertyDomain">
+			<interface.java interface="com.inspur.cams.drel.application.cityLow.domain.ISamLowPeoplePropertyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.application.cityLow.domain.support.SamLowPeoplePropertyDomain"/>
+		<reference name="samLowPeoplePropertyDao" target="samLowPeoplePropertyDao/samLowPeoplePropertyDao"/>
+	</component>
+	
+	<component name="samLowSupportPeopleDao">
+		<service name="samLowSupportPeopleDao">
+			<interface.java interface="com.inspur.cams.drel.application.cityLow.dao.ISamLowSupportPeopleDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.application.cityLow.dao.jdbc.SamLowSupportPeopleDao"/>
+    </component>
+	<component name="samLowSupportPeopleDomain">
+		<service name="samLowSupportPeopleDomain">
+			<interface.java interface="com.inspur.cams.drel.application.cityLow.domain.ISamLowSupportPeopleDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.application.cityLow.domain.support.SamLowSupportPeopleDomain"/>
+		<reference name="samLowSupportPeopleDao" target="samLowSupportPeopleDao/samLowSupportPeopleDao"/>
+	</component>
+	
+	<component name="samLowPeopleIncomeDao">
+		<service name="samLowPeopleIncomeDao">
+			<interface.java interface="com.inspur.cams.drel.application.cityLow.dao.ISamLowPeopleIncomeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.application.cityLow.dao.jdbc.SamLowPeopleIncomeDao"/>
+    </component>
+	<component name="samLowPeopleIncomeDomain">
+		<service name="samLowPeopleIncomeDomain">
+			<interface.java interface="com.inspur.cams.drel.application.cityLow.domain.ISamLowPeopleIncomeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.application.cityLow.domain.support.SamLowPeopleIncomeDomain"/>
+		<reference name="samLowPeopleIncomeDao" target="samLowPeopleIncomeDao/samLowPeopleIncomeDao"/>
+	</component>
+</composite>

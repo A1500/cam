@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg onload="init(evt)" width="1140%" height="1140%" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- 引入图表功能js文件 -->
+    <script type="text/javascript" xlink:href="../../../../skins/js/L5-chart_5.0.1.js"></script>
+    <script type="text/javascript">
+      <![CDATA[
+        function init(evt){
+           //创建柱状图视图对象
+           var bar=new BarChart();
+					 var records = ds.getAllRecords();
+					 var chartDatas = new Array();
+					 if(records.length>0) {
+						 for(var i=0;i<records.length;i++ ) {
+							 var value = records[i].get("SUMASSPAY");
+							 value=Math.round(value.replace(",", "")/10000*100)/100;
+							 var name = records[i].get("domicileName")+"（"+value+"万元）";
+							 chartDatas.push({name:name,value:value});
+						 }
+					 } else {
+						 chartDatas.push({name:"未查询到符合条件的数据",value:"0"});
+					 }
+					 bar.setChartData(chartDatas);
+					 
+           //为视图模型自定义颜色属性，为图表元素显示之用，若不设置则使用默认颜色显示。
+           var colors = new Array("#FF9966", "#C2A00E", "#71A214", "#3399CC", "#CC99FF", "#FF6999", "#00CC99", "#C2CC0E", "#71CC14", "#CC68CC", "#66FFCC");    
+           bar.setColors(colors);
+           //设置图表标题，若不设置则不显示标题
+           bar.setTitle("救助对象属地、救助金额区间、时间段统计查询结果");
+           //设置图表横轴和纵轴名称，若不设置则不显示
+           bar.setYAxisTitle("救助金额(万元)");
+           bar.setXAxisTitle("属地"); 
+           //如果要使用默认的背景
+           bar.setBackgroudColors();
+           //如果要设置渐变效果的背景
+           bar.customBackgroudColors(new Array("#FFFFFF", "#FFAA33", "#EE7700"));
+           //如果要设置单一颜色的背景
+           bar.customBackgroudColors(new Array("#CCCCCC"));        
+           //如果要设置坐标线
+           bar.setCoordLineColor("white","white");	
+           //显示图表，两个参数表示显示图例和更新时间
+           bar.show(true,false);	
+           //如下的addEvent和modifyEvent方法便于开发人员操作图表元素
+           //给图表元素添加了onclick事件，点击柱状图的每个柱形时，都会执行该事件
+           //bar.addEvent("onclick","alert('you click me')");	
+           //修改了图表元素的onmouseover事件，鼠标移至每个柱形时，都会执行修改后的事件
+           //bar.modifyEvent("onmouseover","alert('you onmouseover me')");	
+           //修改了图表元素的onmouseover事件，鼠标移至每个柱形时，都会执行alert('you onmouseover me')和alert('you onmouseover me2')
+           //bar.addEvent("onmouseover","alert('you onmouseover me2')");	
+        }  	
+    ]]></script>
+</svg>

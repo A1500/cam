@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="cams.fis" xmlns="http://www.loushang.com/sca/1.0">
+    <description>demo module</description>
+    <!--墓穴管理Dao-->
+      <component name="FisGraveManagementDao">
+	    <service name="FisGraveManagementDao">
+	    	<interface.java interface="com.inspur.cams.fis.ceme.dao.IFisGraveManagementDao"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.fis.ceme.dao.jdbc.FisGraveManagementDao"/>	
+    </component>
+    <!--墓穴管理Domain-->
+     <component name="FisGraveManagementDomain">
+	    <service name="FisGraveManagementDomain">
+	    	<interface.java interface="com.inspur.cams.fis.ceme.domain.IFisGraveManagementDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.fis.ceme.domain.support.FisGraveManagementDomain"/>	
+    	<reference name="fisGraveManagementDao"  target="FisGraveManagementDao.FisGraveManagementDao"/>
+    </component> 
+   
+</composite>

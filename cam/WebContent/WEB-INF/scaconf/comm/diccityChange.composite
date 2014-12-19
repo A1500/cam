@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<component name="dicCityDataTransDao">
+		<service name="dicCityDataTransDao">
+			<interface.java interface="com.inspur.cams.comm.diccityChange.dao.IDicCityDataTransDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.diccityChange.dao.jdbc.DicCityDataTransDao"/>
+    </component>
+	<component name="dicCityDataTransDomain">
+		<service name="dicCityDataTransDomain">
+			<interface.java interface="com.inspur.cams.comm.diccityChange.domain.IDicCityDataTransDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.diccityChange.domain.support.DicCityDataTransDomain"/>
+		<reference name="dicCityDataTransDao" target="dicCityDataTransDao/dicCityDataTransDao"/>
+	</component>
+	<component name="dicCityChangeDao">
+		<service name="dicCityChangeDao">
+			<interface.java interface="com.inspur.cams.comm.diccityChange.dao.IDicCityChangeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.diccityChange.dao.jdbc.DicCityChangeDao"/>
+    </component>
+	<component name="dicCityChangeDomain">
+		<service name="dicCityChangeDomain">
+			<interface.java interface="com.inspur.cams.comm.diccityChange.domain.IDicCityChangeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.diccityChange.domain.support.DicCityChangeDomain"/>
+		<reference name="dicCityChangeDao" target="dicCityChangeDao/dicCityChangeDao"/>
+		<reference name="dicCityDataTransDao" target="dicCityDataTransDao/dicCityDataTransDao"/>
+	</component>
+	<component name="dicCityChangeBatchDao">
+		<service name="dicCityChangeBatchDao">
+			<interface.java interface="com.inspur.cams.comm.diccityChange.dao.IDicCityChangeBatchDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.diccityChange.dao.jdbc.DicCityChangeBatchDao"/>
+    </component>
+	<component name="dicCityChangeBatchDomain">
+		<service name="dicCityChangeBatchDomain">
+			<interface.java interface="com.inspur.cams.comm.diccityChange.domain.IDicCityChangeBatchDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.diccityChange.domain.support.DicCityChangeBatchDomain"/>
+		<reference name="dicCityChangeBatchDao" target="dicCityChangeBatchDao/dicCityChangeBatchDao"/>
+	</component>
+	<!--区划变更上传附件表-->
+	<component name="dicCityChangeBatchAttachDao">
+		<service name="dicCityChangeBatchAttachDao">
+			<interface.java interface="com.inspur.cams.comm.diccityChange.dao.IDicCityChangeBatchAttachDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.diccityChange.dao.jdbc.DicCityChangeBatchAttachDao"/>
+    </component>
+	<component name="dicCityChangeBatchAttachDomain">
+		<service name="dicCityChangeBatchAttachDomain">
+			<interface.java interface="com.inspur.cams.comm.diccityChange.domain.IDicCityChangeBatchAttachDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.diccityChange.domain.support.DicCityChangeBatchAttachDomain"/>
+		<reference name="dicCityChangeBatchAttachDao" target="dicCityChangeBatchAttachDao/dicCityChangeBatchAttachDao"/>
+	</component>
+</composite>

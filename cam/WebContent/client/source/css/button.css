@@ -1,0 +1,175 @@
+.l-btn {
+	font: normal 12px tahoma, verdana, helvetica;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.l-btn button {
+	border: 0 none;
+	background: transparent;
+	font: normal 12px tahoma, verdana, helvetica;
+	padding-left: 3px;
+	padding-right: 3px;
+	cursor: pointer;
+	margin: 0;
+	overflow: visible;
+	width: auto;
+	-moz-outline: 0 none;
+	outline: 0 none;
+}
+
+* html .L5-ie .l-btn button {
+	width: 1px;
+}
+
+.L5-gecko .l-btn button {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.L5-ie .l-btn button {
+	padding-top: 2px;
+}
+
+.l-btn-icon .l-btn-center .l-btn-text {
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 16px;
+	width: 16px;
+	cursor: pointer;
+	white-space: nowrap;
+	padding: 0;
+}
+
+.l-btn-icon .l-btn-center {
+	padding: 1px;
+}
+
+.l-btn em {
+	font-style: normal;
+	font-weight: normal;
+}
+
+.l-btn-text-icon .l-btn-center .l-btn-text {
+	background-position: 0 2px;
+	background-repeat: no-repeat;
+	padding-left: 18px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	padding-right: 0;
+}
+
+.L5-gecko3 .l-btn-text-icon .l-btn-center .l-btn-text {
+	padding-top: 2px;
+}
+
+.l-btn-left,.l-btn-right {
+	font-size: 1px;
+	line-height: 1px;
+}
+
+.l-btn-left {
+	width: 3px;
+	height: 21px;
+	background: url(../images/default/button/btn-sprite.gif) no-repeat 0 0;
+}
+
+.l-btn-right {
+	width: 3px;
+	height: 21px;
+	background: url(../images/default/button/btn-sprite.gif) no-repeat 0
+		-21px;
+}
+
+.l-btn-left i,.l-btn-right i {
+	display: block;
+	width: 3px;
+	overflow: hidden;
+	font-size: 1px;
+	line-height: 1px;
+}
+
+.l-btn-center {
+	background: url(../images/default/button/btn-sprite.gif) repeat-x 0
+		-42px;
+	vertical-align: middle;
+	text-align: center;
+	padding: 0 5px;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.l-btn-over .l-btn-left {
+	background-position: 0 -63px;
+}
+
+.l-btn-over .l-btn-right {
+	background-position: 0 -84px;
+}
+
+.l-btn-over .l-btn-center {
+	background-position: 0 -105px;
+}
+
+.l-btn-click .l-btn-center,.l-btn-menu-active .l-btn-center {
+	background-position: 0 -126px;
+}
+
+.l-btn-disabled * {
+	color: gray !important;
+	cursor: default !important;
+}
+
+.l-btn-menu-text-wrap .l-btn-center {
+	padding: 0 3px;
+}
+
+.L5-gecko .l-btn-menu-text-wrap .l-btn-center {
+	padding: 0 1px;
+}
+
+.l-btn-menu-arrow-wrap .l-btn-center {
+	padding: 0;
+}
+
+.l-btn-menu-arrow-wrap .l-btn-center button {
+	width: 12px !important;
+	height: 21px;
+	padding: 0 !important;
+	display: block;
+	background: transparent url(../images/default/button/btn-arrow.gif)
+		no-repeat left 3px;
+}
+
+.l-btn-with-menu .l-btn-center {
+	padding-right: 2px !important;
+}
+
+.l-btn-with-menu .l-btn-center em {
+	display: block;
+	background: transparent url(../images/default/toolbar/btn-arrow.gif)
+		no-repeat right 0;
+	padding-right: 10px;
+}
+
+.l-btn-text-icon .l-btn-with-menu .l-btn-center em {
+	display: block;
+	background: transparent url(../images/default/toolbar/btn-arrow.gif)
+		no-repeat right 3px;
+	padding-right: 10px;
+}
+
+.l-btn-pressed .l-btn-left {
+	background: url(../images/default/button/btn-sprite.gif) no-repeat 0
+		-63px;
+}
+
+.l-btn-pressed .l-btn-right {
+	background: url(../images/default/button/btn-sprite.gif) no-repeat 0
+		-84px;
+}
+
+.l-btn-pressed .l-btn-center {
+	background: url(../images/default/button/btn-sprite.gif) repeat-x 0
+		-126px;
+}

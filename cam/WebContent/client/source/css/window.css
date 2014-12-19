@@ -1,0 +1,239 @@
+.l-window {
+	zoom: 1;
+}
+
+.l-window .l-resizable-handle {
+	opacity: 0;
+	-moz-opacity: 0;
+	filter: alpha(opacity = 0);
+}
+
+.l-window-proxy {
+	background: #C7DFFC;
+	border: 1px solid #99bbe8;
+	z-index: 12000;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	opacity: .5;
+	-moz-opacity: .5;
+	filter: alpha(opacity = 50);
+}
+
+.l-window-header {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.l-window-bwrap {
+	z-index: 1;
+	position: relative;
+	zoom: 1;
+	left: 0;
+	top: 0;
+}
+
+.l-window-tl .l-window-header {
+	color: #15428b;
+	font: bold 12px tahoma, arial, verdana, sans-serif;
+	padding: 5px 0 4px 0;
+}
+
+.l-window-header-text {
+	cursor: pointer;
+}
+
+.l-window-tc {
+	background: transparent url(../images/default/window/top-bottom.png)
+		repeat-x 0 0;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.l-window-tl {
+	background: transparent url(../images/default/window/left-corners.png)
+		no-repeat 0 0;
+	padding-left: 6px;
+	zoom: 1;
+	z-index: 1;
+	position: relative;
+}
+
+.l-window-tr {
+	background: transparent url(../images/default/window/right-corners.png)
+		no-repeat right 0;
+	padding-right: 6px;
+}
+
+.l-window-bc {
+	background: transparent url(../images/default/window/top-bottom.png)
+		repeat-x 0 bottom;
+	zoom: 1;
+}
+
+.l-window-bc .l-window-footer {
+	padding-bottom: 6px;
+	zoom: 1;
+	font-size: 0;
+	line-height: 0;
+}
+
+.l-window-bl {
+	background: transparent url(../images/default/window/left-corners.png)
+		no-repeat 0 bottom;
+	padding-left: 6px;
+	zoom: 1;
+}
+
+.l-window-br {
+	background: transparent url(../images/default/window/right-corners.png)
+		no-repeat right bottom;
+	padding-right: 6px;
+	zoom: 1;
+}
+
+.l-window-mc {
+	border: 1px solid #99bbe8;
+	padding: 0;
+	margin: 0;
+	font: normal 12px tahoma, arial, helvetica, sans-serif;
+	background: #dfe8f6;
+}
+
+.l-window-ml {
+	background: transparent url(../images/default/window/left-right.png)
+		repeat-y 0 0;
+	padding-left: 6px;
+	zoom: 1;
+}
+
+.l-window-mr {
+	background: transparent url(../images/default/window/left-right.png)
+		repeat-y right 0;
+	padding-right: 6px;
+	zoom: 1;
+}
+
+.l-window-body {
+	overflow: hidden;
+}
+
+.l-window-bwrap {
+	overflow: hidden;
+}
+
+.l-window-maximized .l-window-bl,.l-window-maximized .l-window-br,.l-window-maximized .l-window-ml,.l-window-maximized .l-window-mr,.l-window-maximized .l-window-tl,.l-window-maximized .l-window-tr
+	{
+	padding: 0;
+}
+
+.l-window-maximized .l-window-footer {
+	padding-bottom: 0;
+}
+
+.l-window-maximized .l-window-tc {
+	padding-left: 3px;
+	padding-right: 3px;
+	background-color: white;
+}
+
+.l-window-maximized .l-window-mc {
+	border-left: 0 none;
+	border-right: 0 none;
+}
+
+.l-window-tbar .l-toolbar,.l-window-bbar .l-toolbar {
+	border-left: 0 none;
+	border-right: 0 none;
+}
+
+.l-window-bbar .l-toolbar {
+	border-top: 1px solid #99bbe8;
+	border-bottom: 0 none;
+}
+
+.l-window-draggable,.l-window-draggable .l-window-header-text {
+	cursor: move;
+}
+
+.l-window-maximized .l-window-draggable,.l-window-maximized .l-window-draggable .l-window-header-text
+	{
+	cursor: default;
+}
+
+.l-window-body {
+	background: transparent;
+}
+
+.l-panel-ghost .l-window-tl {
+	border-bottom: 1px solid #99bbe8;
+}
+
+.l-panel-collapsed .l-window-tl {
+	border-bottom: 1px solid #84a0c4;
+}
+
+.l-window-maximized-ct {
+	overflow: hidden;
+}
+
+.l-window-maximized .l-resizable-handle {
+	display: none;
+}
+
+.l-window-sizing-ghost ul {
+	border: 0 none !important;
+}
+
+.l-dlg-focus {
+	-moz-outline: 0 none;
+	outline: 0 none;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.l-dlg-mask {
+	z-index: 10000;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-moz-opacity: .5;
+	opacity: .50;
+	filter: alpha(opacity = 50);
+	background-color: #CCC;
+}
+
+body.L5-ie6.l-body-masked select {
+	visibility: hidden;
+}
+
+body.L5-ie6.l-body-masked .l-window select {
+	visibility: visible;
+}
+
+.l-window-plain .l-window-mc {
+	background: #CAD9EC;
+	border-right: 1px solid #DFE8F6;
+	border-bottom: 1px solid #DFE8F6;
+	border-top: 1px solid #a3bae9;
+	border-left: 1px solid #a3bae9;
+}
+
+.l-window-plain .l-window-body {
+	border-left: 1px solid #DFE8F6;
+	border-top: 1px solid #DFE8F6;
+	border-bottom: 1px solid #a3bae9;
+	border-right: 1px solid #a3bae9;
+	background: transparent !important;
+}
+
+body.l-body-masked .l-window-plain .l-window-mc {
+	background: #C7D6E9;
+}

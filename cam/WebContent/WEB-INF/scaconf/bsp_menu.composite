@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="bsp_menu" xmlns="http://www.loushang.com/sca/1.0">
+    <description>menu</description>
+    <!-- 菜单类型  开始 -->
+	<component name="MenuTypeDao">
+	    <service name="MenuTypeDao">
+	    	<interface.java interface="org.loushang.bsp.permit.menu.dao.IMenuTypeDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.permit.menu.dao.jdbc.MenuTypeJdbcDao"/>	
+    </component>
+    
+     <component name="MenuTypeDomain">
+	    <service name="MenuTypeDomain">
+	    	<interface.java interface="org.loushang.bsp.permit.menu.domain.IMenuTypeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.permit.menu.domain.support.MenuTypeDomainImpl"/>	
+        <reference name="imenuTypeDao" target="MenuTypeDao/MenuTypeDao"/>
+    </component>
+    <!-- 菜单类型  结束-->
+    
+    <!-- 菜单结构  开始 -->
+    <component name="MenuStruDao">
+	    <service name="MenuStruDao">
+	    	<interface.java interface="org.loushang.bsp.permit.menu.dao.IMenuStruDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.permit.menu.dao.jdbc.MenuStruJdbcDao"/>	
+    </component>
+    
+     <component name="MenuStruDomain">
+	    <service name="MenuStruDomain">
+	    	<interface.java interface="org.loushang.bsp.permit.menu.domain.IMenuStruDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.permit.menu.domain.support.MenuStruDomainImpl"/>	
+        <reference name="imenuStruDao" target="MenuStruDao/MenuStruDao"/>
+        <reference name="imenuItemDao" target="MenuItemDao/MenuItemDao"/>
+    </component>
+    <!-- 菜单结构  结束 -->
+    
+   <!-- 菜单项  开始 -->
+    <component name="MenuItemDao">
+	    <service name="MenuItemDao">
+	    	<interface.java interface="org.loushang.bsp.permit.menu.dao.IMenuItemDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.permit.menu.dao.jdbc.MenuItemJdbcDao"/>	
+    </component>
+    
+     <component name="MenuItemDomain">
+	    <service name="MenuItemDomain">
+	    	<interface.java interface="org.loushang.bsp.permit.menu.domain.IMenuItemDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.permit.menu.domain.support.MenuItemDomainImpl"/>	
+        <reference name="imenuItemDao" target="MenuItemDao/MenuItemDao"/>
+        <reference name="imenuStruDao" target="MenuStruDao/MenuStruDao"/>
+    </component>
+    <!-- 菜单项  结束 -->
+    <component name="MenuManager">
+	    <service name="MenuManager">
+	    	<interface.java interface="org.loushang.bsp.permit.menu.domain.IMenuManager"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.permit.menu.domain.support.DBMenuManagerWrapper"/>	
+        <reference name="imenuTypeDomain" target="MenuTypeDomain/MenuTypeDomain"/>
+        <reference name="appDao" target="AppDao/AppDao"/>
+    </component>
+</composite>

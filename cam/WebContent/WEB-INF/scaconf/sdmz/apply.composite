@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="apply" xmlns="http://www.loushang.com/sca/1.0">
+	<description>samApply module</description>
+	<component name="SamApplyDao">
+		<service name="ISamApplyDao">
+			<interface.java interface="com.inspur.sdmz.apply.dao.ISamApplyDao"/>
+			<binding.sca/>
+	    </service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.sdmz.apply.dao.jdbc.SamApplyDao"/>	
+	</component>
+	<component name="SamApplyHandleDao">
+		<service name="ISamApplyHandleDao">
+			<interface.java interface="com.inspur.sdmz.apply.dao.ISamApplyHandleDao"/>
+			<binding.sca/>
+	    </service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.sdmz.apply.dao.jdbc.SamApplyHandleDao"/>	
+	</component>
+
+	<component name="SamApplyDomain">
+		<service name="SamApplyDomain">
+		    <interface.java interface="com.inspur.sdmz.apply.domain.ISamApplyDomain"/>
+	        <binding.sca/>
+	    </service>
+	    <implementation.java impl="com.inspur.sdmz.apply.domain.support.SamApplyDomain"/>
+		<reference name="samapplyDao" target="SamApplyDao.ISamApplyDao"/>
+		<reference name="samapplyHandleDao" target="SamApplyHandleDao.ISamApplyHandleDao"/>
+	</component>
+</composite>

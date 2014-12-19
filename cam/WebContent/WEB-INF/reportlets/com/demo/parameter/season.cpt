@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.EmbeddedTableData">
+<Parameters>
+</Parameters>
+<ColumnNames><![CDATA[Company,,.,,Year,,.,,Season,,.,,Income,,.,,Costs]]></ColumnNames>
+<ColumnTypes><![CDATA[java.lang.String,java.lang.Integer,java.lang.String,java.lang.Double,java.lang.Double]]></ColumnTypes>
+<RowData>
+<![CDATA[Fd0.K"#1'HkNgaP?u5be?(7[gG,_K4OZIUN^U,I93;+5&@C[cRJUu#Dp&+g"moum$CbJ$1YP
+[)=]VSND(*u(K-K+N?"Yt,N5_9*
+`^K1CCBa4.Djl?%B%_+q7GQ>68i6m1g6Rq@tfE:8$l2\-
+mGDEiT:kq5"&I/UPBF[$n"pkbnLI+lq8oT;@kjRULUB:WjH?[H#_M/
+[C?k08t_F((,0Sde#a
+h\)A:pN&gSfHbZ(00j+K*TVOZjJ@B%*dbi0?aH<P'N..!2)CfE0"R\3G<TXYQ2lJnuC6e*QV
+$a!'&1)J
+n.F1!HWeWcslZu3@m)3JG'bCV,7j85jAiT<PVjO)WtQ%(9'CVLDfLi$IAoPGCX8*
+C"Ner4'`hH5hf#[R=sKS[!>2'EbPUGYSSU!
+R1#\4K8tB@"jh-dQ(fLXjFI,F,4"qB^(4ihWY
+eA1E^2^MN4O;u1UN9T3=c_Ao3agFP<'1.:#dpt8^]N4gkP>m/pDM!PF:c"quZ~
+
+
+]]>
+</RowData>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="true" headerHeight="0.0" footerHeight="0.0">
+<PaperSize width="11.693" height="16.536" />
+<Margin top="0.27" left="0.7499999999999999" bottom="0.27" right="0.7499999999999999" />
+</ReportSettings>
+<ReportPageAttr>
+</ReportPageAttr>
+<ReportParameterAttr>
+<Parameters>
+<Parameter>
+<Attributes name="Start"
+ type="1"
+ shown="true" />
+<O t="I">2008</O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="End"
+ type="1"
+ shown="true" />
+<O t="I">2009</O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="Year"
+ type="1"
+ shown="true" />
+<O t="I">-1</O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="-1" value="去年"/>
+<Dict key="-2" value="前两年"/>
+<Dict key="-5" value="前五年"/>
+<Dict key="-10" value="前十年"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</Parameter>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="1" userDefineWindow="true" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+<WorkSheet>
+<ReportSettings shrinkToFit="false" headerHeight="0.0" footerHeight="0.0">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<Header reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Footer>
+<RowHeight defaultValue="19">
+<![CDATA[20]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[60,88,40,72,49]]>
+</ColumnWidth>
+<CellElementList>
+<C c="1" r="0" s="0"><O t="S"><![CDATA[历年销售查询：]]></O>
+</C>
+<C c="2" r="0" s="0"><O t="S"><![CDATA[年度：]]></O>
+</C>
+<C c="3" r="0" s="0"><O t="PR" >
+<ParameterRef name="Year" />
+</O>
+</C>
+<C c="4" r="0" s="1"><O t="PB" >
+<ParameterButton name="查询" type="0" />
+</O>
+</C>
+</CellElementList>
+</WorkSheet>
+<PP class="com.fr.report.parameter.CustomParameterProcessor">
+<UnitProcessorMap>
+<ParameterUnitProcessor parameter="End">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=YEAR(TODAY())]]></Attributes><Result type="Integer">2009</Result></Formula></UP>
+</ParameterUnitProcessor>
+<ParameterUnitProcessor parameter="Start">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=YEAR(TODAY())+$Year]]></Attributes><Result type="Integer">2008</Result></Formula></UP>
+</ParameterUnitProcessor>
+</UnitProcessorMap>
+</PP>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<Header reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Footer>
+<RowHeight defaultValue="19">
+<![CDATA[22,19,19,22,22,22,22]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[110,110,110,110,110,110]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="6" s="2"><O t="S"><![CDATA[企业历年销售明细一览表]]></O>
+</C>
+<C c="0" r="1" s="3"><O t="S"><![CDATA[查询日期：]]></O>
+</C>
+<C c="1" r="1" s="3"><O t="Formula" class="Formula" ><Attributes><![CDATA[=Today()]]></Attributes></O>
+</C>
+<C c="2" r="1" s="4"></C>
+<C c="3" r="1" s="4"></C>
+<C c="4" r="1" s="4"></C>
+<C c="5" r="1" s="4"></C>
+<C c="0" r="3" cs="6" s="5"></C>
+<C c="0" r="4" s="6"><O t="S"><![CDATA[企业]]></O>
+</C>
+<C c="1" r="4" s="6"><O t="S"><![CDATA[年度]]></O>
+</C>
+<C c="2" r="4" s="6"><O t="S"><![CDATA[季度]]></O>
+</C>
+<C c="3" r="4" s="6"><O t="S"><![CDATA[营业收入（万元）]]></O>
+</C>
+<C c="4" r="4" s="6"><O t="S"><![CDATA[营业成本（万元）]]></O>
+</C>
+<C c="5" r="4" s="6"><O t="S"><![CDATA[利润（万元）]]></O>
+</C>
+<C c="0" r="5" rs="2" s="7"><O t="DSColumn"><Attributes dsName="ds1" columnName="Company" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="1" r="5" rs="2" s="7"><O t="DSColumn"><Attributes dsName="ds1" columnName="Year" />
+<Condition class="com.fr.data.condition.ListCondition"><JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Year]]></CNAME><Compare op="3">
+<Parameter>
+<Attributes name="Start"
+ type="1"
+ shown="true" />
+<O t="I">2008</O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Year]]></CNAME><Compare op="4">
+<Parameter>
+<Attributes name="End"
+ type="1"
+ shown="true" />
+<O t="I">2009</O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+</JoinCondition>
+</Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="2" r="5" s="7"><O t="DSColumn"><Attributes dsName="ds1" columnName="Season" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="3" r="5" s="7"><O t="DSColumn"><Attributes dsName="ds1" columnName="Income" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="4" r="5" s="7"><O t="DSColumn"><Attributes dsName="ds1" columnName="Costs" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="5" r="5" s="7"><O t="Formula" class="Formula" ><Attributes><![CDATA[=D6-E6]]></Attributes></O>
+</C>
+<C c="2" r="6" cs="3" s="8"><O t="S"><![CDATA[利润总额：]]></O>
+</C>
+<C c="5" r="6" s="9"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(F6)]]></Attributes></O>
+</C>
+<C c="5" r="7" s="10"></C>
+<C c="0" r="8" cs="6" s="11"><O t="S"><![CDATA[“企业历年销售明细一览表”报表功能应用说明：]]></O>
+</C>
+<C c="0" r="9" cs="6" s="12"><O t="S"><![CDATA[1、参数处理器：时间段]]></O>
+</C>
+<C c="0" r="10" cs="6" s="12"><O t="S"><![CDATA[     该报表中，您任意输入年度，如输入“去年”，即可查询出相对当前年度上一年的销售记录，该功能通过参数处理器可]]></O>
+</C>
+<C c="0" r="11" cs="6" s="13"><O t="S"><![CDATA[     实现。]]></O>
+</C>
+<C c="1" r="12"></C>
+<C c="1" r="13"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="14"></C>
+<C c="1" r="16"></C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style vertical_alignment="3" imageLayout="2">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0" vertical_alignment="3" imageLayout="2">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="1" size="14" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ImageBackground"
+ specifiedImageWidth="-1.0"
+ specifiedImageHeight="-1.0"
+ layout="2">
+<Image width="271" height="20">
+<![CDATA[mDD3s_Ctrm_#OF0>K!!9WJ6!OQ7+.ZoaQ9>0E]d2laNppWiE)!WiGp)li!RsTDPW,0?[QWIV
+_g1pu1d?NUQ%!281S82*R8))W+4
+iebJi;<TD!-WQ)u!;iUeW~
+
+]]>
+</Image>
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="4">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-986886">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-986886">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Top style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Bottom style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

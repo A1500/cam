@@ -1,0 +1,12 @@
+#Mon Dec 15 12:14:49 GMT 2014
+eclipse.preferences.version=1
+encoding//WebContent/initDatabase.properties=UTF-8
+encoding//WebContent/jsp/cams/jcm/config=UTF-8
+encoding//WebContent/jsp/ext/mbalance/manage/samBill20130827.fr3=ISO-8859-1
+encoding//src/com/inspur/cams/welfare/base/domain/IWealFitApplyDomain.java=UTF-8
+encoding//src/com/inspur/cams/welfare/prosthesis/apply/cmd/FitApplyCmd.java=UTF-8
+encoding//src/com/inspur/cams/welfare/prosthesis/apply/cmd/FitApplyQueryCmd.java=UTF-8
+encoding//src/com/inspur/cams/welfare/prosthesis/apply/domain/support/FitApplyQueryDomain.java=UTF-8
+encoding//src/com/inspur/cams/welfare/welfarecorp/apply/domain/IUnitApplyQueryDomain.java=UTF-8
+encoding//src/security.properties=UTF-8
+encoding/<project>=UTF-8

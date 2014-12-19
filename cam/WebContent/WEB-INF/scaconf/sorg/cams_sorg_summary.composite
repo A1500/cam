@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--社会组织数量统计表-->
+	<component name="SorgSummaryDao">
+		<service name="SorgSummaryDao">
+			<interface.java interface="com.inspur.cams.sorg.query.dao.ISorgSummaryDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.query.dao.jdbc.SorgSummaryDao"/>	
+	</component>
+</composite>

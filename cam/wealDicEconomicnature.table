@@ -1,0 +1,9 @@
+<app-data>
+<database name="db" package="null" defaultIdMethod="null" baseClass="BaseObject" basePeer="BasePeer">
+<table name="WEAL_DIC_ECONOMICNATURE" id="8a898b173e3f4fd2013e3f50132b0001" javaName="WealDicEconomicnature" pkg="com.inspur.cams.welfare.economic" jspPath="jsp/cams/welfare/economic" chineseDescription="经济性质">
+    <column name="code" id="8a898b173e3f4fd2013e3f945754000e" javaName="code" description="编号" primaryKey="true" required="true" type="VARCHAR" size="50" />
+    <column name="name" id="8a898b173e3f4fd2013e3f95181c000f" javaName="name" description="经济性质" required="false" type="VARCHAR" size="50" />
+    <column name="type" id="8a898b173e3f4fd2013e3f9567820010" javaName="type" description="类型" required="false" type="VARCHAR" size="32" />
+ <diagram-ref id="8a898b173e3f4fd2013e3f4fd2b60000"/>
+</table>
+</database></app-data>

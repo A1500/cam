@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sp:spconfig xmlns:sp="urn:bsp:sp-federation:config:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:bsp:sp-federation:config:1.0 spconfig.xsd ">
+   <!-- 默认的IDP EntityID -->
+  <defaultIDPEntityID>http://10.162.11.80:8082/bspcore1</defaultIDPEntityID>
+   <!-- 该SP默认使用的binding -->
+  <defaultBinding>urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST</defaultBinding>
+  <!-- 客户端和被集成应用的衔接模式 -->
+  <integrationModel>native</integrationModel>
+  <excludeFilterUrlGroup>
+  	<excludeFilterUrl>http://10.162.1.17:8080/sp</excludeFilterUrl>
+  </excludeFilterUrlGroup>
+  <!--
+  <sp:keystorePassword>sp:keystorePassword</sp:keystorePassword>
+  -->
+  <!-- 匹配servletpath的处理类 -->
+  <samlhandlerGroup>
+    <samlhandler id="SPLogin"><ref name="SAMLLoginhandler"/></samlhandler>
+    <samlhandler id="SPAssertionConsumer"><ref name="SAMLAssertionConsumerHandler"/></samlhandler>
+    <samlhandler id="SPLogout"><ref name="logouthandler"/></samlhandler>
+    <samlhandler id="SPLogoutServiceSOAP"><ref name="logoutServiceSOAPhandler"/></samlhandler>
+    <samlhandler id="SPLogoutConsumer"><ref name="samllogoutConsumer"/></samlhandler>
+  </samlhandlerGroup>
+
+<!-- login -->
+<class id="SAMLLoginhandler" class="org.loushang.bsp.security.sp.service.process.impl.Loginhandler"/>
+<!-- ACS -->
+<class id="SAMLAssertionConsumerHandler" class="org.loushang.bsp.security.sp.service.process.impl.AssertionConsumerHandler">
+	<property value="assertionValidator"><ref name="DefaultAssertionValidator"/></property>
+	<property value="responseValidator"><ref name="DefaultResponseValidator"/></property>
+	<property value="sessionHandler"><ref name="sessionHandler"/></property>
+	<property value="forwordpath"><value>/jsp/b.jsp</value></property>
+</class>
+<!-- 处理IDP SOAP注销请求 -->
+<class id="logoutServiceSOAPhandler" class="org.loushang.bsp.security.sp.service.process.impl.LogoutSOAPHandler">
+	<property value="sessionHandler"><ref name="sessionHandler"/></property>
+</class>
+
+<!-- 注销 -->
+<class id="logouthandler" class="org.loushang.bsp.security.sp.service.process.impl.LogoutHandler">
+	<property value="sessionhandler"><ref name="sessionHandler"/></property>
+	<property value="iLogout"><ref name="iLogout"/></property>
+</class>
+
+<class id="samllogoutConsumer" class="org.loushang.bsp.security.sp.service.process.impl.LogoutConsumerHandler">
+	<property value="sessionhandler"><ref name="sessionHandler"/></property>
+	<property value="iLogout"><ref name="iLogout"/></property>
+</class>
+<!-- 这个类需要配置为业务系统实现的类 -->
+<class id="iLogout" class="org.loushang.bsp.security.sp.service.process.impl.Logout"/>
+<!-- 注销 -->
+
+<!-- 断言的验证类 -->
+<class id="DefaultAssertionValidator" class="org.loushang.bsp.security.sp.component.validate.DefaultAssertionValidator"/>
+<!-- response的验证类 -->
+<class id="DefaultResponseValidator" class="org.loushang.bsp.security.sp.component.validate.DefaultResponseValidator"/>
+<!-- 会话管理 -->
+<class id="sessionHandler" class="org.loushang.bsp.security.sp.session.impl.DefaultSessionHandler"/>
+</sp:spconfig>

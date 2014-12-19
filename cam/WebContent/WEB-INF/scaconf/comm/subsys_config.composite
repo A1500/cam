@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="ComSubsysConfigDao" xmlns="http://www.loushang.com/sca/1.0">
+<component name="ComSubsysConfigDao">
+	    <service name="ComSubsysConfigDao">
+	    	<interface.java interface="com.inspur.cams.comm.subsys.dao.IComSubsysConfigDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.comm.subsys.dao.jdbc.ComSubsysConfigDao"/>
+    </component>
+    <component name="ComSubsysRolesDao">
+	    <service name="ComSubsysRolesDao">
+	    	<interface.java interface="com.inspur.cams.comm.subsys.dao.IComSubsysRolesDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.comm.subsys.dao.jdbc.ComSubsysRolesDao"/>
+    </component>
+
+     <component name="ComSubsysConfigDomain">
+	    <service name="ComSubsysConfigDomain">
+	    	<interface.java interface="com.inspur.cams.comm.subsys.domain.IComSubsysConfigDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.comm.subsys.domain.support.ComSubsysConfigDomain"/>
+        <reference name="comsubsysconfigDao" target="ComSubsysConfigDao/ComSubsysConfigDao"/>
+        <reference name="comsubsysrolesDao" target="ComSubsysRolesDao/ComSubsysRolesDao"/>
+    </component>
+</composite>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select * from EmployeeInfo]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="false" headerHeight="0.0" footerHeight="0.0">
+<PaperSize width="11.693" height="16.536" />
+<Margin top="0.27" left="0.7499999999999999" bottom="0.27" right="0.7499999999999999" />
+</ReportSettings>
+<ReportPageAttr>
+</ReportPageAttr>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+<Submiter class="com.fr.report.write.BuiltInSQLSubmiter" name="内置SQL1">
+<Attributes dsName="FRDemo" tableName="EmployeeInfo" />
+<Column isKey="true" name="ID">
+<ColumnRow column="1" row="4"/>
+</Column>
+<Column isKey="false" name="FirstName">
+<ColumnRow column="2" row="4"/>
+</Column>
+<Column isKey="false" name="LastName">
+<ColumnRow column="3" row="4"/>
+</Column>
+<Column isKey="false" name="Address">
+<ColumnRow column="4" row="4"/>
+</Column>
+<Column isKey="false" name="ZipCode">
+<ColumnRow column="5" row="4"/>
+</Column>
+<Column isKey="false" name="HomePhone">
+<ColumnRow column="6" row="4"/>
+</Column>
+<Column isKey="false" name="Ext">
+<ColumnRow column="7" row="4"/>
+</Column>
+</Submiter>
+<NameJavaScriptGroup>
+<NameJavaScript name="success">
+</NameJavaScript>
+<NameJavaScript name="fail">
+</NameJavaScript>
+</NameJavaScriptGroup>
+</ReportWriteAttr>
+<Header reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Footer>
+<RowHeight defaultValue="19">
+<![CDATA[46,28,19,33,28,19,40]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[181,77,48,44,123,72,106,152]]>
+</ColumnWidth>
+<CellElementList>
+<C c="1" r="1" cs="3" s="0"><O t="S"><![CDATA[雇员统计表]]></O>
+</C>
+<C c="4" r="1"></C>
+<C c="5" r="1"></C>
+<C c="6" r="1"></C>
+<C c="7" r="1"></C>
+<C c="1" r="3" s="1"><O t="S"><![CDATA[雇员ID]]></O>
+</C>
+<C c="2" r="3" cs="2" s="2"><O t="S"><![CDATA[姓名]]></O>
+</C>
+<C c="4" r="3" s="1"><O t="S"><![CDATA[地址]]></O>
+</C>
+<C c="5" r="3" s="1"><O t="S"><![CDATA[邮政编码]]></O>
+</C>
+<C c="6" r="3" s="1"><O t="S"><![CDATA[家庭电话]]></O>
+</C>
+<C c="7" r="3" s="1"><O t="S"><![CDATA[分机]]></O>
+</C>
+<C c="1" r="4" s="3"><O t="DSColumn"><Attributes dsName="ds1" columnName="ID" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="2" r="4" s="4"><O t="DSColumn"><Attributes dsName="ds1" columnName="FirstName" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="3" r="4" s="5"><O t="DSColumn"><Attributes dsName="ds1" columnName="LastName" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="4" r="4" s="6"><O t="DSColumn"><Attributes dsName="ds1" columnName="Address" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="5" r="4" s="6"><O t="DSColumn"><Attributes dsName="ds1" columnName="ZipCode" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="6" r="4" s="6"><O t="DSColumn"><Attributes dsName="ds1" columnName="HomePhone" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="7" r="4" s="6"><O t="DSColumn"><Attributes dsName="ds1" columnName="Ext" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="6" r="7" s="7"><O t="S"><![CDATA[填报人：]]></O>
+</C>
+<C c="7" r="7" s="8"><O t="S"><![CDATA[sail]]></O>
+<CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="6" r="8" s="7"><O t="S"><![CDATA[填报时间：]]></O>
+</C>
+<C c="7" r="8" s="9"><O t="S"><![CDATA[2008-09-10]]></O>
+<CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.DateCellEditorDef"><Attributes allowBlank="true" />
+<Attribute format="yyyy-MM-dd" />
+</CellEditorDef>
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style>
+<FRFont name="SimSun" style="1" size="14" foreground="-16777088" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-16764058"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="14" foreground="-16777088" />
+<Background name="ImageBackground"
+ specifiedImageWidth="-1.0"
+ specifiedImageHeight="-1.0"
+ layout="2">
+<Image width="271" height="20">
+<![CDATA[mDD3s_Ctrm_#OF0>K!!9WJ6!OQ7+.ZoaQ9>0E]d2laNppWiE)!WiGp)li!RsTDPW,0?[QWIV
+_g1pu1d?NUQ%!281S82*R8))W+4
+iebJi;<TD!-WQ)u!;iUeW~
+
+]]>
+</Image>
+</Background>
+<Border><Top style="1" color="-3342337"
+ /><Bottom style="1" color="-3342337"
+ /><Left style="1" color="-3342337"
+ /><Right style="1" color="-3342337"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="14" foreground="-16777088" />
+<Background name="ImageBackground"
+ specifiedImageWidth="-1.0"
+ specifiedImageHeight="-1.0"
+ layout="2">
+<Image width="271" height="20">
+<![CDATA[mDD3s_Ctrm_#OF0>K!!9WJ6!OQ7+.ZoaQ9>0E]d2laNppWiE)!WiGp)li!RsTDPW,0?[QWIV
+_g1pu1d?NUQ%!281S82*R8))W+4
+iebJi;<TD!-WQ)u!;iUeW~
+
+]]>
+</Image>
+</Background>
+<Border><Top style="1" color="-3342337"
+ /><Left style="1" color="-3342337"
+ /><Right style="1" color="-3342337"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" foreground="-16777088" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-3342337"
+ /><Bottom style="1" color="-3342337"
+ /><Left style="1" color="-3342337"
+ /></Border>
+</Style>
+<Style horizontal_alignment="4">
+<FRFont name="SimSun" style="0" size="12" foreground="-16777088" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-3342337"
+ /><Bottom style="1" color="-3342337"
+ /><Left style="1" color="-3342337"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" foreground="-16777088" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-3342337"
+ /><Bottom style="1" color="-3342337"
+ /><Right style="1" color="-3342337"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" foreground="-16777088" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-3342337"
+ /><Bottom style="1" color="-3342337"
+ /><Left style="1" color="-3342337"
+ /><Right style="1" color="-3342337"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" foreground="-16777088" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-16764058"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" foreground="-16777088" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-16764058"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<Format class="java.text.SimpleDateFormat"><![CDATA[yyyy-MM-dd]]>
+</Format>
+<FRFont name="SimSun" style="0" size="12" foreground="-16777088" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-16764058"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

@@ -1,0 +1,52 @@
+.l-panel-noborder .l-panel-body-noborder {
+	border-width: 0;
+}
+
+.l-panel-noborder .l-panel-header-noborder {
+	border-width: 0;
+	border-bottom: 1px solid #99bbe8;
+}
+
+.l-panel-noborder .l-panel-tbar-noborder .l-toolbar {
+	border-width: 0;
+	border-bottom: 1px solid #99bbe8;
+}
+
+.l-panel-noborder .l-panel-bbar-noborder .l-toolbar {
+	border-width: 0;
+	border-top: 1px solid #99bbe8;
+}
+
+.l-window-noborder .l-window-mc {
+	border-width: 0;
+}
+
+.l-window-plain .l-window-body-noborder {
+	border-width: 0;
+}
+
+.l-tab-panel-noborder .l-tab-panel-body-noborder {
+	border-width: 0;
+}
+
+.l-tab-panel-noborder .l-tab-panel-header-noborder {
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+.l-tab-panel-noborder .l-tab-panel-footer-noborder {
+	border-bottom-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+.l-tab-panel-bbar-noborder .l-toolbar {
+	border-width: 0;
+	border-top: 1px solid #99bbe8;
+}
+
+.l-tab-panel-tbar-noborder .l-toolbar {
+	border-width: 0;
+	border-bottom: 1px solid #99bbe8;
+}

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='GBK' standalone='no'?>
+<toTable tempName='BPT_IMP_CAPITAL_TEMP' name='' makeName='BPT_IMP_CAPITAL_TEMP_MARK' vailClass='com.inspur.cams.bpt.excelToTable.Validate'>
+	<field name='id_card'>
+		<vaildate name='require(身份证号)'/>
+		<vaildate name='checkIdCard()'/>
+	</field>
+	
+	<field name='name'>
+		 
+	</field>
+	
+	<field name='grant_date'>
+		<vaildate name='require(发放日期)'/>
+		<vaildate name='checkDate(发放日期)'/>
+	</field>
+	
+	<field name='grant_mon'>
+		<vaildate name='require(发放金额)'/>
+		<vaildate name='checkMoney(发放金额)'/>
+	</field>
+	
+	<field name='sub_total'>
+		<vaildate name='checkMoney(地方补贴小计)'/>
+	</field>
+	
+	<field name='increase_mechanism'>
+		<vaildate name='checkMoney(自然增长机制费)'/>
+	</field>
+	
+	<field name='grain_oil_mon'>
+		<vaildate name='checkMoney(粮油增发)'/>
+	</field>
+	
+	<field name='old_lonely_mon'>
+		<vaildate name='checkMoney(孤老增发)'/>
+	</field>
+	
+	<field name='other_subsidy_one'>
+		<vaildate name='checkMoney(其他补助1)'/>
+	</field>
+	
+	<field name='other_subsidy_two'>
+		<vaildate name='checkMoney(其他补助2)'/>
+	</field>
+	
+	<field name='other_subsidy_three'>
+		<vaildate name='checkMoney(其他补助3)'/>
+	</field>
+	
+	<field name='other_subsidy_four'>
+		<vaildate name='checkMoney(其他补助4)'/>
+	</field>
+	
+	<field name='other_subsidy_five'>
+		<vaildate name='checkMoney(其他补助5)'/>
+	</field>
+	
+	<field name='grant_mon_sum'>
+		<vaildate name='checkMoney(发放资金总额)'/>
+	</field>
+	
+	<field name='note'>
+	</field>
+	
+	<field name='organ_code'>
+	</field>
+	
+	<field name='register_type'>
+	</field>
+	
+</toTable>

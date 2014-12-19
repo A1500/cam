@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="ComPhoto" xmlns="http://www.loushang.com/sca/1.0">
+    <description>ComPhoto</description>   
+    <!-- 字典信息维护 -->
+    <component name="DicManageDao">
+	    <service name="DicManageDao">
+	    	<interface.java interface="com.inspur.cams.comm.dicm.dao.IDicManageDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.comm.dicm.dao.jdbc.DicManageDao"/>	
+    </component>
+    <component name="DicManageDomain">
+	    <service name="DicManageDomain">
+	    	<interface.java interface="com.inspur.cams.comm.dicm.domain.IDicManageDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.comm.dicm.domain.support.DicManageDomain"/>
+        <reference name="dicManageDao" target="DicManageDao.DicManageDao"/>
+    </component>
+    <!-- 字典详细信息 -->
+    <component name="DicDetailsDao">
+	    <service name="DicDetailsDao">
+	    	<interface.java interface="com.inspur.cams.comm.dicm.dao.IDicDetailsDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.comm.dicm.dao.jdbc.DicDetailsDao"/>	
+    </component>
+    <component name="DicDetailsDomain">
+	    <service name="DicDetailsDomain">
+	    	<interface.java interface="com.inspur.cams.comm.dicm.domain.IDicDetailsDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.comm.dicm.domain.support.DicDetailsDomain"/>
+        <reference name="dicDetailsDao" target="DicDetailsDao.DicDetailsDao"/>
+    </component>
+</composite>

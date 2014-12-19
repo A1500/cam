@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.1</Version>
+<Report class="com.fr.report.WorkSheet" name="Sheet1">
+<TableDataMap>
+<NameTableData name="FRDemo.sale1">
+<TableData class="com.fr.data.impl.DBTableData">
+<Attributes type="0" isCache="true" />
+<Database class="com.fr.data.impl.NameDatabase">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Database>
+<Query><![CDATA[select * from sale]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="false" headerHeight="0.33" footerHeight="0.33">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="false" windowPosition="0" userDefineWindow="false" />
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+<Submiter class="BuiltInSQLSubmiter">
+<Attributes dsName="FRDemo" tableName="sale1" />
+<Column isKey="false" name="Region">
+<ColumnRow column="1" row="2"/>
+</Column>
+<Column isKey="true" name="Manager">
+<ColumnRow column="2" row="2"/>
+</Column>
+<Column isKey="false" name="ProType">
+<ColumnRow column="3" row="0"/>
+</Column>
+<Column isKey="true" name="Product">
+<ColumnRow column="3" row="1"/>
+</Column>
+<Column isKey="false" name="Amount">
+<ColumnRow column="3" row="2"/>
+</Column>
+</Submiter>
+</ReportWriteAttr>
+<RowHeight defaultValue="19.0">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72.0">
+<![CDATA[]]>
+</ColumnWidth>
+<FloatElementList>
+</FloatElementList>
+<CellElementList>
+<C c="0" r="0"><O t="S"></O></C>
+<C c="1" r="0" s="0"><O t="S"></O></C>
+<C c="2" r="0" s="0"><O t="S"></O></C>
+<C c="3" r="0" s="0"><O t="DSColumn"><Attributes dsName="FRDemo.sale1" columnName="ProType" />
+</O><CellGUIAttr><CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"></CellEditorDef></CellGUIAttr><Expand dir="1" />
+<CellWriteAttr appType="1" /></C>
+<C c="0" r="1"><O t="S"></O></C>
+<C c="1" r="1" s="0"><O t="S"></O></C>
+<C c="2" r="1" s="0"><O t="S"></O></C>
+<C c="3" r="1" s="0"><O t="DSColumn"><Attributes dsName="FRDemo.sale1" columnName="Product" />
+</O><CellGUIAttr><CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"></CellEditorDef></CellGUIAttr><Expand dir="1" />
+<CellWriteAttr appType="0" /></C>
+<C c="0" r="2"><O t="S"></O></C>
+<C c="1" r="2" s="0"><O t="DSColumn"><Attributes dsName="FRDemo.sale1" columnName="Region" />
+</O><CellGUIAttr><CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"></CellEditorDef></CellGUIAttr><Expand dir="0" />
+<CellWriteAttr appType="1" /></C>
+<C c="2" r="2" s="0"><O t="DSColumn"><Attributes dsName="FRDemo.sale1" columnName="Manager" />
+</O><CellGUIAttr><CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"></CellEditorDef></CellGUIAttr><Expand dir="0" />
+<CellWriteAttr appType="0" /></C>
+<C c="3" r="2" s="0"><O t="DSColumn"><Attributes dsName="FRDemo.sale1" columnName="Amount" />
+<Complex type="3" function="com.fr.data.util.function.SumFunction" />
+</O><CellGUIAttr><CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"></CellEditorDef></CellGUIAttr><CellWriteAttr /></C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" /><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+</StyleList>
+</WorkBook>

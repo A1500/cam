@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="special" xmlns="http://www.loushang.com/sca/1.0">
+     <component name="SamSpecialAssPlanDomain">
+	    <service name="SamSpecialAssPlanDomain">
+	    	<interface.java interface="com.inspur.cams.drel.application.special.domain.ISamSpecialAssPlanDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.application.special.domain.support.SamSpecialAssPlanDomain"/>	
+    	<reference name="samReleaseSummaryDomain"  target="SamReleaseSummaryDomain.SamReleaseSummaryDomain"/>
+    	<reference name="samReleaseDetailDomain"  target="SamReleaseDetailDomain.SamReleaseDetailDomain"/>
+	<reference name="baseinfoFamilyArchiveDomain"  target="BaseinfoFamilyArchiveDomain.BaseinfoFamilyArchiveDomain"/>
+    </component> 
+</composite>

@@ -1,0 +1,25 @@
+package com.inspur.cams.sorg.query.domain;
+
+import org.loushang.next.data.DataSet;
+import org.loushang.next.data.ParameterSet;
+
+public interface ISomWorkflowQueryDomain {
+	/**
+	 * 按照日期查询 已办理过的业务数量
+	 * @param pset
+	 * @return
+	 */
+	public DataSet queryNum(ParameterSet pset);
+	
+	/**
+	 * 按照日期查询 已办理过的指定业务对应的所有社会组织列表
+	 * @return
+	 */
+	public DataSet queryList(ParameterSet pset);
+	
+	/**
+	 * 按照日期查询 已办理过的业务中指定的社会组织对应的所有环节情况
+	 * @return
+	 */
+	public DataSet queryDetail(ParameterSet pset);
+}

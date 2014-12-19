@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ItemVariety">
+<TableData class="com.fr.data.impl.EmbeddedTableData">
+<Parameters>
+</Parameters>
+<ColumnNames><![CDATA[ItemVarietyID,,.,,ItemVariety,,.,,ItemVarietyNo,,.,,ItemName,,.,,BuildDepartment,,.,,ItemQuality,,.,,ItemStatus,,.,,05,,.,,06]]></ColumnNames>
+<ColumnTypes><![CDATA[java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String]]></ColumnTypes>
+<RowData>
+<![CDATA[L!\'OJj:"Ri:ZJSZl[nS&P+1"R[Q$r#5NlqC@2FDd6_'EM?Ko@TeqihZT.Goc5cquH&;Y,2t
+>.85_-3J'LPbcn.V+*$:l5HgcbE
+8`*.(,_U++0nLidO4&Vm<m<"[T3pNT8@8eA(/aolJ)UF5
+D7f&7^BEf&7A_uA!>%SL!]?j>i1QmMl-R,c+TD2]lZs4IVW^Wa_o<s
+->"LgfV55#2$dQ;;:V
+I5p2RJ#c]<coh*kH1nG\'0A;B_O=IqZ/>~
+
+]]>
+</RowData>
+</TableData>
+</NameTableData>
+<NameTableData name="05CapitalArrange">
+<TableData class="com.fr.data.impl.EmbeddedTableData">
+<Parameters>
+</Parameters>
+<ColumnNames><![CDATA[ID,,.,,FinanceCapital,,.,,RaiseSelf,,.,,Other,,.,,ItemVarietyID,,.,,ItemVarietyNo]]></ColumnNames>
+<ColumnTypes><![CDATA[java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String]]></ColumnTypes>
+<RowData>
+<![CDATA[-&p"U^d&/-hkh;G8!a,nM`5o`@R_19*$Q9!#tH+3=Ptg3r>Ji`6q`k1123QlH6mSXar3C/'U
+>UQK1Lt\4Y&sJoF*:m($a$=[U]5
+RUL!~
+
+]]>
+</RowData>
+</TableData>
+</NameTableData>
+<NameTableData name="06CapitalArrange">
+<TableData class="com.fr.data.impl.EmbeddedTableData">
+<Parameters>
+</Parameters>
+<ColumnNames><![CDATA[ID,,.,,FinanceCapital,,.,,RaiseSelf,,.,,Other,,.,,ItemVarietyNo,,.,,ItemVarietyID]]></ColumnNames>
+<ColumnTypes><![CDATA[java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String]]></ColumnTypes>
+<RowData>
+<![CDATA[*K8)P^b?/uhs5#.FN!FYZ/@a_!1G4$?(9Ugq1;_CA>d>UXdc,T%!k<&(\sLU76*93lToY0["
+`gd)rl#-K\#`ZF1CL_bg8Z@DWh0
+~
+
+]]>
+</RowData>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<DictMap>
+<NameDictionary name="ItemVariety">
+<Dictionary class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="1:I" value="农业水利项目"/>
+<Dict key="2:I" value="交通水利项目"/>
+</CustomDictAttr>
+</Dictionary>
+</NameDictionary>
+</DictMap>
+<ReportSettings orientation="1" shrinkToFit="false" headerHeight="0.0" footerHeight="0.0">
+<PaperSize width="11.693" height="16.536" />
+<Margin top="0.27" left="0.7500000000000001" bottom="0.27" right="0.7500000000000001" />
+</ReportSettings>
+<ReportPageAttr>
+</ReportPageAttr>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[30,19,29,24,22,22,22,22,22,22,22,22,22,22]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[116,146,90,90,72,72,72,72,85,72,72,72,72,102,55]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="15" s="0"><O t="S"><![CDATA[××市05、06年度政府投资（建设）项目计划表]]></O>
+</C>
+<C c="0" r="2" cs="15" s="1"><O t="S"><![CDATA[序号前带“△”的为千万以上项目]]></O>
+</C>
+<C c="0" r="3" cs="15" s="2"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="0" r="4" rs="3" s="3"><O t="S"><![CDATA[项目类型]]></O>
+</C>
+<C c="1" r="4" rs="3" s="3"><O t="S"><![CDATA[项目名称]]></O>
+</C>
+<C c="2" r="4" rs="3" s="3"><O t="S"><![CDATA[建设单位]]></O>
+</C>
+<C c="3" r="4" rs="3" s="3"><O t="S"><![CDATA[项目性质]]></O>
+</C>
+<C c="4" r="4" cs="4" s="3"><O t="S"><![CDATA[资金来源（万元）]]></O>
+</C>
+<C c="8" r="4" rs="3" s="3"><O t="S"><![CDATA[至2005年底投资完成情况]]></O>
+</C>
+<C c="9" r="4" cs="5" s="3"><O t="S"><![CDATA[2006年安排及完成情况（万元）]]></O>
+</C>
+<C c="14" r="4" rs="3" s="3"><O t="S"><![CDATA[备注]]></O>
+</C>
+<C c="4" r="5" rs="2" s="3"><O t="S"><![CDATA[总投资]]></O>
+</C>
+<C c="5" r="5" cs="3" s="3"><O t="S"><![CDATA[其中]]></O>
+</C>
+<C c="9" r="5" cs="4" s="3"><O t="S"><![CDATA[资金安排]]></O>
+</C>
+<C c="13" r="5" rs="2" s="3"><O t="S"><![CDATA[2006年完成投资]]></O>
+</C>
+<C c="5" r="6" s="3"><O t="S"><![CDATA[市财政]]></O>
+</C>
+<C c="6" r="6" s="3"><O t="S"><![CDATA[自筹]]></O>
+</C>
+<C c="7" r="6" s="3"><O t="S"><![CDATA[其他]]></O>
+</C>
+<C c="9" r="6" s="3"><O t="S"><![CDATA[小计]]></O>
+</C>
+<C c="10" r="6" s="3"><O t="S"><![CDATA[财政资金]]></O>
+</C>
+<C c="11" r="6" s="3"><O t="S"><![CDATA[自筹]]></O>
+</C>
+<C c="12" r="6" s="3"><O t="S"><![CDATA[其他]]></O>
+</C>
+<C c="0" r="7" s="4"><O t="DSColumn"><Attributes dsName="ItemVariety" columnName="ItemVarietyID" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Present class="com.fr.report.cellElement.DictPresent"><Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="1:I" value="农业水利项目"/>
+<Dict key="2:I" value="交通水利项目"/>
+</CustomDictAttr>
+</Dict></Present><Expand dir="0" />
+</C>
+<C c="1" r="7" s="5"></C>
+<C c="2" r="7" s="5"></C>
+<C c="3" r="7" s="5"></C>
+<C c="4" r="7" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(E12)]]></Attributes></O>
+</C>
+<C c="5" r="7" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(F12)]]></Attributes></O>
+</C>
+<C c="6" r="7" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(G12)]]></Attributes></O>
+</C>
+<C c="7" r="7" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(H12)]]></Attributes></O>
+</C>
+<C c="8" r="7" s="5"></C>
+<C c="9" r="7" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(J12)]]></Attributes></O>
+</C>
+<C c="10" r="7" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(K12)]]></Attributes></O>
+</C>
+<C c="11" r="7" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(L12)]]></Attributes></O>
+</C>
+<C c="12" r="7" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(M12)]]></Attributes></O>
+</C>
+<C c="13" r="7" s="5"></C>
+<C c="14" r="7" s="5"></C>
+<C c="0" r="8" s="5"></C>
+<C c="1" r="8" s="7"><O t="S"><![CDATA[其中千万以上项目：]]></O>
+</C>
+<C c="2" r="8" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(C11)]]></Attributes></O>
+</C>
+<C c="3" r="8" s="5"></C>
+<C c="4" r="8" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(E11)]]></Attributes></O>
+</C>
+<C c="5" r="8" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(F11)]]></Attributes></O>
+</C>
+<C c="6" r="8" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(G11)]]></Attributes></O>
+</C>
+<C c="7" r="8" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(H11)]]></Attributes></O>
+</C>
+<C c="8" r="8" s="5"></C>
+<C c="9" r="8" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(J11)]]></Attributes></O>
+</C>
+<C c="10" r="8" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(K11)]]></Attributes></O>
+</C>
+<C c="11" r="8" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(L11)]]></Attributes></O>
+</C>
+<C c="12" r="8" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(M11)]]></Attributes></O>
+</C>
+<C c="13" r="8" s="5"></C>
+<C c="14" r="8" s="5"></C>
+<C c="0" r="9" s="5"><Expand leftParentDefault="false" left="B10" />
+</C>
+<C c="1" r="9" s="8"><O t="DSColumn"><Attributes dsName="ItemVariety" columnName="ItemStatus" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A8" />
+</C>
+<C c="2" r="9" s="5"></C>
+<C c="3" r="9" s="5"></C>
+<C c="4" r="9" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(E12)]]></Attributes></O>
+</C>
+<C c="5" r="9" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(F12)]]></Attributes></O>
+</C>
+<C c="6" r="9" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(G12)]]></Attributes></O>
+</C>
+<C c="7" r="9" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(H12)]]></Attributes></O>
+</C>
+<C c="8" r="9" s="5"></C>
+<C c="9" r="9" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(J12)]]></Attributes></O>
+</C>
+<C c="10" r="9" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(K12)]]></Attributes></O>
+</C>
+<C c="11" r="9" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(L12)]]></Attributes></O>
+</C>
+<C c="12" r="9" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(M12)]]></Attributes></O>
+</C>
+<C c="13" r="9" s="5"></C>
+<C c="14" r="9" s="5"></C>
+<C c="0" r="10" s="5"></C>
+<C c="1" r="10" s="7"><O t="S"><![CDATA[其中千万以上项目：]]></O>
+<Expand leftParentDefault="false" left="B10" />
+</C>
+<C c="2" r="10" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=count(E12{E12>1000})]]></Attributes></O>
+</C>
+<C c="3" r="10" s="5"></C>
+<C c="4" r="10" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(E12{E12>1000})]]></Attributes></O>
+</C>
+<C c="5" r="10" s="9"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(F12{E12>1000})]]></Attributes></O>
+</C>
+<C c="6" r="10" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(G12{E12>1000})]]></Attributes></O>
+</C>
+<C c="7" r="10" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(H12{E12>1000})]]></Attributes></O>
+</C>
+<C c="8" r="10" s="5"></C>
+<C c="9" r="10" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(J12{E12>1000})]]></Attributes></O>
+</C>
+<C c="10" r="10" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(K12{E12>1000})]]></Attributes></O>
+</C>
+<C c="11" r="10" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(L12{E12>1000})]]></Attributes></O>
+</C>
+<C c="12" r="10" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(M12{E12>1000})]]></Attributes></O>
+</C>
+<C c="13" r="10" s="5"></C>
+<C c="14" r="10" s="5"></C>
+<C c="0" r="11" s="6"><O t="DSColumn"><Attributes dsName="ItemVariety" columnName="ItemVarietyNo" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.FormulaCondition"><Formula>
+<![CDATA[=E12>=1000]]>
+</Formula>
+</Condition>
+<HighlightAction class="com.fr.report.highlight.ValueHighlightAction">
+<O t="Formula" class="Formula" ><Attributes><![CDATA[="△"+$$$]]></Attributes></O>
+</HighlightAction>
+</Highlight></HighlightList><Expand dir="0" leftParentDefault="false" left="B10" />
+</C>
+<C c="1" r="11" s="5"><O t="DSColumn"><Attributes dsName="ItemVariety" columnName="ItemName" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="2" r="11" s="6"><O t="DSColumn"><Attributes dsName="ItemVariety" columnName="BuildDepartment" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="3" r="11" s="6"><O t="DSColumn"><Attributes dsName="ItemVariety" columnName="ItemQuality" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="4" r="11" s="10"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(F12:H12)]]></Attributes></O>
+</C>
+<C c="5" r="11" s="6"><O t="DSColumn"><Attributes dsName="05CapitalArrange" columnName="FinanceCapital" />
+<Condition class="com.fr.data.condition.ListCondition"><JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[ItemVarietyID]]></CNAME><Compare op="0">
+<ColumnRow column="0" row="7"/>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[ItemVarietyNo]]></CNAME><Compare op="0">
+<ColumnRow column="0" row="11"/>
+</Compare>
+</Condition>
+</JoinCondition>
+</Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="6" r="11" s="11"><O t="DSColumn"><Attributes dsName="05CapitalArrange" columnName="RaiseSelf" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="7" r="11" s="6"><O t="DSColumn"><Attributes dsName="05CapitalArrange" columnName="Other" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="8" r="11" s="5"></C>
+<C c="9" r="11" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(K12:M12)]]></Attributes></O>
+</C>
+<C c="10" r="11" s="6"><O t="DSColumn"><Attributes dsName="06CapitalArrange" columnName="FinanceCapital" />
+<Condition class="com.fr.data.condition.ListCondition"><JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[ItemVarietyID]]></CNAME><Compare op="0">
+<ColumnRow column="0" row="7"/>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[ItemVarietyNo]]></CNAME><Compare op="0">
+<ColumnRow column="0" row="11"/>
+</Compare>
+</Condition>
+</JoinCondition>
+</Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="11" r="11" s="6"><O t="DSColumn"><Attributes dsName="06CapitalArrange" columnName="RaiseSelf" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="12" r="11" s="6"><O t="DSColumn"><Attributes dsName="06CapitalArrange" columnName="Other" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="13" r="11" s="5"></C>
+<C c="14" r="11" s="5"></C>
+<C c="0" r="12" s="4"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="12" s="4"><O t="S"><![CDATA[总投资合计：]]></O>
+</C>
+<C c="2" r="12" s="5"></C>
+<C c="3" r="12" s="5"></C>
+<C c="4" r="12" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(E8)]]></Attributes></O>
+</C>
+<C c="5" r="12" s="12"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(F8)]]></Attributes></O>
+</C>
+<C c="6" r="12" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(G8)]]></Attributes></O>
+</C>
+<C c="7" r="12" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(H8)]]></Attributes></O>
+</C>
+<C c="8" r="12" s="5"></C>
+<C c="9" r="12" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(J8)]]></Attributes></O>
+</C>
+<C c="10" r="12" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(K8)]]></Attributes></O>
+</C>
+<C c="11" r="12" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(L8)]]></Attributes></O>
+</C>
+<C c="12" r="12" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(M8)]]></Attributes></O>
+</C>
+<C c="13" r="12" s="5"></C>
+<C c="14" r="12" s="5"></C>
+<C c="0" r="13" s="4"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="13" s="4"><O t="S"><![CDATA[合计千万以上项目：]]></O>
+</C>
+<C c="2" r="13" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(C9)]]></Attributes></O>
+</C>
+<C c="3" r="13" s="5"></C>
+<C c="4" r="13" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(E9)]]></Attributes></O>
+</C>
+<C c="5" r="13" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(F9)]]></Attributes></O>
+</C>
+<C c="6" r="13" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(G9)]]></Attributes></O>
+</C>
+<C c="7" r="13" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(H9)]]></Attributes></O>
+</C>
+<C c="8" r="13" s="5"></C>
+<C c="9" r="13" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(H9)]]></Attributes></O>
+</C>
+<C c="10" r="13" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(K9)]]></Attributes></O>
+</C>
+<C c="11" r="13" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(L9)]]></Attributes></O>
+</C>
+<C c="12" r="13" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(M9)]]></Attributes></O>
+</C>
+<C c="13" r="13" s="5"></C>
+<C c="14" r="13" s="5"></C>
+<C c="0" r="15" cs="15" s="13"><O t="S"><![CDATA[“××市05、06年度政府投资（建设）项目计划表”功能应用说明：]]></O>
+</C>
+<C c="0" r="16" cs="15" s="14"><O t="S"><![CDATA[1、多源分片]]></O>
+</C>
+<C c="0" r="17" cs="15" s="15"><O t="S"><![CDATA[   该表中数据来自三个不同的数据表，报表设计时，多个数据源可以独立使用。]]></O>
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style horizontal_alignment="0">
+<FRFont name="黑体" style="0" size="16" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="宋体" style="1" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ImageBackground"
+ specifiedImageWidth="-1.0"
+ specifiedImageHeight="-1.0"
+ layout="2">
+<Image width="271" height="20">
+<![CDATA[mDD3s_Ctrm_#OF0>K!!9WJ6!OQ7+.ZoaQ9>0E]d2laNppWiE)!WiGp)li!RsTDPW,0?[QWIV
+_g1pu1d?NUQ%!281S82*R8))W+4
+iebJi;<TD!-WQ)u!;iUeW~
+
+]]>
+</Image>
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="宋体" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="4">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Top style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Bottom style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

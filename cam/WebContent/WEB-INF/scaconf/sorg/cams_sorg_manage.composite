@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--社会组织信息表-->
+	<component name="somOrganDao">
+		<service name="somOrganDao">
+			<interface.java interface="com.inspur.cams.sorg.base.dao.ISomOrganDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomOrganDao"/>
+    </component>
+	<component name="somOrganDomain">
+		<service name="somOrganDomain">
+			<interface.java interface="com.inspur.cams.sorg.base.domain.ISomOrganDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomOrganDomain"/>
+		<reference name="somOrganDao" target="somOrganDao/somOrganDao"/>
+		<reference name="somOrganHisDao" target="somOrganHisDao/somOrganHisDao"/>
+	</component>
+
+	<!--社会组织人员基本信息表-->
+	<component name="somPeopleDao">
+		<service name="somPeopleDao">
+			<interface.java interface="com.inspur.cams.sorg.base.dao.ISomPeopleDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomPeopleDao"/>
+	</component>
+	<component name="somPeopleDomain">
+		<service name="somPeopleDomain">
+			<interface.java interface="com.inspur.cams.sorg.base.domain.ISomPeopleDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomPeopleDomain"/>
+		<reference name="somPeopleDao" target="somPeopleDao/somPeopleDao"/>
+	</component>
+
+	<!--人员简历信息表-->
+	<component name="somPeopleResumeDao">
+		<service name="somPeopleResumeDao">
+			<interface.java interface="com.inspur.cams.sorg.base.dao.ISomPeopleResumeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomPeopleResumeDao"/>
+	</component>
+	<component name="somPeopleResumeDomain">
+		<service name="somPeopleResumeDomain">
+			<interface.java interface="com.inspur.cams.sorg.base.domain.ISomPeopleResumeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomPeopleResumeDomain"/>
+		<reference name="somPeopleResumeDao" target="somPeopleResumeDao/somPeopleResumeDao"/>
+	</component>
+
+	<!--社会组织证书信息-->
+	<component name="somCertDao">
+		<service name="somCertDao">
+			<interface.java interface="com.inspur.cams.sorg.base.dao.ISomCertDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomCertDao"/>
+	</component>
+	<component name="somCertDomain">
+		<service name="somCertDomain">
+			<interface.java interface="com.inspur.cams.sorg.base.domain.ISomCertDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomCertDomain"/>
+		<reference name="somCertDao" target="somCertDao/somCertDao"/>
+	</component>
+
+	<!--社会组织任职信息-->
+	<component name="somDutyDao">
+		<service name="somDutyDao">
+			<interface.java interface="com.inspur.cams.sorg.base.dao.ISomDutyDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomDutyDao"/>
+	</component>
+	<component name="somDutyDomain">
+		<service name="somDutyDomain">
+			<interface.java interface="com.inspur.cams.sorg.base.domain.ISomDutyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomDutyDomain"/>
+		<reference name="somDutyDao" target="somDutyDao/somDutyDao"/>
+		<reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+		<reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+		<reference name="somSessionDomain" target="somSessionDomain/somSessionDomain"/>
+		<reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+		<reference name="somPeopleResumeDao" target="somPeopleResumeDao/somPeopleResumeDao"/>
+		<reference name="somAspchiefDao" target="somAspchiefDao/somAspchiefDao"/>
+		<reference name="somDutyElectronicDao" target="somDutyElectronicDao/somDutyElectronicDao"/>
+		<reference name="somChangeDomain" target="somChangeDomain/somChangeDomain"/>
+		<reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+		<reference name="somElectronicDao" target="somElectronicDao/somElectronicDao"/>
+	</component>
+	<!--职务与相关附件中间表-->
+	<component name="somDutyElectronicDao">
+		<service name="somDutyElectronicDao">
+			<interface.java interface="com.inspur.cams.sorg.base.dao.ISomDutyElectronicDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomDutyElectronicDao"/>
+	</component>
+
+	<!--社会组织届次信息-->
+	<component name="somSessionDao">
+		<service name="somSessionDao">
+			<interface.java interface="com.inspur.cams.sorg.base.dao.ISomSessionDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomSessionDao"/>
+	</component>
+	<component name="somSessionDomain">
+		<service name="somSessionDomain">
+			<interface.java interface="com.inspur.cams.sorg.base.domain.ISomSessionDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomSessionDomain"/>
+		<reference name="somSessionDao" target="somSessionDao/somSessionDao"/>
+	</component>
+
+	<!--社会组织清算组织人员信息-->
+	<component name="somLiqpeopleDao">
+		<service name="somLiqpeopleDao">
+			<interface.java interface="com.inspur.cams.sorg.base.dao.ISomLiqpeopleDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomLiqpeopleDao"/>
+	</component>
+	<component name="somLiqpeopleDomain">
+		<service name="somLiqpeopleDomain">
+			<interface.java interface="com.inspur.cams.sorg.base.domain.ISomLiqpeopleDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomLiqpeopleDomain"/>
+		<reference name="somLiqpeopleDao" target="somLiqpeopleDao/somLiqpeopleDao"/>
+	</component>
+
+	<!--社会组织账户备案表-->
+ 	<component name="somAccountDao">
+	    <service name="somAccountDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomAccountDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomAccountDao"/>
+    </component>
+   <component name="somAccountDomain">
+	    <service name="somAccountDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomAccountDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomAccountDomain"/>
+        <reference name="somAccountDao" target="somAccountDao/somAccountDao"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+    </component>
+
+    <!--社会组织印章备案表-->
+ 	<component name="somSignetDao">
+	    <service name="somSignetDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomSignetDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomSignetDao"/>
+    </component>
+   <component name="somSignetDomain">
+	    <service name="somSignetDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomSignetDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomSignetDomain"/>
+        <reference name="somSignetDao" target="somSignetDao/somSignetDao"/>
+        <reference name="somSignetDirectoryDao" target="somSignetDirectoryDao/somSignetDirectoryDao"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+    </component>
+
+    <!--社会组织印章名录表-->
+ 	<component name="somSignetDirectoryDao">
+	    <service name="somSignetDirectoryDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomSignetDirectoryDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomSignetDirectoryDao"/>
+    </component>
+   <component name="somSignetDirectoryDomain">
+	    <service name="somSignetDirectoryDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomSignetDirectoryDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomSignetDirectoryDomain"/>
+        <reference name="somSignetDirectoryDao" target="somSignetDirectoryDao/somSignetDirectoryDao"/>
+    </component>
+
+	<!--社会组织组织机构代码备案表-->
+ 	<component name="somOrganCodeDao">
+	    <service name="somOrganCodeDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomOrganCodeDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomOrganCodeDao"/>
+    </component>
+   <component name="somOrganCodeDomain">
+	    <service name="somOrganCodeDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomOrganCodeDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomOrganCodeDomain"/>
+        <reference name="somOrganCodeDao" target="somOrganCodeDao/somOrganCodeDao"/>
+        <reference name="somOrganDao" target="somOrganDao/somOrganDao"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+    </component>
+
+	<!--社会组织税务登记证备案表-->
+ 	<component name="somTaxRegistrationCertDao">
+	    <service name="somTaxRegistrationCertDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomTaxRegistrationCertDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomTaxRegistrationCertDao"/>
+    </component>
+   <component name="somTaxRegistrationCertDomain">
+	    <service name="somTaxRegistrationCertDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomTaxRegistrationCertDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomTaxRegistrationCertDomain"/>
+        <reference name="somTaxRegistrationCertDao" target="somTaxRegistrationCertDao/somTaxRegistrationCertDao"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+    </component>
+
+    <!--社会组织举办实体备案表-->
+    <component name="somEntityDao">
+	    <service name="somEntityDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomEntityDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomEntityDao"/>
+    </component>
+    <component name="somEntityDomain">
+	    <service name="somEntityDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomEntityDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomEntityDomain"/>
+   		<reference name="somEntityDao" target="somEntityDao/somEntityDao"/>
+   		<reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+    </component>
+
+    <!--社会组织会议信息表-->
+    <component name="somMeetingDao">
+	    <service name="somMeetingDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomMeetingDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomMeetingDao"/>
+    </component>
+    <component name="somMeetingDomain">
+	    <service name="somMeetingDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomMeetingDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomMeetingDomain"/>
+        <reference name="somMeetingDao" target="somMeetingDao/somMeetingDao"/>
+    </component>
+    <!--社会组织选举信息-->
+    <component name="somElectionDao">
+	    <service name="somElectionDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomElectionDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomElectionDao"/>
+    </component>
+    <!--社会组织章程信息-->
+    <component name="somRuleDao">
+	    <service name="somRuleDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomRuleDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomRuleDao"/>
+    </component>
+    <component name="somRuleDomain">
+	    <service name="somRuleDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomRuleDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomRuleDomain"/>
+        <reference name="somRuleDao" target="somRuleDao/somRuleDao"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+
+    </component>
+
+    <!--社会组织会费标准信息-->
+    <component name="somFeeDao">
+	    <service name="somFeeDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomFeeDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomFeeDao"/>
+    </component>
+    <component name="somFeeDomain">
+	    <service name="somFeeDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomFeeDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomFeeDomain"/>
+		<reference name="somFeeDao" target="somFeeDao/somFeeDao"/>
+		<reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+		<reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+		<reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+    </component>
+
+    <!--社会组织办事机构信息表-->
+    <component name="somOfficeDao">
+	    <service name="somOfficeDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomOfficeDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomOfficeDao"/>
+    </component>
+    <component name="somOfficeDomain">
+	    <service name="somOfficeDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomOfficeDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomOfficeDomain"/>
+        <reference name="somOfficeDao" target="somOfficeDao/somOfficeDao"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+    </component>
+
+	<!--社会组织党建信息表-->
+	<component name="SomPartyDao">
+	    <service name="SomPartyDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomPartyDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomPartyDao"/>
+    </component>
+     <component name="SomPartyDomain">
+	    <service name="SomPartyDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomPartyDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomPartyDomain"/>
+        <reference name="somPartyDao" target="SomPartyDao/SomPartyDao"/>
+    </component>
+
+    <!--社会组织党建党员基本信息表-->
+    <component name="SomPartyMemberDao">
+	    <service name="SomPartyMemberDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomPartyMemberDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomPartyMemberDao"/>
+    </component>
+    <component name="SomPartyMemberDomain">
+	    <service name="SomPartyMemberDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomPartyMemberDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomPartyMemberDomain"/>
+        <reference name="somPartyMemberDao" target="SomPartyMemberDao/SomPartyMemberDao"/>
+    </component>
+
+    <!--社会组织党建党内奖惩-->
+    <component name="somPartyPraiseDao">
+	    <service name="somPartyPraiseDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomPartyPraiseDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomPartyPraiseDao"/>
+    </component>
+    <component name="somPartyPraiseDomain">
+	    <service name="somPartyPraiseDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomPartyPraiseDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomPartyPraiseDomain"/>
+        <reference name="somPartyPraiseDao" target="somPartyPraiseDao/somPartyPraiseDao"/>
+    </component>
+
+    <!--社会组织党建党员状态变更历史表-->
+    <component name="somPartyMemberStatusChangeDao">
+	    <service name="somPartyMemberStatusChangeDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomPartyMemberStatusChangeDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomPartyMemberStatusChangeDao"/>
+    </component>
+    <component name="somPartyMemberStatusChangeDomain">
+	    <service name="somPartyMemberStatusChangeDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomPartyMemberStatusChangeDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomPartyMemberStatusChangeDomain"/>
+        <reference name="somPartyMemberStatusChangeDao" target="somPartyMemberStatusChangeDao/somPartyMemberStatusChangeDao"/>
+    </component>
+
+    <!--社会组织党建变更-->
+    <component name="somPartyChangeDao">
+	    <service name="somPartyChangeDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomPartyChangeDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomPartyChangeDao"/>
+    </component>
+    <component name="somPartyChangeDomain">
+	    <service name="somPartyChangeDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomPartyChangeDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomPartyChangeDomain"/>
+        <reference name="somPartyChangeDao" target="somPartyChangeDao/somPartyChangeDao"/>
+    </component>
+
+    <!-- 社会组织变更信息表-->
+    <component name="somChangeDao">
+	    <service name="somChangeDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomChangeDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomChangeDao"/>
+    </component>
+    <component name="somChangeDomain">
+	    <service name="somChangeDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomChangeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomChangeDomain"/>
+        <reference name="somChangeDao" target="somChangeDao/somChangeDao"/>
+	</component>
+
+	<!-- 社会组织业务申请信息表-->
+	<component name="SomApplyDao">
+	    <service name="SomApplyDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomApplyDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomApplyDao"/>
+    </component>
+    <component name="SomApplyDomain">
+	    <service name="SomApplyDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomApplyDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomApplyDomain"/>
+        <reference name="somApplyDao" target="SomApplyDao/SomApplyDao"/>
+        <reference name="somDutyDao" target="somDutyDao/somDutyDao"/>
+        <reference name="somPeopleDao" target="somPeopleDao/somPeopleDao"/>
+        <reference name="somSessionDao" target="somSessionDao/somSessionDao"/>
+	</component>
+
+	<!--社会组织业务流程意见表-->
+    <component name="SomFlowDao">
+	    <service name="SomFlowDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomFlowDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomFlowDao"/>
+    </component>
+    <component name="SomFlowDomain">
+	    <service name="SomFlowDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomFlowDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomFlowDomain"/>
+        <reference name="somflowDao" target="SomFlowDao/SomFlowDao"/>
+    </component>
+
+    <!--社会组织电子档案信息表-->
+     <component name="somElectronicDao">
+	    <service name="somElectronicDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomElectronicDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="sorgFileDataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomElectronicDao"/>
+    </component>
+    <component name="somElectronicDomain">
+	    <service name="somElectronicDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomElectronicDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomElectronicDomain"/>
+        <reference name="somElectronicDao" target="somElectronicDao/somElectronicDao"/>
+    </component>
+
+     <!--社会组织档案目录信息表-->
+     <component name="somCatalogDao">
+	    <service name="somCatalogDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomCatalogDao"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomCatalogDao"/>
+    </component>
+    <component name="somCatalogDomain">
+	    <service name="somCatalogDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomCatalogDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomCatalogDomain"/>
+        <reference name="somCatalogDao" target="somCatalogDao/somCatalogDao"/>
+    </component>
+
+    <!--业务主管单位-->
+	<component name="somBorgDao">
+	    <service name="somBorgDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomBorgDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomBorgDao"/>
+    </component>
+    <component name="somBorgDomain">
+	    <service name="somBorgDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomBorgDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomBorgDomain"/>
+        <reference name="somBorgDao" target="somBorgDao/somBorgDao"/>
+        <reference name="somBorgChangeDomain" target="somBorgChangeDomain/somBorgChangeDomain"/>
+	</component>
+
+    <!--业务主管单位变更-->
+	<component name="somBorgChangeDao">
+	    <service name="somBorgChangeDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomBorgChangeDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomBorgChangeDao"/>
+    </component>
+    <component name="somBorgChangeDomain">
+	    <service name="somBorgChangeDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.ISomBorgChangeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomBorgChangeDomain"/>
+        <reference name="somBorgChangeDao" target="somBorgChangeDao/somBorgChangeDao"/>
+	</component>
+
+	<!--社会组织职务表-->
+	<component name="dicSomDutyDao">
+	    <service name="dicSomDutyDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.IDicSomDutyDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.DicSomDutyDao"/>
+    </component>
+    <component name="dicSomDutyDomain">
+	    <service name="dicSomDutyDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.base.domain.IDicSomDutyDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.base.domain.support.DicSomDutyDomain"/>
+        <reference name="dicSomDutyDao" target="dicSomDutyDao/dicSomDutyDao"/>
+	</component>
+
+<!--定义业务domain-->
+	<!--社会团体业务domain-->
+    <component name="somGroupDomain">
+	    <service name="somGroupDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.manage.domain.ISomGroupDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.manage.domain.support.SomGroupDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somLiqpeopleDomain" target="somLiqpeopleDomain/somLiqpeopleDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somAccountDomain" target="somAccountDomain/somAccountDomain"/>
+        <reference name="somEntityDomain" target="somEntityDomain/somEntityDomain"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somOfficeDomain" target="somOfficeDomain/somOfficeDomain"/>
+        <reference name="somChangeDomain" target="somChangeDomain/somChangeDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+	</component>
+
+	<!--民非业务domain-->
+    <component name="somUngovDomain">
+	    <service name="somUngovDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.manage.domain.ISomUngovDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.manage.domain.support.SomUngovDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somLiqpeopleDomain" target="somLiqpeopleDomain/somLiqpeopleDomain"/>
+        <reference name="somEntityDomain" target="somEntityDomain/somEntityDomain"/>
+        <reference name="somAccountDomain" target="somAccountDomain/somAccountDomain"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somOfficeDomain" target="somOfficeDomain/somOfficeDomain"/>
+        <reference name="somChangeDomain" target="somChangeDomain/somChangeDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+	</component>
+
+	<!--基金会业务domain-->
+    <component name="somFundDomain">
+	    <service name="somFundDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.manage.domain.ISomFundDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.manage.domain.support.SomFundDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somLiqpeopleDomain" target="somLiqpeopleDomain/somLiqpeopleDomain"/>
+        <reference name="somAccountDomain" target="somAccountDomain/somAccountDomain"/>
+        <reference name="somEntityDomain" target="somEntityDomain/somEntityDomain"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somOfficeDomain" target="somOfficeDomain/somOfficeDomain"/>
+        <reference name="somChangeDomain" target="somChangeDomain/somChangeDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+	</component>
+
+	<!--党建业务domain-->
+	<component name="somPartyOrganDomain">
+	    <service name="somPartyOrganDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.manage.domain.ISomPartyOrganDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.manage.domain.support.SomPartyOrganDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somPartyDomain" target="SomPartyDomain/SomPartyDomain"/>
+        <reference name="somPartyMemberDomain" target="SomPartyMemberDomain/SomPartyMemberDomain"/>
+        <reference name="somPartyPraiseDomain" target="somPartyPraiseDomain/somPartyPraiseDomain"/>
+        <reference name="somPartyChangeDomain" target="somPartyChangeDomain/somPartyChangeDomain"/>
+        <reference name="somPartyMemberStatusChangeDomain" target="somPartyMemberStatusChangeDomain/somPartyMemberStatusChangeDomain"/>
+	</component>
+
+	<!--社会组织筹备-->
+	<component name="somPrepareDao">
+		<service name="somPrepareDao">
+			<interface.java interface="com.inspur.cams.sorg.base.dao.ISomPrepareDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomPrepareDao"/>
+	</component>
+	<component name="somPrepareDomain">
+		<service name="somPrepareDomain">
+			<interface.java interface="com.inspur.cams.sorg.base.domain.ISomPrepareDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomPrepareDomain"/>
+		<reference name="somPrepareDao" target="somPrepareDao/somPrepareDao"/>
+	</component>
+
+    <!--社会组织筹备发起人（自然人）信息表-->
+    <component name="somHeldPeopleDao">
+	    <service name="somHeldPeopleDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomHeldPeopleDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomHeldPeopleDao"/>
+    </component>
+	<component name="somHeldPeopleDomain">
+		<service name="somHeldPeopleDomain">
+			<interface.java interface="com.inspur.cams.sorg.base.domain.ISomHeldPeopleDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomHeldPeopleDomain"/>
+		<reference name="somHeldPeopleDao" target="somHeldPeopleDao/somHeldPeopleDao"/>
+	</component>
+
+    <!--社会组织筹备发起人（单位）信息表-->
+    <component name="somHeldOrganDao">
+	    <service name="somHeldOrganDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomHeldOrganDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomHeldOrganDao"/>
+    </component>
+	<component name="somHeldOrganDomain">
+		<service name="somHeldOrganDomain">
+			<interface.java interface="com.inspur.cams.sorg.base.domain.ISomHeldOrganDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomHeldOrganDomain"/>
+		<reference name="somHeldOrganDao" target="somHeldOrganDao/somHeldOrganDao"/>
+	</component>
+
+    <!--社会组织拟任负责人信息表-->
+    <component name="somAspchiefDao">
+	    <service name="somAspchiefDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomAspchiefDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomAspchiefDao"/>
+    </component>
+    <component name="somAspchiefDomain">
+		<service name="somAspchiefDomain">
+			<interface.java interface="com.inspur.cams.sorg.base.domain.ISomAspchiefDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.base.domain.support.SomAspchiefDomain"/>
+		<reference name="somAspchiefDao" target="somAspchiefDao/somAspchiefDao"/>
+	</component>
+	 <!--社会组织信息历史表-->
+    <component name="somOrganHisDao">
+	    <service name="somOrganHisDao">
+	    	<interface.java interface="com.inspur.cams.sorg.base.dao.ISomOrganHisDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.base.dao.jdbc.SomOrganHisDao"/>
+    </component>
+</composite>

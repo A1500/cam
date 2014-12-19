@@ -1,0 +1,18 @@
+SELECT *
+  FROM be01,
+       ac21 ,
+       be08 ,
+       ae05 ,
+       ab21 
+ WHERE ae05.aae050 = ab21.aae050
+   AND ae05.aae050 = ac21.aae050
+   AND ae05.abe010 = be01.abe010
+   AND be01.aac000 = ac21.aac000
+   AND be01.abe019 = '99'
+   AND be08.abe085 = '01'
+   AND ab21.aab010 = be01.aab010
+   AND ae05.abe010 = be08.abe010
+   AND be08.business_type = '110'
+   AND (ab21.aad011 LIKE '3701%')
+   AND be08.abe081 <= '200001'
+   AND be08.abe082 >= '210001';

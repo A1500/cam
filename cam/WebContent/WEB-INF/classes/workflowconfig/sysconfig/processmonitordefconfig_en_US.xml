@@ -1,0 +1,31 @@
+﻿<!--Process monitor definition rule configuration-->
+<participant-option>
+<!--configuration option for organization-->
+	<select-item key="proc-commonly" display-name="General"
+		use-mode="organization">
+		<select-type key="unit" name="Organization" select-type="radio"
+			select-url="wfStruCmd.cmd?method=getSelectRootForService&amp;organType=1,2,6,8&amp;isCheckBox=0&amp;isIncludeSelf=0&amp;isTree=1&amp;rootId=1"
+			select-url-forNode="wfStruCmd.cmd?method=getHelpTreeNodeForService&amp;organType=1,2,6,8&amp;isCheckBox=0&amp;isIncludeSubCorporation=1&amp;isIncludeStruPath=null&amp;isExact=null&amp;showOrganType=null&amp;rootId="
+			is-applet-win="1" />
+		<select-type key="organType" name="Organization Type"
+			select-url="wfOrganTypeForService.cmd?" is-applet-win="1" />
+	</select-item>	
+		<!--configuration option for creator-->
+	<select-item key="proc-creator" display-name="Creator" use-mode="organization">
+		<select-type key="self" name="Creator Self" select-url="" />
+		<select-type key="directleader" name="Creator's Manager"
+			select-url="" />
+		<select-type key="allUpperLeading" name="Creator's all Superior Leader"
+			select-url="" />
+		<select-type key="corpOrganType"
+			name="Organization Type of Creator's Affiliated Corporate"
+			select-url="wfOrganTypeForService.cmd?" is-applet-win="1" />
+		<select-type key="upperCorpOrganType"
+			name="Organization Type of Superior Corporate of Creator's Affiliated Corporate"
+			select-url="wfOrganTypeForService.cmd?" is-applet-win="1" />
+	</select-item>		
+	<!--other configuration option-->
+	<select-item key="proc-other" display-name="Other" use-mode="organization">
+			<select-type key="startActPartyCorpOrgan" name="Organization of Start Activity Participant's Affiliated Corporate" select-type="radio" select-url="wfStruCmd.cmd?method=getSelectRootForService&amp;organType=1,2,6,8&amp;isCheckBox=0&amp;isIncludeSelf=0&amp;isTree=1&amp;rootId=1" select-url-forNode="wfStruCmd.cmd?method=getHelpTreeNodeForService&amp;organType=1,2,6,8&amp;isCheckBox=0&amp;isIncludeSubCorporation=1&amp;isIncludeStruPath=null&amp;isExact=null&amp;showOrganType=null&amp;rootId=" is-applet-win="1"/>
+	</select-item>	
+</participant-option>

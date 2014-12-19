@@ -1,0 +1,8 @@
+<app-data>
+<database name="db" package="null" defaultIdMethod="null" baseClass="BaseObject" basePeer="BasePeer">
+<table name="wealDevice" id="8a898be53f0818d5013f08198590000e" javaName="Wealdevice" pkg="demo.example" jspPath="jsp/cams/welfare/prosthesis/apply/prosthesisQualification" chineseDescription="设施信息表">
+    <column name="deviceName" id="8a898be53f0818d5013f08198e22000f" javaName="devicename" description="设施名称" primaryKey="true" required="true" type="VARCHAR" size="32" />
+    <column name="deviceNum" id="8a898be53f0818d5013f0819f3a60010" javaName="devicenum" description="设施数量" required="false" type="VARCHAR" size="32" />
+ <diagram-ref id="8a898b173e3f4fd2013e3f4fd2b60000"/>
+</table>
+</database></app-data>

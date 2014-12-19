@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="remoting-service" 
+    class="flex.messaging.services.RemotingService">
+
+    <adapters>
+        <adapter-definition id="java-object" class="flex.messaging.services.remoting.adapters.JavaAdapter" default="true"/>
+    </adapters>
+
+    <default-channels>
+        <channel ref="my-amf"/>
+    </default-channels>
+<destination id="procDefUtil">
+<properties>
+<source>org.loushang.workflow.modeling.definition.flexutil.ProcessDefUtil</source>
+</properties>
+</destination>
+
+<destination id="procMonitor">
+<properties>
+<source>org.loushang.workflow.monitor.cmd.ProcessMonitorCmd</source>
+</properties>
+</destination>
+
+<destination id="jspProcDefUtil">
+<properties>
+<source>org.loushang.workflow.modeling.definition.flexutil.JspProcessDefUtil</source>
+</properties>
+</destination>
+
+
+</service>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>3.0</Version>
+<Report class="com.fr.report.WorkSheet" name="Sheet1">
+<ReportSettings shrinkToFit="false" headerHeight="0.33" footerHeight="0.33">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="false" windowPosition="0" userDefineWindow="false" />
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+<WriteSQLAttr dsName="FRDemo" tableName="Score">
+<Column isKey="false" name="ClassNo">
+<ColumnRow column="3" row="1"/>
+</Column>
+<Column isKey="false" name="Name">
+<ColumnRow column="1" row="2"/>
+</Column>
+<Column isKey="false" name="Sex">
+<ColumnRow column="3" row="2"/>
+</Column>
+<Column isKey="false" name="Course">
+<ColumnRow column="1" row="3"/>
+</Column>
+<Column isKey="false" name="AvgScore">
+<ColumnRow column="3" row="3"/>
+</Column>
+</WriteSQLAttr>
+<ValueVerifier type="1"><![CDATA[D4<=100,,.,,最高分不得高于100！]]></ValueVerifier>
+</ReportWriteAttr>
+<RowHeight defaultValue="19.0">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72.0">
+<![CDATA[]]>
+</ColumnWidth>
+<FloatElementList>
+</FloatElementList>
+<CellElementList>
+<C c="0" r="0" cs="4" s="0"><O t="S">考试成绩登记表</O></C>
+<C c="0" r="1" cs="2" s="1"><O t="S"></O></C>
+<C c="2" r="1" s="2"><O t="S">班级：</O></C>
+<C c="3" r="1" s="3"><O t="S"></O><CellGUIAttr><CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Map class="com.fr.data.impl.CustomMap">
+<CustomMapAttr>
+<CustomMap key="Class1" value="Class1"/>
+<CustomMap key="Class2" value="Class2"/>
+<CustomMap key="Class3" value="Class3"/>
+<CustomMap key="Class4" value="Class4"/>
+</CustomMapAttr>
+</Map>
+</CellEditorDef></CellGUIAttr><CellWriteAttr /><Map class="com.fr.data.impl.CustomMap">
+<CustomMapAttr>
+<CustomMap key="Class1" value="Class1"/>
+<CustomMap key="Class2" value="Class2"/>
+<CustomMap key="Class3" value="Class3"/>
+<CustomMap key="Class4" value="Class4"/>
+</CustomMapAttr>
+</Map>
+</C>
+<C c="0" r="2" s="4"><O t="S">姓名:</O></C>
+<C c="1" r="2" s="5"><O t="S"></O><CellGUIAttr><CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"></CellEditorDef></CellGUIAttr><CellWriteAttr /></C>
+<C c="2" r="2" s="4"><O t="S">性别:</O></C>
+<C c="3" r="2" s="5"><O t="S"></O><CellGUIAttr><CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Map class="com.fr.data.impl.CustomMap">
+<CustomMapAttr>
+<CustomMap key="Female" value="Female"/>
+<CustomMap key="Male" value="Male"/>
+</CustomMapAttr>
+</Map>
+</CellEditorDef></CellGUIAttr><CellWriteAttr /><Map class="com.fr.data.impl.CustomMap">
+<CustomMapAttr>
+<CustomMap key="Female" value="Female"/>
+<CustomMap key="Male" value="Male"/>
+</CustomMapAttr>
+</Map>
+</C>
+<C c="0" r="3" s="4"><O t="S">课程:</O></C>
+<C c="1" r="3" s="5"><O t="S"></O><CellGUIAttr><CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Map class="com.fr.data.impl.CustomMap">
+<CustomMapAttr>
+<CustomMap key="MATH" value="MATH"/>
+<CustomMap key="ENGLISH" value="ENGLISH"/>
+<CustomMap key="ART" value="ART"/>
+</CustomMapAttr>
+</Map>
+</CellEditorDef></CellGUIAttr><CellWriteAttr /><Map class="com.fr.data.impl.CustomMap">
+<CustomMapAttr>
+<CustomMap key="MATH" value="MATH"/>
+<CustomMap key="ENGLISH" value="ENGLISH"/>
+<CustomMap key="ART" value="ART"/>
+</CustomMapAttr>
+</Map>
+</C>
+<C c="2" r="3" s="4"><O t="S">分数:</O></C>
+<C c="3" r="3" s="5"><O t="S"></O><CellGUIAttr><CellEditorDef class="com.fr.report.cellElement.NumberCellEditorDef"><Attribute maxIntegerLength="32" maxDecimalLength="16" allowDecimals="true" allowNegative="true" minValue="-1.7976931348623157E308" maxValue="1.7976931348623157E308" />
+</CellEditorDef></CellGUIAttr><CellWriteAttr /></C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="18" foreground="-16776961" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-16777216"
+ /><Left style="1" color="-16777216"
+ /><Right style="1" color="-16777216"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" color="-16777216"
+ /><Left style="1" color="-16777216"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="14" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" color="-16777216"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" color="-16777216"
+ /><Right style="1" color="-16777216"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="14" />
+<Background name="ColorBackground"
+ color="-1">
+</Background>
+<Border><Top style="1" color="-16777216"
+ /><Bottom style="1" color="-16777216"
+ /><Left style="1" color="-16777216"
+ /><Right style="1" color="-16777216"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" /><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+</StyleList>
+</WorkBook>

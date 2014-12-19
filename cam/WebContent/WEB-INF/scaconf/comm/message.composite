@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<component name="comMessageDao">
+		<service name="comMessageDao">
+			<interface.java interface="com.inspur.cams.comm.message.dao.IComMessageDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.message.dao.jdbc.ComMessageDao"/>
+    </component>
+	<component name="comMessageDomain">
+		<service name="comMessageDomain">
+			<interface.java interface="com.inspur.cams.comm.message.domain.IComMessageDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.message.domain.support.ComMessageDomain"/>
+		<reference name="comMessageDao" target="comMessageDao/comMessageDao"/>
+	</component>
+	<component name="comMessageAttachmentDao">
+		<service name="comMessageAttachmentDao">
+			<interface.java interface="com.inspur.cams.comm.message.dao.IComMessageAttachmentDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.message.dao.jdbc.ComMessageAttachmentDao"/>
+    </component>
+	<component name="comMessageAttachmentDomain">
+		<service name="comMessageAttachmentDomain">
+			<interface.java interface="com.inspur.cams.comm.message.domain.IComMessageAttachmentDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.message.domain.support.ComMessageAttachmentDomain"/>
+		<reference name="comMessageAttachmentDao" target="comMessageAttachmentDao/comMessageAttachmentDao"/>
+	</component>
+</composite>

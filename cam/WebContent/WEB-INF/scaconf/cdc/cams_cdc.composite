@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--填报工作信息表-->
+	<component name="cdcReportWorkDao">
+		<service name="cdcReportWorkDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcReportWorkDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcReportWorkDao"/>
+    </component>
+    <component name="cdcTenementInfoDao">
+		<service name="cdcTenementInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcTenementInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcTenementInfoDao"/>
+    </component>
+	<component name="cdcTenementInfoDomain">
+		<service name="cdcTenementInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcTenementInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcTenementInfoDomain"/>
+		<reference name="cdcTenementInfoDao" target="cdcTenementInfoDao/cdcTenementInfoDao"/>
+	</component>
+    <component name="cdcUnderGovemnsInfoDao">
+		<service name="cdcUnderGovemnsInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcUnderGovemnsInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcUnderGovemnsInfoDao"/>
+    </component>
+	<component name="cdcUnderGovemnsInfoDomain">
+		<service name="cdcUnderGovemnsInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcUnderGovemnsInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcUnderGovemnsInfoDomain"/>
+		<reference name="cdcUnderGovemnsInfoDao" target="cdcUnderGovemnsInfoDao/cdcUnderGovemnsInfoDao"/>
+	</component>
+    <!--志愿者信息-->
+	<component name="cdcVoluntaryInfoDao">
+		<service name="cdcVoluntaryInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcVoluntaryInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcVoluntaryInfoDao"/>
+    </component>
+	<component name="cdcVoluntaryInfoDomain">
+		<service name="cdcVoluntaryInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcVoluntaryInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcVoluntaryInfoDomain"/>
+		<reference name="cdcVoluntaryInfoDao" target="cdcVoluntaryInfoDao/cdcVoluntaryInfoDao"/>
+	</component>
+	<!--志愿者参加活动信息-->
+	<component name="cdcVoluntaryCaperInfoDao">
+		<service name="cdcVoluntaryCaperInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcVoluntaryCaperInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcVoluntaryCaperInfoDao"/>
+    </component>
+	<component name="cdcVoluntaryCaperInfoDomain">
+		<service name="cdcVoluntaryCaperInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcVoluntaryCaperInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcVoluntaryCaperInfoDomain"/>
+		<reference name="cdcVoluntaryCaperInfoDao" target="cdcVoluntaryCaperInfoDao/cdcVoluntaryCaperInfoDao"/>
+	</component>
+	<!--活动信息-->
+	<component name="cdcCaperInfoDao">
+		<service name="cdcCaperInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcCaperInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcCaperInfoDao"/>
+    </component>
+	<component name="cdcCaperInfoDomain">
+		<service name="cdcCaperInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcCaperInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcCaperInfoDomain"/>
+		<reference name="cdcCaperInfoDao" target="cdcCaperInfoDao/cdcCaperInfoDao"/>
+		<reference name="cdcVoluntaryInfoDomain" target="cdcVoluntaryInfoDomain/cdcVoluntaryInfoDomain"/>
+		<reference name="cdcVoluntaryCaperInfoDomain" target="cdcVoluntaryCaperInfoDomain/cdcVoluntaryCaperInfoDomain"/>
+	</component>
+     <!--民主选举城市居委会成员-->
+	<component name="cdcElectionCityMemberDao">
+		<service name="cdcElectionCityMemberDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcElectionCityMemberDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcElectionCityMemberDao"/>
+    </component>
+	<component name="cdcElectionCityMemberDomain">
+		<service name="cdcElectionCityMemberDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcElectionCityMemberDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcElectionCityMemberDomain"/>
+		<reference name="cdcElectionCityMemberDao" target="cdcElectionCityMemberDao/cdcElectionCityMemberDao"/>
+	</component>
+	<component name="cdcReportWorkDomain">
+		<service name="cdcReportWorkDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcReportWorkDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcReportWorkDomain"/>
+		<reference name="cdcReportWorkDao" target="cdcReportWorkDao/cdcReportWorkDao"/>
+	</component>
+	 <!--民主选举村居民小组与代表信息表-->
+	<component name="cdcElectionGroupDao">
+		<service name="cdcElectionGroupDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcElectionGroupDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcElectionGroupDao"/>
+    </component>
+	<component name="cdcElectionGroupDomain">
+		<service name="cdcElectionGroupDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcElectionGroupDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcElectionGroupDomain"/>
+		<reference name="cdcElectionGroupDao" target="cdcElectionGroupDao/cdcElectionGroupDao"/>
+	</component>
+	<!--民主选举两委成员情况信息表-->
+	<component name="cdcElectionCommitteeDao">
+		<service name="cdcElectionCommitteeDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcElectionCommitteeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcElectionCommitteeDao"/>
+    </component>
+	<component name="cdcElectionCommitteeDomain">
+		<service name="cdcElectionCommitteeDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcElectionCommitteeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcElectionCommitteeDomain"/>
+		<reference name="cdcElectionCommitteeDao" target="cdcElectionCommitteeDao/cdcElectionCommitteeDao"/>
+	</component>
+	<!--基础信息人口状况信息表-->
+	<component name="cdcPopulateInfoDao">
+		<service name="cdcPopulateInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcPopulateInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcPopulateInfoDao"/>
+    </component>
+	<component name="cdcPopulateInfoDomain">
+		<service name="cdcPopulateInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcPopulateInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcPopulateInfoDomain"/>
+		<reference name="cdcPopulateInfoDao" target="cdcPopulateInfoDao/cdcPopulateInfoDao"/>
+	</component>
+	<!--基层民主民主决策信息表-->
+	<component name="cdcDecisionInfoDao">
+		<service name="cdcDecisionInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcDecisionInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcDecisionInfoDao"/>
+    </component>
+	<component name="cdcDecisionInfoDomain">
+		<service name="cdcDecisionInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcDecisionInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcDecisionInfoDomain"/>
+		<reference name="cdcDecisionInfoDao" target="cdcDecisionInfoDao/cdcDecisionInfoDao"/>
+	</component>
+	<component name="cdcDecisionReportDao">
+		<service name="cdcDecisionReportDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcDecisionReportDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcDecisionReportDao"/>
+    </component>
+	<component name="cdcDecisionReportDomain">
+		<service name="cdcDecisionReportDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcDecisionReportDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcDecisionReportDomain"/>
+		<reference name="cdcDecisionReportDao" target="cdcDecisionReportDao/cdcDecisionReportDao"/>
+		<reference name="cdcDecisionInfoDomain" target="cdcDecisionInfoDomain/cdcDecisionInfoDomain"/>
+	</component>
+	<!--基层民主民主管理信息表-->
+	<component name="cdcManageInfoDao">
+		<service name="cdcManageInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcManageInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcManageInfoDao"/>
+    </component>
+	<component name="cdcManageInfoDomain">
+		<service name="cdcManageInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcManageInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcManageInfoDomain"/>
+		<reference name="cdcManageInfoDao" target="cdcManageInfoDao/cdcManageInfoDao"/>
+	</component>
+	
+	<!--基层民主民主监督统计表-->
+	<component name="cdcSuperviseReportDao">
+		<service name="cdcSuperviseReportDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcSuperviseReportDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcSuperviseReportDao"/>
+    </component>
+	<component name="cdcSuperviseReportDomain">
+		<service name="cdcSuperviseReportDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcSuperviseReportDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcSuperviseReportDomain"/>
+		<reference name="cdcSuperviseReportDao" target="cdcSuperviseReportDao/cdcSuperviseReportDao"/>
+		<reference name="cdcSuperviseInfoDao" target="cdcSuperviseInfoDao/cdcSuperviseInfoDao"/>
+		<reference name="cdcSuperviseReviewInfoDao" target="cdcSuperviseReviewInfoDao/cdcSuperviseReviewInfoDao"/>
+	</component>
+	<!--基层民主民主监督信息表-->
+	<component name="cdcSuperviseInfoDao">
+		<service name="cdcSuperviseInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcSuperviseInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcSuperviseInfoDao"/>
+    </component>
+	<component name="cdcSuperviseInfoDomain">
+		<service name="cdcSuperviseInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcSuperviseInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcSuperviseInfoDomain"/>
+		<reference name="cdcSuperviseInfoDao" target="cdcSuperviseInfoDao/cdcSuperviseInfoDao"/>
+	</component>
+	<component name="cdcSuperviseReviewInfoDao">
+		<service name="cdcSuperviseReviewInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcSuperviseReviewInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcSuperviseReviewInfoDao"/>
+    </component>
+	<component name="cdcSuperviseReviewInfoDomain">
+		<service name="cdcSuperviseReviewInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcSuperviseReviewInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcSuperviseReviewInfoDomain"/>
+		<reference name="cdcSuperviseReviewInfoDao" target="cdcSuperviseReviewInfoDao/cdcSuperviseReviewInfoDao"/>
+	</component>
+	<!--基础信息自然状况信息表-->
+	<component name="cdcNatureInfoDao">
+		<service name="cdcNatureInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcNatureInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcNatureInfoDao"/>
+    </component>
+	<component name="cdcNatureInfoDomain">
+		<service name="cdcNatureInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcNatureInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcNatureInfoDomain"/>
+		<reference name="cdcNatureInfoDao" target="cdcNatureInfoDao/cdcNatureInfoDao"/>
+	</component>
+	<!--基础信息两委成员与工作者信息表-->
+	<component name="cdcPeopleInfoDao">
+		<service name="cdcPeopleInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcPeopleInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcPeopleInfoDao"/>
+    </component>
+	<component name="cdcPeopleInfoDomain">
+		<service name="cdcPeopleInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcPeopleInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcPeopleInfoDomain"/>
+		<reference name="cdcPeopleInfoDao" target="cdcPeopleInfoDao/cdcPeopleInfoDao"/>
+	</component>
+	<!--基础信息基础设施信息表-->
+	
+	<!--基础信息社区服务信息表-->
+	<component name="cdcServiceInfoDao">
+		<service name="cdcServiceInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcServiceInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcServiceInfoDao"/>
+    </component>
+	<component name="cdcServiceInfoDomain">
+		<service name="cdcServiceInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcServiceInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcServiceInfoDomain"/>
+		<reference name="cdcServiceInfoDao" target="cdcServiceInfoDao/cdcServiceInfoDao"/>
+	</component>
+	<!--社区建设经费情况信息表-->
+	<component name="cdcFundInfoDao">
+		<service name="cdcFundInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcFundInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcFundInfoDao"/>
+    </component>
+	<component name="cdcFundInfoDomain">
+		<service name="cdcFundInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcFundInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcFundInfoDomain"/>
+		<reference name="cdcFundInfoDao" target="cdcFundInfoDao/cdcFundInfoDao"/>
+	</component>
+	<!--基础信息社区经济情况信息表-->
+	<component name="cdcEconomyInfoDao">
+		<service name="cdcEconomyInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcEconomyInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcEconomyInfoDao"/>
+    </component>
+	<component name="cdcEconomyInfoDomain">
+		<service name="cdcEconomyInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcEconomyInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcEconomyInfoDomain"/>
+		<reference name="cdcEconomyInfoDao" target="cdcEconomyInfoDao/cdcEconomyInfoDao"/>
+	</component>
+	<!--基础信息社区单位组织信息表-->
+	<component name="cdcOrganInfoDao">
+		<service name="cdcOrganInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcOrganInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcOrganInfoDao"/>
+    </component>
+	<component name="cdcOrganInfoDomain">
+		<service name="cdcOrganInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcOrganInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcOrganInfoDomain"/>
+		<reference name="cdcOrganInfoDao" target="cdcOrganInfoDao/cdcOrganInfoDao"/>
+	</component>
+	
+	<!--基础信息社区单位组织统计表-->
+	<component name="cdcOrganReportDao">
+		<service name="cdcOrganReportDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcOrganReportDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcOrganReportDao"/>
+    </component>
+	<component name="cdcOrganReportDomain">
+		<service name="cdcOrganReportDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcOrganReportDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcOrganReportDomain"/>
+		<reference name="cdcOrganReportDao" target="cdcOrganReportDao/cdcOrganReportDao"/>
+		<reference name="cdcOrganInfoDomain" target="cdcOrganInfoDomain/cdcOrganInfoDomain"/>
+	</component>
+	<!--基础信息农村社区规划信息表-->
+	<component name="cdcConstructInfoDao">
+		<service name="cdcConstructInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcConstructInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcConstructInfoDao"/>
+    </component>
+	<component name="cdcConstructInfoDomain">
+		<service name="cdcConstructInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcConstructInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcConstructInfoDomain"/>
+		<reference name="cdcConstructInfoDao" target="cdcConstructInfoDao/cdcConstructInfoDao"/>
+	</component>
+	<!--基础信息农村社区规划统计表-->
+	<component name="cdcConstructReportDao">
+		<service name="cdcConstructReportDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcConstructReportDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcConstructReportDao"/>
+    </component>
+	<component name="cdcConstructReportDomain">
+		<service name="cdcConstructReportDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcConstructReportDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcConstructReportDomain"/>
+		<reference name="cdcConstructReportDao" target="cdcConstructReportDao/cdcConstructReportDao"/>
+		<reference name="cdcConstructInfoDomain" target="cdcConstructInfoDomain/cdcConstructInfoDomain"/>
+	</component>
+	<!--社区建设领导协调机制信息表-->
+	<component name="cdcCoordinateInfoDao">
+		<service name="cdcCoordinateInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcCoordinateInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcCoordinateInfoDao"/>
+    </component>
+	<component name="cdcCoordinateInfoDomain">
+		<service name="cdcCoordinateInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcCoordinateInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcCoordinateInfoDomain"/>
+		<reference name="cdcCoordinateInfoDao" target="cdcCoordinateInfoDao/cdcCoordinateInfoDao"/>
+	</component>
+	<!--社区建设规划信息表-->
+	<component name="cdcPlanInfoDao">
+		<service name="cdcPlanInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcPlanInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcPlanInfoDao"/>
+    </component>
+	<component name="cdcPlanInfoDomain">
+		<service name="cdcPlanInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcPlanInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcPlanInfoDomain"/>
+		<reference name="cdcPlanInfoDao" target="cdcPlanInfoDao/cdcPlanInfoDao"/>
+	</component>
+	<!--基础信息社区服务方式信息表-->
+	<component name="cdcServiceModeDao">
+		<service name="cdcServiceModeDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcServiceModeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcServiceModeDao"/>
+    </component>
+	<component name="cdcServiceModeDomain">
+		<service name="cdcServiceModeDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcServiceModeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcServiceModeDomain"/>
+		<reference name="cdcServiceModeDao" target="cdcServiceModeDao/cdcServiceModeDao"/>
+	</component>
+	<!--基础信息两委成员与工作者统计表-->
+	<component name="cdcPeopleReportDao">
+		<service name="cdcPeopleReportDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcPeopleReportDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcPeopleReportDao"/>
+    </component>
+	<component name="cdcPeopleReportDomain">
+		<service name="cdcPeopleReportDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcPeopleReportDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcPeopleReportDomain"/>
+		<reference name="cdcPeopleReportDao" target="cdcPeopleReportDao/cdcPeopleReportDao"/>
+	</component>
+	<!--基础信息社区服务统计表-->
+	<component name="cdcServiceReportDao">
+		<service name="cdcServiceReportDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcServiceReportDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcServiceReportDao"/>
+    </component>
+	<component name="cdcServiceReportDomain">
+		<service name="cdcServiceReportDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcServiceReportDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcServiceReportDomain"/>
+		<reference name="cdcServiceInfoDomain" target="cdcServiceInfoDomain/cdcServiceInfoDomain"/>
+		<reference name="cdcServiceReportDao" target="cdcServiceReportDao/cdcServiceReportDao"/>
+	</component>
+	<!--基础信息自然状况统计表-->
+	<component name="cdcNatureReportDao">
+		<service name="cdcNatureReportDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcNatureReportDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcNatureReportDao"/>
+    </component>
+	<component name="cdcNatureReportDomain">
+		<service name="cdcNatureReportDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcNatureReportDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcNatureReportDomain"/>
+		<reference name="cdcNatureReportDao" target="cdcNatureReportDao/cdcNatureReportDao"/>
+		<reference name="cdcNatureInfoDomain" target="cdcNatureInfoDomain/cdcNatureInfoDomain"/>
+	</component>
+	<!--基层民主民主管理统计表-->
+	<component name="cdcManageReportDao">
+		<service name="cdcManageReportDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcManageReportDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcManageReportDao"/>
+    </component>
+	<component name="cdcManageReportDomain">
+		<service name="cdcManageReportDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcManageReportDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcManageReportDomain"/>
+		<reference name="cdcManageReportDao" target="cdcManageReportDao/cdcManageReportDao"/>
+		<reference name="cdcManageInfoDao" target="cdcManageInfoDao/cdcManageInfoDao"/>
+	</component>
+	<!--社区建设基础设施统计表-->
+	<component name="cdcFacilitiesReportDao">
+		<service name="cdcFacilitiesReportDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcFacilitiesReportDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcFacilitiesReportDao"/>
+    </component>
+	<component name="cdcFacilitiesReportDomain">
+		<service name="cdcFacilitiesReportDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcFacilitiesReportDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcFacilitiesReportDomain"/>
+		<reference name="cdcFacilitiesReportDao" target="cdcFacilitiesReportDao/cdcFacilitiesReportDao"/>
+	</component>
+	<!--社区图片展示-->
+	<component name="cdcPicInfoDao">
+		<service name="cdcPicInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcPicInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcPicInfoDao"/>
+    </component>
+	<component name="cdcPicInfoDomain">
+		<service name="cdcPicInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcPicInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcPicInfoDomain"/>
+		<reference name="cdcPicInfoDao" target="cdcPicInfoDao/cdcPicInfoDao"/>
+	</component>
+	<!--基层民主与社区建设通讯录-->
+	<component name="cdcMailListDao">
+		<service name="cdcMailListDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcMailListDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcMailListDao"/>
+    </component>
+	<component name="cdcMailListDomain">
+		<service name="cdcMailListDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcMailListDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcMailListDomain"/>
+		<reference name="cdcMailListDao" target="cdcMailListDao/cdcMailListDao"/>
+	</component>
+	<!--基层民主与社区建设工作交流-->
+	<component name="cdcWorkInfoDao">
+		<service name="cdcWorkInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcWorkInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcWorkInfoDao"/>
+    </component>
+	<component name="cdcWorkInfoDomain">
+		<service name="cdcWorkInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcWorkInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcWorkInfoDomain"/>
+		<reference name="cdcWorkInfoDao" target="cdcWorkInfoDao/cdcWorkInfoDao"/>
+	</component>
+		<!--经济基本情况统计表-->
+	<component name="cdcFinanceInfoDao">
+		<service name="cdcFinanceInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcFinanceInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcFinanceInfoDao"/>
+    </component>
+	<component name="cdcFinanceInfoDomain">
+		<service name="cdcFinanceInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcFinanceInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcFinanceInfoDomain"/>
+		<reference name="cdcFinanceInfoDao" target="cdcFinanceInfoDao/cdcFinanceInfoDao"/>
+	</component>
+		<!--社区服务设施表-->
+	<component name="cdcServiceFacilitiesDao">
+		<service name="cdcServiceFacilitiesDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcServiceFacilitiesDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcServiceFacilitiesDao"/>
+    </component>
+	<component name="cdcServiceFacilitiesDomain">
+		<service name="cdcServiceFacilitiesDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcServiceFacilitiesDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcServiceFacilitiesDomain"/>
+		<reference name="cdcServiceFacilitiesDao" target="cdcServiceFacilitiesDao/cdcServiceFacilitiesDao"/>
+	</component>
+<!--下发通知和申报材料-->
+	<component name="cdcNoticeInfoDao">
+		<service name="cdcNoticeInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcNoticeInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcNoticeInfoDao"/>
+    </component>
+	<component name="cdcNoticeInfoDomain">
+		<service name="cdcNoticeInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcNoticeInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcNoticeInfoDomain"/>
+		<reference name="cdcNoticeInfoDao" target="cdcNoticeInfoDao/cdcNoticeInfoDao"/>
+	</component>
+	<!--下发通知查看统计-->
+	<component name="cdcNoticeCheckDao">
+		<service name="cdcNoticeCheckDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcNoticeCheckDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcNoticeCheckDao"/>
+    </component>
+	<component name="cdcNoticeCheckDomain">
+		<service name="cdcNoticeCheckDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcNoticeCheckDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcNoticeCheckDomain"/>
+		<reference name="cdcNoticeCheckDao" target="cdcNoticeCheckDao/cdcNoticeCheckDao"/>
+	</component>
+		<!--文件上传下载-->
+	<component name="comFileDao">
+		<service name="comFileDao">
+			<interface.java interface="com.inspur.cams.comm.comfile.dao.IComFileDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.comfile.dao.ComFileDao"/>
+    </component>
+	<component name="comFileDomain">
+		<service name="comFileDomain">
+			<interface.java interface="com.inspur.cams.comm.comfile.domain.IComFileDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.comfile.domain.ComFileDomain"/>
+		<reference name="comFileDao" target="comFileDao/comFileDao"/>
+	</component>
+	
+	<component name="cdcNoticeDao">
+		<service name="cdcNoticeDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcNoticeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcNoticeDao"/>
+    </component>
+	<component name="cdcNoticeDomain">
+		<service name="cdcNoticeDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcNoticeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcNoticeDomain"/>
+		<reference name="cdcNoticeDao" target="cdcNoticeDao/cdcNoticeDao"/>
+	</component>
+	<!--社区变更表-->
+	<component name="cdcOrganChangeDao">
+		<service name="cdcOrganChangeDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcOrganChangeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcOrganChangeDao"/>
+    </component>
+	<component name="cdcOrganChangeDomain">
+		<service name="cdcOrganChangeDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcOrganChangeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcOrganChangeDomain"/>
+		<reference name="cdcOrganChangeDao" target="cdcOrganChangeDao/cdcOrganChangeDao"/>
+		<reference name="comExtUserDomain" target="comExtUserDomain/comExtUserDomain"/>
+	</component>
+	
+	<component name="cdcBaseinfoPeopleDomain">
+		<service name="cdcBaseinfoPeopleDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcBaseinfoPeopleDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcBaseinfoPeopleDomain"/>
+		<reference name="cdcBaseinfoPeopleDao" target="cdcBaseinfoPeopleDao/cdcBaseinfoPeopleDao"/>
+	</component>
+	<component name="cdcBaseinfoPeopleDao">
+		<service name="cdcBaseinfoPeopleDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcBaseinfoPeopleDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcBaseinfoPeopleDao"/>
+    </component>
+	
+	
+	
+	<!-- 民主选举选举信息表 -->
+	<component name="cdcElectionInfoDao">
+		<service name="cdcElectionInfoDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcElectionInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcElectionInfoDao"/>
+    </component>
+	<component name="cdcElectionInfoDomain">
+		<service name="cdcElectionInfoDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcElectionInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcElectionInfoDomain"/>
+		<reference name="cdcElectionInfoDao" target="cdcElectionInfoDao/cdcElectionInfoDao"/>
+	</component>
+	<!--民主选举正式候选人信息表-->
+	<component name="cdcElectionCandidateDao">
+		<service name="cdcElectionCandidateDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcElectionCandidateDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcElectionCandidateDao"/>
+    </component>
+	<component name="cdcElectionCandidateDomain">
+		<service name="cdcElectionCandidateDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcElectionCandidateDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcElectionCandidateDomain"/>
+		<reference name="cdcElectionCandidateDao" target="cdcElectionCandidateDao/cdcElectionCandidateDao"/>
+	</component>
+	<!--民主选举选举准备信息表-->
+	<component name="cdcElectionPrepareDao">
+		<service name="cdcElectionPrepareDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcElectionPrepareDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcElectionPrepareDao"/>
+    </component>
+	<component name="cdcElectionPrepareDomain">
+		<service name="cdcElectionPrepareDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcElectionPrepareDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcElectionPrepareDomain"/>
+		<reference name="cdcElectionPrepareDao" target="cdcElectionPrepareDao/cdcElectionPrepareDao"/>
+	</component>
+	<!--民主选举候选人的产生-->
+	<component name="cdcElectionNominateDao">
+		<service name="cdcElectionNominateDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcElectionNominateDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcElectionNominateDao"/>
+    </component>
+	<component name="cdcElectionNominateDomain">
+		<service name="cdcElectionNominateDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcElectionNominateDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcElectionNominateDomain"/>
+		<reference name="cdcElectionNominateDao" target="cdcElectionNominateDao/cdcElectionNominateDao"/>
+		<reference name="cdcElectionMemberDao" target="cdcElectionMemberDao/cdcElectionMemberDao"/>
+	</component>
+	<!--民主选举正式选举-->
+	<component name="cdcElectionVoteDao">
+		<service name="cdcElectionVoteDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcElectionVoteDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcElectionVoteDao"/>
+    </component>
+	<component name="cdcElectionVoteDomain">
+		<service name="cdcElectionVoteDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcElectionVoteDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcElectionVoteDomain"/>
+		<reference name="cdcElectionVoteDao" target="cdcElectionVoteDao/cdcElectionVoteDao"/>
+	</component>
+	<!--民主选举选举结果-->
+	<component name="cdcElectionResultDao">
+		<service name="cdcElectionResultDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcElectionResultDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcElectionResultDao"/>
+    </component>
+	<component name="cdcElectionResultDomain">
+		<service name="cdcElectionResultDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcElectionResultDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcElectionResultDomain"/>
+		<reference name="cdcElectionResultDao" target="cdcElectionResultDao/cdcElectionResultDao"/>
+		<reference name="cdcElectionMemberDao" target="cdcElectionMemberDao/cdcElectionMemberDao"/>
+	</component>
+	<!--民主选举人员信息-->
+	<component name="cdcElectionMemberDao">
+		<service name="cdcElectionMemberDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcElectionMemberDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcElectionMemberDao"/>
+    </component>
+	<component name="cdcElectionMemberDomain">
+		<service name="cdcElectionMemberDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcElectionMemberDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcElectionMemberDomain"/>
+		<reference name="cdcElectionMemberDao" target="cdcElectionMemberDao/cdcElectionMemberDao"/>
+	</component>
+	<!--民主选举监督委员会-->
+	<component name="cdcElectionSupDao">
+		<service name="cdcElectionSupDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcElectionSupDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcElectionSupDao"/>
+    </component>
+	<component name="cdcElectionSupDomain">
+		<service name="cdcElectionSupDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcElectionSupDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcElectionSupDomain"/>
+		<reference name="cdcElectionSupDao" target="cdcElectionSupDao/cdcElectionSupDao"/>
+		<reference name="cdcElectionMemberDao" target="cdcElectionMemberDao/cdcElectionMemberDao"/>
+	</component>
+	<!--民主选举党员信息-->
+	<component name="cdcElectionPartyDao">
+		<service name="cdcElectionPartyDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcElectionPartyDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcElectionPartyDao"/>
+    </component>
+	<component name="cdcElectionPartyDomain">
+		<service name="cdcElectionPartyDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcElectionPartyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcElectionPartyDomain"/>
+		<reference name="cdcElectionPartyDao" target="cdcElectionPartyDao/cdcElectionPartyDao"/>
+		<reference name="cdcElectionMemberDao" target="cdcElectionMemberDao/cdcElectionMemberDao"/>
+	</component>
+	
+    <!--民主选举选举程序信息表-->
+	<component name="cdcElectionProgramDao">
+		<service name="cdcElectionProgramDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcElectionProgramDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcElectionProgramDao"/>
+    </component>
+	<component name="cdcElectionProgramDomain">
+		<service name="cdcElectionProgramDomain">
+			<interface.java interface="com.inspur.cams.cdc.base.domain.ICdcElectionProgramDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.cdc.base.domain.support.CdcElectionProgramDomain"/>
+		<reference name="cdcElectionProgramDao" target="cdcElectionProgramDao/cdcElectionProgramDao"/>
+	</component>
+	<!--民主选举汇总-->
+	<component name="cdcElectionSumDao">
+		<service name="cdcElectionSumDao">
+			<interface.java interface="com.inspur.cams.cdc.base.dao.ICdcElectionSumDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.cdc.base.dao.jdbc.CdcElectionSumDao"/>
+    </component>
+</composite>

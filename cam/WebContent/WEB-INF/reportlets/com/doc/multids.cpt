@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="Sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select * from Sale]]></Query>
+</TableData>
+</NameTableData>
+<NameTableData name="ds2">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select * from Costs]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="false" headerHeight="0.33" footerHeight="0.33">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="false" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" s="0"><O t="S"><![CDATA[Region]]></O>
+</C>
+<C c="1" r="0" s="0"><O t="S"><![CDATA[Manager]]></O>
+</C>
+<C c="2" r="0" s="0"><O t="S"><![CDATA[Amount]]></O>
+</C>
+<C c="3" r="0" s="1"><O t="S"><![CDATA[Costs]]></O>
+</C>
+<C c="0" r="1" rs="2" s="2"><O t="DSColumn"><Attributes dsName="ds1" columnName="Region" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="1" r="1" s="2"><O t="DSColumn"><Attributes dsName="ds1" columnName="Manager" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="2" r="1" s="2"><O t="DSColumn"><Attributes dsName="ds1" columnName="Amount" />
+<RG class="com.fr.report.cellElement.core.SummaryGrouper"><FN><![CDATA[com.fr.data.util.function.SumFunction]]></FN></RG></O>
+</C>
+<C c="3" r="1" s="1"><O t="DSColumn"><Attributes dsName="ds2" columnName="Costs" />
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Manager]]></CNAME><Compare op="0">
+<ColumnRow column="1" row="1"/>
+</Compare>
+</Condition>
+<RG class="com.fr.report.cellElement.core.SummaryGrouper"><FN><![CDATA[com.fr.data.util.function.SumFunction]]></FN></RG></O>
+<Expand leftParentDefault="false" left="B2" />
+</C>
+<C c="1" r="2" s="3"><O t="S"><![CDATA[小计：]]></O>
+</C>
+<C c="2" r="2" s="4"><O t="Formula" class="Formula" ><Attributes><![CDATA[=Sum(C2)]]></Attributes></O>
+</C>
+<C c="3" r="2" s="1"><O t="Formula" class="Formula" ><Attributes><![CDATA[=Sum(D2)]]></Attributes></O>
+</C>
+<C c="4" r="2"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="4" r="4"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="4" r="5"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="3" r="6"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="5" r="6"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="0" r="7"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="7"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="2" r="7"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="3" r="7"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="4" r="7"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="5" r="7"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="6" r="7"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="7" r="7"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="8" r="7"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="0" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="2" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="3" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="7" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="7" r="9"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="7" r="11"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="6" r="12"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="6" r="14"><O t="S"><![CDATA[]]></O>
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-52">
+</Background>
+<Border><Top style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-4144960">
+</Background>
+<Border><Top style="1" /><Bottom style="1" /><Right style="1" /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" /><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-3342337">
+</Background>
+<Border><Bottom style="1" /><Right style="1" /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-3342337">
+</Background>
+<Border><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+</StyleList>
+</WorkBook>

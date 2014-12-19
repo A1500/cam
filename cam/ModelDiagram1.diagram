@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram id="8a898b173e3f4fd2013e3f4fd2b60000" height="200" width="160" xpos="10" ypos="10">
+<table id="8a898b173e3f4fd2013e3f50132b0001" isview="false" name="WEAL_DIC_ECONOMICNATURE" javaname="WealDicEconomicnature" path="wealDicEconomicnature.table" height="222" width="246" xpos="146" ypos="80">
+    <column id="8a898b173e3f4fd2013e3f945754000e" height="200" width="160" xpos="10" ypos="10">
+</column>
+    <column id="8a898b173e3f4fd2013e3f95181c000f" height="200" width="160" xpos="10" ypos="10">
+</column>
+    <column id="8a898b173e3f4fd2013e3f9567820010" height="200" width="160" xpos="10" ypos="10">
+</column>
+</table>
+<table id="8a898be53f0818d5013f08198590000e" isview="false" name="wealDevice" javaname="Wealdevice" path="wealdevice.table" height="213" width="306" xpos="473" ypos="72">
+    <column id="8a898be53f0818d5013f08198e22000f" height="200" width="160" xpos="10" ypos="10">
+</column>
+    <column id="8a898be53f0818d5013f0819f3a60010" height="200" width="160" xpos="10" ypos="10">
+</column>
+</table>
+</diagram>

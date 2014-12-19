@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--页面列描述-->
+	<component name="fisColumnInfoDao">
+		<service name="fisColumnInfoDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisColumnInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisColumnInfoDao"/>
+    </component>
+	<component name="fisColumnInfoDomain">
+		<service name="fisColumnInfoDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisColumnInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisColumnInfoDomain"/>
+		<reference name="fisColumnInfoDao" target="fisColumnInfoDao/fisColumnInfoDao"/>
+	</component>
+	<!--页面信息表-->
+	<component name="fisPageInfoDao">
+		<service name="fisPageInfoDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisPageInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisPageInfoDao"/>
+    </component>
+	<component name="fisPageInfoDomain">
+		<service name="fisPageInfoDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisPageInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisPageInfoDomain"/>
+		<reference name="fisPageInfoDao" target="fisPageInfoDao/fisPageInfoDao"/>
+	</component>
+</composite>

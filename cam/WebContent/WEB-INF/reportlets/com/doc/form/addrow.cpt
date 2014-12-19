@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="Sheet1">
+<TableDataMap>
+<NameTableData name="db1">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select * from sale]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="false" headerHeight="0.33" footerHeight="0.33">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+<Submiter class="BuiltInSQLSubmiter内置SQL">
+<Attributes dsName="FRDemo" tableName="sale" />
+<Column isKey="true" name="Region">
+<ColumnRow column="0" row="0"/>
+</Column>
+<Column isKey="true" name="Manager">
+<ColumnRow column="1" row="0"/>
+</Column>
+<Column isKey="true" name="ProType">
+<ColumnRow column="2" row="0"/>
+</Column>
+<Column isKey="true" name="Product">
+<ColumnRow column="3" row="0"/>
+</Column>
+<Column isKey="false" name="Amount">
+<ColumnRow column="4" row="0"/>
+</Column>
+</Submiter>
+<NameHyperlinkGroup>
+<NameHyperlink name="success">
+</NameHyperlink>
+<NameHyperlink name="fail">
+</NameHyperlink>
+</NameHyperlinkGroup>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" s="0"><O t="DSColumn"><Attributes dsName="db1" columnName="Region" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+<CellWriteAttr appType="1" delType="1">
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attr allowBlank="true" multiLine="false" /></CellEditorDef>
+</C>
+<C c="1" r="0" s="0"><O t="DSColumn"><Attributes dsName="db1" columnName="Manager" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attr allowBlank="true" multiLine="false" /></CellEditorDef>
+</C>
+<C c="2" r="0" s="0"><O t="DSColumn"><Attributes dsName="db1" columnName="ProType" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+<O t="S"><![CDATA[Digital]]></O>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attr allowBlank="true" multiLine="false" /></CellEditorDef>
+</C>
+<C c="3" r="0" s="0"><O t="DSColumn"><Attributes dsName="db1" columnName="Product" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+<O t="S"><![CDATA[MP3]]></O>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attr allowBlank="true" multiLine="false" /></CellEditorDef>
+</C>
+<C c="4" r="0" s="0"><O t="DSColumn"><Attributes dsName="db1" columnName="Amount" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.SummaryGrouper"><FN><![CDATA[com.fr.data.util.function.SumFunction]]></FN></RG><Result><![CDATA[$$$]]></Result></O>
+<CellWriteAttr appType="0" delType="1">
+<O t="I">0</O>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.NumberCellEditorDef"><Attribute maxIntegerLength="32" maxDecimalLength="16" allowDecimals="false" allowNegative="false" minValue="-1.7976931348623157E308" maxValue="1.7976931348623157E308" />
+</CellEditorDef>
+</C>
+<C c="0" r="1"><CellWriteAttr appType="1" delType="1">
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attr allowBlank="true" multiLine="false" /></CellEditorDef>
+</C>
+<C c="1" r="1"><CellWriteAttr appType="0" delType="1">
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attr allowBlank="true" multiLine="false" /></CellEditorDef>
+</C>
+<C c="2" r="1"><CellWriteAttr appType="0" delType="1">
+<O t="S"><![CDATA[Digital]]></O>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attr allowBlank="true" multiLine="false" /></CellEditorDef>
+</C>
+<C c="3" r="1"><CellWriteAttr appType="0" delType="1">
+<O t="S"><![CDATA[MP3]]></O>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attr allowBlank="true" multiLine="false" /></CellEditorDef>
+</C>
+<C c="4" r="1"></C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" /><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+</StyleList>
+</WorkBook>

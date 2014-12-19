@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--当前单位资金业务domain-->
+	<component name="disCurrentOrganFundsDomain">
+		<service name="disCurrentOrganFundsDomain">
+			<interface.java interface="com.inspur.cams.dis.funds.domain.IDisCurrentOrganFundsDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.funds.domain.support.DisCurrentOrganFundsDomain"/>
+		<reference name="disCurrentMoneyDomain" target="disCurrentMoneyDomain/disCurrentMoneyDomain"/>
+		<reference name="disCurrentMoneyDetailDomain" target="disCurrentMoneyDetailDomain/disCurrentMoneyDetailDomain"/>
+	</component>
+	
+	
+	<!--资金来源业务domain-->
+	<component name="disFundsSourceManageDomain">
+		<service name="disFundsSourceManageDomain">
+			<interface.java interface="com.inspur.cams.dis.funds.domain.IDisFundsSourceManageDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.funds.domain.support.DisFundsSourceManageDomain"/>
+		<reference name="disFundsSourceDomain" target="disFundsSourceDomain/disFundsSourceDomain"/>
+		<reference name="disFundsSourceDetailDomain" target="disFundsSourceDetailDomain/disFundsSourceDetailDomain"/>
+		<reference name="disCurrentOrganFundsDomain" target="disCurrentOrganFundsDomain/disCurrentOrganFundsDomain"/>
+		<reference name="disFundsAllocationDomain" target="disFundsAllocationDomain/disFundsAllocationDomain"/>
+		<reference name="disFundsAllocationDetailDomain" target="disFundsAllocationDetailDomain/disFundsAllocationDetailDomain"/>
+	</component>
+</composite>

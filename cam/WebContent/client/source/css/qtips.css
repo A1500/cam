@@ -1,0 +1,158 @@
+.l-tip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	z-index: 20000;
+	border: 0 none;
+}
+
+.l-tip .l-tip-close {
+	background-image: url(../images/default/qtip/close.gif);
+	height: 15px;
+	float: right;
+	width: 15px;
+	margin: 0 0 2px 2px;
+	cursor: pointer;
+	display: none;
+}
+
+.l-tip .l-tip-tc {
+	background: transparent url(../images/default/qtip/tip-sprite.gif)
+		no-repeat 0 -62px;
+	padding-top: 3px;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.l-tip .l-tip-tl {
+	background: transparent url(../images/default/qtip/tip-sprite.gif)
+		no-repeat 0 0;
+	padding-left: 6px;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.l-tip .l-tip-tr {
+	background: transparent url(../images/default/qtip/tip-sprite.gif)
+		no-repeat right 0;
+	padding-right: 6px;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.l-tip .l-tip-bc {
+	background: transparent url(../images/default/qtip/tip-sprite.gif)
+		no-repeat 0 -121px;
+	height: 3px;
+	overflow: hidden;
+}
+
+.l-tip .l-tip-bl {
+	background: transparent url(../images/default/qtip/tip-sprite.gif)
+		no-repeat 0 -59px;
+	padding-left: 6px;
+	zoom: 1;
+}
+
+.l-tip .l-tip-br {
+	background: transparent url(../images/default/qtip/tip-sprite.gif)
+		no-repeat right -59px;
+	padding-right: 6px;
+	zoom: 1;
+}
+
+.l-tip .l-tip-mc {
+	border: 0 none;
+	font: normal 12px tahoma, arial, helvetica, sans-serif;
+}
+
+.l-tip .l-tip-ml {
+	background: #fff url(../images/default/qtip/tip-sprite.gif) no-repeat 0
+		-124px;
+	padding-left: 6px;
+	zoom: 1;
+}
+
+.l-tip .l-tip-mr {
+	background: transparent url(../images/default/qtip/tip-sprite.gif)
+		no-repeat right -124px;
+	padding-right: 6px;
+	zoom: 1;
+}
+
+.L5-ie .l-tip .l-tip-header,.L5-ie .l-tip .l-tip-tc {
+	font-size: 0;
+	line-height: 0;
+}
+
+.l-tip .l-tip-header-text {
+	font: bold 12px tahoma, arial, helvetica, sans-serif;
+	padding: 0;
+	margin: 0 0 2px 0;
+	color: #444;
+}
+
+.l-tip .l-tip-body {
+	font: normal 12px tahoma, arial, helvetica, sans-serif;
+	margin: 0 !important;
+	line-height: 14px;
+	color: #444;
+	padding: 0;
+}
+
+.l-tip .l-tip-body .loading-indicator {
+	margin: 0;
+}
+
+.l-tip-draggable .l-tip-header,.l-tip-draggable .l-tip-header-text {
+	cursor: move;
+}
+
+.l-form-invalid-tip .l-tip-tc {
+	background: url(../images/default/form/error-tip-corners.gif) repeat-x 0
+		-12px;
+	padding-top: 6px;
+}
+
+.l-form-invalid-tip .l-tip-tl {
+	background-image: url(../images/default/form/error-tip-corners.gif);
+}
+
+.l-form-invalid-tip .l-tip-tr {
+	background-image: url(../images/default/form/error-tip-corners.gif);
+}
+
+.l-form-invalid-tip .l-tip-bc {
+	background: url(../images/default/form/error-tip-corners.gif) repeat-x 0
+		-18px;
+	height: 6px;
+}
+
+.l-form-invalid-tip .l-tip-bl {
+	background: url(../images/default/form/error-tip-corners.gif) no-repeat
+		0 -6px;
+}
+
+.l-form-invalid-tip .l-tip-br {
+	background: url(../images/default/form/error-tip-corners.gif) no-repeat
+		right -6px;
+}
+
+.l-form-invalid-tip .l-tip-ml {
+	background-image: url(../images/default/form/error-tip-corners.gif);
+}
+
+.l-form-invalid-tip .l-tip-mr {
+	background-image: url(../images/default/form/error-tip-corners.gif);
+}
+
+.l-form-invalid-tip .l-tip-body {
+	padding: 2px;
+}
+
+.l-form-invalid-tip .l-tip-body {
+	padding-left: 24px;
+	background: transparent url(../images/default/form/exclamation.gif)
+		no-repeat 2px 2px;
+}

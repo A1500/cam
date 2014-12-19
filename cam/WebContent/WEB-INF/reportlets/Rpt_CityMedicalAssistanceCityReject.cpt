@@ -1,0 +1,1530 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="城市">
+<TableDataMap>
+<NameTableData name="CityMedicalAssistanceUpdateQuery0">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" isDiskCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select p.* from Rpt_CityMedicalAssistance p]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings orientation="1" shrinkToFit="false" headerHeight="0.5118110236220472" footerHeight="0.5118110236220472">
+<PaperSize width="23.389" height="33.056" />
+<Margin top="0.984251968503937" left="0.0" bottom="0.984251968503937" right="0.0" />
+</ReportSettings>
+<ReportPageAttr>
+</ReportPageAttr>
+<ReportParameterAttr>
+<Parameters>
+<Parameter>
+<Attributes name="id"
+ type="0"
+ shown="false" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+<ToolbarManager showToolbar="false" specifiedToolbar="true" toolbarPosition="1" isIconVisible="true" isTextVisible="true" isShowPageSetup="false" isShowFlashPrint="false" isShowPDFPrint="false" isShowAppletPrint="false" isShowPDF="false" isShowExcel="false" isShowPrint="false" isShowExport="false" isShowEmail="false">
+<firstIconObject path="/com/fr/web/images/first.png">
+</firstIconObject>
+<previousIconObject path="/com/fr/web/images/previous.png">
+</previousIconObject>
+<nextIconObject path="/com/fr/web/images/next.png">
+</nextIconObject>
+<lastIconObject path="/com/fr/web/images/last.png">
+</lastIconObject>
+<pageSetupIconObject path="/com/fr/web/images/pageSetup.png">
+</pageSetupIconObject>
+<flashPrintIconObject path="/com/fr/web/images/flashPrint.png">
+</flashPrintIconObject>
+<pdfPrintIconObject path="/com/fr/web/images/pdfPrint.png">
+</pdfPrintIconObject>
+<appletPrintIconObject path="/com/fr/web/images/pdfPrint.png">
+</appletPrintIconObject>
+<pdfIconObject path="/com/fr/web/images/pdf.png">
+</pdfIconObject>
+<printIconObject path="/com/fr/web/images/serverPrint.png">
+</printIconObject>
+<exportIconObject path="/com/fr/web/images/export.png">
+</exportIconObject>
+<emailIconObject path="/com/fr/web/images/email.png">
+</emailIconObject>
+</ToolbarManager>
+</ReportWebAttr>
+<ReportWriteAttr>
+<Submiter class="com.fr.report.write.BuiltInSQLSubmiter" name="内置SQL">
+<Attributes dsName="FRDemo" tableName="RPT_CITYMEDICALASSISTANCE" />
+<Column isKey="true" skipUnmodified="false" name="ID">
+<ColumnRow column="0" row="2"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="REPORTYEAR">
+<ColumnRow column="6" row="1"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="REPORTQUARTER">
+<ColumnRow column="8" row="1"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="REGION">
+<ColumnRow column="0" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="REPORTCORP">
+<ColumnRow column="1" row="9"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="REPORTER">
+<ColumnRow column="6" row="9"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="EXAMINER">
+<ColumnRow column="11" row="9"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="OFFICEOPINION">
+<ColumnRow column="17" row="9"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="REPORTTIME">
+<ColumnRow column="36" row="9"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C1">
+<ColumnRow column="1" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C2">
+<ColumnRow column="2" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C3">
+<ColumnRow column="3" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C4">
+<ColumnRow column="4" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C5">
+<ColumnRow column="5" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C6">
+<ColumnRow column="6" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C7">
+<ColumnRow column="7" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C8">
+<ColumnRow column="8" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C9">
+<ColumnRow column="9" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C10">
+<ColumnRow column="10" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C11">
+<ColumnRow column="11" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C12">
+<ColumnRow column="12" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C13">
+<ColumnRow column="13" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C14">
+<ColumnRow column="14" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C15">
+<ColumnRow column="15" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C16">
+<ColumnRow column="16" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C17">
+<ColumnRow column="17" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C18">
+<ColumnRow column="18" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C19">
+<ColumnRow column="19" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C20">
+<ColumnRow column="20" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C21">
+<ColumnRow column="21" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C22">
+<ColumnRow column="22" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C23">
+<ColumnRow column="23" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C24">
+<ColumnRow column="24" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C25">
+<ColumnRow column="25" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C26">
+<ColumnRow column="26" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C27">
+<ColumnRow column="27" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C28">
+<ColumnRow column="28" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C29">
+<ColumnRow column="29" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C30">
+<ColumnRow column="30" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C31">
+<ColumnRow column="31" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C32">
+<ColumnRow column="32" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C33">
+<ColumnRow column="33" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="REPORTED">
+<ColumnRow column="6" row="2"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C34">
+<ColumnRow column="34" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C35">
+<ColumnRow column="35" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C36">
+<ColumnRow column="36" row="8"/>
+</Column>
+<Column isKey="false" skipUnmodified="false" name="C37">
+<ColumnRow column="37" row="8"/>
+</Column>
+</Submiter>
+<NameJavaScriptGroup>
+<NameJavaScript name="success">
+</NameJavaScript>
+<NameJavaScript name="fail">
+</NameJavaScript>
+</NameJavaScriptGroup>
+</ReportWriteAttr>
+<Header reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Footer>
+<RowHeight defaultValue="19">
+<![CDATA[17,43,23,31,45,18,51,37,51,30,19,18,18,18,18,18,18,18,18,18,18]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[124,100,70,80,93,82,94,59,94,109,95,86,60,57,93,101,147,102,102,103,89,102,90,90,93,71,72,82,56,70,58,57,55,58,54,69]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" s="0"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="0" s="1"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="2" r="0" s="1"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="3" r="0" s="2"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="4" r="0" s="3"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="5" r="0" s="2"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="6" r="0" s="4"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="7" r="0" s="2"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="8" r="0" s="2"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="9" r="0" s="2"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="10" r="0" s="5"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="11" r="0" s="5"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="12" r="0" s="5"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="13" r="0" s="5"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="14" r="0" s="5"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="15" r="0" s="5"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="16" r="0" s="5"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="17" r="0" s="5"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="18" r="0" s="5"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="19" r="0" s="6"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="0" r="1" cs="6" s="7"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="6" r="1" s="8"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="REPORTYEAR" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+</CellWriteAttr>
+</C>
+<C c="7" r="1" s="9"><O t="S"><![CDATA[年]]></O>
+</C>
+<C c="8" r="1" s="8"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="REPORTQUARTER" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+</C>
+<C c="9" r="1" cs="29" s="8"><O t="S"><![CDATA[季度城市医疗救助工作情况调查表]]></O>
+</C>
+<C c="0" r="2" cs="6" s="10"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="ID" />
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[ID]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="id"
+ type="0"
+ shown="false" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+<CellWriteAttr>
+</CellWriteAttr>
+</C>
+<C c="6" r="2" s="11"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="REPORTED" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="7" r="2" s="12"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="8" r="2" s="12"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="9" r="2" s="13"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="10" r="2" s="13"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="11" r="2" s="13"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="12" r="2" s="13"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="13" r="2" s="13"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="14" r="2" s="13"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="15" r="2" s="13"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="16" r="2" s="13"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="17" r="2" s="13"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="18" r="2" s="13"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="19" r="2" s="13"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="20" r="2" s="14"></C>
+<C c="21" r="2" s="14"></C>
+<C c="22" r="2" s="14"></C>
+<C c="23" r="2" s="14"></C>
+<C c="24" r="2" s="14"></C>
+<C c="25" r="2" s="14"></C>
+<C c="26" r="2" s="14"></C>
+<C c="27" r="2" s="14"></C>
+<C c="28" r="2" s="14"></C>
+<C c="29" r="2" s="14"></C>
+<C c="30" r="2" s="14"></C>
+<C c="31" r="2" s="14"></C>
+<C c="32" r="2" s="14"></C>
+<C c="33" r="2" s="14"></C>
+<C c="34" r="2" s="15"></C>
+<C c="35" r="2" s="16"></C>
+<C c="36" r="2" s="16"></C>
+<C c="37" r="2" s="17"></C>
+<C c="0" r="3" rs="4" s="18"><O t="S"><![CDATA[地区]]></O>
+</C>
+<C c="1" r="3" cs="2" s="19"><O t="S"><![CDATA[基本情况]]></O>
+</C>
+<C c="3" r="3" cs="6" s="18"><O t="S"><![CDATA[地方医疗救助资金筹集情况]]></O>
+</C>
+<C c="9" r="3" rs="4" s="20"><O t="Formula" class="Formula" ><Attributes><![CDATA[=CONCATENATE(G2, "年基金总收入（万元）")]]></Attributes></O>
+</C>
+<C c="10" r="3" cs="5" s="18"><O t="S"><![CDATA[累计救助人次情况]]></O>
+</C>
+<C c="15" r="3" cs="5" s="18"><O t="S"><![CDATA[资金累计支出情况]]></O>
+</C>
+<C c="20" r="3" cs="2" s="18"><O t="S"><![CDATA[年封顶线]]></O>
+</C>
+<C c="22" r="3" cs="2" s="18"><O t="S"><![CDATA[医疗救助总支出]]></O>
+</C>
+<C c="24" r="3" cs="6" s="18"><O t="S"><![CDATA[资助参保情况]]></O>
+</C>
+<C c="30" r="3" cs="2" rs="2" s="18"><O t="S"><![CDATA[人均住院救助金额（元）]]></O>
+</C>
+<C c="32" r="3" cs="2" rs="2" s="21"><O t="S"><![CDATA[救助金额占个人应负担比例（%）]]></O>
+</C>
+<C c="34" r="3" cs="4" s="19"><O t="S"><![CDATA[住院救助人数及构成]]></O>
+</C>
+<C c="1" r="4" rs="3" s="22"><O t="S"><![CDATA[需纳入医疗救助人数（人）]]></O>
+</C>
+<C c="2" r="4" s="23"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="3" r="4" rs="3" s="18"><O t="S"><![CDATA[总额（万元）]]></O>
+</C>
+<C c="4" r="4" rs="3" s="18"><O t="Formula" class="Formula" ><Attributes><![CDATA[=CONCATENATE((G2-1), "年基金结转（万元）")]]></Attributes></O>
+</C>
+<C c="5" r="4" cs="4" s="18"><O t="Formula" class="Formula" ><Attributes><![CDATA[=CONCATENATE(G2, "年地方财政及彩票公益金安排情况")]]></Attributes></O>
+</C>
+<C c="10" r="4" rs="3" s="18"><O t="S"><![CDATA[总人次（人次）]]></O>
+</C>
+<C c="11" r="4" rs="3" s="22"><O t="S"><![CDATA[直接救助人次（人次）]]></O>
+</C>
+<C c="12" r="4" cs="2" s="24"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="14" r="4" rs="3" s="18"><O t="S"><![CDATA[资助参保人数 （人）]]></O>
+</C>
+<C c="15" r="4" rs="3" s="18"><O t="S"><![CDATA[总额（万元）]]></O>
+</C>
+<C c="16" r="4" rs="3" s="22"><O t="S"><![CDATA[直接救助支出（万元）]]></O>
+</C>
+<C c="17" r="4" cs="2" s="24"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="19" r="4" rs="3" s="18"><O t="S"><![CDATA[资助参保资金支出（万元）]]></O>
+</C>
+<C c="20" r="4" rs="3" s="18"><O t="S"><![CDATA[住院(元/年/人)]]></O>
+</C>
+<C c="21" r="4" rs="3" s="18"><O t="S"><![CDATA[门诊（元/年/人）]]></O>
+</C>
+<C c="22" r="4" rs="3" s="18"><O t="S"><![CDATA[其中财政支出（万元）]]></O>
+</C>
+<C c="23" r="4" rs="3" s="18"><O t="S"><![CDATA[其中社会捐赠等支出（万元）]]></O>
+</C>
+<C c="24" r="4" rs="3" s="22"><O t="S"><![CDATA[资助参保总人数（人）]]></O>
+</C>
+<C c="25" r="4" cs="2" s="23"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="27" r="4" rs="3" s="22"><O t="S"><![CDATA[资助参保总支出（万元）]]></O>
+</C>
+<C c="28" r="4" cs="2" s="23"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="34" r="4" rs="3" s="22"><O t="S"><![CDATA[低保对象（人次）]]></O>
+</C>
+<C c="35" r="4" s="24"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="36" r="4" rs="3" s="22"><O t="S"><![CDATA[其他困难群众（人次）]]></O>
+</C>
+<C c="37" r="4" s="25"></C>
+<C c="2" r="5" rs="2" s="18"><O t="S"><![CDATA[患大病人数（人）]]></O>
+</C>
+<C c="5" r="5" rs="2" s="18"><O t="S"><![CDATA[合计（万元）]]></O>
+</C>
+<C c="6" r="5" rs="2" s="18"><O t="S"><![CDATA[省本级（万元）]]></O>
+</C>
+<C c="7" r="5" rs="2" s="18"><O t="S"><![CDATA[地市本级（万元）]]></O>
+</C>
+<C c="8" r="5" rs="2" s="18"><O t="S"><![CDATA[县（市、区）级（万元）]]></O>
+</C>
+<C c="12" r="5" rs="2" s="18"><O t="S"><![CDATA[住院人次（人次）]]></O>
+</C>
+<C c="13" r="5" rs="2" s="18"><O t="S"><![CDATA[门诊人次（人次）]]></O>
+</C>
+<C c="17" r="5" rs="2" s="18"><O t="S"><![CDATA[住院支出（万元）]]></O>
+</C>
+<C c="18" r="5" rs="2" s="18"><O t="S"><![CDATA[门诊支出（万元）]]></O>
+</C>
+<C c="25" r="5" rs="2" s="18"><O t="S"><![CDATA[财政直接资助参保人数（人）]]></O>
+</C>
+<C c="26" r="5" rs="2" s="18"><O t="S"><![CDATA[大型企业或集体经济等资助参保人数（人）]]></O>
+</C>
+<C c="28" r="5" rs="2" s="18"><O t="S"><![CDATA[财政直接资助参保资金（万元）]]></O>
+</C>
+<C c="29" r="5" rs="2" s="18"><O t="S"><![CDATA[大型企业或集体经济等资助参保资金（万元）]]></O>
+</C>
+<C c="30" r="5" rs="2" s="21"><O t="S"><![CDATA[低保对象]]></O>
+</C>
+<C c="31" r="5" rs="2" s="21"><O t="S"><![CDATA[困难群众]]></O>
+</C>
+<C c="32" r="5" rs="2" s="21"><O t="S"><![CDATA[低保对象]]></O>
+</C>
+<C c="33" r="5" rs="2" s="21"><O t="S"><![CDATA[困难群众]]></O>
+</C>
+<C c="35" r="5" rs="2" s="21"><O t="S"><![CDATA[其中优抚对象（人次）]]></O>
+</C>
+<C c="37" r="5" rs="2" s="21"><O t="S"><![CDATA[其中优抚对象（人次）]]></O>
+</C>
+<C c="0" r="7" s="21"><O t="S"><![CDATA[栏目]]></O>
+</C>
+<C c="1" r="7" s="21"><O t="I">1</O>
+</C>
+<C c="2" r="7" s="21"><O t="I">2</O>
+</C>
+<C c="3" r="7" s="21"><O t="I">3</O>
+</C>
+<C c="4" r="7" s="21"><O t="I">4</O>
+</C>
+<C c="5" r="7" s="21"><O t="I">5</O>
+</C>
+<C c="6" r="7" s="21"><O t="I">6</O>
+</C>
+<C c="7" r="7" s="21"><O t="I">7</O>
+</C>
+<C c="8" r="7" s="21"><O t="I">8</O>
+</C>
+<C c="9" r="7" s="21"><O t="I">9</O>
+</C>
+<C c="10" r="7" s="21"><O t="I">10</O>
+</C>
+<C c="11" r="7" s="21"><O t="I">11</O>
+</C>
+<C c="12" r="7" s="21"><O t="I">12</O>
+</C>
+<C c="13" r="7" s="21"><O t="I">13</O>
+</C>
+<C c="14" r="7" s="21"><O t="I">14</O>
+</C>
+<C c="15" r="7" s="21"><O t="I">15</O>
+</C>
+<C c="16" r="7" s="21"><O t="I">16</O>
+</C>
+<C c="17" r="7" s="21"><O t="I">17</O>
+</C>
+<C c="18" r="7" s="21"><O t="I">18</O>
+</C>
+<C c="19" r="7" s="21"><O t="I">19</O>
+</C>
+<C c="20" r="7" s="21"><O t="I">20</O>
+</C>
+<C c="21" r="7" s="21"><O t="I">21</O>
+</C>
+<C c="22" r="7" s="21"><O t="I">22</O>
+</C>
+<C c="23" r="7" s="21"><O t="I">23</O>
+</C>
+<C c="24" r="7" s="21"><O t="I">24</O>
+</C>
+<C c="25" r="7" s="21"><O t="I">25</O>
+</C>
+<C c="26" r="7" s="21"><O t="I">26</O>
+</C>
+<C c="27" r="7" s="21"><O t="I">27</O>
+</C>
+<C c="28" r="7" s="21"><O t="I">28</O>
+</C>
+<C c="29" r="7" s="21"><O t="I">29</O>
+</C>
+<C c="30" r="7" s="21"><O t="I">30</O>
+</C>
+<C c="31" r="7" s="21"><O t="I">31</O>
+</C>
+<C c="32" r="7" s="21"><O t="I">32</O>
+</C>
+<C c="33" r="7" s="21"><O t="I">33</O>
+</C>
+<C c="34" r="7" s="21"><O t="I">34</O>
+</C>
+<C c="35" r="7" s="21"><O t="I">35</O>
+</C>
+<C c="36" r="7" s="21"><O t="I">36</O>
+</C>
+<C c="37" r="7" s="21"><O t="I">37</O>
+</C>
+<C c="0" r="8" s="21"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="REGION" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+</CellWriteAttr>
+</C>
+<C c="1" r="8" s="26"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C1" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="2" r="8" s="26"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C2" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="3" r="8" s="27"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C3" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="4" r="8" s="28"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C4" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="5" r="8" s="27"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C5" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="6" r="8" s="28"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C6" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="7" r="8" s="28"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C7" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="8" r="8" s="28"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C8" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="9" r="8" s="29"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C9" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="10" r="8" s="30"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C10" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="11" r="8" s="30"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C11" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="12" r="8" s="30"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C12" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="13" r="8" s="26"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C13" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="14" r="8" s="26"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C14" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="15" r="8" s="27"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C15" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="16" r="8" s="27"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C16" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="17" r="8" s="28"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C17" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="18" r="8" s="28"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C18" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="19" r="8" s="28"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C19" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="20" r="8" s="31"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C20" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="21" r="8" s="28"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C21" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="22" r="8" s="27"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C22" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="23" r="8" s="28"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C23" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="24" r="8" s="30"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C24" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="25" r="8" s="26"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C25" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="26" r="8" s="26"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C26" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="27" r="8" s="27"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C27" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="28" r="8" s="28"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C28" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="29" r="8" s="28"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C29" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="30" r="8" s="28"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C30" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="31" r="8" s="21"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C31" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+</C>
+<C c="32" r="8" s="32"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C32" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+</C>
+<C c="33" r="8" s="32"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C33" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+</C>
+<C c="34" r="8" s="26"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C34" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="35" r="8" s="26"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C35" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="36" r="8" s="26"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C36" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+<O t="I">0</O>
+</CellWriteAttr>
+</C>
+<C c="37" r="8" s="21"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="C37" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+</C>
+<C c="0" r="9" s="33"><O t="S"><![CDATA[填表单位： ]]></O>
+</C>
+<C c="1" r="9" s="16"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="REPORTCORP" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+</C>
+<C c="2" r="9" s="34"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="3" r="9" s="35"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="4" r="9" s="33"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="5" r="9" s="33"><O t="S"><![CDATA[填表人：]]></O>
+</C>
+<C c="6" r="9" s="16"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="REPORTER" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+</C>
+<C c="7" r="9" s="33"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="8" r="9" s="33"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="9" r="9" s="34"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="10" r="9" s="33"><O t="S"><![CDATA[科室审批人：]]></O>
+</C>
+<C c="11" r="9" s="16"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="EXAMINER" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="12" r="9" s="33"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="13" r="9" s="33"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="14" r="9" s="33"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="15" r="9" s="33"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="16" r="9" s="33"><O t="S"><![CDATA[局领导签字（盖章）：]]></O>
+</C>
+<C c="17" r="9" s="36"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="OFFICEOPINION" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" leftParentDefault="false" left="A3" upParentDefault="false" up="A3" />
+<CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="18" r="9" s="33"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="19" r="9" s="37"></C>
+<C c="20" r="9" s="37"></C>
+<C c="21" r="9" s="37"></C>
+<C c="22" r="9" s="37"></C>
+<C c="23" r="9" s="37"></C>
+<C c="24" r="9" s="37"></C>
+<C c="25" r="9" s="37"></C>
+<C c="26" r="9" s="37"></C>
+<C c="27" r="9" s="37"></C>
+<C c="28" r="9" s="37"></C>
+<C c="29" r="9" s="37"></C>
+<C c="30" r="9" s="37"></C>
+<C c="31" r="9" s="37"></C>
+<C c="32" r="9" s="37"></C>
+<C c="33" r="9" s="37"></C>
+<C c="34" r="9" s="37"></C>
+<C c="35" r="9" s="37"><O t="S"><![CDATA[填报时间：]]></O>
+</C>
+<C c="36" r="9" cs="2" s="38"><O t="DSColumn"><Attributes dsName="CityMedicalAssistanceUpdateQuery0" columnName="REPORTTIME" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+<CellWriteAttr>
+</CellWriteAttr>
+</C>
+<C c="0" r="11" s="39"><O t="S"><![CDATA[填表说明：]]></O>
+</C>
+<C c="1" r="11" cs="36" s="40"><O t="S"><![CDATA[1、需纳入医疗救助人数：指地方政府城市医疗救助文件规定的城市低保对象及其他特殊困难群体；]]></O>
+</C>
+<C c="0" r="12" s="41"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="12" cs="36" s="42"><O t="S"><![CDATA[2、2011年地方财政及彩票公益金安排情况，即第6栏、第7栏、第8栏，指当年本级财政预算安排数，不包括上级补助资金；]]></O>
+</C>
+<C c="0" r="13" s="41"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="13" cs="36" s="43"><O t="S"><![CDATA[3、2010年基金结转：指2010年当地医疗救助基金结余数，包括2010年省下拨资金和地方自筹资金；]]></O>
+</C>
+<C c="0" r="14" s="41"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="14" cs="36" s="43"><O t="S"><![CDATA[4、2011年基金总收入：2010年基金结转数（第4栏）＋2011年地方预算实际拨入医疗救助基金数+2011年上级补助资金数；]]></O>
+</C>
+<C c="0" r="15" s="41"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="15" cs="4"><O t="S"><![CDATA[5、有关资金金额计量数据项，精确到一位小数。]]></O>
+</C>
+<C c="5" r="15"></C>
+<C c="6" r="15"></C>
+<C c="7" r="15"></C>
+<C c="8" r="15"></C>
+<C c="9" r="15"></C>
+<C c="10" r="15"></C>
+<C c="11" r="15"></C>
+<C c="12" r="15"></C>
+<C c="13" r="15"></C>
+<C c="14" r="15"></C>
+<C c="15" r="15"></C>
+<C c="16" r="15"></C>
+<C c="17" r="15"></C>
+<C c="18" r="15"></C>
+<C c="19" r="15"></C>
+<C c="20" r="15"></C>
+<C c="21" r="15"></C>
+<C c="22" r="15"></C>
+<C c="23" r="15"></C>
+<C c="24" r="15"></C>
+<C c="25" r="15"></C>
+<C c="26" r="15"></C>
+<C c="27" r="15"></C>
+<C c="28" r="15"></C>
+<C c="29" r="15"></C>
+<C c="30" r="15"></C>
+<C c="31" r="15"></C>
+<C c="32" r="15"></C>
+<C c="33" r="15"></C>
+<C c="34" r="15"></C>
+<C c="35" r="15"></C>
+<C c="36" r="15" s="44"></C>
+<C c="0" r="16" s="41"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="16" cs="4" s="45"><O t="S"><![CDATA[6、第3栏＝第4栏＋第5栏；第5栏＝第6栏＋第7栏＋第8栏]]></O>
+</C>
+<C c="5" r="16"></C>
+<C c="6" r="16" cs="4"><O t="S"><![CDATA[11、第15栏=第16栏+第19栏，同时等于第22栏+第23栏]]></O>
+</C>
+<C c="10" r="16"></C>
+<C c="11" r="16"></C>
+<C c="12" r="16"></C>
+<C c="13" r="16"></C>
+<C c="14" r="16"></C>
+<C c="15" r="16"></C>
+<C c="16" r="16"></C>
+<C c="17" r="16"></C>
+<C c="18" r="16"></C>
+<C c="19" r="16"></C>
+<C c="20" r="16"></C>
+<C c="21" r="16"></C>
+<C c="22" r="16"></C>
+<C c="23" r="16"></C>
+<C c="24" r="16"></C>
+<C c="25" r="16"></C>
+<C c="26" r="16"></C>
+<C c="27" r="16"></C>
+<C c="28" r="16"></C>
+<C c="29" r="16"></C>
+<C c="30" r="16"></C>
+<C c="31" r="16"></C>
+<C c="32" r="16"></C>
+<C c="33" r="16"></C>
+<C c="34" r="16"></C>
+<C c="35" r="16"></C>
+<C c="36" r="16" s="44"></C>
+<C c="0" r="17" s="41"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="17" cs="4" s="45"><O t="S"><![CDATA[7、第9栏＝第4栏＋第5栏]]></O>
+</C>
+<C c="5" r="17"></C>
+<C c="6" r="17" cs="4"><O t="S"><![CDATA[12、第16栏＝第17栏＋第18栏]]></O>
+</C>
+<C c="10" r="17"></C>
+<C c="11" r="17"></C>
+<C c="12" r="17"></C>
+<C c="13" r="17"></C>
+<C c="14" r="17"></C>
+<C c="15" r="17"></C>
+<C c="16" r="17"></C>
+<C c="17" r="17"></C>
+<C c="18" r="17"></C>
+<C c="19" r="17"></C>
+<C c="20" r="17"></C>
+<C c="21" r="17"></C>
+<C c="22" r="17"></C>
+<C c="23" r="17"></C>
+<C c="24" r="17"></C>
+<C c="25" r="17"></C>
+<C c="26" r="17"></C>
+<C c="27" r="17"></C>
+<C c="28" r="17"></C>
+<C c="29" r="17"></C>
+<C c="30" r="17"></C>
+<C c="31" r="17"></C>
+<C c="32" r="17"></C>
+<C c="33" r="17"></C>
+<C c="34" r="17"></C>
+<C c="35" r="17"></C>
+<C c="36" r="17" s="44"></C>
+<C c="0" r="18" s="41"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="18" cs="4" s="45"><O t="S"><![CDATA[8、第10栏＝第11栏＋第14栏]]></O>
+</C>
+<C c="5" r="18"></C>
+<C c="6" r="18" cs="4"><O t="S"><![CDATA[13、第24栏＝第14栏＋第25栏＋第26栏]]></O>
+</C>
+<C c="10" r="18"></C>
+<C c="11" r="18"></C>
+<C c="12" r="18"></C>
+<C c="13" r="18"></C>
+<C c="14" r="18"></C>
+<C c="15" r="18"></C>
+<C c="16" r="18"></C>
+<C c="17" r="18"></C>
+<C c="18" r="18"></C>
+<C c="19" r="18"></C>
+<C c="20" r="18"></C>
+<C c="21" r="18"></C>
+<C c="22" r="18"></C>
+<C c="23" r="18"></C>
+<C c="24" r="18"></C>
+<C c="25" r="18"></C>
+<C c="26" r="18"></C>
+<C c="27" r="18"></C>
+<C c="28" r="18"></C>
+<C c="29" r="18"></C>
+<C c="30" r="18"></C>
+<C c="31" r="18"></C>
+<C c="32" r="18"></C>
+<C c="33" r="18"></C>
+<C c="34" r="18"></C>
+<C c="35" r="18"></C>
+<C c="36" r="18" s="44"></C>
+<C c="0" r="19" s="46"></C>
+<C c="1" r="19" cs="4" s="45"><O t="S"><![CDATA[9、第11栏＝第12栏＋第13栏]]></O>
+</C>
+<C c="5" r="19"></C>
+<C c="6" r="19" cs="4"><O t="S"><![CDATA[14、第27栏＝第19栏＋第28栏＋第29栏]]></O>
+</C>
+<C c="10" r="19"></C>
+<C c="11" r="19"></C>
+<C c="12" r="19"></C>
+<C c="13" r="19"></C>
+<C c="14" r="19"></C>
+<C c="15" r="19"></C>
+<C c="16" r="19"></C>
+<C c="17" r="19"></C>
+<C c="18" r="19"></C>
+<C c="19" r="19"></C>
+<C c="20" r="19"></C>
+<C c="21" r="19"></C>
+<C c="22" r="19"></C>
+<C c="23" r="19"></C>
+<C c="24" r="19"></C>
+<C c="25" r="19"></C>
+<C c="26" r="19"></C>
+<C c="27" r="19"></C>
+<C c="28" r="19"></C>
+<C c="29" r="19"></C>
+<C c="30" r="19"></C>
+<C c="31" r="19"></C>
+<C c="32" r="19"></C>
+<C c="33" r="19"></C>
+<C c="34" r="19"></C>
+<C c="35" r="19"></C>
+<C c="36" r="19" s="44"></C>
+<C c="0" r="20" s="47"></C>
+<C c="1" r="20" cs="4" s="48"><O t="S"><![CDATA[10、第12栏＝第34栏＋第36栏]]></O>
+</C>
+<C c="5" r="20" s="49"></C>
+<C c="6" r="20" cs="4" s="49"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="10" r="20" s="49"></C>
+<C c="11" r="20" s="49"></C>
+<C c="12" r="20" s="49"></C>
+<C c="13" r="20" s="49"></C>
+<C c="14" r="20" s="49"></C>
+<C c="15" r="20" s="49"></C>
+<C c="16" r="20" s="49"></C>
+<C c="17" r="20" s="49"></C>
+<C c="18" r="20" s="49"></C>
+<C c="19" r="20" s="49"></C>
+<C c="20" r="20" s="49"></C>
+<C c="21" r="20" s="49"></C>
+<C c="22" r="20" s="49"></C>
+<C c="23" r="20" s="49"></C>
+<C c="24" r="20" s="49"></C>
+<C c="25" r="20" s="49"></C>
+<C c="26" r="20" s="49"></C>
+<C c="27" r="20" s="49"></C>
+<C c="28" r="20" s="49"></C>
+<C c="29" r="20" s="49"></C>
+<C c="30" r="20" s="49"></C>
+<C c="31" r="20" s="49"></C>
+<C c="32" r="20" s="49"></C>
+<C c="33" r="20" s="49"></C>
+<C c="34" r="20" s="49"></C>
+<C c="35" r="20" s="49"></C>
+<C c="36" r="20" s="50"></C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style horizontal_alignment="0" textStyle="1">
+<FRFont name="宋体" style="0" size="13" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="4" textStyle="1">
+<FRFont name="宋体" style="0" size="10" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="4" textStyle="1">
+<Format class="java.text.DecimalFormat"><![CDATA[#0]]>
+</Format>
+<FRFont name="宋体" style="0" size="10" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="4" textStyle="1">
+<Format class="java.text.DecimalFormat"><![CDATA[#0.0]]>
+</Format>
+<FRFont name="宋体" style="0" size="10" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<FRFont name="宋体" style="0" size="10" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style textStyle="1">
+<Format class="java.text.DecimalFormat"><![CDATA[#0]]>
+</Format>
+<FRFont name="宋体" style="0" size="10" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style textStyle="1">
+<FRFont name="宋体" style="0" size="10" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<FRFont name="宋体" style="1" size="16" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-16737793"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="16" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="16" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" foreground="-1" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<FRFont name="宋体" style="0" size="12" foreground="-1" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<FRFont name="宋体" style="1" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<FRFont name="宋体" style="1" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="6" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="6" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" color="-16737793"
+ /><Left style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" color="-16737793"
+ /><Right style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="宋体" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-16737793"
+ /><Bottom style="1" color="-16737793"
+ /><Left style="1" color="-16737793"
+ /><Right style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<FRFont name="宋体" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-16737793"
+ /><Bottom style="1" color="-16737793"
+ /><Left style="1" color="-16737793"
+ /><Right style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="宋体" style="0" size="12" underline="1" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-16737793"
+ /><Bottom style="1" color="-16737793"
+ /><Left style="1" color="-16737793"
+ /><Right style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-16737793"
+ /><Bottom style="1" color="-16737793"
+ /><Left style="1" color="-16737793"
+ /><Right style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="宋体" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-16737793"
+ /><Bottom style="1" color="-16737793"
+ /><Left style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<FRFont name="宋体" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-16737793"
+ /><Bottom style="1" color="-16737793"
+ /><Left color="-1"
+ /><Right style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="宋体" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-16737793"
+ /><Bottom style="1" color="-16737793"
+ /><Left color="-1"
+ /><Right style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-16737793"
+ /><Bottom style="1" color="-16737793"
+ /><Left color="-1"
+ /><Right style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<Format class="java.text.DecimalFormat"><![CDATA[#0]]>
+</Format>
+<FRFont name="宋体" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-16737793"
+ /><Bottom style="1" color="-16737793"
+ /><Left style="1" color="-16737793"
+ /><Right style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<Format class="java.text.DecimalFormat"><![CDATA[#0.0]]>
+</Format>
+<FRFont name="宋体" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-6697729">
+</Background>
+<Border><Top style="1" color="-16737793"
+ /><Bottom style="1" color="-16737793"
+ /><Left style="1" color="-16737793"
+ /><Right style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<Format class="java.text.DecimalFormat"><![CDATA[#0.0]]>
+</Format>
+<FRFont name="宋体" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-16737793"
+ /><Bottom style="1" color="-16737793"
+ /><Left style="1" color="-16737793"
+ /><Right style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<FRFont name="宋体" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-6697729">
+</Background>
+<Border><Top style="1" color="-16737793"
+ /><Bottom style="1" color="-16737793"
+ /><Left style="1" color="-16737793"
+ /><Right style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<Format class="java.text.DecimalFormat"><![CDATA[#0]]>
+</Format>
+<FRFont name="宋体" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-6697729">
+</Background>
+<Border><Top style="1" color="-16737793"
+ /><Bottom style="1" color="-16737793"
+ /><Left style="1" color="-16737793"
+ /><Right style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1" imageLayout="2">
+<Format class="java.text.DecimalFormat"><![CDATA[#0.0]]>
+</Format>
+<FRFont name="宋体" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-16737793"
+ /><Bottom style="1" color="-16737793"
+ /><Left style="1" color="-16737793"
+ /><Right style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<Format class="java.text.DecimalFormat"><![CDATA[#0.0]]>
+</Format>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-16737793"
+ /><Bottom style="1" color="-16737793"
+ /><Left style="1" color="-16737793"
+ /><Right style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<FRFont name="宋体" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<Format class="java.text.DecimalFormat"><![CDATA[#0]]>
+</Format>
+<FRFont name="宋体" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<Format class="java.text.DecimalFormat"><![CDATA[#0.0]]>
+</Format>
+<FRFont name="宋体" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0" textStyle="1">
+<FRFont name="宋体" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0">
+<Format class="java.text.SimpleDateFormat"><![CDATA[yyyy-MM-dd]]>
+</Format>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="1" color="-16737793"
+ /></Border>
+</Style>
+<Style textStyle="1">
+<FRFont name="宋体" style="0" size="13" />
+<Background name="NullBackground" />
+<Border><Top style="14" color="-16737793"
+ /><Left style="14" color="-16737793"
+ /></Border>
+</Style>
+<Style textStyle="1">
+<FRFont name="宋体" style="0" size="13" />
+<Background name="NullBackground" />
+<Border><Top style="14" color="-16737793"
+ /><Right style="14" color="-16737793"
+ /></Border>
+</Style>
+<Style textStyle="1">
+<FRFont name="宋体" style="0" size="13" />
+<Background name="NullBackground" />
+<Border><Left style="14" color="-16737793"
+ /></Border>
+</Style>
+<Style textStyle="1">
+<FRFont name="宋体" style="0" size="13" />
+<Background name="NullBackground" />
+<Border><Right style="14" color="-16737793"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="宋体" style="0" size="13" />
+<Background name="NullBackground" />
+<Border><Right style="14" color="-16737793"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Right style="14" color="-16737793"
+ /></Border>
+</Style>
+<Style textStyle="1">
+<FRFont name="宋体" style="0" size="13" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Left style="14" color="-16737793"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="14" color="-16737793"
+ /><Left style="14" color="-16737793"
+ /></Border>
+</Style>
+<Style textStyle="1">
+<FRFont name="宋体" style="0" size="13" />
+<Background name="NullBackground" />
+<Border><Bottom style="14" color="-16737793"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="14" color="-16737793"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="14" color="-16737793"
+ /><Right style="14" color="-16737793"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

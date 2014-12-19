@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="MenuConfigSearch" xmlns="http://www.loushang.com/sca/1.0">
+    <description>MenuConfigSearch</description>   
+    
+    <component name="MenuConfigSearchDao">
+	    <service name="MenuConfigSearchDao">
+	    	<interface.java interface="com.inspur.cams.comm.menuconfig.dao.IMenuConfigSearchDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.comm.menuconfig.dao.MenuConfigSearchDao"/>	
+    </component>
+    <component name="pubMenuConfigDomain">
+		<service name="pubMenuConfigDomain">
+			<interface.java interface="com.inspur.cams.comm.menuconfig.domain.IPubMenuConfigDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.menuconfig.domain.PubMenuConfigDomain"/>
+		<reference name="pubMenuConfigDao" target="pubMenuConfigDao/pubMenuConfigDao"/>
+	</component>
+	<component name="pubMenuConfigDao">
+	    <service name="pubMenuConfigDao">
+	    	<interface.java interface="com.inspur.cams.comm.menuconfig.dao.IPubMenuConfigDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.comm.menuconfig.dao.PubMenuConfigDao"/>	
+    </component>
+    
+    <component name="CustomMenuDomain">
+		<service name="CustomMenuDomain">
+			<interface.java interface="com.inspur.cams.comm.menuconfig.domain.ICustomMenuDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.menuconfig.domain.CustomMenuDomain"/>
+        <reference name="pubMenuConfigDao" target="pubMenuConfigDao/pubMenuConfigDao"/>
+		<reference name="imenuStruDao" target="MenuStruDao/MenuStruDao"/>
+        <reference name="imenuItemDao" target="MenuItemDao/MenuItemDao"/>
+	</component>
+</composite>

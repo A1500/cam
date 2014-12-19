@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.EmbeddedTableData">
+<Parameters>
+</Parameters>
+<ColumnNames><![CDATA[ID,,.,,Name,,.,,Number]]></ColumnNames>
+<ColumnTypes><![CDATA[java.lang.String,java.lang.String,java.lang.String]]></ColumnTypes>
+<RowData>
+<![CDATA[7F'-bJj:"Ri:Z>KB(#Hk]X+SR,F7G!Jfo^P8jr*)TEf/h\u7->D*Q=VpBVoK<EH9qI24[DA@
+N1;.b($:'9QgGcs6J&7#I@:S/sb
+%MdsoIFso;8`fuO[:30'[.6r5uh\1t[6R6ul:?k=pE.6'
+m\4dNT4>/"QM3'mLaATgL?nQG8Qgu\JOKZjahAXL)2Z,d#9HMDj/e[
+Us*s[4!:?6[o!K=0B9
+C<S~
+
+]]>
+</RowData>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="false" isHorizontalCenterOnPage="true" headerHeight="0.0" footerHeight="0.0">
+<Margin top="0.27" left="0.7499999999999999" bottom="0.27" right="0.7499999999999999" />
+</ReportSettings>
+<ReportPageAttr>
+</ReportPageAttr>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<Header reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Footer>
+<RowHeight defaultValue="19">
+<![CDATA[25,19,19,19,19,19,0]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[158,158,158,158,112,72,29]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="4" s="0"><O t="S"><![CDATA[重大事件告警量排名]]></O>
+</C>
+<C c="0" r="2" s="1"><O t="S"><![CDATA[ From：]]></O>
+</C>
+<C c="1" r="2"><O t="S"><![CDATA[2008-01-01]]></O>
+</C>
+<C c="2" r="2" s="1"><O t="S"><![CDATA[to：]]></O>
+</C>
+<C c="3" r="2"><O t="S"><![CDATA[2008-06-01]]></O>
+</C>
+<C c="0" r="3" cs="4" s="2"></C>
+<C c="0" r="4" s="3"><O t="S"><![CDATA[公司ID]]></O>
+</C>
+<C c="1" r="4" s="3"><O t="S"><![CDATA[公司名称]]></O>
+</C>
+<C c="2" r="4" s="3"><O t="S"><![CDATA[重大事件告警量]]></O>
+</C>
+<C c="3" r="4" s="3"><O t="S"><![CDATA[告警量排名]]></O>
+</C>
+<C c="0" r="5" s="4"><O t="DSColumn"><Attributes dsName="ds1" columnName="ID" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.FormulaCondition"><Formula>
+<![CDATA[=row()%2==1]]>
+</Formula>
+</Condition>
+<HighlightAction class="com.fr.report.highlight.BackgroundHighlightAction">
+<Background name="ColorBackground"
+ color="-853505">
+</Background>
+<Scope val="1" /></HighlightAction>
+</Highlight></HighlightList><Expand dir="0" />
+</C>
+<C c="1" r="5" s="4"><O t="DSColumn"><Attributes dsName="ds1" columnName="Name" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.FormulaCondition"><Formula>
+<![CDATA[=row()%2==1]]>
+</Formula>
+</Condition>
+<HighlightAction class="com.fr.report.highlight.BackgroundHighlightAction">
+<Background name="ColorBackground"
+ color="-853505">
+</Background>
+<Scope val="1" /></HighlightAction>
+</Highlight></HighlightList><Expand dir="0" />
+</C>
+<C c="2" r="5" s="4"><O t="DSColumn"><Attributes dsName="ds1" columnName="Number" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.FormulaCondition"><Formula>
+<![CDATA[=row()%2==1]]>
+</Formula>
+</Condition>
+<HighlightAction class="com.fr.report.highlight.BackgroundHighlightAction">
+<Background name="ColorBackground"
+ color="-853505">
+</Background>
+<Scope val="1" /></HighlightAction>
+</Highlight></HighlightList><Expand dir="0" />
+</C>
+<C c="3" r="5" s="5"><O t="Formula" class="Formula" ><Attributes><![CDATA[=count(C6[!0]{C6>=$C6})]]></Attributes></O>
+<HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.FormulaCondition"><Formula>
+<![CDATA[=row()%2==1]]>
+</Formula>
+</Condition>
+<HighlightAction class="com.fr.report.highlight.BackgroundHighlightAction">
+<Background name="ColorBackground"
+ color="-853505">
+</Background>
+<Scope val="1" /></HighlightAction>
+</Highlight></HighlightList></C>
+<C c="0" r="7"></C>
+<C c="1" r="7"></C>
+<C c="2" r="7"></C>
+<C c="3" r="7"></C>
+<C c="0" r="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="8"></C>
+<C c="2" r="8" s="6"><O t="S"><![CDATA[制表人：]]></O>
+</C>
+<C c="3" r="8" s="7"><O t="S"><![CDATA[Lee]]></O>
+</C>
+<C c="0" r="9" s="8"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="9" s="8"></C>
+<C c="2" r="9" s="9"><O t="S"><![CDATA[制表日期：]]></O>
+</C>
+<C c="3" r="9" s="10"><O t="S"><![CDATA[2008-06-05]]></O>
+</C>
+<C c="0" r="11" cs="4" s="11"><O t="S"><![CDATA[“重大事件告警量排名”报表功能应用说明：]]></O>
+</C>
+<C c="0" r="12" cs="4" s="12"><O t="S"><![CDATA[1、排名]]></O>
+</C>
+<C c="0" r="13" cs="4" s="13"><O t="S"><![CDATA[     该报表中，可通过公式，将各分公司按照重大事件发生数量进行排名。]]></O>
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="14" foreground="-16157524" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ImageBackground"
+ specifiedImageWidth="-1.0"
+ specifiedImageHeight="-1.0"
+ layout="2">
+<Image width="271" height="20">
+<![CDATA[mDD3s_Ctrm_#OF0>K!!9WJ6!OQ7+.ZoaQ9>0E]d2laNppWiE)!WiGp)li!RsTDPW,0?[QWIV
+_g1pu1d?NUQ%!281S82*R8))W+4
+iebJi;<TD!-WQ)u!;iUeW~
+
+]]>
+</Image>
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-918018">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" foreground="-65536" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="4">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="2" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="4">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="2" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="2" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Top style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Bottom style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

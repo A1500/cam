@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select * from StScore]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="false" headerHeight="0.33" footerHeight="0.33">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+<Parameter>
+<Attributes name="Para"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[ClassNo,Name]]></O>
+<CellEditorDef class="com.fr.report.cellElement.CheckBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="ClassNo" value="ClassNo"/>
+<Dict key="Course" value="Course"/>
+<Dict key="Grade" value="Grade"/>
+<Dict key="Name" value="Name"/>
+<Dict key="Sex" value="Sex"/>
+<Dict key="StudentNo" value="StudentNo"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</Parameter>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="1" s="0"></C>
+<C c="1" r="1" s="0"><O t="Formula" class="Formula" ><Attributes><![CDATA[=split($Para,",")]]></Attributes></O>
+<Expand dir="1" />
+</C>
+<C c="0" r="2" s="0"><O t="Formula" class="Formula" ><Attributes><![CDATA[=ds1.select(#0)]]></Attributes></O>
+<Expand dir="0" />
+</C>
+<C c="1" r="2" s="0"><O t="Formula" class="Formula" ><Attributes><![CDATA[=ds1.value(a3, b2)]]></Attributes></O>
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

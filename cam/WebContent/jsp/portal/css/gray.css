@@ -1,0 +1,30 @@
+.banner {
+	background-image:url( ../images/gray/banner.jpg ) !important;
+}
+.top-zs_01{
+	background-image:url( ../images/gray/top-zs_01.png ) !important;
+}
+.top-zs_02{
+	background-image:url( ../images/gray/top-zs_02.gif ) !important;
+}
+.topbj{
+	background-image:url( ../images/gray/topbj.jpg ) !important;
+}
+.l-panel-header {
+	color: #b44f06;
+	border: 1px solid #e9d2d2;
+	border-bottom: 0px;
+	background: transparent
+		url(../images/gray/white-top-bottom.gif) repeat-x 0 -1px;
+}
+.l-panel-body{
+	border: 1px solid #e9d2d2;
+}
+.dot{
+	bgcolor:"#f2e8c4"
+}
+.topwel{
+height:28;
+color:white;
+background-image:url( ../images/gray/topbj.jpg ) !important;
+}

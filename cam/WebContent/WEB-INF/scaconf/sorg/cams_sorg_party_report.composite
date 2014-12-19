@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--社会组织党建报表查询dao-->
+	<component name="somPartyReportDao">
+	    <service name="somPartyReportDao">
+	    	<interface.java interface="com.inspur.cams.sorg.report.dao.ISomPartyReportDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.report.dao.jdbc.SomPartyReportDao"/>
+    </component>
+    <!--社会组织党建报表查询Domain-->
+     <component name="somPartyReportDomain">
+	    <service name="somPartyReportDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.report.domain.ISomPartyReportDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.report.domain.support.SomPartyReportDomain"/>
+        <reference name="somPartyReportDao" target="somPartyReportDao/somPartyReportDao"/>
+    </component>
+</composite>

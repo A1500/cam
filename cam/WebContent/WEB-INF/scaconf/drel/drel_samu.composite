@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<component name="samGerocomiumInfoDao">
+		<service name="samGerocomiumInfoDao">
+			<interface.java interface="com.inspur.cams.drel.samu.dao.ISamGerocomiumInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.samu.dao.jdbc.SamGerocomiumInfoDao"/>
+    </component>
+	<component name="samGerocomiumInfoDomain">
+		<service name="samGerocomiumInfoDomain">
+			<interface.java interface="com.inspur.cams.drel.samu.domain.ISamGerocomiumInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.samu.domain.support.SamGerocomiumInfoDomain"/>
+		<reference name="samGerocomiumInfoDao" target="samGerocomiumInfoDao/samGerocomiumInfoDao"/>
+		<reference name="samRoomInfoDao" target="samRoomInfoDao/samRoomInfoDao"/>
+		<reference name="samWorkerInfoDao" target="samWorkerInfoDao/samWorkerInfoDao"/>
+		<reference name="samBedInfoDao" target="samBedInfoDao/samBedInfoDao"/>
+	</component>
+	<component name="samRoomInfoDao">
+		<service name="samRoomInfoDao">
+			<interface.java interface="com.inspur.cams.drel.samu.dao.ISamRoomInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.samu.dao.jdbc.SamRoomInfoDao"/>
+    </component>
+	<component name="samRoomInfoDomain">
+		<service name="samRoomInfoDomain">
+			<interface.java interface="com.inspur.cams.drel.samu.domain.ISamRoomInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.samu.domain.support.SamRoomInfoDomain"/>
+		<reference name="samRoomInfoDao" target="samRoomInfoDao/samRoomInfoDao"/>
+	</component>
+	<component name="samWorkerInfoDao">
+		<service name="samWorkerInfoDao">
+			<interface.java interface="com.inspur.cams.drel.samu.dao.ISamWorkerInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.samu.dao.jdbc.SamWorkerInfoDao"/>
+    </component>
+	<component name="samWorkerInfoDomain">
+		<service name="samWorkerInfoDomain">
+			<interface.java interface="com.inspur.cams.drel.samu.domain.ISamWorkerInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.samu.domain.support.SamWorkerInfoDomain"/>
+		<reference name="samWorkerInfoDao" target="samWorkerInfoDao/samWorkerInfoDao"/>
+	</component>
+	<component name="samBedInfoDao">
+		<service name="samBedInfoDao">
+			<interface.java interface="com.inspur.cams.drel.samu.dao.ISamBedInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.samu.dao.jdbc.SamBedInfoDao"/>
+    </component>
+	<component name="samBedInfoDomain">
+		<service name="samBedInfoDomain">
+			<interface.java interface="com.inspur.cams.drel.samu.domain.ISamBedInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.samu.domain.support.SamBedInfoDomain"/>
+		<reference name="samBedInfoDao" target="samBedInfoDao/samBedInfoDao"/>
+	</component>
+	<component name="samGeroKeptPersonDao">
+		<service name="samGeroKeptPersonDao">
+			<interface.java interface="com.inspur.cams.drel.samu.dao.ISamGeroKeptPersonDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.samu.dao.jdbc.SamGeroKeptPersonDao"/>
+    </component>	
+	<component name="samGeroKeptPersonDomain">
+		<service name="samGeroKeptPersonDomain">
+			<interface.java interface="com.inspur.cams.drel.samu.domain.ISamGeroKeptPersonDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.samu.domain.support.SamGeroKeptPersonDomain"/>
+		<reference name="samGeroKeptPersonDao" target="samGeroKeptPersonDao/samGeroKeptPersonDao"/>
+		<reference name="samGeroApplyDao" target="samGeroApplyDao/samGeroApplyDao"/>
+		<reference name="samFamilyTreatmentDao" target="samFamilyTreatmentDao/samFamilyTreatmentDao"/>
+		<reference name="baseinfoPeopleArchiveDao" target="baseinfoPeopleArchiveDao/baseinfoPeopleArchiveDao"/>
+	</component>
+	<component name="samGeroApplyDao">
+		<service name="samGeroApplyDao">
+			<interface.java interface="com.inspur.cams.drel.samu.dao.ISamGeroApplyDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.samu.dao.jdbc.SamGeroApplyDao"/>
+    </component>
+	<component name="samGeroApplyDomain">
+		<service name="samGeroApplyDomain">
+			<interface.java interface="com.inspur.cams.drel.samu.domain.ISamGeroApplyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.samu.domain.support.SamGeroApplyDomain"/>
+		<reference name="samGeroApplyDao" target="samGeroApplyDao/samGeroApplyDao"/>
+	</component>
+	<component name="samPocketApplyDomain">
+		<service name="samPocketApplyDomain">
+			<interface.java interface="com.inspur.cams.drel.samu.domain.ISamPocketApplyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.samu.domain.support.SamPocketApplyDomain"/>
+		<reference name="samGeroApplyDomain" target="samGeroApplyDomain/samGeroApplyDomain"/>
+		<reference name="samGeroKeptPersonDomain" target="samGeroKeptPersonDomain/samGeroKeptPersonDomain"/>
+	</component>
+	<component name="samGeroAccessoriesDao">
+		<service name="samGeroAccessoriesDao">
+			<interface.java interface="com.inspur.cams.drel.samu.dao.ISamGeroAccessoriesDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.samu.dao.jdbc.SamGeroAccessoriesDao"/>
+    </component>
+	<component name="samGeroAccessoriesDomain">
+		<service name="samGeroAccessoriesDomain">
+			<interface.java interface="com.inspur.cams.drel.samu.domain.ISamGeroAccessoriesDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.samu.domain.support.SamGeroAccessoriesDomain"/>
+		<reference name="samGeroAccessoriesDao" target="samGeroAccessoriesDao/samGeroAccessoriesDao"/>
+	</component>
+</composite>

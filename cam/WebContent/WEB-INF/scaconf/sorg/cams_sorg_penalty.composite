@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--行政执法基本信息-->
+	<component name="somPenaltyDao">
+		<service name="somPenaltyDao">
+			<interface.java interface="com.inspur.cams.sorg.penalty.base.dao.ISomPenaltyDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.sorg.penalty.base.dao.jdbc.SomPenaltyDao"/>
+    </component>
+	<component name="somPenaltyBaseDomain">
+		<service name="somPenaltyBaseDomain">
+			<interface.java interface="com.inspur.cams.sorg.penalty.base.domain.ISomPenaltyBaseDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.penalty.base.domain.support.SomPenaltyBaseDomain"/>
+		<reference name="somPenaltyDao" target="somPenaltyDao/somPenaltyDao"/>	
+	</component>
+	<!--行政执法审核-->
+	<component name="somPenaltyApplyDao">
+		<service name="somPenaltyApplyDao">
+			<interface.java interface="com.inspur.cams.sorg.penalty.base.dao.ISomPenaltyApplyDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.sorg.penalty.base.dao.jdbc.SomPenaltyApplyDao"/>
+    </component>
+	<component name="somPenaltyApplyBaseDomain">
+		<service name="somPenaltyApplyBaseDomain">
+			<interface.java interface="com.inspur.cams.sorg.penalty.base.domain.ISomPenaltyApplyBaseDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.penalty.base.domain.support.SomPenaltyApplyBaseDomain"/>	
+		<reference name="somPenaltyApplyDao" target="somPenaltyApplyDao/somPenaltyApplyDao"/>		
+	</component>
+	
+	<!--行政处罚-->
+	<component name="somPenaltyApplyDomain">
+		<service name="somPenaltyApplyDomain">
+			<interface.java interface="com.inspur.cams.sorg.penalty.penalty.domain.ISomPenaltyApplyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.penalty.penalty.domain.support.SomPenaltyApplyDomain"/>	
+		<reference name="somPenaltyApplyDao" target="somPenaltyApplyDao/somPenaltyApplyDao"/>		
+		<reference name="somPenaltyBaseDomain" target="somPenaltyBaseDomain/somPenaltyBaseDomain"/>	
+		<reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>			
+		<reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>			
+		<reference name="somRestrictPeopleDetailDomain" target="somRestrictPeopleDetailDomain/somRestrictPeopleDetailDomain"/>			
+		<reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>	
+	</component>
+	<!--取缔非法社会组织-->
+	<component name="somPenaltyForbidDomain">
+		<service name="somPenaltyForbidDomain">
+			<interface.java interface="com.inspur.cams.sorg.penalty.forbid.domain.ISomPenaltyForbidDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.penalty.forbid.domain.support.SomPenaltyForbidDomain"/>	
+		<reference name="somPenaltyApplyDao" target="somPenaltyApplyDao/somPenaltyApplyDao"/>		
+		<reference name="somPenaltyBaseDomain" target="somPenaltyBaseDomain/somPenaltyBaseDomain"/>		
+		<reference name="somRestrictPeopleDetailDomain" target="somRestrictPeopleDetailDomain/somRestrictPeopleDetailDomain"/>			
+	</component>
+</composite>

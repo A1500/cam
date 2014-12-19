@@ -1,0 +1,36 @@
+#l-debug-browser .l-tree .l-tree-node a span {
+	color: #222297;
+	font-size: 12px;
+	padding-top: 2px;
+	font-family: "monotype", "courier new", sans-serif;
+	line-height: 18px;
+}
+
+#l-debug-browser .l-tree a i {
+	color: #FF4545;
+	font-style: normal;
+}
+
+#l-debug-browser .l-tree a em {
+	color: #999;
+}
+
+#l-debug-browser .l-tree .l-tree-node .l-tree-selected a span {
+	background: #c3daf9;
+}
+
+#l-debug-browser .l-tool-toggle {
+	background-position: 0 -75px;
+}
+
+#l-debug-browser .l-tool-toggle-over {
+	background-position: -15px -75px;
+}
+
+#l-debug-browser.l-panel-collapsed .l-tool-toggle {
+	background-position: 0 -60px;
+}
+
+#l-debug-browser.l-panel-collapsed .l-tool-toggle-over {
+	background-position: -15px -60px;
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<composite name="exchange" xmlns="http://www.loushang.com/sca/1.0">
+	 <component name="SamDataExchange">
+	    <service name="SamDataExchange">
+	    	<interface.java interface="com.inspur.cams.drel.samDataExchange.domain.ISamDataExchange"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+       	 <implementation.java impl="com.inspur.cams.drel.samDataExchange.domain.support.SamDataExchange"/>
+        <reference name="samApplyInfoDomain" target="samApplyInfoDomain/samApplyInfoDomain"/>
+        <reference name="baseinfoDomain" target="baseinfoDomain/baseinfoDomain"/>
+        <reference name="samFamilyTreatmentDomain" target="samFamilyTreatmentDomain/samFamilyTreatmentDomain"/>
+        <reference name="samFamilyAssistanceDomain" target="samFamilyAssistanceDomain/samFamilyAssistanceDomain"/>
+        <reference name="samApplyNoticeDomain" target="samApplyNoticeDomain/samApplyNoticeDomain"/>
+        <reference name="samApplyDiscussionDomain" target="samApplyDiscussionDomain/samApplyDiscussionDomain"/>
+        <reference name="samApplySurveyDomain" target="samApplySurveyDomain/samApplySurveyDomain"/>
+        <reference name="samBankAccountDomain" target="SamBankAccountDomain/SamBankAccountDomain"/>
+        <reference name="samPeopleTypeDomain" target="samPeopleTypeDomain/samPeopleTypeDomain"/>
+        <reference name="samPeopleExtendDomain" target="samPeopleExtendDomain/samPeopleExtendDomain"/>
+        <reference name="samPeopleDiseaseDomain" target="samPeopleDiseaseDomain/samPeopleDiseaseDomain"/>
+        <reference name="samPeopleDisabilityDomain" target="samPeopleDisabilityDomain/samPeopleDisabilityDomain"/>
+        <reference name="samPeopleEduDomain" target="samPeopleEduDomain/samPeopleEduDomain"/>
+        <reference name="samPeopleIncomeDomain" target="samPeopleIncomeDomain/samPeopleIncomeDomain"/>
+        <reference name="samPeopleJobsDomain" target="samPeopleJobsDomain/samPeopleJobsDomain"/>
+        <reference name="samPeopleInsuranceDomain" target="samPeopleInsuranceDomain/samPeopleInsuranceDomain"/>
+        <reference name="samApplyOptionsHisDomain" target="samApplyOptionsHisDomain/samApplyOptionsHisDomain"/>
+        <reference name="samCardNoDomain" target="samCardNoDomain/samCardNoDomain"/>
+        <reference name="samLowStandardsDomain" target="SamLowStandardsDomain/SamLowStandardsDomain"/>
+        <reference name="samFamilyHouseDao" target="samFamilyHouseDao/samFamilyHouseDao"/>
+        <reference name="samFamilyEstateDao" target="samFamilyEstateDao/samFamilyEstateDao"/>
+        <reference name="samFamilySupportDao" target="samFamilySupportDao/samFamilySupportDao"/>
+         <reference name="baseInfoFamilyDao" target="BaseinfoFamilyDao/BaseinfoFamilyDao"/>
+          <reference name="baseinfoPeopleDao" target="baseinfoPeopleDao/baseinfoPeopleDao"/>
+	</component>
+	
+</composite>

@@ -1,0 +1,6 @@
+﻿#微件加载方式
+LOUSHANG_PORTAL.WIDGET_TYPE=1:系统默认,2:IFRAME
+#模板使用对象,0:用户,1:角色,2:岗位类型,3:组织机构
+LOUSHANG_PORTAL.TEMPLATE_TYPE=0:用户,1:角色,2:岗位类型,3:组织机构
+#模板应用是否显示
+LOUSHANG_PORTAL.IS_DISPLAY=1:是,0:否

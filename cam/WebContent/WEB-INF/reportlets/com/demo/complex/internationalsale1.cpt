@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.EmbeddedTableData">
+<Parameters>
+</Parameters>
+<ColumnNames><![CDATA[ID,,.,,Continent,,.,,ID1,,.,,Country,,.,,ID2,,.,,City,,.,,Amount]]></ColumnNames>
+<ColumnTypes><![CDATA[java.lang.Integer,java.lang.String,java.lang.Integer,java.lang.String,java.lang.Integer,java.lang.String,java.lang.Integer]]></ColumnTypes>
+<RowData>
+<![CDATA[IFR.qdQe?KnE7!)%GAGea1kgugO]qiK7SaWB8Dk\Q56Ns[`YsZ7piJM%m#[\mToE\R%/HUA3
+P(D\%<FePJcVn?H'hSm,6_'&iQ6
+XI;hWH-XI*%Uo.W96nZ87pcSKXnm+L(rI/kq?3Q#0qe"^
+g@Y;8Q5fs69X^tuPg2m?bqQmdA74t7[h[^nBY5h$o[n3mdE0LMdBZg
+PbSQa_L.i4:.bbYec[
+ii=u$SZ3Th[r,^e8Z7/JB7uU>IF25)\j/skWBeM3Iqes^3`"snl?$i]k<2LN>)7"^@)++IFe
+b@gFg9t(
+Seb'9c$VcM;m]]AkgjLCN48E0;WfBk4GK8aMSUejKQn7cMQW6Y7f.t6D"MB=a9jS0
+Ru]<p^3D(a@2C%3^#UNQ>X.j*+rfq6BQ2b
++6J9dAL0B[%L_dq;_qj%o:@J:si?GT$ZZd#ZM@
+2st^SK7$=PniESL;>+dY-UuZT%PpXVf*!6jTr,ii\2r.n>P<h"`EM4]GRXD$J
+bGX;Wri+Q8t
+/c\bJ_!Ku31n'dk2dPeq.q`7jeo*n>d[jHmm7:&c^-9&p1\=#1L*oq?c++>,h+Q4jms44'!G
+*_1)Z'h?Rs"QhW%
+R10.1r_J6q$-~
+
+]]>
+</RowData>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="false" headerHeight="0.0" footerHeight="0.0">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+<Parameter>
+<Attributes name="Continent"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+<PP class="com.fr.report.parameter.CustomParameterProcessor">
+<UnitProcessorMap>
+<ParameterUnitProcessor parameter="Continent">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($Continent=="",nofilter,$Continent)]]></Attributes></Formula></UP>
+</ParameterUnitProcessor>
+</UnitProcessorMap>
+</PP>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<Header reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Footer>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[100,90,110,110]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="4" s="0"><O t="S"><![CDATA[各大洲销售情况统计]]></O>
+</C>
+<C c="0" r="1" s="1"></C>
+<C c="1" r="1" s="1"></C>
+<C c="2" r="1" s="2"><O t="S"><![CDATA[查询日期：]]></O>
+</C>
+<C c="3" r="1" s="3"><O t="Formula" class="Formula" ><Attributes><![CDATA[=today()]]></Attributes></O>
+</C>
+<C c="0" r="3" cs="4" s="4"></C>
+<C c="0" r="4" s="5"><O t="S"><![CDATA[洲]]></O>
+<NameJavaScriptGroup>
+<NameJavaScript name="International">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/internationalsale.cpt]]></ReportletName>
+<Parameters>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+</NameJavaScriptGroup>
+</C>
+<C c="1" r="4" s="6"><O t="S"><![CDATA[国家编号]]></O>
+</C>
+<C c="2" r="4" s="6"><O t="S"><![CDATA[国家]]></O>
+</C>
+<C c="3" r="4" s="6"><O t="S"><![CDATA[销售额（万元）]]></O>
+</C>
+<C c="0" r="5" rs="2" s="7"><O t="DSColumn"><Attributes dsName="ds1" columnName="Continent" />
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Continent]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="Continent"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="1" r="5" s="7"><O t="DSColumn"><Attributes dsName="ds1" columnName="ID1" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="2" r="5" s="8"><O t="DSColumn"><Attributes dsName="ds1" columnName="Country" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<NameJavaScriptGroup>
+<NameJavaScript name="Country">
+<JavaScript class="com.fr.report.javaScript.ReportletHyperlink"><ReportletName extendParameters="false"><![CDATA[/com/demo/complex/internationalsale2.cpt]]></ReportletName>
+<Parameters>
+<Parameter>
+<Attributes name="Continent"
+ type="7"
+ shown="true" />
+<O t="Formula" class="Formula" ><Attributes><![CDATA[=A6]]></Attributes></O>
+</Parameter>
+<Parameter>
+<Attributes name="Country"
+ type="7"
+ shown="true" />
+<O t="Formula" class="Formula" ><Attributes><![CDATA[=C6]]></Attributes></O>
+</Parameter>
+</Parameters>
+</JavaScript>
+</NameJavaScript>
+</NameJavaScriptGroup>
+<Expand dir="0" />
+</C>
+<C c="3" r="5" s="7"><O t="DSColumn"><Attributes dsName="ds1" columnName="Amount" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.SummaryGrouper"><FN><![CDATA[com.fr.data.util.function.SumFunction]]></FN></RG><Result><![CDATA[$$$]]></Result></O>
+</C>
+<C c="1" r="6" cs="2" s="9"><O t="S"><![CDATA[合计：]]></O>
+</C>
+<C c="3" r="6" s="10"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(D6)]]></Attributes></O>
+</C>
+<C c="0" r="8" cs="4" s="11"><O t="S"><![CDATA[“各大洲销售情况统计”报表功能应用说明：]]></O>
+</C>
+<C c="0" r="9" cs="4" s="12"><O t="S"><![CDATA[1、层次钻取]]></O>
+</C>
+<C c="0" r="10" cs="4" s="12"><O t="S"><![CDATA[     该表是由“全球销量统计”报表链接所得。]]></O>
+</C>
+<C c="0" r="11" cs="4" s="12"><O t="S"><![CDATA[     向上钻取数据：点击标题“洲”，可链接到“全球销量统计”报表。]]></O>
+</C>
+<C c="0" r="12" cs="4" s="13"><O t="S"><![CDATA[     向下钻取数据：点击任一国家名，即可链接到该国相关城市销量情况。]]></O>
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style>
+<FRFont name="SimSun" style="1" size="14" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="4">
+<FRFont name="SimSun" style="0" size="12" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ImageBackground"
+ specifiedImageWidth="-1.0"
+ specifiedImageHeight="-1.0"
+ layout="2">
+<Image width="271" height="20">
+<![CDATA[mDD3s_Ctrm_#OF0>K!!9WJ6!OQ7+.ZoaQ9>0E]d2laNppWiE)!WiGp)li!RsTDPW,0?[QWIV
+_g1pu1d?NUQ%!281S82*R8))W+4
+iebJi;<TD!-WQ)u!;iUeW~
+
+]]>
+</Image>
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" foreground="-16776961" underline="1" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" foreground="-16776961" underline="1" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="4">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-986886">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-986886">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Top style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Bottom style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

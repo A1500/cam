@@ -1,0 +1,25 @@
+.title3 {
+	font-family: '宋体';
+	font-size: 20px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.title1 {
+	font-family: '宋体';
+	font-size: 40px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.td1 {
+border-right-style:none;
+border-left-style:none;
+border-top-style:none;	                                          
+border-bottom-style:none;                                          
+}
+
+.unnamed1 {
+	border: 1 solid #000000;
+	font-size: 16px;
+}

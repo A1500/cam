@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="Sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select * from Sale]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="true" headerHeight="0.33" footerHeight="0.33">
+<Margin top="0.27" left="0.7499999999999999" bottom="0.27" right="0.7499999999999999" />
+</ReportSettings>
+<ReportPageAttr>
+</ReportPageAttr>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="false" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+<Submiter class="com.fr.report.write.BuiltInSQLSubmiter" name="内置SQL">
+<Attributes dsName="FRDemo" tableName="Sale" />
+<Column isKey="true" name="Region">
+<ColumnRow column="1" row="6"/>
+</Column>
+<Column isKey="true" name="Manager">
+<ColumnRow column="2" row="6"/>
+</Column>
+<Column isKey="true" name="ProType">
+<ColumnRow column="3" row="4"/>
+</Column>
+<Column isKey="true" name="Product">
+<ColumnRow column="3" row="5"/>
+</Column>
+<Column isKey="false" name="Amount">
+<ColumnRow column="3" row="6"/>
+</Column>
+</Submiter>
+<NameJavaScriptGroup>
+<NameJavaScript name="success">
+</NameJavaScript>
+<NameJavaScript name="fail">
+</NameJavaScript>
+</NameJavaScriptGroup>
+</ReportWriteAttr>
+<Header reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Footer>
+<RowHeight defaultValue="19">
+<![CDATA[19,19,19,24]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[]]>
+</ColumnWidth>
+<CellElementList>
+<C c="1" r="0" cs="4" s="0"><O t="S"><![CDATA[产品信息统计表]]></O>
+</C>
+<C c="1" r="1" cs="2" s="1"><O t="S"><![CDATA[统计时间：]]></O>
+</C>
+<C c="3" r="1" cs="2" s="1"><O t="Formula" class="Formula" ><Attributes><![CDATA[=today()]]></Attributes></O>
+</C>
+<C c="1" r="3" cs="4" s="2"></C>
+<C c="1" r="4" cs="2" rs="2" s="3"><O type="BiasTextPainter">
+<IsBackSlash value="false"/>
+<![CDATA[    Products|     Manager]]>
+</O>
+
+</C>
+<C c="3" r="4" cs="2" s="4"><O t="DSColumn"><Attributes dsName="ds1" columnName="ProType" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="1" />
+<CellWriteAttr>
+</CellWriteAttr>
+</C>
+<C c="3" r="5" s="4"><O t="DSColumn"><Attributes dsName="ds1" columnName="Product" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Present class="com.fr.report.cellElement.DictPresent"><Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+</CustomDictAttr>
+</Dict></Present><Expand dir="1" />
+<CellWriteAttr>
+</CellWriteAttr>
+</C>
+<C c="4" r="5" s="4"><O t="S"><![CDATA[Total]]></O>
+</C>
+<C c="1" r="6" rs="2" s="5"><O t="DSColumn"><Attributes dsName="ds1" columnName="Region" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Present class="com.fr.report.cellElement.DictPresent"><Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="HongKong" value="HongKong"/>
+<Dict key="NewYork" value="NewYork"/>
+<Dict key="ShangHai" value="ShangHai"/>
+</CustomDictAttr>
+</Dict></Present><Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+<O t="S"><![CDATA[HongKong]]></O>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="HongKong" value="HongKong"/>
+<Dict key="NewYork" value="NewYork"/>
+<Dict key="ShangHai" value="ShangHai"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</C>
+<C c="2" r="6" s="6"><O t="DSColumn"><Attributes dsName="ds1" columnName="Manager" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="3" r="6" s="6"><O t="DSColumn"><Attributes dsName="ds1" columnName="Amount" />
+<RG class="com.fr.report.cellElement.core.SummaryGrouper"><FN><![CDATA[com.fr.data.util.function.SumFunction]]></FN></RG></O>
+<CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.NumberCellEditorDef"><Attributes allowBlank="true" />
+<Attribute maxIntegerLength="32" maxDecimalLength="16" allowDecimals="true" allowNegative="true" minValue="-1.7976931348623157E308" maxValue="1.7976931348623157E308" />
+</CellEditorDef>
+</C>
+<C c="4" r="6" s="7"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(D7)]]></Attributes></O>
+</C>
+<C c="2" r="7" s="7"><O t="S"><![CDATA[Total：]]></O>
+<CellWriteAttr>
+</CellWriteAttr>
+</C>
+<C c="3" r="7" s="7"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(D7)]]></Attributes></O>
+</C>
+<C c="4" r="7" s="8"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(E7)]]></Attributes></O>
+</C>
+<C c="1" r="9" cs="4" s="9"><O t="S"><![CDATA[“产品信息统计表”功能应用说明：]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="1" r="10" cs="4" s="10"><O t="S"><![CDATA[1、交叉填报表添加行列]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="1" r="11" cs="4" s="11"><O t="S"><![CDATA[     该表单为交叉填报表单，可根据具体需求，智能添加删除行列。]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="16" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-5774094"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ImageBackground"
+ specifiedImageWidth="-1.0"
+ specifiedImageHeight="-1.0"
+ layout="2">
+<Image width="271" height="20">
+<![CDATA[mDD3s_Ctrm_#OF0>K!!9WJ6!OQ7+.ZoaQ9>0E]d2laNppWiE)!WiGp)li!RsTDPW,0?[QWIV
+_g1pu1d?NUQ%!281S82*R8))W+4
+iebJi;<TD!-WQ)u!;iUeW~
+
+]]>
+</Image>
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-1">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" foreground="-13421773" />
+<Background name="ColorBackground"
+ color="-986886">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" foreground="-13421773" />
+<Background name="ColorBackground"
+ color="-4736521">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Top style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Bottom style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--核查业务反馈表-->
+	<component name="ensureToClientDao">
+		<service name="ensureToClientDao">
+			<interface.java interface="com.inspur.cams.drel.ensureInfo.dao.IEnsureToClientDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.ensureInfo.dao.jdbc.EnsureToClientDao"/>
+    </component>
+	<component name="ensureToClientDomain">
+		<service name="ensureToClientDomain">
+			<interface.java interface="com.inspur.cams.drel.ensureInfo.domain.IEnsureToClientDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.ensureInfo.domain.support.EnsureToClientDomain"/>
+		<reference name="ensureToClientDao" target="ensureToClientDao/ensureToClientDao"/>
+		<reference name="d204a01Domain" target="d204a01Domain/d204a01Domain"/>
+		<reference name="d204z57Domain" target="d204z57Domain/d204z57Domain"/>
+		<reference name="d204c21Domain" target="d204c21Domain/d204c21Domain"/>
+		<reference name="d204c22Domain" target="d204c22Domain/d204c22Domain"/>
+		<reference name="d204d32Domain" target="d204d32Domain/d204d32Domain"/>
+		<reference name="d204d34Domain" target="d204d34Domain/d204d34Domain"/>
+		<reference name="d204b12Domain" target="d204b12Domain/d204b12Domain"/>
+		
+	</component>
+</composite>

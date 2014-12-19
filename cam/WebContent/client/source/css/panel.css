@@ -1,0 +1,513 @@
+.l-panel {
+	border-style: solid;
+	border-color: #99bbe8;
+	border-width: 0;
+}
+
+.l-panel-header {
+	overflow: hidden;
+	zoom: 1;
+	color: #15428b;
+	font: bold 12px tahoma, arial, verdana, sans-serif;
+	padding: 5px 3px 4px 5px;
+	border: 1px solid #99bbe8;
+	line-height: 15px;
+	background: transparent
+		url(../images/default/panel/white-top-bottom.gif) repeat-x 0 -1px;
+}
+
+.l-panel-body {
+	border: 1px solid #99bbe8;
+	border-top: 0 none;
+	overflow: hidden;
+	background: white;
+	position: relative;
+}
+
+.l-panel-bbar .l-toolbar {
+	border: 1px solid #99bbe8;
+	border-top: 0 none;
+	overflow: hidden;
+	padding: 2px;
+}
+
+.l-panel-tbar .l-toolbar {
+	border: 1px solid #99bbe8;
+	border-top: 0 none;
+	overflow: hidden;
+	padding: 2px;
+}
+
+.l-panel-tbar-noheader .l-toolbar,.l-panel-mc .l-panel-tbar .l-toolbar {
+	border-top: 1px solid #99bbe8;
+	border-bottom: 0 none;
+}
+
+.l-panel-body-noheader,.l-panel-mc .l-panel-body {
+	border-top: 1px solid #99bbe8;
+}
+
+.l-panel-header {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.l-panel-tl .l-panel-header {
+	color: #15428b;
+	font: bold 12px tahoma, arial, verdana, sans-serif;
+	padding: 5px 0 4px 0;
+	border: 0 none;
+	background: transparent;
+}
+
+.l-panel-tl .l-panel-icon,.l-window-tl .l-panel-icon {
+	padding-left: 20px !important;
+	background-repeat: no-repeat;
+	background-position: 0 4px;
+	zoom: 1;
+}
+
+.l-panel-inline-icon {
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	vertical-align: middle;
+	margin-right: 4px;
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+.l-panel-tc {
+	background: transparent url(../images/default/panel/top-bottom.gif)
+		repeat-x 0 0;
+	overflow: hidden;
+}
+
+.L5-strict .L5-ie7 .l-panel-tc {
+	overflow: visible;
+}
+
+.l-panel-tl {
+	background: transparent url(../images/default/panel/corners-sprite.gif)
+		no-repeat 0 0;
+	padding-left: 6px;
+	zoom: 1;
+	border-bottom: 1px solid #99bbe8;
+}
+
+.l-panel-tr {
+	background: transparent url(../images/default/panel/corners-sprite.gif)
+		no-repeat right 0;
+	zoom: 1;
+	padding-right: 6px;
+}
+
+.l-panel-bc {
+	background: transparent url(../images/default/panel/top-bottom.gif)
+		repeat-x 0 bottom;
+	zoom: 1;
+}
+
+.l-panel-bc .l-panel-footer {
+	zoom: 1;
+}
+
+.l-panel-bl {
+	background: transparent url(../images/default/panel/corners-sprite.gif)
+		no-repeat 0 bottom;
+	padding-left: 6px;
+	zoom: 1;
+}
+
+.l-panel-br {
+	background: transparent url(../images/default/panel/corners-sprite.gif)
+		no-repeat right bottom;
+	padding-right: 6px;
+	zoom: 1;
+}
+
+.l-panel-mc {
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+	font: normal 12px tahoma, arial, helvetica, sans-serif;
+	padding-top: 6px;
+	background: #dfe8f6;
+}
+
+.l-panel-mc .l-panel-body {
+	background: transparent;
+	border: 0 none;
+}
+
+.l-panel-ml {
+	background: #fff url(../images/default/panel/left-right.gif) repeat-y 0
+		0;
+	padding-left: 6px;
+	zoom: 1;
+}
+
+.l-panel-mr {
+	background: transparent url(../images/default/panel/left-right.gif)
+		repeat-y right 0;
+	padding-right: 6px;
+	zoom: 1;
+}
+
+.l-panel-bc .l-panel-footer {
+	padding-bottom: 6px;
+}
+
+.l-panel-nofooter .l-panel-bc,.l-panel-nofooter .l-window-bc {
+	height: 6px;
+	font-size: 0;
+	line-height: 0;
+}
+
+.l-panel-bwrap {
+	overflow: hidden;
+	zoom: 1;
+	left: 0;
+	top: 0;
+}
+
+.l-panel-body {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.l-panel-collapsed .l-resizable-handle {
+	display: none;
+}
+
+.L5-gecko .l-panel-animated div {
+	overflow: hidden !important;
+}
+
+.l-plain-body {
+	overflow: hidden;
+}
+
+.l-plain-bbar .l-toolbar {
+	overflow: hidden;
+	padding: 2px;
+}
+
+.l-plain-tbar .l-toolbar {
+	overflow: hidden;
+	padding: 2px;
+}
+
+.l-plain-bwrap {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.l-plain {
+	overflow: hidden;
+}
+
+.l-tool {
+	overflow: hidden;
+	width: 15px;
+	height: 15px;
+	float: right;
+	cursor: pointer;
+	background: transparent url(../images/default/panel/tool-sprites.gif)
+		no-repeat;
+	margin-left: 2px;
+}
+
+.l-tool-toggle {
+	background-position: 0 -60px;
+}
+
+.l-tool-toggle-over {
+	background-position: -15px -60px;
+}
+
+.l-panel-collapsed .l-tool-toggle {
+	background-position: 0 -75px;
+}
+
+.l-panel-collapsed .l-tool-toggle-over {
+	background-position: -15px -75px;
+}
+
+.l-tool-close {
+	background-position: 0 -0;
+}
+
+.l-tool-close-over {
+	background-position: -15px 0;
+}
+
+.l-tool-minimize {
+	background-position: 0 -15px;
+}
+
+.l-tool-minimize-over {
+	background-position: -15px -15px;
+}
+
+.l-tool-maximize {
+	background-position: 0 -30px;
+}
+
+.l-tool-maximize-over {
+	background-position: -15px -30px;
+}
+
+.l-tool-restore {
+	background-position: 0 -45px;
+}
+
+.l-tool-restore-over {
+	background-position: -15px -45px;
+}
+
+.l-tool-gear {
+	background-position: 0 -90px;
+}
+
+.l-tool-gear-over {
+	background-position: -15px -90px;
+}
+
+.l-tool-pin {
+	background-position: 0 -135px;
+}
+
+.l-tool-pin-over {
+	background-position: -15px -135px;
+}
+
+.l-tool-unpin {
+	background-position: 0 -150px;
+}
+
+.l-tool-unpin-over {
+	background-position: -15px -150px;
+}
+
+.l-tool-right {
+	background-position: 0 -165px;
+}
+
+.l-tool-right-over {
+	background-position: -15px -165px;
+}
+
+.l-tool-left {
+	background-position: 0 -180px;
+}
+
+.l-tool-left-over {
+	background-position: -15px -180px;
+}
+
+.l-tool-up {
+	background-position: 0 -210px;
+}
+
+.l-tool-up-over {
+	background-position: -15px -210px;
+}
+
+.l-tool-down {
+	background-position: 0 -195px;
+}
+
+.l-tool-down-over {
+	background-position: -15px -195px;
+}
+
+.l-tool-refresh {
+	background-position: 0 -225px;
+}
+
+.l-tool-refresh-over {
+	background-position: -15px -225px;
+}
+
+.l-tool-minus {
+	background-position: 0 -255px;
+}
+
+.l-tool-minus-over {
+	background-position: -15px -255px;
+}
+
+.l-tool-plus {
+	background-position: 0 -240px;
+}
+
+.l-tool-plus-over {
+	background-position: -15px -240px;
+}
+
+.l-tool-search {
+	background-position: 0 -270px;
+}
+
+.l-tool-search-over {
+	background-position: -15px -270px;
+}
+
+.l-tool-save {
+	background-position: 0 -285px;
+}
+
+.l-tool-save-over {
+	background-position: -15px -285px;
+}
+
+.l-tool-help {
+	background-position: 0 -300px;
+}
+
+.l-tool-help-over {
+	background-position: -15px -300px;
+}
+
+.l-tool-print {
+	background-position: 0 -315px;
+}
+
+.l-tool-print-over {
+	background-position: -15px -315px;
+}
+
+.l-panel-ghost {
+	background: #cbddf3;
+	z-index: 12000;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: .65;
+	-moz-opacity: .65;
+	filter: alpha(opacity = 65);
+}
+
+.l-panel-ghost ul {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+	border: 1px solid #99bbe8;
+	border-top: 0 none;
+	display: block;
+}
+
+.l-panel-ghost * {
+	cursor: move !important;
+}
+
+.l-panel-dd-spacer {
+	border: 2px dashed #99bbe8;
+}
+
+.l-panel-btns-ct {
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.l-panel-btns-ct .l-btn {
+	float: right;
+	clear: none;
+}
+
+.l-panel-btns-ct .l-panel-btns td {
+	border: 0;
+	padding: 0;
+}
+
+.l-panel-btns-ct .l-panel-btns-right table {
+	float: right;
+	clear: none;
+}
+
+.l-panel-btns-ct .l-panel-btns-left table {
+	float: left;
+	clear: none;
+}
+
+.l-panel-btns-ct .l-panel-btns-center {
+	text-align: center;
+}
+
+.l-panel-btns-ct .l-panel-btns-center table {
+	margin: 0 auto;
+}
+
+.l-panel-btns-ct table td.l-panel-btn-td {
+	padding: 3px;
+}
+
+.l-panel-btns-ct .l-btn-focus .l-btn-left {
+	background-position: 0 -147px;
+}
+
+.l-panel-btns-ct .l-btn-focus .l-btn-right {
+	background-position: 0 -168px;
+}
+
+.l-panel-btns-ct .l-btn-focus .l-btn-center {
+	background-position: 0 -189px;
+}
+
+.l-panel-btns-ct .l-btn-over .l-btn-left {
+	background-position: 0 -63px;
+}
+
+.l-panel-btns-ct .l-btn-over .l-btn-right {
+	background-position: 0 -84px;
+}
+
+.l-panel-btns-ct .l-btn-over .l-btn-center {
+	background-position: 0 -105px;
+}
+
+.l-panel-btns-ct .l-btn-click .l-btn-center {
+	background-position: 0 -126px;
+}
+
+.l-panel-btns-ct .l-btn-click .l-btn-right {
+	background-position: 0 -84px;
+}
+
+.l-panel-btns-ct .l-btn-click .l-btn-left {
+	background-position: 0 -63px;
+}
+
+
+.l-panel-toggle {
+	width:15px;
+    background-image:url(../images/default/panel/tools-toggle-collapse.gif) !important;
+    background-position:right;
+}
+.l-panel-toggle-over {
+	width:15px;
+    background-image:url(../images/default/panel/tools-toggle-collapse-over.gif) !important;
+    background-position:right;
+}
+.l-panel-collapsed .l-panel-toggle {
+	width:15px;
+    background-image:url(../images/default/panel/tools-toggle-expand.gif) !important;
+    background-position:right;
+}
+.l-panel-collapsed .l-panel-toggle-over {
+	width:15px;
+    background-image:url(../images/default/panel/tools-toggle-expand-over.gif) !important;
+    background-position:right;
+}
+/*浮动窗口浮动按钮的样式*/
+.l-floatpanel-imgdiv-top{
+	background: url(../images/scrollpage_h.png) no-repeat;
+}
+.l-floatpanel-imgdiv-right{
+	background: url(../images/scrollpage.png) no-repeat;
+}

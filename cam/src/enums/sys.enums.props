@@ -1,0 +1,3 @@
+BOOL=0:否,1:是
+COMPONENT.IMPLTYPE=impl.java:java实现,impl.groovy:groovy实现
+COMPONENT.BINDINGTYPE=binding.ws:web服务,binding.rmi:RMI调用,binding.java:java绑定,binding.jsonrpc:JSONRPC服务

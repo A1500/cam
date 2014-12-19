@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ds_1">
+<TableData class="com.fr.data.impl.EmbeddedTableData">
+<Parameters>
+</Parameters>
+<ColumnNames><![CDATA[ID,,.,,Variety,,.,,ClientKind,,.,,ClientNo,,.,,ClientInfo,,.,,ParticularInfo]]></ColumnNames>
+<ColumnTypes><![CDATA[java.lang.Double,java.lang.String,java.lang.String,java.lang.Double,java.lang.String,java.lang.String]]></ColumnTypes>
+<RowData>
+<![CDATA[NR^a!'1!JNnalCb1ms]$g"@TO%j'5a[tSWb';T71ilCR@]L9-GDAV#CUkNt@A_VgL"V2qhim
+jhQ9pES%$F<D"g$!SRo/+5+bRQp
+oY8\9kj/RP$0rQ`LK!C%K.t)'.Ms_BnMK;gY5Y82e?Zf,
+)?0%NAes^Jfk\LTU`+uL;)u(MLREkPQ#mlT+RNM[WlAL;Q@)X4^]o2
+P:CZfXN/aXOccOe&tj
+B3NF`buk.MURmi$r3$sn@SG>+)RMQ?RnM4=<jWmarWTu0MQMf1H8<pSZCS!L:?m^c;KlH%G.
+W'ECLV)L
+ZYsLQoEtn;>(gXhaLc/*RdQA3H2'm"uV'uE0aOT=gSkn7&XKAkU&*?0q2-mND_So
+LR$_-dj5EXLs1-S"P4*[&I)l^"T6I!,XR+q
+l>fSC'kT#,:kYTbDm`hf\qU4n'"<H#7Mr$@^S
+q>FDg-.sLBUjR+EJI$on0_nVI?R`$6IG-T9p"*U'S/&]h<isdeA34]PoNuo9;9
+,)FAR4_[B5
+t/.DV9IlRfYH#T3O>@H7)H+6\2hTLqgh/BlIGAD9h_B0?s94UX]iGA'P"\+[c%V<Y^j.9i:c
+f%2Ng7CMYs7B?_9o
+:r)0G4N60UDupZiA_f,J=sOa3j><&&7+a-]Za,Zu+*WE2"3BMs*,l)4d
+\L@<\n5R&(*s(+mK.4\p;tTTd\#qm[;r"800;_1/)%/
+R#?pQQd,ScFS9K%'EOFi,%s(JPidr
+kPIlEcA950F+o>;8q;mVPh)j->HR+W?kc'U:6H0Uk_sL@95ap"V&0p1#ZgE4;epj%ZJe8-
+eg
+oc.Rh63O1[Z/)-.et9'$gKi'4I+Lqum~
+
+]]>
+</RowData>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="false" headerHeight="0.0" footerHeight="0.0">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+<Parameter>
+<Attributes name="Variety"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[预留]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<Header reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Footer>
+<RowHeight defaultValue="19">
+<![CDATA[22,19,19,22,22]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[90,90,100,120,162]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="5" s="0"><O t="S"><![CDATA[过期客户统计信息]]></O>
+</C>
+<C c="0" r="1" s="1"><O t="S"><![CDATA[统计日期：]]></O>
+</C>
+<C c="1" r="1" s="1"><O t="Formula" class="Formula" ><Attributes><![CDATA[=date(2007,1,1)]]></Attributes></O>
+</C>
+<C c="2" r="1" s="1"></C>
+<C c="3" r="1" s="2"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="4" r="1" s="3"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="0" r="3" cs="5" s="4"></C>
+<C c="0" r="4" s="5"><O t="S"><![CDATA[类别]]></O>
+</C>
+<C c="1" r="4" s="5"><O t="S"><![CDATA[客户性质]]></O>
+</C>
+<C c="2" r="4" s="5"><O t="S"><![CDATA[客户编号]]></O>
+</C>
+<C c="3" r="4" s="5"><O t="S"><![CDATA[客户信息]]></O>
+</C>
+<C c="4" r="4" s="5"><O t="S"><![CDATA[详细信息]]></O>
+</C>
+<C c="0" r="5" s="6"><O t="DSColumn"><Attributes dsName="ds_1" columnName="Variety" />
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Variety]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="Variety"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[预留]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="1" r="5" s="6"><O t="DSColumn"><Attributes dsName="ds_1" columnName="ClientKind" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="2" r="5" s="6"><O t="DSColumn"><Attributes dsName="ds_1" columnName="ClientNo" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="3" r="5" s="6"><O t="DSColumn"><Attributes dsName="ds_1" columnName="ClientInfo" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="4" r="5" s="6"><O t="DSColumn"><Attributes dsName="ds_1" columnName="ParticularInfo" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="14" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="4">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ImageBackground"
+ specifiedImageWidth="-1.0"
+ specifiedImageHeight="-1.0"
+ layout="2">
+<Image width="271" height="20">
+<![CDATA[mDD3s_Ctrm_#OF0>K!!9WJ6!OQ7+.ZoaQ9>0E]d2laNppWiE)!WiGp)li!RsTDPW,0?[QWIV
+_g1pu1d?NUQ%!281S82*R8))W+4
+iebJi;<TD!-WQ)u!;iUeW~
+
+]]>
+</Image>
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

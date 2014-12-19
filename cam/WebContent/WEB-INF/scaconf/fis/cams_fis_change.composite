@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	
+	<component name="fisCemeChangeDomain">
+		<service name="fisCemeChangeDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCemeChangeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCemeChangeDomain"/>
+		<reference name="fisCemeChangeDao" target="fisCemeChangeDao/fisCemeChangeDao"/>
+	</component>
+	
+	<component name="fisCemeChangeDetailDomain">
+		<service name="fisCemeChangeDetailDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCemeChangeDetailDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCemeChangeDetailDomain"/>
+		<reference name="fisCemeChangeDetailDao" target="fisCemeChangeDetailDao/fisCemeChangeDetailDao"/>
+	</component>
+	
+	<component name="fisCemeChangeDao">
+		<service name="fisCemeChangeDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCemeChangeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCemeChangeDao"/>
+	</component>
+	
+	<component name="fisCemeChangeDetailDao">
+		<service name="fisCemeChangeDetailDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCemeChangeDetailDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCemeChangeDetailDao"/>
+	</component>
+	
+	<!--经营性公墓变更-->
+	<component name="fisChangeDomain">
+		<service name="fisChangeDomain">
+			<interface.java interface="com.inspur.cams.fis.change.domain.IFisChangeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.change.domain.support.FisChangeDomain"/>
+		<reference name="fisCemeApplyInfoDomain" target="fisCemeApplyInfoDomain/fisCemeApplyInfoDomain"/>
+		<reference name="fisCemeChangeDomain" target="fisCemeChangeDomain/fisCemeChangeDomain"/>
+		<reference name="fisCemeChangeDetailDomain" target="fisCemeChangeDetailDomain/fisCemeChangeDetailDomain"/>
+		<reference name="fisCemeInfoDomain" target="fisCemeInfoDomain/fisCemeInfoDomain"/>
+	</component>
+	
+</composite>

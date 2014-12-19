@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="common" xmlns="http://www.loushang.com/sca/1.0">
+	<description>基础人员与家庭信息配置</description>
+	<!--人员信息DAO-->
+	<component name="baseinfoPeopleDao">
+		<service name="baseinfoPeopleDao">
+			<interface.java interface="com.inspur.cams.comm.baseinfo.dao.IBaseinfoPeopleDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.baseinfo.dao.jdbc.BaseinfoPeopleDao"/>
+	</component>
+	<!--家庭信息DAO-->
+	<component name="baseinfoFamilyDao">
+		<service name="baseinfoFamilyDao">
+			<interface.java interface="com.inspur.cams.comm.baseinfo.dao.IBaseinfoFamilyDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.baseinfo.dao.jdbc.BaseinfoFamilyDao"/>
+	</component>
+    <!--家庭信息和人员信息Domain-->
+    <component name="baseinfoDomain">
+	    <service name="baseinfoDomain">
+	    	<interface.java interface="com.inspur.cams.comm.baseinfo.domain.IBaseinfoDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.comm.baseinfo.domain.support.BaseinfoDomain"/>
+        <reference name="baseinfoPeopleDao" target="baseinfoPeopleDao/baseinfoPeopleDao"/>
+        <reference name="baseinfoFamilyDao" target="baseinfoFamilyDao/baseinfoFamilyDao"/>
+    </component>
+</composite>

@@ -1,0 +1,1046 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+
+    <!--家庭信息和人员信息Domain-->
+    <component name="bptBaseinfoPeopleDomain">
+	    <service name="bptBaseinfoPeopleDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptBaseinfoPeopleDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptBaseinfoPeopleDomain"/>
+        <reference name="baseinfoPeopleDao" target="baseinfoPeopleDao/baseinfoPeopleDao"/>
+        <reference name="baseinfoFamilyDao" target="baseinfoFamilyDao/baseinfoFamilyDao"/>
+    </component>
+    
+    <!-- 优抚人员信息DAO -->
+    <component name="bptPeopleDao">
+	    <service name="bptPeopleDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptPeopleDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptPeopleDao"/>
+    </component>
+	<component name="bptPeopleDomain">
+	    <service name="bptPeopleDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptPeopleDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptPeopleDomain"/>	
+        <reference name="bptPeopleDao" target="bptPeopleDao/bptPeopleDao"/>
+	</component>
+	
+	<!--建购房信息 DAO -->
+    <component name="bptHouseSubsidyInfoDao">
+	    <service name="bptHouseSubsidyInfoDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptHouseSubsidyInfoDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptHouseSubsidyInfoDao"/>
+    </component>
+	<component name="bptHouseSubsidyInfoDomain">
+	    <service name="bptHouseSubsidyInfoDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptHouseSubsidyInfoDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptHouseSubsidyInfoDomain"/>	
+        <reference name="bptHouseSubsidyInfoDao" target="bptHouseSubsidyInfoDao/bptHouseSubsidyInfoDao"/>
+	</component>
+    
+    <!--伤残信息DAO-->
+    <component name="bptPeopleDisabilityDao">
+	    <service name="bptPeopleDisabilityDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptPeopleDisabilityDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptPeopleDisabilityDao"/>
+    </component>
+	<component name="bptPeopleDisabilityDomain">
+	    <service name="bptPeopleDisabilityDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptPeopleDisabilityDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptPeopleDisabilityDomain"/>	
+        <reference name="bptPeopleDisabilityDao" target="bptPeopleDisabilityDao/bptPeopleDisabilityDao"/>
+	</component>
+	
+	<!--审批记录历史-->
+	<component name="bptApplyHistoryDao">
+	    <service name="bptApplyHistoryDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptApplyHistoryDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptApplyHistoryDao"/>
+    </component>
+	<component name="BptApplyHistoryDomain">
+	    <service name="BptApplyHistoryDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptApplyHistoryDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptApplyHistoryDomain"/>	
+        <reference name="bptApplyHistoryDao" target="bptApplyHistoryDao/bptApplyHistoryDao"/>
+	</component>
+	
+	<!-- 证件编号 -->
+	<component name="bptComfortNoDao">
+	    <service name="bptComfortNoDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptComfortNoDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptComfortNoDao"/>
+    </component>
+	<component name="bptComfortNoDomain">
+	    <service name="bptComfortNoDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptComfortNoDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptComfortNoDomain"/>	
+        <reference name="bptComfortNoDao" target="bptComfortNoDao/bptComfortNoDao"/>
+	</component>
+	
+	<!-- 在乡复员审批 start -->
+    <component name="demobilizedflowDao">
+	    <service name="demobilizedflowDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IDemobilizedflowDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.DemobilizedflowDao"/>
+    </component>
+	<component name="bptApplyDemobilizedDomain">
+	    <service name="bptApplyDemobilizedDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptApplyDemobilizedDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptApplyDemobilizedDomain"/>	
+        <reference name="demobilizedflowDao" target="demobilizedflowDao/demobilizedflowDao"/>
+	</component>
+	<!-- 在乡复员审批 end -->
+	
+	<!-- 伤残审批 start -->
+    <component name="bptApplyDisabilityDao">
+	    <service name="bptApplyDisabilityDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptApplyDisabilityDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptApplyDisabilityDao"/>
+    </component>
+	<component name="bptApplyDisabilityDomain">
+	    <service name="bptApplyDisabilityDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptApplyDisabilityDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptApplyDisabilityDomain"/>	
+        <reference name="bptApplyDisabilityDao" target="bptApplyDisabilityDao/bptApplyDisabilityDao"/>
+	</component>
+	<!-- 伤残审批 end -->
+	
+	<!-- 优抚人员打证模板管理 -->
+	 <component name="BptCertTemplatesDao">
+	    <service name="BptCertTemplatesDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptCertTemplatesDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptCertTemplatesDao"/>
+    </component>
+	<component name="BptCertTemplatesDomain">
+	    <service name="BptCertTemplatesDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptCertTemplatesDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptCertTemplatesDomain"/>	
+        <reference name="bptCertTemplatesDao" target="BptCertTemplatesDao/BptCertTemplatesDao"/>
+	</component>
+
+	    <!--伤残鉴定介绍信Domain-->
+    <component name="disabilityIdentificationDao">
+	    <service name="disabilityIdentificationDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IDisabilityIdentificationDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.DisabilityIdentificationDao"/>
+    </component>
+	<component name="disabilityIdentificationDomain">
+	    <service name="disabilityIdentificationDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IDisabilityIdentificationDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.DisabilityIdentificationDomain"/>	
+        <reference name="disabilityIdentificationDao" target="disabilityIdentificationDao/disabilityIdentificationDao"/>
+	</component>
+		<!--公式书dao-->
+    <component name="bptOpenLetterDao">
+	    <service name="bptOpenLetterDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptOpenLetterDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptOpenLetterDao"/>
+    </component>
+    	<!--公式书domain-->
+	<component name="bptOpenLetterDomain">
+	    <service name="bptOpenLetterDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptOpenLetterDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptOpenLetterDomain"/>	
+        <reference name="bptOpenLetterDao" target="bptOpenLetterDao/bptOpenLetterDao"/>
+	</component>
+	 <!--不予评定,调整伤残决定书Domain-->
+    <component name="bptDecisionLetterDao">
+	    <service name="bptDecisionLetterDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptDecisionLetterDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptDecisionLetterDao"/>
+    </component>
+	<component name="bptDecisionLetterDomain">
+	    <service name="bptDecisionLetterDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptDecisionLetterDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptDecisionLetterDomain"/>	
+        <reference name="bptDecisionLetterDao" target="bptDecisionLetterDao/bptDecisionLetterDao"/>
+	</component>
+
+		<!--公式书dao-->
+    <component name="bptDisbilityOpenDao">
+	    <service name="bptDisbilityOpenDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptDisabilityOpenDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptDisabilityOpenDao"/>
+    </component>
+    	<!--公式书domain-->
+	<component name="bptDisbilityOpenDomain">
+	    <service name="bptDisbilityOpenDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptDisabilityOpenDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptDisabilityOpenDomain"/>	
+        <reference name="bptDisabilityOpenDao" target="bptDisbilityOpenDao/bptDisbilityOpenDao"/>
+	</component>
+	    <!--伤残受理通知书Domain-->
+    <component name="bptApplyDisabilityNoticeDao">
+	    <service name="bptApplyDisabilityNoticeDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptApplyDisabilityNoticeDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptApplyDisabilityNoticeDao"/>
+    </component>
+	<component name="disabilityNoticeDomain">
+	    <service name="disabilityNoticeDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IDisabilityNoticeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.DisabilityNoticeDomain"/>	
+        <reference name="bptApplyDisabilityNoticeDao" target="bptApplyDisabilityNoticeDao/bptApplyDisabilityNoticeDao"/>
+	</component>
+	<!-- 外省优抚人员抚恤关系迁入我省 -->
+	<component name="BptApplyIntoprovinceDao">
+	    <service name="BptApplyIntoprovinceDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptApplyIntoprovinceDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptApplyIntoprovinceDao"/>
+    </component>
+     <component name="BptApplyIntoprovinceDomain">
+	    <service name="BptApplyIntoprovinceDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptApplyIntoprovinceDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptApplyIntoprovinceDomain"/>
+        <reference name="bptApplyIntoprovinceDao" target="BptApplyIntoprovinceDao/BptApplyIntoprovinceDao"/>
+    </component>
+	<!-- 优抚人员抚恤关系跨省迁出 -->
+	<component name="BptApplyEmigrationDao">
+	    <service name="BptApplyEmigrationDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptApplyEmigrationDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptApplyEmigrationDao"/>
+    </component>
+     <component name="BptApplyEmigrationDomain">
+	    <service name="BptApplyEmigrationDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptApplyEmigrationDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptApplyEmigrationDomain"/>
+        <reference name="bptApplyEmigrationDao" target="BptApplyEmigrationDao/BptApplyEmigrationDao"/>
+    </component>	
+    <!-- 优抚人员省内迁移 -->
+	<component name="BptProvinceMigrateDao">
+	    <service name="BptProvinceMigrateDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptProvinceMigrateDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptProvinceMigrateDao"/>
+    </component>
+     <component name="BptProvinceMigrateDomain">
+	    <service name="BptProvinceMigrateDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptProvinceMigrateDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptProvinceMigrateDomain"/>
+        <reference name="bptProvinceMigrateDao" target="BptProvinceMigrateDao/BptProvinceMigrateDao"/>
+    </component>
+	<!--遗属Domain-->
+    <component name="bptPeopleDependantDao">
+	    <service name="bptPeopleDependantDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptPeopleDependantDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptPeopleDependantDao"/>
+    </component>
+	<component name="bptPeopleDependantDomain">
+	    <service name="bptPeopleDependantDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptPeopleDependantDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptPeopleDependantDomain"/>	
+        <reference name="bptPeopleDependantDao" target="bptPeopleDependantDao/bptPeopleDependantDao"/>
+	</component>
+	
+	<!--三属申请审批-->
+	<component name="bptApplyDependantDao">
+	    <service name="bptApplyDependantDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptApplyDependantDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptApplyDependantDao"/>
+    </component>
+	<component name="bptApplyDependantDomain">
+	    <service name="bptApplyDependantDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptApplyDependantDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptApplyDependantDomain"/>	
+        <reference name="bptApplyDependantDao" target="bptApplyDependantDao/bptApplyDependantDao"/>
+	</component>
+    
+    <!-- 在乡复员军人Domain -->
+    <component name="bptPeopleDemobilizedDao">
+	    <service name="bptPeopleDemobilizedDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptPeopleDemobilizedDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptPeopleDemobilizedDao"/>
+    </component>
+	<component name="bptPeopleDemobilizedDomain">
+	    <service name="bptPeopleDemobilizedDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptPeopleDemobilizedDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptPeopleDemobilizedDomain"/>	
+        <reference name="bptPeopleDemobilizedDao" target="bptPeopleDemobilizedDao/bptPeopleDemobilizedDao"/>
+	</component>
+    
+    	<!-- 带病回乡退伍军人Domain -->
+    <component name="demobilizedIllnessDao">
+	    <service name="demobilizedIllnessDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptPeopleDemobilizedIllnessDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptPeopleDemobilizedIllnessDao"/>
+    </component>
+	<component name="demobilizedIllnessDomain">
+	    <service name="demobilizedIllnessDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptPeopleDemobilizedIllnessDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptPeopleDemobilizedIllnessDomain"/>	
+        <reference name="demobilizedIllnessDao" target="demobilizedIllnessDao/demobilizedIllnessDao"/>
+	</component>
+	
+	<!-- 在乡复员军人 And 带病回乡退伍军人 审批 -->
+    <component name="bptApplyCountrysideDao">
+	    <service name="bptApplyCountrysideDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptApplyCountrysideDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptApplyCountrysideDao"/>
+    </component>
+	<component name="bptApplyCountrysideDomain">
+	    <service name="bptApplyCountrysideDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptApplyCountrysideDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptApplyCountrysideDomain"/>	
+        <reference name="bptApplyCountrysideDao" target="bptApplyCountrysideDao/bptApplyCountrysideDao"/>
+	</component>
+	
+	<!-- 状态变更Domain -->
+    <component name="bptStateChangeDao">
+	    <service name="bptStateChangeDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptStateChangeDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptStateChangeDao"/>
+    </component>
+	<component name="bptStateChangeDomain">
+	    <service name="bptStateChangeDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptStateChangeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptStateChangeDomain"/>	
+        <reference name="bptStateChangeDao" target="bptStateChangeDao/bptStateChangeDao"/>
+	</component>
+	
+	<!-- 定期认证Domain -->
+    <component name="bptRegularIdentificationDao">
+	    <service name="bptRegularIdentificationDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptRegularIdentificationDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptRegularIdentificationDao"/>
+    </component>
+	<component name="bptRegularIdentificationDomain">
+	    <service name="bptRegularIdentificationDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptRegularIdentificationDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptRegularIdentificationDomain"/>	
+        <reference name="bptRegularIdentificationDao" target="bptRegularIdentificationDao/bptRegularIdentificationDao"/>
+	</component>
+	
+	<!-- 伤残辅助器械Domain -->
+    <component name="bptApplyAssistiveDevicesDao">
+	    <service name="bptApplyAssistiveDevicesDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptApplyAssistiveDevicesDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptApplyAssistiveDevicesDao"/>
+    </component>
+	<component name="bptApplyAssistiveDevicesDomain">
+	    <service name="bptApplyAssistiveDevicesDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptApplyAssistiveDevicesDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptApplyAssistiveDevicesDomain"/>	
+        <reference name="bptApplyAssistiveDevicesDao" target="bptApplyAssistiveDevicesDao/bptApplyAssistiveDevicesDao"/>
+	</component>
+	
+	<!-- 伤残辅助器械审批Domain -->
+    <component name="bptApplyAssistiveDevicesPrDao">
+	    <service name="bptApplyAssistiveDevicesPrDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptApplyAssistiveDevicesPrDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptApplyAssistiveDevicesPrDao"/>
+    </component>
+	<component name="bptApplyAssistiveDevicesPrDomain">
+	    <service name="bptApplyAssistiveDevicesPrDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptApplyAssistiveDevicesPrDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptApplyAssistiveDevicesPrDomain"/>	
+        <reference name="bptApplyAssistiveDevicesPrDao" target="bptApplyAssistiveDevicesPrDao/bptApplyAssistiveDevicesPrDao"/>
+	</component>
+	
+	<!-- 定期提示Domain -->
+    <component name="bptRegularInformationCueDao">
+	    <service name="bptRegularInformationCueDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptRegularInformationCueDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptRegularInformationCueDao"/>
+    </component>
+	<component name="bptRegularInformationCueDomain">
+	    <service name="bptRegularInformationCueDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptRegularInformationCueDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptRegularInformationCueDomain"/>	
+        <reference name="bptRegularInformationCueDao" target="bptRegularInformationCueDao/bptRegularInformationCueDao"/>
+	</component>
+	
+	<!--工作流信息 Start-->
+        <component name="wfProcessBusinessDao">
+	    <service name="wfProcessBusinessDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IWfProcessBusinessDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.WfProcessBusinessDao"/>
+        </component>
+
+        <component name="wfProcessBusinessDomain">
+	    <service name="wfProcessBusinessDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IWfProcessBusinessDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.WfProcessBusinessDomain"/>
+        <reference name="wfProcessBusinessDao" target="wfProcessBusinessDao/wfProcessBusinessDao"/>
+	</component>
+	<!--工作流信息 End-->    
+    <!--参战 Start-->
+        <component name="bptPeopleWarDao">
+	    <service name="bptPeopleWarDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptPeopleWarDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptPeopleWarDao"/>
+        </component>
+    
+        <component name="bptWarDomain">
+	    <service name="bptWarDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IWarDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.WarDomain"/>	
+        <reference name="bptPeopleWarDao" target="bptPeopleWarDao/bptPeopleWarDao"/>
+	</component>
+	<!--参战 End-->
+	
+	<!--参试 Start-->
+	<component name="bptPeopleTestedDao">
+	    <service name="bptPeopleTestedDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptPeopleTestedDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptPeopleTestedDao"/>
+        </component>
+	
+	<component name="bptPeopleTestedDomain">
+	    <service name="bptPeopleTestedDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptPeopleTestedDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptPeopleTestedDomain"/>	
+        <reference name="bptPeopleTestedDao" target="bptPeopleTestedDao/bptPeopleTestedDao"/>
+	</component>
+	<!--参试 End-->
+	
+	<!--资金管理Start-->
+	  
+	<component name="bptCapitalstaDao">
+	    <service name="bptCapitalstaDao">
+	    	<interface.java interface="com.inspur.cams.bpt.capital.dao.IBptCapitalstaDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.capital.dao.jdbc.BptCapitalstaDao"/>
+    </component>
+	
+	<component name="bptCapitalstaDomain">
+	    <service name="bptCapitalstaDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.capital.domain.IBptCapitalstaDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.capital.domain.support.BptCapitalstaDomain"/>	
+        <reference name="bptCapitalstaDao" target="bptCapitalstaDao/bptCapitalstaDao"/>
+	</component>
+	
+	<component name="bptCapitalSummaryDao">
+	    <service name="bptCapitalSummaryDao">
+	    	<interface.java interface="com.inspur.cams.bpt.capital.dao.IBptCapitalSummaryDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.capital.dao.jdbc.BptCapitalSummaryDao"/>
+    </component>
+	
+	<component name="bptCapitalSummaryDomain">
+	    <service name="bptCapitalSummaryDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.capital.domain.IBptCapitalSummaryDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.capital.domain.support.BptCapitalSummaryDomain"/>	
+        <reference name="bptCapitalSummaryDao" target="bptCapitalSummaryDao/bptCapitalSummaryDao"/>
+	</component>
+		
+	<component name="bptCapitalDetailDao">
+	    <service name="bptCapitalDetailDao">
+	    	<interface.java interface="com.inspur.cams.bpt.capital.dao.IBptCapitalDetailDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.capital.dao.jdbc.BptCapitalDetailDao"/>
+    </component>
+	
+	<component name="bptCapialDetailDomain">
+	    <service name="bptCapialDetailDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.capital.domain.IBptCapialDetailDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.capital.domain.support.BptCapialDetailDomain"/>	
+        <reference name="bptCapitalDetailDao" target="bptCapitalDetailDao/bptCapitalDetailDao"/>
+	</component>
+	<!--义务兵-->
+	<component name="bptCompulsorySummaryDao">
+	                 
+	    <service name="bptCompulsorySummaryDao">
+	    	<interface.java interface="com.inspur.cams.bpt.capital.dao.IBptCompulsorySummaryDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.capital.dao.jdbc.BptCompulsorySummaryDao"/>
+    </component>
+	
+	<component name="bptCompulsorySummaryDomain">
+	    <service name="bptCompulsorySummaryDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.capital.domain.IBptCompulsorySummaryDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.capital.domain.support.BptCompulsorySummaryDomain"/>	
+        <reference name="bptCompulsorySummaryDao" target="bptCompulsorySummaryDao/bptCompulsorySummaryDao"/>
+	</component>
+	
+	<component name="bptCompulsoryDetailsDao">
+	    <service name="bptCompulsoryDetailsDao">
+	    	<interface.java interface="com.inspur.cams.bpt.capital.dao.IBptCompulsoryDetailsDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.capital.dao.jdbc.BptCompulsoryDetailsDao"/>
+    </component>
+	
+	<component name="bptCompulsoryDetailsDomain">
+	    <service name="bptCompulsoryDetailsDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.capital.domain.IBptCompulsoryDetailsDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.capital.domain.support.BptCompulsoryDetailsDomain"/>	
+        <reference name="bptCompulsoryDetailsDao" target="bptCompulsoryDetailsDao/bptCompulsoryDetailsDao"/>
+	</component>
+	
+	<!--临时救助-->
+	<component name="bptTemporaryHelpDao">
+	    <service name="bptTemporaryHelpDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptTemporaryHelpDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptTemporaryHelpDao"/>
+    </component>
+	
+	<component name="bptTemporaryHelpDomain">
+	    <service name="bptTemporaryHelpDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptTemporaryHelpDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptTemporaryHelpDomain"/>	
+        <reference name="bptTemporaryHelpDao" target="bptTemporaryHelpDao/bptTemporaryHelpDao"/>
+	</component>
+	
+	<!-- 上传文件目录 -->
+	<component name="ElectronicDao">
+	    <service name="ElectronicDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptElectronicDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptElectronicDao"/>
+    </component>
+	
+	<component name="BptElectronicDomain">
+	    <service name="BptElectronicDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptElectronicDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptElectronicDomain"/>	
+        <reference name="ElectronicDao" target="ElectronicDao/ElectronicDao"/>
+	</component>
+	
+    <!--档案目录-->
+	<component name="bptCatalogueArchivesDao">
+	    <service name="bptCatalogueArchivesDao">
+	    	<interface.java interface="com.inspur.cams.bpt.edoc.dao.IBptCatalogueArchivesDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.edoc.dao.jdbc.BptCatalogueArchivesDao"/>
+    </component>
+	
+	<component name="bptCatalogueArchivesDomain">
+	    <service name="bptCatalogueArchivesDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.edoc.domain.IBptCatalogueArchivesDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.edoc.domain.support.BptCatalogueArchivesDomain"/>	
+        <reference name="bptCatalogueArchivesDao" target="bptCatalogueArchivesDao/bptCatalogueArchivesDao"/>
+	</component>
+    
+
+    
+    <component name="bptCatalogueArchivesSaveDao">
+	    <service name="bptCatalogueArchivesSaveDao">
+	    	<interface.java interface="com.inspur.cams.bpt.edoc.dao.IBptCatalogueArchivesDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.edoc.dao.jdbc.BptCatalogueArchivesDao"/>
+    </component>
+	
+	<component name="bptCatalogueArchivesSaveDomain">
+	    <service name="bptCatalogueArchivesSaveDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.edoc.domain.IBptCatalogueArchivesSaveDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.edoc.domain.support.BptCatalogueArchivesSaveDomain"/>	
+        <reference name="bptCatalogueArchivesSaveDao" target="bptCatalogueArchivesSaveDao/bptCatalogueArchivesSaveDao"/>
+	</component>
+    <!--优抚-->
+    <component name="bptGroupDomain">
+	    <service name="bptGroupDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.manage.domain.IBptGroupDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.manage.domain.support.BptGroupDomain"/>
+        
+        <!-- 家庭和人员信息 -->
+        <reference name="bptBaseinfoPeopleDomain" target="bptBaseinfoPeopleDomain/bptBaseinfoPeopleDomain"/>
+        
+        <!-- 优抚人员信息 -->
+        <reference name="bptPeopleDomain" target="bptPeopleDomain/bptPeopleDomain"/>
+        
+        <!-- 伤残信息 -->
+        <reference name="bptPeopleDisabilityDomain" target="bptPeopleDisabilityDomain/bptPeopleDisabilityDomain"/>
+        
+        <!-- 伤残受理通知书 -->
+        <reference name="disabilityIdentificationDomain" target="disabilityIdentificationDomain/disabilityIdentificationDomain"/>
+        
+        <!-- 伤残鉴定介绍信 -->
+        <reference name="disabilityNoticeDomain" target="disabilityNoticeDomain/disabilityNoticeDomain"/>
+        
+        <!-- 遗属 -->
+        <reference name="bptPeopleDependantDomain" target="bptPeopleDependantDomain/bptPeopleDependantDomain"/>
+        
+        <!-- 在乡复员军人 -->
+        <reference name="bptPeopleDemobilizedDomain" target="bptPeopleDemobilizedDomain/bptPeopleDemobilizedDomain"/>
+        
+        <!-- 带病回乡退伍军人 -->
+        <reference name="demobilizedIllnessDomain" target="demobilizedIllnessDomain/demobilizedIllnessDomain"/>
+        
+        <!-- 参战 -->
+        <reference name="bptWarDomain" target="bptWarDomain/bptWarDomain"/>
+        
+        <!-- 参试 -->
+        <reference name="bptPeopleTestedDomain" target="bptPeopleTestedDomain/bptPeopleTestedDomain"/>
+        
+        <!--资金管理(资金发放标准)-->
+        <reference name="bptCapitalstaDomain" target="bptCapitalstaDomain/bptCapitalstaDomain"/>
+        
+        <!--资金管理(编造发放名册)-->
+        <reference name="bptCapitalSummaryDomain" target="bptCapitalSummaryDomain/bptCapitalSummaryDomain"/>
+        
+         <!--资金管理-->
+        <reference name="bptCapialDetailDomain" target="bptCapialDetailDomain/bptCapialDetailDomain"/>
+        
+        <!--临时救助-->
+        <reference name="bptTemporaryHelpDomain" target="bptTemporaryHelpDomain/bptTemporaryHelpDomain"/>
+        
+         <!--义务兵、非义务兵-->
+        <reference name="bptCompulsorySummaryDomain" target="bptCompulsorySummaryDomain/bptCompulsorySummaryDomain"/>
+        <reference name="bptCompulsoryDetailsDomain" target="bptCompulsoryDetailsDomain/bptCompulsoryDetailsDomain"/>
+        
+        <!--档案目录-->
+        <reference name="bptCatalogueArchivesDomain" target="bptCatalogueArchivesDomain/bptCatalogueArchivesDomain"/>
+        <reference name="bptCatalogueArchivesSaveDomain" target="bptCatalogueArchivesSaveDomain/bptCatalogueArchivesSaveDomain"/>
+     </component>
+     
+         	<!-- 义务兵家庭信息 -->
+	<component name="bptcompulsoryDao">
+		<service name="bptcompulsoryDao">
+			<interface.java interface="com.inspur.cams.bpt.base.dao.IBptCompulsoryDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptCompulsoryDao"/>
+	</component>
+	<component name="bptcompulsoryDomain">
+		<service name="bptcompulsoryService">
+			<interface.java interface="com.inspur.cams.bpt.base.domain.IBptCompulsoryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptCompulsoryDomain"/>
+		<reference name="bptcompulsoryDao" target="bptcompulsoryDao/bptcompulsoryDao"/>
+	</component>
+	
+	<!-- 优抚医院信息及法人代表信息 -->
+	<component name="BptHospitalDao">
+	    <service name="BptHospitalDao">
+	    	<interface.java interface="com.inspur.cams.bpt.bptinstitution.dao.IBptHospitalDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.bptinstitution.dao.jdbc.BptHospitalDao"/>
+    </component>
+     <component name="BptHospitalLegalDao">
+	    <service name="BptHospitalLegalDao">
+	    	<interface.java interface="com.inspur.cams.bpt.bptinstitution.dao.IBptHospitalLegalDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.bptinstitution.dao.jdbc.BptHospitalLegalDao"/>
+    </component>
+    <component name="BptHospitalDomain">
+	    <service name="BptHospitalDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.bptinstitution.domain.IBptHospitalDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.bptinstitution.domain.support.BptHospitalDomain"/>
+        <reference name="bpthospitalDao" target="BptHospitalDao/BptHospitalDao"/>
+       <reference name="bpthospitallegalDao" target="BptHospitalLegalDao/BptHospitalLegalDao"/>
+    </component>
+    
+    <!-- 优抚光荣医院信息及法人代表信息 -->
+    <component name="BptGloriousInstituteDao">
+	    <service name="BptGloriousInstituteDao">
+	    	<interface.java interface="com.inspur.cams.bpt.bptinstitution.dao.IBptGloriousInstituteDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.bptinstitution.dao.jdbc.BptGloriousInstituteDao"/>
+    </component>
+    <component name="BptGloriousLegalDao">
+	    <service name="BptGloriousLegalDao">
+	    	<interface.java interface="com.inspur.cams.bpt.bptinstitution.dao.IBptGloriousLegalDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.bptinstitution.dao.jdbc.BptGloriousLegalDao"/>
+    </component>
+
+     <component name="BptGloriousInstituteDomain">
+	    <service name="BptGloriousInstituteDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.bptinstitution.domain.IBptGloriousInstituteDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.bptinstitution.domain.support.BptGloriousInstituteDomain"/>
+        <reference name="bptgloriousinstituteDao" target="BptGloriousInstituteDao/BptGloriousInstituteDao"/>
+        <reference name="bptgloriouslegalDao" target="BptGloriousLegalDao/BptGloriousLegalDao"/>
+    </component>
+    <!-- 优抚烈士纪念建筑物保护单位信息及法人代表信息 -->
+    <component name="BptMartyrBuildingsDao">
+	    <service name="BptMartyrBuildingsDao">
+	    	<interface.java interface="com.inspur.cams.bpt.bptinstitution.dao.IBptMartyrBuildingsDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.bptinstitution.dao.jdbc.BptMartyrBuildingsDao"/>
+    </component>
+    <component name="BptMartyrBuildingsLegalDao">
+	    <service name="BptMartyrBuildingsLegalDao">
+	    	<interface.java interface="com.inspur.cams.bpt.bptinstitution.dao.IBptMartyrBuildingsLegalDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.bptinstitution.dao.jdbc.BptMartyrBuildingsLegalDao"/>
+    </component>
+
+     <component name="BptMartyrBuildingsDomain">
+	    <service name="BptMartyrBuildingsDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.bptinstitution.domain.IBptMartyrBuildingsDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.bptinstitution.domain.support.BptMartyrBuildingsDomain"/>
+        <reference name="bptmartyrbuildingsDao" target="BptMartyrBuildingsDao/BptMartyrBuildingsDao"/>
+        <reference name="bptmartyrbuildingslegalDao" target="BptMartyrBuildingsLegalDao/BptMartyrBuildingsLegalDao"/>
+    </component>
+	<!-- 获取姓名拼音码-->
+    <component name="sysCnCharSpellDomain">
+	    <service name="sysCnCharSpellDomain">
+	    	<interface.java interface="com.inspur.cams.comm.syscncharspell.domain.ISysCnCharSpellDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.comm.syscncharspell.domain.support.SysCnCharSpellDomainImpl"/>
+        <reference name="sysCnCharSpellDao" target="sysCnCharSpellDao/sysCnCharSpellDao"/>
+    </component>
+	
+	<component name="sysCnCharSpellDao">
+		<service name="sysCnCharSpellDao">
+			<interface.java interface="com.inspur.cams.comm.syscncharspell.dao.ISysCnCharSpellDao"/>
+			<binding.sca/>
+	    </service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.syscncharspell.dao.jdbc.SysCnCharSpellJdbcDao"/>	
+	</component>
+	
+	<!--政策法规信息表Dao-->
+      <component name="BptRegulationDao">
+	    <service name="BptRegulationDao">
+	    	<interface.java interface="com.inspur.cams.bpt.regulations.dao.IBptRegulationsDao"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.regulations.dao.BptRegulationsDao"/>	
+    </component>
+   <!--政策法规信息表附件Dao-->
+      <component name="BptRegulationsAttachmentDao">
+	    <service name="BptRegulationsAttachmentDao">
+	    	<interface.java interface="com.inspur.cams.bpt.regulations.dao.IBptRegulationsAttachmentDao"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.regulations.dao.BptRegulationsAttachmentDao"/>	
+    </component>
+   	<!--政策法规信息表Domain-->
+      <component name="BptRegulationDomain">
+	    <service name="BptRegulationDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.regulations.domain.IBptRegulationDomain"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.regulations.domain.BptRegulationDomain"/>	
+        <reference name="regulationsDao"  target="BptRegulationDao.BptRegulationDao"/>
+    	<reference name="attachmentDao"  target="BptRegulationsAttachmentDao.BptRegulationsAttachmentDao"/>
+    </component>
+    
+    <!--轮养休养批次Dao-->
+      <component name="BptRecuperateDao">
+	    <service name="BptRecuperateDao">
+	    	<interface.java interface="com.inspur.cams.bpt.bptrecuperate.dao.IBptRecuperateDao"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.bptrecuperate.dao.jdbc.BptRecuperateDao"/>	
+    </component>
+    <!--轮养休养名单Dao-->
+      <component name="BptRecuperateDetailDao">
+	    <service name="BptRecuperateDetailDao">
+	    	<interface.java interface="com.inspur.cams.bpt.bptrecuperate.dao.IBptRecuperateDetailDao"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.bptrecuperate.dao.jdbc.BptRecuperateDetailDao"/>	
+    </component>
+    
+    	<!--轮养休养情况Domain-->
+      <component name="BptRecuperateDomain">
+	    <service name="BptRecuperateDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.bptrecuperate.domain.IBptRecuperateDomain"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.bptrecuperate.domain.BptRecuperateDomain"/>	
+        <reference name="batchDao"  target="BptRecuperateDao.BptRecuperateDao"/>
+    	<reference name="detailDaoDao"  target="BptRecuperateDetailDao.BptRecuperateDetailDao"/>
+    </component>
+    
+    <!--资金发放excel导入Dao-->
+      <component name="ImpExcelCapitalDao">
+	    <service name="ImpExcelCapitalDao">
+	    	<interface.java interface="com.inspur.cams.bpt.capital.excel.dao.IImpExcelCapitalDao"/>
+	    	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.capital.excel.dao.support.ImpExcelCapitalDao"/>	
+    </component>
+    
+        <!--资金发放excel导入domain-->
+      <component name="ImpExcepCapitalDomain">
+	    <service name="ImpExcepCapitalDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.capital.excel.domain.IImpExcelCapitalDomain"/>
+	    	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.capital.excel.domain.support.ImpExcepCapitalDomain"/>	
+   	    <reference name="impExcelCapitalDao"  target="ImpExcelCapitalDao/ImpExcelCapitalDao"/>
+   	    <reference name="bptCapitalSummaryDao"  target="bptCapitalSummaryDao/bptCapitalSummaryDao"/>
+   	    <reference name="bptCapitalDetailDao"  target="bptCapitalDetailDao/bptCapitalDetailDao"/>
+   	    <reference name="bptCompulsorySummaryDao"  target="bptCompulsorySummaryDao/bptCompulsorySummaryDao"/>
+   	    <reference name="bptCompulsoryDetailsDao"  target="bptCompulsoryDetailsDao/bptCompulsoryDetailsDao"/>
+    </component>
+    
+    <!-- 部分烈士（错杀被平反人员）子女 -->
+	<component name="peopleMartyrOffspringDao">
+	    <service name="peopleMartyrOffspringDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptPeopleMartyrOffspringDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptPeopleMartyrOffspringDao"/>
+    </component>
+	<component name="bptPeopleMartyrOffspringDomain">
+	    <service name="bptPeopleMartyrOffspringDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptPeopleMartyrOffspringDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptPeopleMartyrOffspringDomain"/>	
+        <reference name="peopleMartyrOffspringDao" target="peopleMartyrOffspringDao/peopleMartyrOffspringDao"/>
+	</component>
+	<!-- End -->
+	
+	<!-- 部分烈士（错杀被平反人员）子女申请 -->
+	<component name="applyMartyrOffspringDao">
+	    <service name="applyMartyrOffspringDao">
+	    	<interface.java interface="com.inspur.cams.bpt.base.dao.IBptApplyMartyrOffspringDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.bpt.base.dao.jdbc.BptApplyMartyrOffspringDao"/>
+    </component>
+	<component name="bptApplyMartyrOffspringDomain">
+	    <service name="bptApplyMartyrOffspringDomain">
+	    	<interface.java interface="com.inspur.cams.bpt.base.domain.IBptApplyMartyrOffspringDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.bpt.base.domain.support.BptApplyMartyrOffspringDomain"/>	
+        <reference name="applyMartyrOffspringDao" target="applyMartyrOffspringDao/applyMartyrOffspringDao"/>
+	</component>
+	<!-- End -->
+	
+	<!-- 农村退役士兵补助标准-->
+	<component name="retStaDao">
+		<service name="retStaDao">
+			<interface.java interface="com.inspur.cams.bpt.capital.dao.IBptCapitalRetStaDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.bpt.capital.dao.jdbc.BptCapitalRetStaDao"/>
+	</component>
+	<component name="retStaDomain">
+		<service name="retStaDomain">
+			<interface.java interface="com.inspur.cams.bpt.capital.domain.IBptCapitalRetStaDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.bpt.capital.domain.support.BptCapitalRetStaDomain"/>
+		<reference name="bptCapitalRetStaDao" target="retStaDao/retStaDao"/>
+	</component>
+	<!-- End -->
+	
+	<!-- 烈士子女补助标准-->
+	<component name="marStaDao">
+		<service name="marStaDao">
+			<interface.java interface="com.inspur.cams.bpt.capital.dao.IBptCapitalMarStaDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.bpt.capital.dao.jdbc.BptCapitalMarStaDao"/>
+	</component>
+	<component name="marStaDomain">
+		<service name="marStaDomain">
+			<interface.java interface="com.inspur.cams.bpt.capital.domain.IBptCapitalMarStaDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.bpt.capital.domain.support.BptCapitalMarStaDomain"/>
+		<reference name="bptCapitalMarStaDao" target="marStaDao/marStaDao"/>
+	</component>
+	<!-- End -->
+	
+</composite>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg onload="init(evt)" width="100%" height="100%" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<script type="text/javascript" xlink:href="../../../../../skins/js/L5-chart_5.0.1.js"></script>
+	<script type="text/javascript">
+	<![CDATA[
+    	function init(evt){
+				var polyline=new PolylineChart();
+				var records = ds.getAllRecords();
+				var chartDatas = new Array();
+				if(records.length>0) {
+					for(var i=0;i<records.length;i++ ) {
+						var value = records[i].get("NUM");
+						var name = records[i].get("MC")+"（"+value+"户）";
+						chartDatas.push({name:name,value:value});
+					}
+				} else {
+					chartDatas.push({name:"未查询到符合条件的数据",value:"0"});
+				}
+				polyline.setChartData(chartDatas);
+
+				polyline.setYAxisTitle("数量");
+    		polyline.setXAxisTitle("日期");
+				var colors = new Array("#FF9966", "#C2A00E", "#71A214", "#3399CC", "#CC99FF", "#FF6999", "#00CC99", "#C2CC0E", "#71CC14", "#CC68CC", "#66FFCC");      	
+      	polyline.setColors(colors);
+      	polyline.setTitle("救助对象数量增长分析"); 
+      	var bgc=new Array("#FFFFFF", "#FFAA33", "#EE7700");
+      	polyline.setBackgroudColors(bgc);
+      	polyline.customBackgroudColors(bgc);
+      	polyline.setCoordLineColor("white","white");		
+      	polyline.show(true,false);
+        //polyline.addEvent("onclick","alert('you click me')");	
+        //polyline.modifyEvent("onmouseover","alert('you onmouseover me')");	
+        	
+		}  	
+    ]]></script>
+</svg>

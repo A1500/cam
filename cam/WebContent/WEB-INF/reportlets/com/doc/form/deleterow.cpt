@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.1</Version>
+<Report class="com.fr.report.WorkSheet" name="Sheet1">
+<ReportSettings shrinkToFit="false" headerHeight="0.33" footerHeight="0.33">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="true" windowPosition="0" userDefineWindow="false" />
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+<Submiter class="BuiltInSQLSubmiter">
+<Attributes dsName="FRDemo" tableName="sale" />
+<Column isKey="true" name="Region">
+<ColumnRow column="0" row="0"/>
+</Column>
+<Column isKey="true" name="Manager">
+<ColumnRow column="1" row="0"/>
+</Column>
+<Column isKey="true" name="ProType">
+<ColumnRow column="2" row="0"/>
+</Column>
+<Column isKey="true" name="Product">
+<ColumnRow column="3" row="0"/>
+</Column>
+<Column isKey="false" name="Amount">
+<ColumnRow column="4" row="0"/>
+</Column>
+</Submiter>
+</ReportWriteAttr>
+<RowHeight defaultValue="19.0">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72.0">
+<![CDATA[]]>
+</ColumnWidth>
+<FloatElementList>
+</FloatElementList>
+<CellElementList>
+<C c="0" r="0" s="0"><O t="DSColumn"><Attributes dsName="sale" columnName="Region" />
+</O><Expand dir="0" />
+<CellWriteAttr appType="1" /></C>
+<C c="1" r="0" s="1"><O t="DSColumn"><Attributes dsName="sale" columnName="Manager" />
+</O><CellGUIAttr><CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"></CellEditorDef></CellGUIAttr><Expand dir="0" />
+<CellWriteAttr appType="0" delType="1" /></C>
+<C c="2" r="0" s="0"><O t="DSColumn"><Attributes dsName="sale" columnName="ProType" />
+</O><CellGUIAttr><CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"></CellEditorDef></CellGUIAttr><Expand dir="0" />
+<CellWriteAttr><O t="S">Digital</O></CellWriteAttr></C>
+<C c="3" r="0" s="0"><O t="DSColumn"><Attributes dsName="sale" columnName="Product" />
+</O><CellGUIAttr><CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"></CellEditorDef></CellGUIAttr><Expand dir="0" />
+<CellWriteAttr><O t="S">MP3</O></CellWriteAttr></C>
+<C c="4" r="0" s="0"><O t="DSColumn"><Attributes dsName="sale" columnName="Amount" />
+</O><CellGUIAttr><CellEditorDef class="com.fr.report.cellElement.NumberCellEditorDef"><Attribute maxIntegerLength="32" maxDecimalLength="16" allowDecimals="false" allowNegative="false" minValue="-1.7976931348623157E308" maxValue="1.7976931348623157E308" />
+</CellEditorDef></CellGUIAttr><Expand dir="0" />
+<CellWriteAttr><O t="D">0.0</O></CellWriteAttr></C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" /><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+<Style>
+<Format class="java.text.SimpleDateFormat"><![CDATA[MM/dd/yyyy]]>
+</Format>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" /><Bottom style="1" /><Left style="1" /><Right style="1" /></Border>
+</Style>
+</StyleList>
+</WorkBook>

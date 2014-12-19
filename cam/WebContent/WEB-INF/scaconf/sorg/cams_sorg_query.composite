@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--社会组织流程统计查询-->
+	<component name="somWorkflowQueryDao">
+		<service name="somWorkflowQueryDao">
+			<interface.java interface="com.inspur.cams.sorg.query.dao.ISomWorkflowQueryDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.sorg.query.dao.jdbc.SomWorkflowQueryDao"/>
+    </component>
+	<component name="somWorkflowQueryDomain">
+		<service name="somWorkflowQueryDomain">
+			<interface.java interface="com.inspur.cams.sorg.query.domain.ISomWorkflowQueryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.query.domain.support.SomWorkflowQueryDomain"/>
+		<reference name="somWorkflowQueryDao" target="somWorkflowQueryDao/somWorkflowQueryDao"/>
+	</component>
+	
+	<!--社会组织台帐-->
+	<component name="somAccountQueryDao">
+		<service name="somAccountQueryDao">
+			<interface.java interface="com.inspur.cams.sorg.query.dao.ISomAccountQueryDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.sorg.query.dao.jdbc.SomAccountQueryDao"/>
+    </component>
+	<component name="somAccountQueryDomain">
+		<service name="somAccountQueryDomain">
+			<interface.java interface="com.inspur.cams.sorg.query.domain.ISomAccountQueryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.query.domain.support.SomAccountQueryDomain"/>
+		<reference name="somAccountQueryDao" target="somAccountQueryDao/somAccountQueryDao"/>
+	</component>
+		
+	<!--社会组织分支统计-->
+	<component name="somBranchStaticDao">
+		<service name="somBranchStaticDao">
+			<interface.java interface="com.inspur.cams.sorg.query.dao.ISomBranchStaticDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.sorg.query.dao.jdbc.SomBranchStaticDao"/>
+    </component>
+	<component name="somBranchStaticDomain">
+		<service name="somBranchStaticDomain">
+			<interface.java interface="com.inspur.cams.sorg.query.domain.ISomBranchStaticDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.query.domain.support.SomBranchStaticDomain"/>
+		<reference name="somBranchStaticDao" target="somBranchStaticDao/somBranchStaticDao"/>
+	</component>
+	
+	<!--社会组织举办实体统计-->
+	<component name="somEntityStaticDao">
+		<service name="somEntityStaticDao">
+			<interface.java interface="com.inspur.cams.sorg.query.dao.ISomEntityStaticDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.sorg.query.dao.jdbc.SomEntityStaticDao"/>
+    </component>
+	<component name="somEntityStaticDomain">
+		<service name="somEntityStaticDomain">
+			<interface.java interface="com.inspur.cams.sorg.query.domain.ISomEntityStaticDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.query.domain.support.SomEntityStaticDomain"/>
+		<reference name="somEntityStaticDao" target="somEntityStaticDao/somEntityStaticDao"/>
+	</component>
+</composite>

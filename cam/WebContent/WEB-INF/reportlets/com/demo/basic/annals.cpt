@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="行业项目">
+<TableData class="com.fr.data.impl.EmbeddedTableData">
+<Parameters>
+</Parameters>
+<ColumnNames><![CDATA[ID,,.,,项目类型,,.,,项目数量,,.,,到位资金,,.,,同期比,,.,,占比,,.,,变化]]></ColumnNames>
+<ColumnTypes><![CDATA[java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String]]></ColumnTypes>
+<RowData>
+<![CDATA[/]t=*_E\ZciHjoTY$Khrh7N?.I01'5!eQ(>&N!$TYd(GI_*T),PaH4DT8ujA:[S-fYG%+&m$
+';"-qOR<f6e@p2^:$](FN'j-&up
+kMgq"r\oaFAC7g,P$7#5:3&^a&YS\Q["Ho`0J;#6Q_t(-
+\N3AHpfF&DugrO!HBWg*6f8W$)8g8f(0)~
+
+]]>
+</RowData>
+</TableData>
+</NameTableData>
+<NameTableData name="地区项目">
+<TableData class="com.fr.data.impl.EmbeddedTableData">
+<Parameters>
+</Parameters>
+<ColumnNames><![CDATA[ID,,.,,地区,,.,,到位额,,.,,占比]]></ColumnNames>
+<ColumnTypes><![CDATA[java.lang.String,java.lang.String,java.lang.String,java.lang.String]]></ColumnTypes>
+<RowData>
+<![CDATA[1Z[?)IFI=aM`K%AoaHd=NK*U)<4RrI2_R2]GOKNH;^4FM6V\k94\Jd-A'SjC_1F#"H3P.T7R
+fY.!!~
+
+]]>
+</RowData>
+</TableData>
+</NameTableData>
+<NameTableData name="企业">
+<TableData class="com.fr.data.impl.EmbeddedTableData">
+<Parameters>
+</Parameters>
+<ColumnNames><![CDATA[ID,,.,,企业名称,,.,,投资额]]></ColumnNames>
+<ColumnTypes><![CDATA[java.lang.String,java.lang.String,java.lang.String]]></ColumnTypes>
+<RowData>
+<![CDATA[1Z[?(AFo>$^Gg)eH#if<b88I]gU[1Q5#,$/,L2M9G:c!uC=hM5MluK$9,JNI!!~
+
+]]>
+</RowData>
+</TableData>
+</NameTableData>
+<NameTableData name="能耗">
+<TableData class="com.fr.data.impl.EmbeddedTableData">
+<Parameters>
+</Parameters>
+<ColumnNames><![CDATA[ ID,,.,,能耗类别,,.,,能耗量,,.,,同期比,,.,,变化]]></ColumnNames>
+<ColumnTypes><![CDATA[java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String]]></ColumnTypes>
+<RowData>
+<![CDATA[1Z[?dlM@*i]/U8m$k:E?:%Tu:3R8f$]9UQqo?<[;]8upKj>=0h1KW\Nnnmt2/n<2/cOVYgj>
+8]E#lt#~
+
+]]>
+</RowData>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="true" headerHeight="0.0" footerHeight="0.0">
+<Margin top="0.27" left="0.7499999999999999" bottom="0.27" right="0.7499999999999999" />
+</ReportSettings>
+<ReportPageAttr>
+</ReportPageAttr>
+<ReportParameterAttr>
+<Parameters>
+<Parameter>
+<Attributes name="Year"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[2007]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,22,84,22,64,22,95,30,113,22,54,21,90]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="7" cs="9" rs="4" s="0"><O t="S"><![CDATA[城市发展研究年报]]></O>
+</C>
+<C c="0" r="12" cs="9" rs="4" s="1"><O t="S"><![CDATA[天津市发展研究年报]]></O>
+</C>
+<C c="0" r="17" cs="9" rs="4" s="0"><O t="Formula" class="Formula" ><Attributes><![CDATA[=$Year]]></Attributes></O>
+</C>
+<C c="0" r="43" cs="9" rs="2"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="0" r="45" cs="9" rs="2" s="2"><O t="S"><![CDATA[城市统计局]]></O>
+</C>
+<C c="0" r="56" cs="9" s="3"><O t="S"><![CDATA[一、招商引资力度]]></O>
+</C>
+<C c="0" r="57" cs="9" s="4"><O t="Formula" class="Formula" ><Attributes><![CDATA[="天津市在注重引进外资的同时，还积极解放思想，不断加大对内资的吸引，从而有效实现了国内招商引资的高起步。数据统计，"+$Year+"年全市共引进内资项目"+sum(行业项目.group(项目数量,ID==1))+ "个，到位资金"
++sum(行业项目.group(到位资金,ID==1))+ "亿元，"+行业项目.group(变化,ID==1)+行业项目.group(同期比,ID==1)+"同时数据还展现出以下四方面特征："]]></Attributes></O>
+</C>
+<C c="0" r="58" cs="9" s="5"><O t="S"><![CDATA[1、规模不断扩大，质量稳步提高]]></O>
+</C>
+<C c="0" r="59" cs="9" s="4"><O t="Formula" class="Formula" ><Attributes><![CDATA[=$Year+"年累计新批及增资超亿元大项目"+sum(行业项目.group(项目数量,ID==2))+"个，到位资金"+sum(行业项目.group(到位资金,ID==2))+"亿元，占引资总额的81.5%，同比增长64.1%。引进高新技术项目"+sum(行业项目.group(项目数量,ID==3))+"个，到位额"+sum(行业项目.group(到位资金,ID==3))+"亿元。"]]></Attributes></O>
+</C>
+<C c="0" r="60" cs="9" s="5"><O t="S"><![CDATA[2、优化引资结构，积极引导国内资金投向本市重点发展产业。]]></O>
+</C>
+<C c="0" r="61" cs="9" s="4"><O t="Formula" class="Formula" ><Attributes><![CDATA[=$Year+"年，全市累计引进制造业项目"+sum(行业项目.group(项目数量,ID==4))+"个，到位资金"+sum(行业项目.group(到位资金,ID==4))+"亿元，占全市比重的 12.2%；引进的服务业项目"+sum(行业项目.group(项目数量,ID==5))+"个，到位资金"+sum(行业项目.group(到位资金,ID==5))+"亿元，占全市引进内资比重的85.8%；投向其他行
+业项目"+sum(行业项目.group(项目数量,ID==6))+"个，到位资金"+sum(行业项目.group(到位资金,ID==6))+"亿元，占全市比重2%。"]]></Attributes></O>
+</C>
+<C c="0" r="62" cs="9" s="5"><O t="S"><![CDATA[3、增强城市发展活力，大力引进多元化投资主体。]]></O>
+</C>
+<C c="0" r="63" cs="9" s="4"><O t="Formula" class="Formula" ><Attributes><![CDATA[=$Year+"年，来自环渤海地区投资到位额"+sum(地区项目.group(到位额,ID==1))+"亿元，占引资到位总额的"+地区项目.group(占比,ID==1)+"；来自“长三角”地区投资到位额"+sum(地区项目.group(到位额,ID==2))+"亿元，占总额的"+地区项目.group(占比,ID==2)+"；来自“珠三角”地区投资到位额"+sum(地区项目.group(到位额,ID==3))+"亿
+元，占总额的"+地区项目.group(占比,ID==3)+"。三地投资到位额合计为"+sum(地区项目.group(到位额,ID==1),地区项目.group(到位额,ID==2),地区项目.group(到位额,ID==3))+" 亿元，占总额的占总额的79.7%。"]]></Attributes></O>
+</C>
+<C c="0" r="64" cs="9" s="5"><O t="S"><![CDATA[4、实施招商选资战略，一批国内知名企业落户天津]]></O>
+</C>
+<C c="0" r="65" cs="9" s="4"><O t="Formula" class="Formula" ><Attributes><![CDATA[=$Year+企业.group(企业名称,ID==1)+"在开发区投资"+sum(企业.group(投资额,ID==1))+"亿元设立天津长城汽亿元车有限公司；"+企业.group(企业名称,ID==2)+"投资"+sum(企业.group(投资额,ID==2))+"亿元开发海河耳闸公园地块项目等。"]]></Attributes></O>
+</C>
+<C c="0" r="66" cs="9" s="3"><O t="S"><![CDATA[二、节能降耗成果]]></O>
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="32" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="46" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="22" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="1" size="18" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="14" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="16" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+</StyleList>
+</WorkBook>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="fiso" xmlns="http://www.loushang.com/sca/1.0">
+    
+    <!-- 业务办理Domain-->
+     <component name="FuneralFisApplyDomain">
+	    <service name="FuneralFisApplyDomain">
+	    	<interface.java interface="com.inspur.cams.fis.funeral.domain.IFuneralFisApplyDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.fis.funeral.domain.support.FuneralFisApplyDomain"/>	
+    	<reference name="fisDeadInfoDomain"  target="FisDeadInfoDomain.FisDeadInfoDomain"/>
+    	<reference name="fisPersonalCustomDomain"  target="FisPersonalCustomDomain.FisPersonalCustomDomain"/>
+    	<reference name="fisPersonalCustomRoleDomain"  target="FisPersonalCustomRoleDomain.FisPersonalCustomRoleDomain"/>
+    	<reference name="fisApplyInfoDomain"  target="FisApplyInfoDomain.FisApplyInfoDomain"/>
+    	<reference name="fisServiceDriveDomain"  target="FisServiceDriveDomain.FisServiceDriveDomain"/>
+    	<reference name="fisServiceCarryDomain"  target="FisServiceCarryDomain.FisServiceCarryDomain"/>
+    	<reference name="fisServiceStorageDomain"  target="FisServiceStorageDomain.FisServiceStorageDomain"/>
+    	<reference name="fisServiceCosmeticDomain"  target="FisServiceCosmeticDomain.FisServiceCosmeticDomain"/>
+    	<reference name="fisServiceFarewellDomain"  target="FisServiceFarewellDomain.FisServiceFarewellDomain"/>
+    	<reference name="fisFarewellSiteDomain"  target="FisFarewellSiteDomain.FisFarewellSiteDomain"/>
+    	<reference name="fisServiceOtherDomain"  target="FisServiceOtherDomain.FisServiceOtherDomain"/>
+    	<reference name="fisUseGoodsDomain"  target="FisUseGoodsDomain.FisUseGoodsDomain"/>
+    	<reference name="fisUseServiceDomain"  target="FisUseServiceDomain.FisUseServiceDomain"/>
+    	<reference name="fisFeeInfoDomain"  target="FisFeeInfoDomain.FisFeeInfoDomain"/>
+    	<reference name="fisFeeDetailDomain"  target="FisFeeDetailDomain.FisFeeDetailDomain"/>
+    	<reference name="fisServiceCremationDomain"  target="FisServiceCremationDomain.FisServiceCremationDomain"/>
+    	<reference name="fisFeeTotalInfoDomain"  target="FisFeeTotalInfoDomain.FisFeeTotalInfoDomain"/>
+    	<reference name="fisResourceInfoDomain"  target="FisResourceInfoDomain.FisResourceInfoDomain"/>
+    </component> 
+    
+    <!-- 寄存业务办理Domain-->
+     <component name="FuneralFisEmplacingApplyDomain">
+	    <service name="FuneralFisEmplacingApplyDomain">
+	    	<interface.java interface="com.inspur.cams.fis.funeral.domain.IFuneralFisEmplacingApplyDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.fis.funeral.domain.support.FuneralFisEmplacingApplyDomain"/>	
+    	<reference name="fisDeadInfoDomain"  target="FisDeadInfoDomain.FisDeadInfoDomain"/>
+    	<reference name="fisPersonalCustomDomain"  target="FisPersonalCustomDomain.FisPersonalCustomDomain"/>
+    	<reference name="fisPersonalCustomHistoryDomain"  target="FisPersonalCustomHistoryDomain.FisPersonalCustomHistoryDomain"/>
+    	<reference name="fisPersonalCustomRoleDomain"  target="FisPersonalCustomRoleDomain.FisPersonalCustomRoleDomain"/>
+    	<reference name="fisApplyInfoDomain"  target="FisApplyInfoDomain.FisApplyInfoDomain"/>
+    	<reference name="fisServiceOtherDomain"  target="FisServiceOtherDomain.FisServiceOtherDomain"/>
+    	<reference name="fisUseGoodsDomain"  target="FisUseGoodsDomain.FisUseGoodsDomain"/>
+    	<reference name="fisUseServiceDomain"  target="FisUseServiceDomain.FisUseServiceDomain"/>
+    	<reference name="fisFeeInfoDomain"  target="FisFeeInfoDomain.FisFeeInfoDomain"/>
+    	<reference name="fisFeeDetailDomain"  target="FisFeeDetailDomain.FisFeeDetailDomain"/>
+    	<reference name="fisServiceCremationDomain"  target="FisServiceCremationDomain.FisServiceCremationDomain"/>
+    	<reference name="fisServiceEmplacingDomain"  target="FisServiceEmplacingDomain.FisServiceEmplacingDomain"/>
+    	<reference name="fisServiceContinueEmplacingDomain"  target="FisServiceContinueEmplacingDomain.FisServiceContinueEmplacingDomain"/>
+    	<reference name="fisServiceCurrentEmplacingDomain"  target="FisServiceCurrentEmplacingDomain.FisServiceCurrentEmplacingDomain"/>
+    	<reference name="fisServiceMemoryDomain"  target="FisServiceMemoryDomain.FisServiceMemoryDomain"/>
+    	<reference name="fisMemoryCustomDomain"  target="FisMemoryCustomDomain.FisMemoryCustomDomain"/>
+    	<reference name="fisFeeTotalInfoDomain"  target="FisFeeTotalInfoDomain.FisFeeTotalInfoDomain"/>
+    	<reference name="fisResourceInfoDomain"  target="FisResourceInfoDomain.FisResourceInfoDomain"/>
+    	<reference name="fisEmplacingWreckageDomain"  target="FisEmplacingWreckageDomain.FisEmplacingWreckageDomain"/>
+    </component> 
+     <!-- 预约登记Domain-->
+    <component name="FuneralTransitReserveDomain">
+	    <service name="FuneralTransitReserveDomain">
+	    	<interface.java interface="com.inspur.cams.fis.funeral.domain.IFuneralTransitReserveDomain"/>
+        	<binding.sca/>   
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.fis.funeral.domain.support.FuneralTransitReserveDomain"/>	
+    	<reference name="fisPersonalCustomDomain"  target="FisPersonalCustomDomain.FisPersonalCustomDomain"/>
+    	<reference name="fisApplyInfoDomain"  target="FisApplyInfoDomain.FisApplyInfoDomain"/>
+    	<reference name="fisServiceDriveDomain"  target="FisServiceDriveDomain.FisServiceDriveDomain"/>
+    	<reference name="fisUseServiceDomain"  target="FisUseServiceDomain.FisUseServiceDomain"/>
+    	<reference name="fisPersonalCustomRoleDomain"  target="FisPersonalCustomRoleDomain.FisPersonalCustomRoleDomain"/>
+    	<reference name="fisServiceCarryDomain"  target="FisServiceCarryDomain.FisServiceCarryDomain"/>
+    </component>
+    
+    
+     <!-- 预约派工Domain-->
+    <component name="FuneralTransitDispatchDomain">
+	    <service name="FuneralTransitDispatchDomain">
+	    	<interface.java interface="com.inspur.cams.fis.funeral.domain.IFuneralTransitDispatchDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.fis.funeral.domain.support.FuneralTransitDispatchDomain"/>	
+    	<reference name="fisServiceDriveDomain"  target="FisServiceDriveDomain.FisServiceDriveDomain"/>
+    	<reference name="fisUseServiceDomain"  target="FisUseServiceDomain.FisUseServiceDomain"/>
+    	<reference name="fisServiceCarryDomain"  target="FisServiceCarryDomain.FisServiceCarryDomain"/>
+    </component> 
+    
+     <!-- 保存派工Domain-->
+    <component name="FuneralStorageDomain">
+	    <service name="FuneralStorageDomain">
+	    	<interface.java interface="com.inspur.cams.fis.funeral.domain.IFuneralStorageDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.fis.funeral.domain.support.FuneralStorageDomain"/>	
+    	<reference name="fisServiceStorageDomain"  target="FisServiceStorageDomain.FisServiceStorageDomain"/>
+    	<reference name="fisUseServiceDomain"  target="FisUseServiceDomain.FisUseServiceDomain"/>
+    	<reference name="fisPriceServiceDomain"  target="FisPriceServiceDomain.FisPriceServiceDomain"/>
+    </component> 
+    
+    
+      <!-- 整容派工Domain-->
+    <component name="FuneralServiceCosmeticDomain">
+	    <service name="FuneralServiceCosmeticDomain">
+	    	<interface.java interface="com.inspur.cams.fis.funeral.domain.IFuneralServiceCosmeticDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.fis.funeral.domain.support.FuneralServiceCosmeticDomain"/>
+        <reference name="fisUseServiceDomain"  target="FisUseServiceDomain.FisUseServiceDomain"/>
+        <reference name="fisServiceCosmeticDomain"  target="FisServiceCosmeticDomain.FisServiceCosmeticDomain"/>	
+    </component> 
+    
+    <!-- 告别派工Domain-->
+    <component name="FuneralFarewellDomain">
+	    <service name="FuneralFarewellDomain">
+	    	<interface.java interface="com.inspur.cams.fis.funeral.domain.IFuneralFarewellDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.fis.funeral.domain.support.FuneralFarewellDomain"/>	
+    	<reference name="fisServiceFarewellDomain"  target="FisServiceFarewellDomain.FisServiceFarewellDomain"/>
+    	<reference name="fisUseServiceDomain"  target="FisUseServiceDomain.FisUseServiceDomain"/>
+    </component>
+    
+    <!-- 确认领灰Domain-->
+    <component name="FuneralAshesHandOverDomain">
+	    <service name="FuneralAshesHandOverDomain">
+	    	<interface.java interface="com.inspur.cams.fis.funeral.domain.IFuneralAshesHandOverDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.fis.funeral.domain.support.FuneralAshesHandOverDomain"/>	
+    	<reference name="fisDeadInfoDomain"  target="FisDeadInfoDomain.FisDeadInfoDomain"/>
+    	<reference name="fisApplyInfoDomain"  target="FisApplyInfoDomain.FisApplyInfoDomain"/>
+    </component>
+    
+    <!--火化派工Domain-->
+    <component name="FuneralCremationDispatchDomain">
+	  	<service name="FuneralCremationDispatchDomain">
+	  		<interface.java interface="com.inspur.cams.fis.funeral.domain.IFuneralCremationDispatchDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.fis.funeral.domain.support.FuneralCremationDispatchDomain"/>	
+    	<reference name="fisServiceCremationDomain"  target="FisServiceCremationDomain.FisServiceCremationDomain"/>
+    	<reference name="fisUseServiceDomain"  target="FisUseServiceDomain.FisUseServiceDomain"/>
+    	<reference name="fisDeadInfoDomain"  target="FisDeadInfoDomain.FisDeadInfoDomain"/>
+    </component>
+    
+     <!-- 优惠策略业务Domain-->
+    <component name="FuneralReducationDomain">
+	    <service name="FuneralReducationDomain">
+	    	<interface.java interface="com.inspur.cams.fis.funeral.domain.IFuneralReducationDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.fis.funeral.domain.support.FuneralReducationDomain"/>	
+    	<reference name="fisReducationTypeDomain"  target="FisReducationTypeDomain.FisReducationTypeDomain"/>
+    	<reference name="fisReducationPolicyDomain"  target="FisReducationPolicyDomain.FisReducationPolicyDomain"/>
+    </component> 
+    
+</composite>	

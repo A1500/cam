@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="common" xmlns="http://www.loushang.com/sca/1.0">
+	<description>外部用户构件</description>
+	<component name="comExtOrganDao">
+		<service name="comExtOrganDao">
+			<interface.java interface="com.inspur.cams.comm.extuser.dao.IComExtOrganDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.extuser.dao.jdbc.ComExtOrganDao"/>
+	</component>
+	<component name="comExtOrganDomain">
+		<service name="comExtOrganDomain">
+			<interface.java interface="com.inspur.cams.comm.extuser.domain.IComExtOrganDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.extuser.domain.support.ComExtOrganDomain"/>
+		<reference name="comExtOrganDao" target="comExtOrganDao/comExtOrganDao"/>
+		<reference name="comExtUserDao" target="comExtUserDao/comExtUserDao"/>
+	</component>
+	
+	<component name="comExtUserDao">
+		<service name="comExtUserDao">
+			<interface.java interface="com.inspur.cams.comm.extuser.dao.IComExtUserDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.extuser.dao.jdbc.ComExtUserDao"/>
+	</component>
+	<component name="comExtUserDomain">
+		<service name="comExtUserDomain">
+			<interface.java interface="com.inspur.cams.comm.extuser.domain.IComExtUserDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.extuser.domain.support.ComExtUserDomain"/>
+		<reference name="comExtUserDao" target="comExtUserDao/comExtUserDao"/>
+	</component>
+	
+	<component name="comExtOrganTypeDao">
+		<service name="comExtOrganTypeDao">
+			<interface.java interface="com.inspur.cams.comm.extuser.dao.IComExtOrganTypeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.extuser.dao.jdbc.ComExtOrganTypeDao"/>
+	</component>
+	<component name="comExtOrganTypeDomain">
+		<service name="comExtOrganTypeDomain">
+			<interface.java interface="com.inspur.cams.comm.extuser.domain.IComExtOrganTypeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.extuser.domain.support.ComExtOrganTypeDomain"/>
+		<reference name="comExtOrganTypeDao" target="comExtOrganTypeDao/comExtOrganTypeDao"/>
+	</component>
+	<component name="ComExtUserLoginService">
+		<service name="ComExtUserLoginService">
+			<interface.java interface="com.inspur.cams.comm.extuser.webservice.IComExtUserLoginService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.extuser.webservice.ComExtUserLoginService"/>
+	</component>
+</composite>

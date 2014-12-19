@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DatasourceManager>
+<ConnectionMap>
+<Connection name="FRDemo" class="com.fr.data.impl.JDBCDatabaseConnection">
+<DatabaseAttr />
+<JDBCDatabaseAttr url="jdbc:oracle:thin:@192.168.1.2:1521:orcl2" driver="oracle.jdbc.driver.OracleDriver" user="develop2" password="develop2"
+ encryptPassword="true" />
+</Connection></ConnectionMap>
+<TableDataMap>
+<TableData name="国家" class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Semantic>
+<ColumnMap>
+<Column name="Name" semantic="名字" />
+<Column name="Area" semantic="面积" />
+<Column name="Population" semantic="人口" />
+<Column name="Capital" semantic="首都" />
+<Column name="Continent" semantic="大陆" />
+</ColumnMap>
+</Semantic>
+<Attributes isCache="true" isDiskCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select * from Country]]></Query>
+</TableData>
+<TableData name="city" class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" isDiskCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select Region from sale group by Region]]></Query>
+</TableData>
+<TableData name="ClassNo" class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" isDiskCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select ClassNo from StScore group by ClassNo]]></Query>
+</TableData>
+<TableData name="Course" class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" isDiskCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select Course from StScore group by Course]]></Query>
+</TableData>
+</TableDataMap>
+<DictMap>
+</DictMap>
+<Relations>
+</Relations>
+</DatasourceManager>

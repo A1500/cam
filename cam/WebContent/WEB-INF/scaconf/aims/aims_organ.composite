@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--农业龙头企业填报单位信息-->
+	<component name="aimOrganReportDao">
+		<service name="aimOrganReportDao">
+			<interface.java interface="com.inspur.aims.organ.base.dao.IAimOrganReportDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.aims.organ.base.dao.jdbc.AimOrganReportDao"/>
+    </component>
+	<component name="aimOrganReportDomain">
+		<service name="aimOrganReportDomain">
+			<interface.java interface="com.inspur.aims.organ.base.domain.IAimOrganReportDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.aims.organ.base.domain.support.AimOrganReportDomain"/>
+		<reference name="aimOrganReportDao" target="aimOrganReportDao/aimOrganReportDao"/>
+		<reference name="aimSpecialBaseHisDomain" target="aimSpecialBaseHisDomain/aimSpecialBaseHisDomain"/>
+	</component>
+	<!--农业企业组织主营产品生产情况-->
+	<component name="aimOrganProductDao">
+		<service name="aimOrganProductDao">
+			<interface.java interface="com.inspur.aims.organ.base.dao.IAimOrganProductDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.aims.organ.base.dao.jdbc.AimOrganProductDao"/>
+    </component>
+	<component name="aimOrganProductDomain">
+		<service name="aimOrganProductDomain">
+			<interface.java interface="com.inspur.aims.organ.base.domain.IAimOrganProductDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.aims.organ.base.domain.support.AimOrganProductDomain"/>
+		<reference name="aimOrganProductDao" target="aimOrganProductDao/aimOrganProductDao"/>
+	</component>
+	<!--企业组织主要原料采购情况-->
+	<component name="aimOrganMaterialDao">
+		<service name="aimOrganMaterialDao">
+			<interface.java interface="com.inspur.aims.organ.base.dao.IAimOrganMaterialDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.aims.organ.base.dao.jdbc.AimOrganMaterialDao"/>
+    </component>
+	<component name="aimOrganMaterialDomain">
+		<service name="aimOrganMaterialDomain">
+			<interface.java interface="com.inspur.aims.organ.base.domain.IAimOrganMaterialDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.aims.organ.base.domain.support.AimOrganMaterialDomain"/>
+		<reference name="aimOrganMaterialDao" target="aimOrganMaterialDao/aimOrganMaterialDao"/>
+	</component>
+	<!--企业组织主要经济指标表-->
+	<component name="aimOrganEconomyDao">
+		<service name="aimOrganEconomyDao">
+			<interface.java interface="com.inspur.aims.organ.base.dao.IAimOrganEconomyDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.aims.organ.base.dao.jdbc.AimOrganEconomyDao"/>
+    </component>
+	<component name="aimOrganEconomyDomain">
+		<service name="aimOrganEconomyDomain">
+			<interface.java interface="com.inspur.aims.organ.base.domain.IAimOrganEconomyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.aims.organ.base.domain.support.AimOrganEconomyDomain"/>
+		<reference name="aimOrganEconomyDao" target="aimOrganEconomyDao/aimOrganEconomyDao"/>
+	</component>
+	<!--农业企业组织带动基地农户情况-->
+	<component name="aimOrganDriveDao">
+		<service name="aimOrganDriveDao">
+			<interface.java interface="com.inspur.aims.organ.base.dao.IAimOrganDriveDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.aims.organ.base.dao.jdbc.AimOrganDriveDao"/>
+    </component>
+	<component name="aimOrganDriveDomain">
+		<service name="aimOrganDriveDomain">
+			<interface.java interface="com.inspur.aims.organ.base.domain.IAimOrganDriveDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.aims.organ.base.domain.support.AimOrganDriveDomain"/>
+		<reference name="aimOrganDriveDao" target="aimOrganDriveDao/aimOrganDriveDao"/>
+	</component>
+</composite>

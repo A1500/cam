@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+
+	<!--流程表-->
+	<component name="fisWfModelDao">
+		<service name="fisWfModelDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisWfModelDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisWfModelDao"/>
+    </component>
+	<component name="fisWfModelDomain">
+		<service name="fisWfModelDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisWfModelDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisWfModelDomain"/>
+		<reference name="fisWfModelDao" target="fisWfModelDao/fisWfModelDao"/>
+	</component>
+	<!--流程节点表-->
+	<component name="fisWfNodeDao">
+		<service name="fisWfNodeDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisWfNodeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisWfNodeDao"/>
+    </component>
+	<component name="fisWfNodeDomain">
+		<service name="fisWfNodeDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisWfNodeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisWfNodeDomain"/>
+		<reference name="fisWfNodeDao" target="fisWfNodeDao/fisWfNodeDao"/>
+	</component>
+	<!--殡葬业务公墓信息表-->
+	<component name="fisCemeInfoDao">
+		<service name="fisCemeInfoDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCemeInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCemeInfoDao"/>
+    </component>
+	<component name="fisCemeInfoDomain">
+		<service name="fisCemeInfoDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCemeInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCemeInfoDomain"/>
+		<reference name="fisCemeInfoDao" target="fisCemeInfoDao/fisCemeInfoDao"/>
+	</component>
+	<!--殡葬业务公墓撤销备案表-->
+	<component name="fisCemeLogoffDao">
+		<service name="fisCemeLogoffDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCemeLogoffDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCemeLogoffDao"/>
+    </component>
+	<component name="fisCemeLogoffDomain">
+		<service name="fisCemeLogoffDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCemeLogoffDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCemeLogoffDomain"/>
+		<reference name="fisCemeLogoffDao" target="fisCemeLogoffDao/fisCemeLogoffDao"/>
+	</component>
+	<!--公墓审批业务表-->
+	<component name="fisCemeApplyInfoDao">
+		<service name="fisCemeApplyInfoDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCemeApplyInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCemeApplyInfoDao"/>
+    </component>
+	<component name="fisCemeApplyInfoDomain">
+		<service name="fisCemeApplyInfoDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCemeApplyInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCemeApplyInfoDomain"/>
+		<reference name="fisCemeApplyInfoDao" target="fisCemeApplyInfoDao/fisCemeApplyInfoDao"/>
+		<reference name="fisCemeInfoDao" target="fisCemeInfoDao/fisCemeInfoDao"/>
+		<reference name="fisCemeCheckScoreDomain" target="fisCemeCheckScoreDomain/fisCemeCheckScoreDomain"/>
+		<reference name="fisCemeCheckHistoryDomain" target="fisCemeCheckHistoryDomain/fisCemeCheckHistoryDomain"/>
+		<reference name="fisCemeInfoDomain" target="fisCemeInfoDomain/fisCemeInfoDomain"/>
+        <reference name="fisCemeAccessoriesDao" target="fisCemeAccessoriesDao/fisCemeAccessoriesDao"/>
+		<reference name="fisCemeLogoffDomain" target="fisCemeLogoffDomain/fisCemeLogoffDomain"/>
+		<reference name="fisCemeLogoffOpinionDomain" target="fisCemeLogoffOpinionDomain/fisCemeLogoffOpinionDomain"/>
+		<reference name="fisCemeChangeDetailDomain" target="fisCemeChangeDetailDomain/fisCemeChangeDetailDomain"/>
+		<reference name="fisCemeChangeDomain" target="fisCemeChangeDomain/fisCemeChangeDomain"/>
+		<reference name="fisCemeExpendInfoDao" target="fisCemeExpendInfoDao/fisCemeExpendInfoDao"/>
+		
+	</component>
+	<!--公墓年检附件类型字典-->
+	<component name="dicCemeAccessoriesTypeDao">
+		<service name="dicCemeAccessoriesTypeDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IDicCemeAccessoriesTypeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.DicCemeAccessoriesTypeDao"/>
+    </component>
+	<component name="dicCemeAccessoriesTypeDomain">
+		<service name="dicCemeAccessoriesTypeDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IDicCemeAccessoriesTypeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.DicCemeAccessoriesTypeDomain"/>
+		<reference name="dicCemeAccessoriesTypeDao" target="dicCemeAccessoriesTypeDao/dicCemeAccessoriesTypeDao"/>
+	</component>
+	<!--公墓审批附件表-->
+	<component name="fisCemeAccessoriesDao">
+		<service name="fisCemeAccessoriesDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCemeAccessoriesDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCemeAccessoriesDao"/>
+    </component>
+	<component name="fisCemeAccessoriesDomain">
+		<service name="fisCemeAccessoriesDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCemeAccessoriesDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCemeAccessoriesDomain"/>
+		<reference name="fisCemeAccessoriesDao" target="fisCemeAccessoriesDao/fisCemeAccessoriesDao"/>
+	</component>
+	<!--公墓年检审核结果表-->
+	<component name="fisCemeCheckResultDao">
+		<service name="fisCemeCheckResultDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCemeCheckResultDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCemeCheckResultDao"/>
+    </component>
+	<component name="fisCemeCheckResultDomain">
+		<service name="fisCemeCheckResultDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCemeCheckResultDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCemeCheckResultDomain"/>
+		<reference name="fisCemeCheckResultDao" target="fisCemeCheckResultDao/fisCemeCheckResultDao"/>
+	</component>
+	<!--公墓年检打分-->
+	<component name="fisCemeCheckScoreDao">
+		<service name="fisCemeCheckScoreDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCemeCheckScoreDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCemeCheckScoreDao"/>
+    </component>
+	<component name="fisCemeCheckScoreDomain">
+		<service name="fisCemeCheckScoreDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCemeCheckScoreDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCemeCheckScoreDomain"/>
+		<reference name="fisCemeCheckScoreDao" target="fisCemeCheckScoreDao/fisCemeCheckScoreDao"/>
+	</component>
+	<!--公墓流程历史记录表-->
+	<component name="fisCemeWfHistoryDao">
+		<service name="fisCemeWfHistoryDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCemeWfHistoryDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCemeWfHistoryDao"/>
+    </component>
+	<component name="fisCemeWfHistoryDomain">
+		<service name="fisCemeWfHistoryDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCemeWfHistoryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCemeWfHistoryDomain"/>
+		<reference name="fisCemeWfHistoryDao" target="fisCemeWfHistoryDao/fisCemeWfHistoryDao"/>
+	</component>
+
+	<!--公墓年检历史记录表 lf-->
+	<component name="fisCemeCheckHistoryDao">
+		<service name="fisCemeCheckHistoryDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCemeCheckHistoryDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCemeCheckHistoryDao"/>
+	</component>
+	<component name="fisCemeCheckHistoryDomain">
+		<service name="fisCemeCheckHistoryDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCemeCheckHistoryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCemeCheckHistoryDomain"/>
+		<reference name="fisCemeCheckHistoryDao" target="fisCemeCheckHistoryDao/fisCemeCheckHistoryDao"/>
+	</component>
+
+	<!--同级其它部门意见-->
+	<component name="fisCemeLogoffOpinionDao">
+		<service name="fisCemeLogoffOpinionDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCemeLogoffOpinionDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCemeLogoffOpinionDao"/>
+    </component>
+	<component name="fisCemeLogoffOpinionDomain">
+		<service name="fisCemeLogoffOpinionDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCemeLogoffOpinionDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCemeLogoffOpinionDomain"/>
+		<reference name="fisCemeLogoffOpinionDao" target="fisCemeLogoffOpinionDao/fisCemeLogoffOpinionDao"/>
+	</component>
+	<!--业务流程查询-->
+	<component name="fisCemeWorkflowQueryDao">
+		<service name="fisCemeWorkflowQueryDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCemeWorkflowQueryDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCemeWorkflowQueryDao"/>
+    </component>
+	<component name="fisCemeWorkflowQueryDomain">
+		<service name="fisCemeWorkflowQueryDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCemeWorkflowQueryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCemeWorkflowQueryDomain"/>
+		<reference name="fisCemeWorkflowQueryDao" target="fisCemeWorkflowQueryDao/fisCemeWorkflowQueryDao"/>
+		<reference name="activityLimitDefDao" target="activityLimitDefDao/activityLimitDefDao"/>
+	</component>
+	<!--扩建备案表wqf-->
+	<component name="fisCemeExpendInfoDao">
+		<service name="fisCemeExpendInfoDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCemeExpendInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCemeExpendInfoDao"/>
+    </component>
+    
+	<component name="fisCemeExpendInfoDomain">
+		<service name="fisCemeExpendInfoDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCemeExpendInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCemeExpendInfoDomain"/>
+		<reference name="fisCemeExpendInfoDao" target="fisCemeExpendInfoDao/fisCemeExpendInfoDao"/>
+	</component>
+	
+</composite>

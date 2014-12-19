@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	entityID="mysp">
+	<md:SPSSODescriptor AuthnRequestsSigned="true"
+		WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:ArtifactResolutionService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact"
+			Location="http://10.162.1.17:8080/sp/SPAssertionConsumer"
+			index="0" isDefault="true" />
+		<md:SingleLogoutService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="http://10.162.1.17:8080/sp/SAML2/samllogout"
+			ResponseLocation="http://10.162.1.17:8080/sp/SAML2/SPLogoutConsumer"
+			index="0"/>
+		<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+			Location="http://10.162.1.17:8080/sp/SAML2/logoutServiceSOAP" index="1"/>
+		<md:AssertionConsumerService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://10.162.1.17:8080/sp/SAML2/SPAssertionConsumer"
+			index="0" isDefault="true" />
+		<md:AssertionConsumerService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact"
+			Location="http://10.162.1.17:8080/sp/SAML2/SPAssertionConsumer"
+			index="1" isDefault="false" />
+		<md:AssertionConsumerService
+			Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+			Location="http://10.162.1.17:8080/sp/SAML2/SPAssertionConsumer"
+			index="2" isDefault="false" />
+	</md:SPSSODescriptor>
+</md:EntityDescriptor>

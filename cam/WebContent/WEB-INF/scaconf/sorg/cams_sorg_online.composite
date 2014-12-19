@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="history" xmlns="http://www.loushang.com/sca/1.0">
+	<!--社会团体网上申请-->
+	<component name="somGroupOnlineDomain">
+		<service name="somGroupOnlineDomain">
+			<interface.java interface="com.inspur.cams.sorg.online.apply.group.domain.ISomGroupOnlineDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.online.apply.group.domain.support.SomGroupOnlineDomain"/>	
+		<reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+		<reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+		<!--筹备-->
+		<reference name="somHeldPeopleDomain" target="somHeldPeopleDomain/somHeldPeopleDomain"/>
+		<reference name="somHeldOrganDomain" target="somHeldOrganDomain/somHeldOrganDomain"/>
+		<reference name="somAspchiefDomain" target="somAspchiefDomain/somAspchiefDomain"/>
+		<!--成立-->
+		 <reference name="somRuleDomain" target="somRuleDomain/somRuleDomain"/>
+       	 <reference name="somFeeDomain" target="somFeeDomain/somFeeDomain"/>
+       	 <!--变更-->
+       	 <reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+       	 <reference name="somChangeDomain" target="somChangeDomain/somChangeDomain"/>
+       	 <reference name="somDutyElectronicDao" target="somDutyElectronicDao/somDutyElectronicDao"/>
+       	  <reference name="somPeopleResumeDomain" target="somPeopleResumeDomain/somPeopleResumeDomain"/>
+		<!--注销-->
+		<reference name="somLiqpeopleDomain" target="somLiqpeopleDomain/somLiqpeopleDomain"/>    
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somSignetDomain" target="somSignetDomain/somSignetDomain"/>
+        <reference name="somPartyMemberDomain" target="SomPartyMemberDomain/SomPartyMemberDomain"/>
+        <reference name="somPartyPraiseDomain" target="somPartyPraiseDomain/somPartyPraiseDomain"/>
+	</component>
+	<!-- 基金会-->
+	<component name="somFundOnlineDomain">
+		<service name="somFundOnlineDomain">
+			<interface.java interface="com.inspur.cams.sorg.online.apply.fund.domain.ISomFundOnlineDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.online.apply.fund.domain.support.SomFundOnlineDomain"/>	
+		<reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+		<reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+		<!--筹备-->
+		<reference name="somHeldPeopleDomain" target="somHeldPeopleDomain/somHeldPeopleDomain"/>
+		<reference name="somHeldOrganDomain" target="somHeldOrganDomain/somHeldOrganDomain"/>
+		<reference name="somAspchiefDomain" target="somAspchiefDomain/somAspchiefDomain"/>
+		<!--成立-->
+		 <reference name="somRuleDomain" target="somRuleDomain/somRuleDomain"/>
+       	 <reference name="somFeeDomain" target="somFeeDomain/somFeeDomain"/>
+       	 <!--变更-->
+       	 <reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+       	 <reference name="somChangeDomain" target="somChangeDomain/somChangeDomain"/>
+       	 <reference name="somDutyElectronicDao" target="somDutyElectronicDao/somDutyElectronicDao"/>
+		<!--注销-->
+		<reference name="somLiqpeopleDomain" target="somLiqpeopleDomain/somLiqpeopleDomain"/>    
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somSignetDomain" target="somSignetDomain/somSignetDomain"/>
+        <reference name="somPartyMemberDomain" target="SomPartyMemberDomain/SomPartyMemberDomain"/>
+        <reference name="somPartyPraiseDomain" target="somPartyPraiseDomain/somPartyPraiseDomain"/>
+        
+         <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+       	<reference name="somElectionDao" target="somElectionDao/somElectionDao"/>
+       
+	</component>		
+	<!--民非网上申请业务-->
+	<component name="somUngovOnlineDomain">
+		<service name="somUngovOnlineDomain">
+			<interface.java interface="com.inspur.cams.sorg.online.apply.ungov.domain.ISomUngovOnlineDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.online.apply.ungov.domain.support.SomUngovOnlineDomain"/>	
+		<reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somOfficeDomain" target="somOfficeDomain/somOfficeDomain"/>
+        <reference name="somHeldPeopleDomain" target="somHeldPeopleDomain/somHeldPeopleDomain"/>
+        <reference name="somHeldOrganDomain" target="somHeldOrganDomain/somHeldOrganDomain"/>
+        <reference name="somRuleDomain" target="somRuleDomain/somRuleDomain"/>
+        <reference name="somAspchiefDomain" target="somAspchiefDomain/somAspchiefDomain"/>
+		<!--变更-->
+   	    <reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+   	    <reference name="somChangeDomain" target="somChangeDomain/somChangeDomain"/>
+   	    <reference name="somDutyElectronicDao" target="somDutyElectronicDao/somDutyElectronicDao"/>
+   	    <reference name="somPeopleResumeDomain" target="somPeopleResumeDomain/somPeopleResumeDomain"/>
+		<!--注销-->
+		<reference name="somLiqpeopleDomain" target="somLiqpeopleDomain/somLiqpeopleDomain"/>    
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somSignetDomain" target="somSignetDomain/somSignetDomain"/>
+        <reference name="somPartyMemberDomain" target="SomPartyMemberDomain/SomPartyMemberDomain"/>
+        <reference name="somPartyPraiseDomain" target="somPartyPraiseDomain/somPartyPraiseDomain"/>
+	</component>
+	<component name="somRuleOnlineDomain">
+	    <service name="somRuleOnlineDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.online.apply.rule.domain.ISomRuleOnlineDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.online.apply.rule.domain.support.SomRuleOnlineDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>	
+        <reference name="somRuleDao" target="somRuleDao/somRuleDao"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+    </component>
+    <component name="somFeeOnlineDomain">
+	    <service name="somFeeOnlineDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.online.apply.fee.domain.ISomFeeOnlineDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.online.apply.fee.domain.support.SomFeeOnlineDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>	
+        <reference name="somFeeDao" target="somFeeDao/somFeeDao"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+    </component>
+     <component name="somElectionOnlineDomain">
+	    <service name="somElectionOnlineDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.online.apply.election.domain.ISomElectionOnlineDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.online.apply.election.domain.support.SomElectionOnlineDomain"/>	
+        <reference name="somElectionDao" target="somElectionDao/somElectionDao"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somAspchiefDomain" target="somAspchiefDomain/somAspchiefDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>	
+    </component>
+    <component name="somElectionDelayOnlineDomain">
+	    <service name="somElectionDelayOnlineDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.online.apply.delayElection.domain.ISomElectionDelayOnlineDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.online.apply.delayElection.domain.support.SomElectionDelayOnlineDomain"/>	
+        <reference name="somElectionDao" target="somElectionDao/somElectionDao"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somAspchiefDomain" target="somAspchiefDomain/somAspchiefDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>	
+        <reference name="somSessionDomain" target="somSessionDomain/somSessionDomain"/>	
+    </component>
+    <component name="managePeopleDomain">
+		<service name="managePeopleDomain">
+			<interface.java interface="com.inspur.cams.sorg.online.apply.managePeople.domain.IManagePeopleDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.online.apply.managePeople.domain.support.ManagePeopleDomain"/>	
+		<reference name="somDutyDao" target="somDutyDao/somDutyDao"/>
+		<reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+		<reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+		<reference name="somSessionDomain" target="somSessionDomain/somSessionDomain"/>
+		<reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+		<reference name="somPeopleResumeDao" target="somPeopleResumeDao/somPeopleResumeDao"/>
+		<reference name="somAspchiefDao" target="somAspchiefDao/somAspchiefDao"/>
+		<reference name="somDutyElectronicDao" target="somDutyElectronicDao/somDutyElectronicDao"/>
+		 <reference name="somChangeDomain" target="somChangeDomain/somChangeDomain"/>
+	</component>
+</composite>

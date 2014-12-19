@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="common" xmlns="http://www.loushang.com/sca/1.0">
+	<description>打印</description>
+	
+	<!-- 评残等级审批申请表打印 -->
+	<component name="assDisdislityApp">
+		<service name="assDisdislityAppPrintDao">
+			<interface.java interface="com.inspur.cams.comm.print.dao.IPrintDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.print.dao.jdbc.AssDisabilityAppPrintDao"/>
+	</component>
+	
+	<!-- 迁移证明打印 -->
+	<component name="migrationApp">
+		<service name="migrationAppPrintDao">
+			<interface.java interface="com.inspur.cams.comm.print.dao.IPrintDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.print.dao.jdbc.MigrationAppPrintDao"/>
+	</component>	
+	
+	<!-- 外省迁入证明打印 -->
+	<component name="intoMigration">
+		<service name="intoMigrationPrintDao">
+			<interface.java interface="com.inspur.cams.comm.print.dao.IPrintDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.print.dao.jdbc.intoMigrationPrintDao"/>
+	</component>
+	<!-- 在乡复员军人审批表打印 -->
+	<component name="demobilizedAppPrint">
+		<service name="demobilizedAppPrtDao">
+			<interface.java interface="com.inspur.cams.comm.print.dao.IPrintDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.print.dao.jdbc.DemobilizedAppPrintDao"/>
+	</component>
+	<!-- 带病回乡退伍军人审批表打印 -->
+	<component name="demobilizedIllApp">
+		<service name="demobilizedIllAppPrintDao">
+			<interface.java interface="com.inspur.cams.comm.print.dao.IPrintDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.print.dao.jdbc.DemobilizedillnessAppPrintDao"/>
+	</component>
+	
+	<!-- 参战审批申请表打印 -->
+	<component name="warApp">
+		<service name="warAppPrintDao">
+			<interface.java interface="com.inspur.cams.comm.print.dao.IPrintDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.print.dao.jdbc.WarAppPrintDao"/>
+	</component>
+	
+	<!-- 参试审批申请表打印 -->
+	<component name="testApp">
+		<service name="testAppPrintDao">
+			<interface.java interface="com.inspur.cams.comm.print.dao.IPrintDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.print.dao.jdbc.TestAppPrintDao"/>
+	</component>
+	
+	<!-- 优抚对象临时救助审批表打印 -->
+	<component name="tempApp">
+		<service name="tempAppPrintDao">
+			<interface.java interface="com.inspur.cams.comm.print.dao.IPrintDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.print.dao.jdbc.TemporaryHelpAppPrintDao"/>
+	</component>
+	
+	<!-- 山东省领取定期抚恤金审批表打印 -->
+	<component name="dependantApp">
+		<service name="dependantAppPrintDao">
+			<interface.java interface="com.inspur.cams.comm.print.dao.IPrintDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.print.dao.jdbc.DependantAppPrintDao"/>
+	</component>
+	
+	<!-- 优抚对象定期认证打印 -->
+	<component name="reguIdentiApp">
+		<service name="reguIdentiAppPrintDao">
+			<interface.java interface="com.inspur.cams.comm.print.dao.IPrintDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.print.dao.jdbc.ReguIdentiAppPrintDao"/>
+	</component>
+	<!--   -->
+	<component name="soldierApp">
+		<service name="soldierPrintDao">
+			<interface.java interface="com.inspur.cams.comm.print.dao.IPrintDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.prs.print.PrintDao"/>
+	</component>
+	<!-- 公示书打印 -->
+	<component name="openLetterPrintdao">
+		<service name="openLetterPrintdao">
+			<interface.java interface="com.inspur.cams.comm.print.dao.IPrintDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.print.dao.jdbc.OpenLetterPrintDao"/>
+	</component>
+	<!-- 部分烈士（错杀被平反人员）子女审批表打印 -->
+	<component name="MartyrOffspringApp">
+		<service name="MartyrOffspringAppPrintDao">
+			<interface.java interface="com.inspur.cams.comm.print.dao.IPrintDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.print.dao.jdbc.MartyrOffspringAppPrintDao"/>
+	</component>
+	<!-- (殡葬)低保优抚对象信息打印 -->
+	<component name="lowBptInfo">
+		<service name="lowBptInfoPrintDao">
+			<interface.java interface="com.inspur.cams.comm.print.dao.IPrintDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.print.dao.jdbc.LowBptInfoPrintDao"/>
+	</component>
+</composite>

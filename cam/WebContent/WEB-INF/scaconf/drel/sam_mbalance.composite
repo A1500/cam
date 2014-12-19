@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+    <description>demo module</description>    
+     <!--  一站结算_住院登记-->
+    <component name="SamMBalanceDao">
+	    <service name="SamMBalanceDao">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.dao.ISamMBalanceDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.dao.jdbc.SamMBalanceDao"/>	
+    </component>
+    <component name="SamMBalanceDomain">
+	    <service name="SamMBalanceDomain">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.domain.ISamMBalanceDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.domain.support.SamMBalanceDomain"/>
+        <reference name="samMBalanceDao" target="SamMBalanceDao/SamMBalanceDao"/>
+        <reference name="insuranceDomain" target="SamInsuranceDomain/SamInsuranceDomain"/>
+        <reference name="detailExpenseDomain" target="samMedicalDetailExpenseDomain/samMedicalDetailExpenseDomain"/>
+        <reference name="samMedicalBeforeDomain" target="samMedicalBeforeDomain/samMedicalBeforeDomain"/>
+         
+    </component> 
+     
+    <component name="SamInsuranceDomain">
+	    <service name="SamInsuranceDomain">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.domain.ISamInsuranceDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.domain.support.SamInsuranceDomain"/>
+        <reference name="conConfigDomain" target="samMedicalConConfigDomain/samMedicalConConfigDomain"/>
+    </component>  
+    
+    <component name="SamMTopLineDao">
+	    <service name="SamMTopLineDao">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.dao.ISamMTopLineDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.dao.jdbc.SamMTopLineDao"/>	
+    </component>
+    <component name="SamMTopLineDomain">
+	    <service name="SamMTopLineDomain">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.domain.ISamMTopLineDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.domain.support.SamMTopLineDomain"/>
+        <reference name="samMTopLineDao" target="SamMTopLineDao/SamMTopLineDao"/>
+    </component>  
+    
+     <!--  一站结算_救助比例-->
+    <component name="samMedicalPerDao">
+	    <service name="samMedicalPerDao">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.dao.ISamMedicalPerDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.dao.jdbc.SamMedicalPerDao"/>	
+    </component>
+    <component name="samMedicalPerDomain">
+	    <service name="samMedicalPerDomain">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.domain.ISamMedicalPerDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.domain.support.SamMedicalPerDomain"/>
+        <reference name="samMedicalPerDao" target="samMedicalPerDao/samMedicalPerDao"/>
+    </component>  
+    
+     <!--  一站结算_优抚救助比例-->
+    <component name="samMedicalSpPerDao">
+	    <service name="samMedicalSpPerDao">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.dao.ISamMedicalSpPerDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.dao.jdbc.SamMedicalSpPerDao"/>	
+    </component>
+    <component name="samMedicalSpPerDomain">
+	    <service name="samMedicalSpPerDomain">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.domain.ISamMedicalSpPerDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.domain.support.SamMedicalSpPerDomain"/>
+        <reference name="samMedicalSpPerDao" target="samMedicalSpPerDao/samMedicalSpPerDao"/>
+    </component> 
+    
+     <!--  一站结算_救助封顶线-->
+    <component name="samMedicalTopLineDao">
+	    <service name="samMedicalTopLineDao">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.dao.ISamMedicalTopLineDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.dao.jdbc.SamMedicalTopLineDao"/>	
+    </component>
+    <component name="samMedicalTopLineDomain">
+	    <service name="samMedicalTopLineDomain">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.domain.ISamMedicalTopLineDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.domain.support.SamMedicalTopLineDomain"/>
+        <reference name="samMedicalTopLineDao" target="samMedicalTopLineDao/samMedicalTopLineDao"/>
+    </component> 
+    <!--  一站结算_医前救助-->
+    <component name="samMedicalBeforeDao">
+	    <service name="samMedicalBeforeDao">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.dao.ISamMedicalBeforeDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.dao.jdbc.SamMedicalBeforeDao"/>	
+    </component>
+    <component name="samMedicalBeforeDomain">
+	    <service name="samMedicalBeforeDomain">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.domain.ISamMedicalBeforeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.domain.support.SamMedicalBeforeDomain"/>
+        <reference name="samMedicalBeforeDao" target="samMedicalBeforeDao/samMedicalBeforeDao"/>
+    </component> 
+      <!--  一站结算_门规-->
+    <component name="samMedicalClinicSpDao">
+	    <service name="samMedicalClinicSpDao">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.dao.ISamMedicalClinicSpDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.dao.jdbc.SamMedicalClinicSpDao"/>	
+    </component>
+    <component name="samMedicalClinicSpDomain">
+	    <service name="samMedicalClinicSpDomain">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.domain.ISamMedicalClinicSpDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.domain.support.SamMedicalClinicSpDomain"/>
+        <reference name="samMedicalClinicSpDao" target="samMedicalClinicSpDao/samMedicalClinicSpDao"/>
+    </component> 
+    
+    <!--  医院配置入院备案的救助对象地域 -->
+    <component name="samMServiceAreaDao">
+	    <service name="samMServiceAreaDao">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.dao.ISamMServiceAreaDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.dao.jdbc.SamMServiceAreaDao"/>	
+    </component>
+    <component name="samMServiceAreaDomain">
+	    <service name="samMServiceAreaDomain">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.domain.ISamMServiceAreaDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.domain.support.SamMServiceAreaDomain"/>
+        <reference name="samMServiceAreaDao" target="samMServiceAreaDao/samMServiceAreaDao"/>
+    </component> 
+    
+    
+      <!--  一站结算_费用明细-->
+    <component name="samMedicalDetailExpenseDao">
+	    <service name="samMedicalDetailExpenseDao">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.dao.ISamMedicalDetailExpenseDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.dao.jdbc.SamMedicalDetailExpenseDao"/>	
+    </component>
+    <component name="samMedicalDetailExpenseDomain">
+	    <service name="samMedicalDetailExpenseDomain">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.domain.ISamMedicalDetailExpenseDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.domain.support.SamMedicalDetailExpenseDomain"/>
+        <reference name="samMedicalDetailExpenseDao" target="samMedicalDetailExpenseDao/samMedicalDetailExpenseDao"/>
+    </component> 
+      <!--  一站结算_医保连接配置-->
+    <component name="samMedicalConConfigDao">
+	    <service name="samMedicalConConfigDao">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.dao.ISamMedicalConConfigDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.dao.jdbc.SamMedicalConConfigDao"/>	
+    </component>
+    <component name="samMedicalConConfigDomain">
+	    <service name="samMedicalConConfigDomain">
+	    	<interface.java interface="com.inspur.cams.drel.mbalance.domain.ISamMedicalConConfigDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.drel.mbalance.domain.support.SamMedicalConConfigDomain"/>
+        <reference name="samMedicalConConfigDao" target="samMedicalConConfigDao/samMedicalConConfigDao"/>
+    </component> 
+    
+    
+    
+    
+</composite>

@@ -1,0 +1,6 @@
+CONTACTADDR.DELIVERYMODE=0:邮箱,1:手机
+SERVICESUBSCRIBE.CHOOSESTATE= 1:是,0:否
+ENGINE.MESSAGESTATE=0:草稿,1:未读,2:已读,5:删除
+ENGINE.SENDSTATE=0:草稿,1:等待,2:正在发送,3:部分发送成功,4:已发送,5:发送失败,6:部分已读,7:已读,8:作废,9:删除
+USER.GENDER=0:男,1:女
+SMS.PHRASES=0:早上好,1:晚安,2:下班啦!

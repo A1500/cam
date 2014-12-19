@@ -1,0 +1,132 @@
+.search {
+    background-image:url(../images/default/toolbar/search.png) !important;
+}
+.add {
+    background-image:url(../images/default/toolbar/add.gif) !important;
+}
+.remove {
+    background-image:url(../images/default/toolbar/remove.png) !important;
+}
+.delete {
+    background-image:url(../images/default/toolbar/delete.png) !important;
+}
+.save {
+    background-image:url(../images/default/toolbar/save.gif) !important;
+}
+.undo {
+    background-image:url(../images/default/toolbar/undo.jpg) !important;
+}
+.movePrev {
+    background-image:url(../images/default/toolbar/movePrev.gif) !important;
+}
+.moveNext {
+    background-image:url(../images/default/toolbar/moveNext.gif) !important;
+}
+.moveFirst {
+    background-image:url(../images/default/toolbar/moveFirst.gif) !important;
+}
+.moveLast {
+    background-image:url(../images/default/toolbar/moveLast.gif) !important;
+}
+.undo {
+    background-image:url(../images/default/toolbar/undo.gif) !important;
+}
+.query{
+    background-image: url(../images/default/toolbar/query.png) !important;
+}
+.yes{
+    background-image: url(../images/default/dd/drop-yes.gif) !important;
+}
+.no{
+    background-image: url(../images/default/dd/drop-no.gif) !important;
+}
+.edit{
+    background-image: url(../images/default/toolbar/edit.png) !important;
+}
+.detail{
+    background-image: url(../images/default/toolbar/detail.png) !important;
+}
+.disable{
+    background-image: url(../images/default/toolbar/disable.png) !important;
+}
+.male{
+    background-image: url(../images/default/toolbar/male.png) !important;
+}
+.female{
+    background-image: url(../images/default/toolbar/female.png) !important;
+}
+.print{
+    background-image: url(../images/default/toolbar/print.png) !important;
+}
+.select{
+    background-image: url(../images/default/toolbar/select.png) !important;
+}
+.install{
+    background-image: url(../images/default/toolbar/install.png) !important;
+}
+.execute{
+    background-image: url(../images/default/toolbar/execute.gif) !important;
+}
+.view{
+    background-image: url(../images/default/toolbar/view.png) !important;
+}
+.export{
+    background-image: url(../images/default/toolbar/export.png) !important;
+}
+.import{
+    background-image: url(../images/default/toolbar/import.png) !important;
+}
+.locate{
+    background-image: url(../images/default/toolbar/locate.png) !important;
+}
+.release{
+    background-image: url(../images/default/toolbar/release.gif) !important;
+}
+.return{
+    background-image: url(../images/default/toolbar/return.png) !important;
+}
+.send{
+    background-image: url(../images/default/toolbar/send.gif) !important;
+}
+.coverexport{
+    background-image: url(../images/default/toolbar/coverexport.png) !important;
+}
+.coverimport{
+    background-image: url(../images/default/toolbar/coverimport.png) !important;
+}
+.newservice{
+    background-image: url(../images/default/toolbar/newservice.gif) !important;
+}
+.batchdelete{
+    background-image: url(../images/default/toolbar/batchdelete.png) !important;
+}
+.start{
+    background-image: url(../images/default/toolbar/start.gif) !important;
+}
+.empty{
+    background-image: url(../images/default/toolbar/empty.gif) !important;
+}
+.saveall{
+    background-image: url(../images/default/toolbar/saveall.png) !important;
+}
+.upload{
+    background-image: url(../images/default/toolbar/upload.png) !important;
+}
+.charge{
+    background-image: url(../images/default/toolbar/charge.gif) !important;
+}
+.stop{
+    background-image: url(../images/default/toolbar/stop.gif) !important;
+}
+.statistics{
+    background-image: url(../images/default/toolbar/statistics.png) !important;
+}
+.chart{
+    background-image: url(../images/default/toolbar/chart.png) !important;
+}
+.uninstall{
+    background-image: url(../images/default/toolbar/uninstall.gif) !important;
+}
+.new{
+    background-image: url(../images/default/toolbar/new.gif) !important;
+}

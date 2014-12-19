@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="fiso" xmlns="http://www.loushang.com/sca/1.0">
+	<component name="FisFuneralImportService">
+		<service name="FisFuneralImportService">
+			<interface.java interface="com.inspur.cams.fis.base.service.IFisFuneralImportService"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.service.FisFuneralImportService"/>
+	</component>
+	<component name="FisFuneralImportServiceQd">
+		<service name="FisFuneralImportServiceQd">
+			<interface.java interface="com.inspur.cams.fis.base.service.IFisFuneralImportServiceQd"/>
+			<binding.sca/>
+			<binding.ws/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.service.FisFuneralImportServiceQd"/>
+		<reference name="qdDeadInfoRecieveDomain" target="qdDeadInfoRecieveDomain/qdDeadInfoRecieveDomain"/>
+		<reference name="qdUploadErrorsDomain" target="qdUploadErrorsDomain/qdUploadErrorsDomain"/>
+		<reference name="qdOrganInfoRecieveDomain" target="qdOrganInfoRecieveDomain/qdOrganInfoRecieveDomain"/>
+	</component>
+</composite>	

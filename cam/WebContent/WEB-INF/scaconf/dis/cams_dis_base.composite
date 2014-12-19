@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--救灾附件信息表-->
+	<component name="disAccessoriesDao">
+		<service name="disAccessoriesDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisAccessoriesDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisAccessoriesDao"/>
+    </component>
+	<component name="disAccessoriesDomain">
+		<service name="disAccessoriesDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisAccessoriesDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisAccessoriesDomain"/>
+		<reference name="disAccessoriesDao" target="disAccessoriesDao/disAccessoriesDao"/>
+	</component>
+	
+	<!--资金拨付表-->
+	<component name="disFundsSourceDao">
+		<service name="disFundsSourceDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisFundsSourceDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisFundsSourceDao"/>
+    </component>
+	<component name="disFundsSourceDomain">
+		<service name="disFundsSourceDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisFundsSourceDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisFundsSourceDomain"/>
+		<reference name="disFundsSourceDao" target="disFundsSourceDao/disFundsSourceDao"/>
+	</component>
+	<!--物资拨付明细表-->
+	<component name="disDetailSourceDao">
+		<service name="disDetailSourceDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisDetailSourceDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisDetailSourceDao"/>
+    </component>
+	<component name="disDetailSourceDomain">
+		<service name="disDetailSourceDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisDetailSourceDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisDetailSourceDomain"/>
+		<reference name="disDetailSourceDao" target="disDetailSourceDao/disDetailSourceDao"/>
+	</component>
+	<!--救灾发放物资类型(字典)-->
+	<component name="dicDisMaterialTypeDao">
+		<service name="dicDisMaterialTypeDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDicDisMaterialTypeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DicDisMaterialTypeDao"/>
+    </component>
+	<component name="dicDisMaterialTypeDomain">
+		<service name="dicDisMaterialTypeDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDicDisMaterialTypeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DicDisMaterialTypeDomain"/>
+		<reference name="dicDisMaterialTypeDao" target="dicDisMaterialTypeDao/dicDisMaterialTypeDao"/>
+	</component>
+	<!--直管单位配置表-->
+	<component name="disDirectManageUnitDao">
+		<service name="disDirectManageUnitDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisDirectManageUnitDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisDirectManageUnitDao"/>
+    </component>
+	<component name="disDirectManageUnitDomain">
+		<service name="disDirectManageUnitDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisDirectManageUnitDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisDirectManageUnitDomain"/>
+		<reference name="disDirectManageUnitDao" target="disDirectManageUnitDao/disDirectManageUnitDao"/>
+	</component>
+	<!--拨付资金关系表-->
+	<component name="disFundsBatchSourceDao">
+		<service name="disFundsBatchSourceDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisFundsBatchSourceDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisFundsBatchSourceDao"/>
+    </component>
+	<component name="disFundsBatchSourceDomain">
+		<service name="disFundsBatchSourceDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisFundsBatchSourceDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisFundsBatchSourceDomain"/>
+		<reference name="disFundsBatchSourceDao" target="disFundsBatchSourceDao/disFundsBatchSourceDao"/>
+	</component>
+	
+	<!--资金拨付批次表-->
+	<component name="disFundsBatchDao">
+		<service name="disFundsBatchDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisFundsBatchDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisFundsBatchDao"/>
+    </component>
+	<component name="disFundsBatchDomain">
+		<service name="disFundsBatchDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisFundsBatchDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisFundsBatchDomain"/>
+		<reference name="disFundsBatchDao" target="disFundsBatchDao/disFundsBatchDao"/>
+		<reference name="disFundsSourceDao" target="disFundsSourceDao/disFundsSourceDao"/>
+		<reference name="disFundsBatchSourceDao" target="disFundsBatchSourceDao/disFundsBatchSourceDao"/>
+		<reference name="disAccessoriesDao" target="disAccessoriesDao/disAccessoriesDao"/>
+	</component>
+	<!--物资采购使用资金关系表-->
+	<component name="disDetailBatchFundsSourceDao">
+		<service name="disDetailBatchFundsSourceDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisDetailBatchFundsSourceDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisDetailBatchFundsSourceDao"/>
+    </component>
+	<component name="disDetailBatchFundsSourceDomain">
+		<service name="disDetailBatchFundsSourceDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisDetailBatchFundsSourceDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisDetailBatchFundsSourceDomain"/>
+		<reference name="disDetailBatchFundsSourceDao" target="disDetailBatchFundsSourceDao/disDetailBatchFundsSourceDao"/>
+	</component>
+	<!--拨付物资关系表-->
+	<component name="disDetailBatchSourceDao">
+		<service name="disDetailBatchSourceDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisDetailBatchSourceDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisDetailBatchSourceDao"/>
+    </component>
+	<component name="disDetailBatchSourceDomain">
+		<service name="disDetailBatchSourceDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisDetailBatchSourceDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisDetailBatchSourceDomain"/>
+		<reference name="disDetailBatchSourceDao" target="disDetailBatchSourceDao/disDetailBatchSourceDao"/>
+	</component>
+	
+	<!--物资批次表-->
+	<component name="disDetailBatchDao">
+		<service name="disDetailBatchDao">
+			<interface.java interface="com.inspur.cams.dis.base.dao.IDisDetailBatchDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.dis.base.dao.jdbc.DisDetailBatchDao"/>
+    </component>
+	<component name="disDetailBatchDomain">
+		<service name="disDetailBatchDomain">
+			<interface.java interface="com.inspur.cams.dis.base.domain.IDisDetailBatchDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.dis.base.domain.support.DisDetailBatchDomain"/>
+		<reference name="disDetailBatchDao" target="disDetailBatchDao/disDetailBatchDao"/>
+		<reference name="disDetailSourceDao" target="disDetailSourceDao/disDetailSourceDao"/>
+		<reference name="disDetailBatchSourceDao" target="disDetailBatchSourceDao/disDetailBatchSourceDao"/>
+		<reference name="disDetailBatchFundsSourceDao" target="disDetailBatchFundsSourceDao/disDetailBatchFundsSourceDao"/>
+		<reference name="disFundsSourceDao" target="disFundsSourceDao/disFundsSourceDao"/>
+		<reference name="disAccessoriesDao" target="disAccessoriesDao/disAccessoriesDao"/>
+	</component>
+</composite>

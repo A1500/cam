@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Report class="com.fr.report.WorkSheet">
+<Version>6.2</Version>
+<TableDataMap>
+<NameTableData name="Age">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select * from Agebase]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="false" headerHeight="0.315" footerHeight="0.984">
+<Margin top="0.472" left="0.748" bottom="0.472" right="0.748" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="false" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[31,19,19,20]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[63,71,69,69]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="4" s="0"><O t="S"><![CDATA[Age Count of Employees]]></O>
+</C>
+<C c="0" r="1" cs="4" s="1"><O t="Formula" class="Formula" ><Attributes reserveExecute="true"><![CDATA[=date(2007,2,6)]]></Attributes></O>
+</C>
+<C c="0" r="2" s="2"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="1" r="2" s="2"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="2" r="2" s="3"><O t="DSColumn"><Attributes dsName="Age" columnName="Age" />
+<RG class="com.fr.report.cellElement.core.CustomGrouper"><Attr other="2" /><ConditionListGroup>
+<Display><![CDATA[Less than 20]]></Display><Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Age]]></CNAME><Compare op="5">
+<O t="S"><![CDATA[20]]></O>
+</Compare>
+</Condition>
+</ConditionListGroup>
+<ConditionListGroup>
+<Display><![CDATA[20~25]]></Display><Condition class="com.fr.data.condition.ListCondition"><JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Age]]></CNAME><Compare op="2">
+<O t="S"><![CDATA[20]]></O>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Age]]></CNAME><Compare op="5">
+<O t="S"><![CDATA[25]]></O>
+</Compare>
+</Condition>
+</JoinCondition>
+</Condition>
+</ConditionListGroup>
+<ConditionListGroup>
+<Display><![CDATA[25~30]]></Display><Condition class="com.fr.data.condition.ListCondition"><JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Age]]></CNAME><Compare op="2">
+<O t="S"><![CDATA[25]]></O>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Age]]></CNAME><Compare op="5">
+<O t="S"><![CDATA[30]]></O>
+</Compare>
+</Condition>
+</JoinCondition>
+</Condition>
+</ConditionListGroup>
+<ConditionListGroup>
+<Display><![CDATA[30~35]]></Display><Condition class="com.fr.data.condition.ListCondition"><JoinCondition join="1">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Age]]></CNAME><Compare op="2">
+<O t="S"><![CDATA[30]]></O>
+</Compare>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Age]]></CNAME><Compare op="5">
+<O t="S"><![CDATA[35]]></O>
+</Compare>
+</Condition>
+</JoinCondition>
+</Condition>
+</ConditionListGroup>
+<ConditionListGroup>
+<Display><![CDATA[More than 35]]></Display><Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Age]]></CNAME><Compare op="2">
+<O t="S"><![CDATA[35]]></O>
+</Compare>
+</Condition>
+</ConditionListGroup>
+</RG></O>
+<Expand dir="1" />
+</C>
+<C c="3" r="2" s="3"><O t="DSColumn"><Attributes dsName="Age" columnName="Sex" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="1" />
+</C>
+<C c="0" r="3" rs="2" s="4"><O t="DSColumn"><Attributes dsName="Age" columnName="City" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="1" r="3" s="5"><O t="DSColumn"><Attributes dsName="Age" columnName="Department" />
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG></O>
+<Expand dir="0" />
+</C>
+<C c="2" r="3" s="5"><O t="DSColumn"><Attributes dsName="Age" columnName="Age" />
+<RG class="com.fr.report.cellElement.core.SummaryGrouper"><FN><![CDATA[com.fr.data.util.function.CountFunction]]></FN></RG></O>
+</C>
+<C c="3" r="3" s="5"><O t="DSColumn"><Attributes dsName="Age" columnName="Age" />
+<RG class="com.fr.report.cellElement.core.SummaryGrouper"><FN><![CDATA[com.fr.data.util.function.CountFunction]]></FN></RG></O>
+</C>
+<C c="1" r="4" s="6"><O t="S"><![CDATA[Total]]></O>
+</C>
+<C c="2" r="4" s="7"><O t="Formula" class="Formula" ><Attributes reserveExecute="true"><![CDATA[=sum(C4)]]></Attributes></O>
+</C>
+<C c="3" r="4" s="7"><O t="Formula" class="Formula" ><Attributes reserveExecute="true"><![CDATA[=sum(D4)]]></Attributes></O>
+</C>
+<C c="4" r="6"><O t="S"><![CDATA[]]></O>
+</C>
+</CellElementList>
+<WorkSheetAttr />
+<StyleList>
+<Style horizontal_alignment="4">
+<FRFont name="SimSun" style="1" size="18" foreground="-8355840" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="4">
+<FRFont name="宋体" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="宋体" style="0" size="14" />
+<Background name="ColorBackground"
+ color="-5592496">
+</Background>
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="宋体" style="0" size="14" />
+<Background name="ColorBackground"
+ color="-5592496">
+</Background>
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="宋体" style="0" size="14" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-8355840"
+ /><Bottom style="1" color="-8355840"
+ /><Left color="-16777216"
+ /><Right color="-16777216"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="宋体" style="0" size="14" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-8355840"
+ /><Bottom style="1" color="-8355840"
+ /><Left color="-16777216"
+ /><Right color="-16777216"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="宋体" style="0" size="14" />
+<Background name="ColorBackground"
+ color="-2894935">
+</Background>
+<Border><Top color="-16777216"
+ /><Bottom style="1" color="-8355840"
+ /><Left color="-16777216"
+ /><Right color="-16777216"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="宋体" style="0" size="14" />
+<Background name="ColorBackground"
+ color="-2894935">
+</Background>
+<Border><Top color="-16777216"
+ /><Bottom style="1" color="-8355840"
+ /><Left color="-16777216"
+ /><Right color="-16777216"
+ /></Border>
+</Style>
+</StyleList>
+</Report>

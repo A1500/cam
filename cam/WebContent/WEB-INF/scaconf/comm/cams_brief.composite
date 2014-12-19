@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<component name="camsBriefCountDao">
+		<service name="camsBriefCountDao">
+			<interface.java interface="com.inspur.cams.comm.brief.dao.ICamsBriefCountDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.brief.dao.jdbc.CamsBriefCountDao"/>
+    </component>
+	<component name="camsBriefCountDomain">
+		<service name="camsBriefCountDomain">
+			<interface.java interface="com.inspur.cams.comm.brief.domain.ICamsBriefCountDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.brief.domain.support.CamsBriefCountDomain"/>
+		<reference name="camsBriefCountDao" target="camsBriefCountDao/camsBriefCountDao"/>
+	</component>
+	<component name="camsBriefConfigDao">
+		<service name="camsBriefConfigDao">
+			<interface.java interface="com.inspur.cams.comm.brief.dao.ICamsBriefConfigDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.brief.dao.jdbc.CamsBriefConfigDao"/>
+    </component>
+	<component name="camsBriefConfigDomain">
+		<service name="camsBriefConfigDomain">
+			<interface.java interface="com.inspur.cams.comm.brief.domain.ICamsBriefConfigDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.brief.domain.support.CamsBriefConfigDomain"/>
+		<reference name="camsBriefConfigDao" target="camsBriefConfigDao/camsBriefConfigDao"/>
+		<reference name="camsBriefCountDao" target="camsBriefCountDao/camsBriefCountDao"/>
+	</component>
+	<component name="camsBriefSeasonDao">
+		<service name="camsBriefSeasonDao">
+			<interface.java interface="com.inspur.cams.comm.brief.dao.ICamsBriefSeasonDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.brief.dao.jdbc.CamsBriefSeasonDao"/>
+    </component>
+	<component name="camsBriefSeasonDomain">
+		<service name="camsBriefSeasonDomain">
+			<interface.java interface="com.inspur.cams.comm.brief.domain.ICamsBriefSeasonDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.brief.domain.support.CamsBriefSeasonDomain"/>
+		<reference name="camsBriefSeasonDao" target="camsBriefSeasonDao/camsBriefSeasonDao"/>
+		<reference name="camsBriefCountDao" target="camsBriefCountDao/camsBriefCountDao"/>
+	</component>
+	<component name="camsReportWorkDao">
+		<service name="camsReportWorkDao">
+			<interface.java interface="com.inspur.cams.comm.brief.dao.ICamsReportWorkDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.brief.dao.jdbc.CamsReportWorkDao"/>
+    </component>
+	<component name="camsReportWorkDomain">
+		<service name="camsReportWorkDomain">
+			<interface.java interface="com.inspur.cams.comm.brief.domain.ICamsReportWorkDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.brief.domain.support.CamsReportWorkDomain"/>
+		<reference name="camsReportWorkDao" target="camsReportWorkDao/camsReportWorkDao"/>
+	</component>
+</composite>

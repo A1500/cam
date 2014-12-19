@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="specialConfig" xmlns="http://www.loushang.com/sca/1.0">
+
+	<component name="specFamilyDomain">
+		<service name="specFamilyDomain">
+			<interface.java interface="com.inspur.cams.drel.special.domain.ISpecFamilyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.special.domain.SpecFamilyDomain"/>
+		<reference name="specialpoorFamilyDao" target="specialpoorFamilyDao/specialpoorFamilyDao"/>
+		<reference name="specPeopleDomain" target="specPeopleDomain/specPeopleDomain"/>
+	</component>
+	<component name="specialpoorFamilyDao">
+		<service name="specialpoorFamilyDao">
+			<interface.java interface="com.inspur.cams.drel.special.dao.ISpecialpoorFamilyDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.special.dao.SpecialpoorFamilyDao"/>
+	</component>
+	
+	<component name="specialpoorFamilyTempDomain">
+		<service name="specialpoorFamilyTempDomain">
+			<interface.java interface="com.inspur.cams.drel.special.domain.ISpecialpoorFamilyTempDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.special.domain.SpecialpoorFamilyTempDomain"/>
+		<reference name="specialpoorFamilyTempDao" target="specialpoorFamilyTempDao/specialpoorFamilyTempDao"/>
+	</component>
+	<component name="specialpoorFamilyTempDao">
+		<service name="specialpoorFamilyTempDao">
+			<interface.java interface="com.inspur.cams.drel.special.dao.ISpecialpoorFamilyTempDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.special.dao.SpecialpoorFamilyTempDao"/>
+	</component>
+	
+	<component name="specPeopleDomain">
+		<service name="specPeopleDomain">
+			<interface.java interface="com.inspur.cams.drel.special.domain.ISpecPeopleDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.special.domain.SpecPeopleDomain"/>
+		<reference name="specialpoorPeopleDao" target="specialpoorPeopleDao/specialpoorPeopleDao"/>
+	</component>
+	<component name="specialpoorPeopleDao">
+		<service name="specialpoorPeopleDao">
+			<interface.java interface="com.inspur.cams.drel.special.dao.ISpecialpoorPeopleDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.special.dao.SpecialpoorPeopleDao"/>
+	</component>
+	
+	<!--特殊困难帮扶单位信息表-->
+	<component name="specialpoorSupportUnitDao">
+		<service name="specialpoorSupportUnitDao">
+			<interface.java interface="com.inspur.cams.drel.special.dao.ISpecialpoorSupportUnitDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.special.dao.jdbc.SpecialpoorSupportUnitDao"/>
+	</component>
+	<component name="specialpoorSupportUnitDomain">
+		<service name="specialpoorSupportUnitDomain">
+			<interface.java interface="com.inspur.cams.drel.special.domain.ISpecialpoorSupportUnitDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.special.domain.support.SpecialpoorSupportUnitDomain"/>
+		<reference name="specialpoorSupportUnitDao" target="specialpoorSupportUnitDao/specialpoorSupportUnitDao"/>
+	</component>
+	<!--帮包村信息表-->
+	<component name="specialpoorHelpVillageDao">
+		<service name="specialpoorHelpVillageDao">
+			<interface.java interface="com.inspur.cams.drel.special.dao.ISpecialpoorHelpVillageDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.special.dao.jdbc.SpecialpoorHelpVillageDao"/>
+	</component>
+	<component name="specialpoorHelpVillageDomain">
+		<service name="specialpoorHelpVillageDomain">
+			<interface.java interface="com.inspur.cams.drel.special.domain.ISpecialpoorHelpVillageDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.special.domain.support.SpecialpoorHelpVillageDomain"/>
+		<reference name="specialpoorHelpVillageDao" target="specialpoorHelpVillageDao/specialpoorHelpVillageDao"/>
+	</component>
+	<!--帮扶关系表-->
+	<component name="specialpoorSupportRefDao">
+		<service name="specialpoorSupportRefDao">
+			<interface.java interface="com.inspur.cams.drel.special.dao.ISpecialpoorSupportRefDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.special.dao.jdbc.SpecialpoorSupportRefDao"/>
+	</component>
+	<component name="specialpoorSupportRefDomain">
+		<service name="specialpoorSupportRefDomain">
+			<interface.java interface="com.inspur.cams.drel.special.domain.ISpecialpoorSupportRefDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.special.domain.support.SpecialpoorSupportRefDomain"/>
+		<reference name="specialpoorSupportRefDao" target="specialpoorSupportRefDao/specialpoorSupportRefDao"/>
+	</component>
+</composite>

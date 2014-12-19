@@ -1,0 +1,25 @@
+
+body { font-family:Verdana; font-size:14px; margin:0;}
+.container {margin:0 auto; width:100%;}
+.top{margin-bottom:5px;}
+.top-left { float:left; width:501px; height:800px;}
+.top-right { float:right; width:501px; height:800px;}
+.top-center { width:654px; height:800px; }
+
+.center { height:250px; margin-bottom:5px;}
+.center-right { float:right; width:50%; height:250px; }
+.center-left { width: 100%}
+
+.bottom { height:100px; margin-bottom:5px;}
+
+
+
+.top-left-t { height:150px;  margin-bottom:5px;}
+.top-left-c { height:194px;  margin-bottom:5px;}
+.top-left-b { height:150px;}
+
+
+.top-center-top { height:600px;  margin-bottom:5px;}
+.top-center-bottom { height:150px; }
+.top-center-b-l { float:right; width:50%; height:150px;}
+.top-center-b-r { width:100%;}

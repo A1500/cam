@@ -1,0 +1,57 @@
+<HTML>
+	<HEAD>
+		<title>图片选择</title>
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<LINK href="../css/pub.css" type="text/css" rel="stylesheet">
+		</HEAD>
+	
+	
+<script language="JavaScript" >
+function Button1_onclick() {
+	var path = form1.picfile.value.toString();
+	var index = path.lastIndexOf(".");
+	var type = path.substring(++index);
+    if( type !="jpg" && type != "bmp" && type != "gif" && type != "jpeg" && type!="JPG" && type!="BMP" && type!="GIF" && type!="JPEG")    //不是图片格式
+               alert("请选择图片类型文件,如jpg，bmp，jpeg类型文件上传！！！");
+    else
+    {
+		window.returnValue = form1.picfile.value;
+		window.close();
+    }
+}
+
+function Button2_onclick() {
+   window.close();
+}
+
+</script>
+	</head>
+<body MS_POSITIONING="GridLayout">
+		<form name="form1">
+		<table width="100%" cellSpacing="0">
+				<TBODY>
+					<tr>
+						<td class="tdfieldset" bgColor="#dfefff">
+							<FIELDSET>
+								<table class="tablebutton" cellSpacing="0">
+									<tr>
+										<td class="tdbuttonleft">
+										</td>
+										<td class="tdbutton"><button class="normal-button" id="btnOk" onmouseover="javascript:this.className = 'mouseover-button'"
+												onmouseout="javascript:this.className = 'normal-button'" type="button"  onclick="return Button1_onclick()">确定</button>     </td ><td><button class="normal-button" id="btnReturn" onmouseover="javascript:this.className = 'mouseover-button'"
+												onmouseout="javascript:this.className = 'normal-button'" type="button"  onclick="return Button2_onclick()">取消</button>
+										</td>
+									</tr>
+								</table>
+							</FIELDSET>
+						</td>
+					</tr>
+					<tr>
+					<td >
+					  <INPUT id="picfile" type="file" name="File1" >
+					</td></tr >
+			</TBODY >
+			</table >
+			</form>
+	</body>
+</html>

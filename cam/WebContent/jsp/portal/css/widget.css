@@ -1,0 +1,19 @@
+.dzcss {
+	font-family: "宋体";
+	font: 12px arial,sans-serif；
+	color: #000;
+}
+.tb{
+	border-left:0;
+	border-right:0;
+	border-top:0;
+	border-bottom:0;
+	border-color:#c0c0c0;
+}
+.td{
+	font-family: "宋体";
+	font: 12px arial,sans-serif；
+	color: #000;
+	border-right:solid 1px; 
+	border-bottom:solid 1px 
+}

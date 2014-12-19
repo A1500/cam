@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.EmbeddedTableData">
+<Parameters>
+</Parameters>
+<ColumnNames><![CDATA[ID,,.,,Vatiety,,.,,RecordDate,,.,,Value]]></ColumnNames>
+<ColumnTypes><![CDATA[java.lang.String,java.lang.String,java.lang.String,java.lang.Integer]]></ColumnTypes>
+<RowData>
+<![CDATA[D4EbL2*Gi2j76Lp-rL#L2t15WDpX&&"-_JiJVdtr%_Me"V!`Z#k:l6!TLohGMUIVd?(Sh2qu
+?T7,O[^DMYtuul!qF,;?3&]8cOe
+%:\cHc(^/r7P@/eaQE%/PQ-8Mil$EIO:RUkOI/8.>_"Er
+'n]C_DU"@J7$>#FD,@"62V^Ac_p6V(*T_)lg5EUuMg+kI*b;!ijU8`
+!MCo^7QZ%AJjnsfc;e
+n8u`am$+Uch=HR1,>KD9OhZt25tF7g9??.KI.J,!%!Qb"DEpK:pMH!=!]4ZW@$!mjju@T2o;
+!5^9WW><
+`+-@PB'$O;)15]RPh.QXBd2=bM[D2g9R-T@AUC!Zk)$;%?fElWGO"J$P"T4!%jIM
+f<B*_[F=p(R?k)*')"-=\cT"&'j#eal6(_1
+?;JqU54H[[^#$*I8+uf$MJ,u>XLL1*dkPtN2Z
+A-YVY;qu%]48%n0E=#rE_nH,FtIoBaH"9@6SgVU.OLG(3FAsAOWn,K8rSa6'l]
+\$+d3VRg.;
+1WemItZ\-0(HI.cr,T0EYK<B/(CK@N1PDnCJ&qcZc`D3Z.G\iZ\@5t\/T]E8!!gL@J1b5<,R
+SDNi5+*8A4=`0=4?
+f6G`T5^@3i-CodB$IGfd&(+T=-i/`=%R#!D:OdAc[e4JS"r*-"qfU-.K
+;TQBomC6.%5K\^*,u\^NDdZ6rFudXn3-JC9%DT2<K#q
+i@nfOB"3IT0O)C0q$%m:=#J=15U,_
+7's:)+EhMrb8o=p&<iDp+C_g%S">=-4b8uccnf/h&/.)<YA0fm\oq,@L7qR4>'N#MS")"X
+Re
+c*!@7GUtL=@sf6gdLiPMD@j-b1aEoglK)SjYVgP-,dn-a?rEoAl\pPGQ@q8QI$&_\;'<Gb.=
+5Z8+ANF]b6RO;kWS9V*!EEl5
+eYT5@`C/5J#A4E-%0B@bq)3?\dWOljcZ!Lf6'P!3)+5A6Y,N
+&YYH36=605Ujkc%FE)Q+_eF-cFd(_?dQmcf>%:MDcpsN!MIJBO^
+HU,\LI3ej@mK2=G;'+OkX
+&&Ya]k=]7VoDq6VUtZK6ogYS4.@=(q4&FK$;=NR\;WbrI\tR^B!"Uu<[rl_tr`GZI3+k\MmD
+\gGf^
+!:J>!pq#Q`X@OSC^'O2M.mdN0:[jP/c[i:Wk`#!6kA9($9qI99G0p[5Bk6W8:Klm#$f
+J:'fC6AOmdnI<R<X;mXI`0Wet+a]ok3J
+T3j?6,&D2B=:2tiUe^s*%p9XVrVR-*6MH0@,I/?<
+>)d#h^m?6,.-FD++K[/hRV'6ltWuL!]YBMXMVn\*s7FkfZ4T=X>)SE5:p`9
+]p7Z-GGklae6=
+;*5H&NH6;P:&f36NBm(3T:X,h4\UTGd;d?941(h7qFPi*ECYfDGT+0ah-$r.0Eer]:05.*`l
+lCAkC*<.@Dca,
+n2UYrDnHd-h[g+ZW5nqTe\RGWiKg$#k(qG_E7E[==L;_K'ib'jhU/L/`o<^
+c^4h#GLDIiqt_h_Mre\eVf*u<+_f(:MJSmg@:5AE
+1"ffoF^LjIFuK[.Rn:<:f3s6tjLGqTBX
+6madK\4&&I<8r[6,?kfuW-TPrI5WaLCR)+/3[j!Jk\BhE;I,,K3Y<N"crI3)WEpj%+0
+H4KqD
+WOO*P'E'+6>Z?ZT$lg#FP)S^\.4iYZlVPG*XZ>*n6d3#BJ:GupL<Ee1W1r_q!ar&Qj$=fdm-
+Fpc:l-<6_38?qWXR8aqj6
+Fo9n\f07V:AlOm`\)OPEqhK_pt<W@9hW2%lS`^e*>5t0NE4HNW!
+;_eEDu-C`%^MKJ<P?DoXEqDd@'qHu`*fG2J4Of/H-k8RRKB;
+ns6$,Dj3u7%h\0S0iu/cG7&_
+(,Vn:@6J,K(R?kWHuV$=_A="E,F`XHp>TQ$<A,n89_@=R`\fD#Ak_brY%Z0)F2?$q/rD0C],
+4W
+0],_Pn8R<4T?E`&J]S%u4S%P=q,ah)a=elEco"7`-lM:;SfDkjAs*fl2l(\kTVKVe6[*.5
+\JLuE36RY:/5EtG*f7m+Th1ng[_hV
+'AoBD7'[%;OG#f)p.T^d43!ki(TW;%bD>(%@leTDRmd
+![GH*?Ms\[:^F>7Q7U*gQjKOQ6=n>e-:h4VQ"F$1\IgTW6T*^6J%S:Ud
+rgNl5u#>8m\u*(@m
+*FD-4Z3d$=g%"t974<A:u8AFP+_:`W4>Za8gLnb)=:1Enp^3iMcJZpq7Vo:uZd1D`"LeLfj>
+oM">fZb!b*
+2U^k@9VBXsQpA9e0nBfE03?+PFBfUI1)&mFFXHaslO-F[]!`^5$R\3+ODUFa?a
+<CmO>#4_PF`'.na*&Vh8/;C=5't)/Mi6B%9&6
+[m4sf_bqbP8i7n*L[rs"/BBKlPm)aTp*oU^
+pWc)#nI/e9H!U.32!46>BPa8^MjU.JbMOE_QN$p3a,4-3V\tit2eht%#jM$c!_nh
+SDD*nEm^
+'tPD%&h,kbfgS>oaGqTI^$.knq1fh@`q_:;o>&@:KN5DE%JkQ2AY8b1)Aj,XDU(&p\,n;lrR
+38=l\D@om6>EW.:$LV
+9@%N<r',9O`h3P(Xs9W=&D=$R&$TUFA:$A>(BM](8)4r-E@gCb2%aV
+Wolg'B]jb[dX'lXb0Q[4^T)Jj]$jK%g$>ZAalt:Z93_1%
+otB;iPGI1VS)=n3NM)9B"u)I<9k
+Wc-2DkE`l'5rPFZE:g,s9Ps.h!6KMjg:haNE!j98T7:a5f.[V^:Grmc"jS.'?;k*+8n6&6&e
+
+r?g.h#Jr*kY^lY8`f@\Lrleo7fmg?fKr9j'$_!_TE(];iY1l1dDn%[kWfkc!GL^,h*,H*LW-
+;.s"5hrm)_(4^=^&JF]EI'@Y9P
+NEWk([b6ac+Z+*tTeGeBAFNRI*^tOF'P)kX`nIc$-$Gn-+
+6;ac%h&M_pkJg@Np'J"m*TTP)*DA,Ju*3EqLL9YA[QX57?;2,C$!F
+cW]@L<!>&pV'@0bMt(V
+m84VQr$Dl[9l)B.YM(,3LCOpQIDlK(a&@Y8'0F(qd1kQQBc5l)/3b:mTbLr*8;^6,12U*J@.
+Q(0Y^7'
+Q3$=#@#K.$Pi[)3@K26qKAk/d8[GW@CQ4<N>XmE<*AG)@5Y/hOSUrm.\@n1^onU]r
+q&)$Na4g:Ki>OKJ(#`DLG&W0BO&_=m4Rqt
+1'mPB3CK*JGN@A,'8:[8U1$6dm7;@+,2dj#R!d
+NbhWUIWsa6BAAJHleuYa0u.MM]+d)=0W@o7I2\kl?DX:K\U"i(L!ui(S,!W(Q
+>>crT_2dIW]
+%B^H/U2?QIo!;U:fo7?_$JZH4u/g%MI8!-S]W^M;R1:(#qU^"jdhV>te=$NY'9Qd$5<!;6M(
+l7m!EQUt!L9LdHE
+Eog/O.rfSJ=7o:X>RNRF%Z"PdHk2#8X"K82CGa/3[)G&FPV'C3Kl&-EP3
+7':10'5gOWP-9I(MpIADrrt'eRWt->3X0U@:iuY>Q$
+=M'L2=C)<Iu>fsoWFHnDj?>2#I*K-+
+YqgS>TiLoGV74^Ge%uA=Oh:SJLdIQ]4=?Y:B9`/-?Yj07IJMf[B#d!os7UX-[1]j.qU_2
+8M"
+-(+)+(rMM^V8_M@I_6o#fY+F,-66X&`Gn?Nj/CH7YJ\*0d=9>7j;3P.3IOB6]C7!bTd#8Y"p
+HED^4c;e[O$PCm;-iJCsRk+
+rn<C(#edjO9k:YgBd9Hg))L;H>S>*g4nG)C;>M8Ba;T'E]kPb
+L>2+ZL$oMW71Y2OL=k$ikQV^7ON_#)68H<]2`f_n02<'*HEh+<
+8)V>;48#[*?ERrgrmAtPE_
+tGG2a01++tV6MIkF)Y=Hf?T>_S3B-[km&#T_m"A[SLB]1s7&p?Rqt?=(BAfq3cnkMQ=0>NFL
+l9#U
+J`pE/`Wf5>k'.,M$2X#DQGk08dfA$]G+6DIfP-;@[8]HZ-[.0:FfqD&^tDQ%gS"21>N!
+,WbW5jpN6FEe&k^"F%^nfRqD1OmN93D
+<?*r+[^mbg,+eB,\)B1[/Va,P0TFg;IVG"UoMM&e7
+7mDEIs5)c+5JWSdr?1`;8>P+SO#9aG6)g;h<KXSe$YbaFa,Z8+A.mrB8ip
+Q(NcHkXFi?);.u
+I5YYep9_8jei#N&`Nq"HUA408M]F#qLWic<j@2^Xq](:iD4),^'Z/2Q:M54'Zt1cZ_rihghm
+D,5)n80k13oR
+B/p0V8I)-_0pB>>cpP\eP-bI>]:)8.rZW$dP=I8MB93,&Y'l06QCRPuRRMGd
+O\20\)<uL5mbK<(/B@-Nq1:9gDGHF,a48ds:k&O
+\gF2-C#FC\]:nP!9hI%1UeB3mf*1%Dh^R
+u(0n'm,,G5$&1f/jCNuIWtLn.VK_<.\UQef\%s=$l.0#:&BBX#;e;.(RA<mXt7,hcf
+^rdHWo
+/pbFN@XMoW<KBprs7:YV3n5`:+r"&sO$AWf)o\[8HO]#s+-9%n!Bp6qf5p/u)r'YRb'8o#ol
+/mkBoN\5q@%=Vg/=QkFq
+$\!#1))e-%"Hlqf1R#-.l=kA9EA-'RAm3q]CYN!/nn,:$aiY>i4/
+QUQ,E63d<&DR7pZUm1-c`M!Bo5;WdRefOS$i!32<Hh<g!ji
+1)[ef3rP(chfJju-NU'0>&"[L
+T:U7&\9oX4LM<[k*o?V0%(;H[Lo_rb<T_EqO!58D:")-"S-mQ(,bk0T-'C5.O3dOg1$iB(-!
+u
+pJ&PT"40qmLK`N)[$kb/Ri_dps.ZI[Z3^B\ZDKY_7=$qfr,1hbe+BGX,O'l$K'CT66uI6RT
+`tOX@s-niO_V\N7Sh]g[0Y[g;H`(
+?'B92#_V6!\Nh,TTU&efolQm;HNP8=.d\DoWFL2/f,*b
+\$$(2%pmkY5d0Y[._bW]2!m"h]1gX:PI/dam57JI:""KkBtr2ohs>u+
+/G?-O,HTR^NU)qW[k
+&,OXS0bAUIq#%`frB)_,]4=VU$Wc5_Xj.Pr?,0"DH3dc)aJU"p]p2s,dE1Q+?2`-k-D_g,L'
+GBiFG]n,K
+?h=uj7VRot=9["OR-0[gZ#Il7CNqr_5!W?"H0E1*7db<f<:l:9LZ[sfG_&Ir/I7
+6#]i(#e.C18V+bI*hYT,Is[Sd?SlACJ%f'46
+I8Ug6>CuGJ+<)EHhBWIMr"?bq,112G%bLe@$
+nYeheo.2!AZmF>_=#e[$HBH[W4Yk^W'>2RLeV1IC%9Zn*`9/1\.[/%-uZ[\%)No
+5C'&_IREQ
+X4WfQ>]+&C1:^[(>1ln&[kh+YbZ?/W.8Mi$K'FYndb8kFS%P7As2]&MP-lI&[TaZC/Ig'm#&
+$X3[&!fWdV6=ie$bf
+X@t^f9-84Rc2MI,r`Q#.PX4RtAHCR],@oooi4R>>&@5?t/h`MQH`nVY
+Q%^`NG9q.>NqtFSaTHeUFbktXF>41O`V15tkJX3AHp=T
+e\+j6."^s0P;4mS]c79Z@J-aWe8W
+r]f<!;W/8!%lu\nWW#K46^@EA/3SUkQBAtjP'(;!fM#0:F=8dnMs9r`kU4(--?2)F6-'Wf<
+g
+4\XHM:;;Su+A=\2=<WGS'A)6(OlWPgN.T(JBqo>'kaWlSh9bQE?T^k&Yq[[krl[JBh)~
+
+]]>
+</RowData>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings shrinkToFit="true" headerHeight="0.0" footerHeight="0.0">
+<Margin top="0.27" left="0.7499999999999999" bottom="0.27" right="0.7499999999999999" />
+</ReportSettings>
+<ReportPageAttr>
+</ReportPageAttr>
+<ReportParameterAttr>
+<Parameters>
+<Parameter>
+<Attributes name="Date"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[2008-01-01]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="Start"
+ type="5"
+ shown="true" />
+<O t="Date"><![CDATA[2008-12-11 16:49:53]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="End"
+ type="5"
+ shown="true" />
+<O t="Date"><![CDATA[2008-12-11 16:49:53]]></O>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</Parameter>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="1" userDefineWindow="true" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+<WorkSheet>
+<ReportSettings shrinkToFit="false" headerHeight="0.0" footerHeight="0.0">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<Header reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Footer>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[60,65,124,90]]>
+</ColumnWidth>
+<CellElementList>
+<C c="1" r="0" s="0"><O t="S"><![CDATA[周报查询：]]></O>
+</C>
+<C c="2" r="0" s="0"><O t="S"><![CDATA[请输入任意一天日期：]]></O>
+</C>
+<C c="3" r="0" s="0"><O t="PR" >
+<ParameterRef name="Date" />
+</O>
+</C>
+<C c="4" r="0" s="1"><O t="PB" >
+<ParameterButton name="查询" type="0" />
+</O>
+</C>
+<C c="1" r="1" cs="5" s="0"><O t="S"><![CDATA[可查询时间段：2008年上半年，即2008-01-01至2008-06-30任意一天。]]></O>
+</C>
+</CellElementList>
+</WorkSheet>
+<PP class="com.fr.report.parameter.CustomParameterProcessor">
+<UnitProcessorMap>
+<ParameterUnitProcessor parameter="End">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=TODATE($Date)-WEEKDAY(TODATE($Date))+6]]></Attributes><Result type="Date"><![CDATA[2008-01-05 00:00:00]]></Result></Formula></UP>
+</ParameterUnitProcessor>
+<ParameterUnitProcessor parameter="Start">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=TODATE($Date)-WEEKDAY(TODATE($Date))]]></Attributes><Result type="Date"><![CDATA[2007-12-30 00:00:00]]></Result></Formula></UP>
+</ParameterUnitProcessor>
+</UnitProcessorMap>
+</PP>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<Header reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Footer>
+<RowHeight defaultValue="19">
+<![CDATA[22,19,19,22,28]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[90,90,80]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="2" s="2"><O t="S"><![CDATA[建材销量周报查询]]></O>
+</C>
+<C c="0" r="1" s="3"><O t="S"><![CDATA[查询日期：]]></O>
+</C>
+<C c="1" r="1" s="3"><O t="Formula" class="Formula" ><Attributes><![CDATA[=TODATE($Date)]]></Attributes></O>
+</C>
+<C c="0" r="3" cs="2" s="4"></C>
+<C c="0" r="4" s="5"><O type="BiasTextPainter">
+<IsBackSlash value="false"/>
+<![CDATA[种类|日期]]>
+</O>
+
+</C>
+<C c="1" r="4" s="6"><O t="DSColumn"><Attributes dsName="ds1" columnName="Vatiety" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="1" />
+</C>
+<C c="0" r="5" s="5"><O t="DSColumn"><Attributes dsName="ds1" columnName="RecordDate" />
+<Condition class="com.fr.data.condition.ListCondition"><JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition"><Formula>
+<![CDATA[=RecordDate>=TODATE($Start)]]>
+</Formula>
+</Condition>
+</JoinCondition>
+<JoinCondition join="0">
+<Condition class="com.fr.data.condition.FormulaCondition"><Formula>
+<![CDATA[=RecordDate<=TODATE($End)]]>
+</Formula>
+</Condition>
+</JoinCondition>
+</Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.ListCondition"></Condition>
+<HighlightAction class="com.fr.report.highlight.ValueHighlightAction">
+<O t="Formula" class="Formula" ><Attributes><![CDATA[=TODATE($$$)]]></Attributes></O>
+</HighlightAction>
+</Highlight></HighlightList><Expand dir="0" />
+</C>
+<C c="1" r="5" s="7"><O t="DSColumn"><Attributes dsName="ds1" columnName="Value" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.SummaryGrouper"><FN><![CDATA[com.fr.data.util.function.SumFunction]]></FN></RG><Result><![CDATA[$$$]]></Result></O>
+<HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.ListCondition"></Condition>
+<HighlightAction class="com.fr.report.highlight.ValueHighlightAction">
+<O t="Formula" class="Formula" ><Attributes><![CDATA[=CONCATENATE("￥",$$$)]]></Attributes></O>
+</HighlightAction>
+</Highlight><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.FormulaCondition"><Formula>
+<![CDATA[=row()%2==1]]>
+</Formula>
+</Condition>
+<HighlightAction class="com.fr.report.highlight.BackgroundHighlightAction">
+<Background name="ColorBackground"
+ color="-525313">
+</Background>
+</HighlightAction>
+</Highlight></HighlightList></C>
+<C c="0" r="7" cs="2" s="8"><O t="S"><![CDATA[“建材销量周报查询”报表功能应用说明：]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="0" r="8" cs="2" s="9"><O t="S"><![CDATA[1、参数处理器]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="0" r="9" cs="2" s="9"><O t="S"><![CDATA[     任意输入一天，系统可计算出这天所在周的起始日期和结束日期。]]></O>
+</C>
+<C c="0" r="10" cs="2" s="10"><O t="S"><![CDATA[     该报表为周报查询，您只需要输入任意一天，即可查询这天所在周的所有销量记录，这一点极大方便了查询。]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style vertical_alignment="3" imageLayout="2">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0" vertical_alignment="3" imageLayout="2">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="1" size="14" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ImageBackground"
+ specifiedImageWidth="-1.0"
+ specifiedImageHeight="-1.0"
+ layout="2">
+<Image width="271" height="20">
+<![CDATA[mDD3s_Ctrm_#OF0>K!!9WJ6!OQ7+.ZoaQ9>0E]d2laNppWiE)!WiGp)li!RsTDPW,0?[QWIV
+_g1pu1d?NUQ%!281S82*R8))W+4
+iebJi;<TD!-WQ)u!;iUeW~
+
+]]>
+</Image>
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-853505">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-853505">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Top style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Bottom style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

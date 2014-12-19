@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select * from Menology]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<ReportSettings orientation="1" shrinkToFit="true" headerHeight="0.33" footerHeight="0.33">
+<PaperSize width="11.693" height="16.536" />
+<Margin top="0.27" left="0.7499999999999999" bottom="0.27" right="0.7499999999999999" />
+</ReportSettings>
+<ReportPageAttr>
+<HR F="0" T="7" /></ReportPageAttr>
+<ReportParameterAttr>
+<Parameters>
+<Parameter>
+<Attributes name="month"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="1:I" value="1:I"/>
+<Dict key="2:I" value="2:I"/>
+<Dict key="3:I" value="3:I"/>
+<Dict key="4:I" value="4:I"/>
+<Dict key="5:I" value="5:I"/>
+<Dict key="6:I" value="6:I"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="year"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="2007:I" value="2007:I"/>
+<Dict key="2008:I" value="2008:I"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="ID"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="1:I" value="1:I"/>
+<Dict key="2:I" value="2:I"/>
+<Dict key="3:I" value="3:I"/>
+<Dict key="4:I" value="4:I"/>
+<Dict key="5:I" value="5:I"/>
+<Dict key="6:I" value="6:I"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</Parameter>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="false" windowPosition="1" userDefineWindow="true" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+<WorkSheet>
+<ReportSettings shrinkToFit="false" headerHeight="0.33" footerHeight="0.33">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<Header reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Footer>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[55,65,60,40,70,40,70]]>
+</ColumnWidth>
+<CellElementList>
+<C c="1" r="0" s="0"><O t="S"><![CDATA[企业序号：]]></O>
+</C>
+<C c="2" r="0" s="0"><O t="Parameter"><Attributes name="ID"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="1:I" value="1:I"/>
+<Dict key="2:I" value="2:I"/>
+<Dict key="3:I" value="3:I"/>
+<Dict key="4:I" value="4:I"/>
+<Dict key="5:I" value="5:I"/>
+<Dict key="6:I" value="6:I"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</O>
+</C>
+<C c="3" r="0" s="0"><O t="S"><![CDATA[年度：]]></O>
+</C>
+<C c="4" r="0" s="0"><O t="Parameter"><Attributes name="year"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="2007:I" value="2007:I"/>
+<Dict key="2008:I" value="2008:I"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</O>
+</C>
+<C c="5" r="0" s="0"><O t="S"><![CDATA[月份：]]></O>
+</C>
+<C c="6" r="0" s="0"><O t="Parameter"><Attributes name="month"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="1:I" value="1:I"/>
+<Dict key="2:I" value="2:I"/>
+<Dict key="3:I" value="3:I"/>
+<Dict key="4:I" value="4:I"/>
+<Dict key="5:I" value="5:I"/>
+<Dict key="6:I" value="6:I"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</O>
+</C>
+<C c="7" r="0" s="1"><O t="PB" >
+<ParameterButton name="查询" type="0" />
+</O>
+</C>
+</CellElementList>
+</WorkSheet>
+<PP class="com.fr.report.parameter.CustomParameterProcessor">
+<UnitProcessorMap>
+<ParameterUnitProcessor parameter="month">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($month=='',nofilter,$month)]]></Attributes><Result type="String"></Result></Formula></UP>
+</ParameterUnitProcessor>
+<ParameterUnitProcessor parameter="ID">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($ID=='',nofilter,$ID)]]></Attributes><Result type="String"></Result></Formula></UP>
+</ParameterUnitProcessor>
+<ParameterUnitProcessor parameter="year">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($year=='',nofilter,$year)]]></Attributes><Result type="String"></Result></Formula></UP>
+</ParameterUnitProcessor>
+</UnitProcessorMap>
+</PP>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+<Submiter class="com.fr.report.write.BuiltInSQLSubmiter" name="内置SQL1">
+<Attributes dsName="FRDemo" tableName="Menology" />
+<Column isKey="true" name="ID">
+<ColumnRow column="1" row="8"/>
+</Column>
+<Column isKey="false" name="Company">
+<ColumnRow column="2" row="8"/>
+</Column>
+<Column isKey="false" name="EmployeeNumber">
+<ColumnRow column="5" row="8"/>
+</Column>
+<Column isKey="false" name="Assets">
+<ColumnRow column="6" row="8"/>
+</Column>
+<Column isKey="false" name="Liability">
+<ColumnRow column="7" row="8"/>
+</Column>
+<Column isKey="false" name="OwnersEquity">
+<ColumnRow column="8" row="8"/>
+</Column>
+<Column isKey="true" name="Year">
+<ColumnRow column="3" row="8"/>
+</Column>
+<Column isKey="true" name="Month">
+<ColumnRow column="4" row="8"/>
+</Column>
+<Column isKey="false" name="OperatingIncome">
+<ColumnRow column="9" row="8"/>
+</Column>
+<Column isKey="false" name="IncomeTotal">
+<ColumnRow column="10" row="8"/>
+</Column>
+<Column isKey="false" name="OperatingCosts">
+<ColumnRow column="11" row="8"/>
+</Column>
+<Column isKey="false" name="CostsTotal">
+<ColumnRow column="12" row="8"/>
+</Column>
+<Column isKey="false" name="Profits">
+<ColumnRow column="13" row="8"/>
+</Column>
+<Column isKey="false" name="ProfitsTotal">
+<ColumnRow column="14" row="8"/>
+</Column>
+<Column isKey="false" name="SignMan">
+<ColumnRow column="3" row="3"/>
+</Column>
+</Submiter>
+<NameJavaScriptGroup>
+<NameJavaScript name="success">
+</NameJavaScript>
+<NameJavaScript name="fail">
+</NameJavaScript>
+</NameJavaScriptGroup>
+</ReportWriteAttr>
+<Header reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Footer>
+<RowHeight defaultValue="19">
+<![CDATA[19,22,19,19,19,26,22,22,22]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[72,52,100,72,72,72,62,61,82]]>
+</ColumnWidth>
+<CellElementList>
+<C c="1" r="1" cs="14" s="2"><O t="S"><![CDATA[07、08年度企业上半年经营月报]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="1" r="3" cs="2" s="3"><O t="S"><![CDATA[填报人:]]></O>
+</C>
+<C c="3" r="3" cs="2"><O t="S"><![CDATA[]]></O>
+<CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="1" r="4" cs="2" s="3"><O t="S"><![CDATA[报表日期:]]></O>
+</C>
+<C c="3" r="4" cs="2"><O t="Formula" class="Formula" ><Attributes><![CDATA[=$year+" 年 "+$ month+" 月"]]></Attributes></O>
+</C>
+<C c="5" r="4"></C>
+<C c="6" r="4"></C>
+<C c="7" r="4"></C>
+<C c="8" r="4"></C>
+<C c="1" r="5" cs="14" s="4"></C>
+<C c="1" r="6" cs="2" s="5"><O t="S"><![CDATA[企业]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="3" r="6" rs="2" s="5"><O t="S"><![CDATA[年份]]></O>
+</C>
+<C c="4" r="6" rs="2" s="5"><O t="S"><![CDATA[月份]]></O>
+</C>
+<C c="5" r="6" rs="2" s="5"><O t="S"><![CDATA[员工数量]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="6" r="6" rs="2" s="5"><O t="S"><![CDATA[资产总计(万元)]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="7" r="6" rs="2" s="5"><O t="S"><![CDATA[负债总计(万元)]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="8" r="6" rs="2" s="6"><O t="S"><![CDATA[所有者权益]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="9" r="6" cs="2" s="5"><O t="S"><![CDATA[营业总收入(万元)]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="11" r="6" cs="2" s="5"><O t="S"><![CDATA[营业总成本(万元)]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="13" r="6" cs="2" s="5"><O t="S"><![CDATA[利润总额(万元)]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="1" r="7" s="7"><O t="S"><![CDATA[序号]]></O>
+</C>
+<C c="2" r="7" s="7"><O t="S"><![CDATA[公司名称]]></O>
+</C>
+<C c="9" r="7" s="7"><O t="S"><![CDATA[本月]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="10" r="7" s="8"><O t="S"><![CDATA[累计]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="11" r="7" s="7"><O t="S"><![CDATA[本月]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="12" r="7" s="7"><O t="S"><![CDATA[累计]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="13" r="7" s="7"><O t="S"><![CDATA[本月]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="14" r="7" s="7"><O t="S"><![CDATA[累计]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="1" r="8" s="9"><O t="DSColumn"><Attributes dsName="ds1" columnName="ID" />
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[ID]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="ID"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="1:I" value="1:I"/>
+<Dict key="2:I" value="2:I"/>
+<Dict key="3:I" value="3:I"/>
+<Dict key="4:I" value="4:I"/>
+<Dict key="5:I" value="5:I"/>
+<Dict key="6:I" value="6:I"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="2" r="8" s="9"><O t="DSColumn"><Attributes dsName="ds1" columnName="Company" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+<WRoleNames>
+<![CDATA[录入-中航鑫港担保公司.,;录入-动力能源公司.,;录入-医院.,;录入-博维公司.,;录入-商贸公司.,;录入-地产集团.,;录入-地服公司.,;录入-安保公司.,;录入-干线机场.,;录入-广告公司.,;录入-建设集团.,;录入-旅业公司.,;录入-机场综保部.,;录入-民族证券.,;录入-民航工程咨询.,;录入-物业.,;录入-航港物流.,;录入-航港科技公司.,;录入-苏州国信.,;录入-要客部.,;录入-财务公司.,;录入-配餐公司.,;录入-金元证券.,;录入-餐饮公司.,;录入-股份公司]]>
+</WRoleNames>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="3" r="8" s="9"><O t="DSColumn"><Attributes dsName="ds1" columnName="Year" />
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Year]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="year"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="2007:I" value="2007:I"/>
+<Dict key="2008:I" value="2008:I"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="4" r="8" s="9"><O t="DSColumn"><Attributes dsName="ds1" columnName="Month" />
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Month]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="month"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="1:I" value="1:I"/>
+<Dict key="2:I" value="2:I"/>
+<Dict key="3:I" value="3:I"/>
+<Dict key="4:I" value="4:I"/>
+<Dict key="5:I" value="5:I"/>
+<Dict key="6:I" value="6:I"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="5" r="8" s="9"><O t="DSColumn"><Attributes dsName="ds1" columnName="EmployeeNumber" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+<WRoleNames>
+<![CDATA[录入-中航鑫港担保公司.,;录入-动力能源公司.,;录入-医院.,;录入-博维公司.,;录入-商贸公司.,;录入-地产集团.,;录入-地服公司.,;录入-安保公司.,;录入-干线机场.,;录入-广告公司.,;录入-建设集团.,;录入-旅业公司.,;录入-机场综保部.,;录入-民族证券.,;录入-民航工程咨询.,;录入-物业.,;录入-航港物流.,;录入-航港科技公司.,;录入-苏州国信.,;录入-要客部.,;录入-财务公司.,;录入-配餐公司.,;录入-金元证券.,;录入-餐饮公司.,;录入-股份公司]]>
+</WRoleNames>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.NumberCellEditorDef"><Attributes allowBlank="true" />
+<Attribute maxIntegerLength="32" maxDecimalLength="16" allowDecimals="false" allowNegative="false" minValue="-1.7976931348623157E308" maxValue="1.7976931348623157E308" />
+</CellEditorDef>
+</C>
+<C c="6" r="8" s="9"><O t="DSColumn"><Attributes dsName="ds1" columnName="Assets" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+<WRoleNames>
+<![CDATA[录入-中航鑫港担保公司.,;录入-动力能源公司.,;录入-医院.,;录入-博维公司.,;录入-商贸公司.,;录入-地产集团.,;录入-地服公司.,;录入-安保公司.,;录入-干线机场.,;录入-广告公司.,;录入-建设集团.,;录入-旅业公司.,;录入-机场综保部.,;录入-民族证券.,;录入-民航工程咨询.,;录入-物业.,;录入-航港物流.,;录入-航港科技公司.,;录入-苏州国信.,;录入-要客部.,;录入-财务公司.,;录入-配餐公司.,;录入-金元证券.,;录入-餐饮公司.,;录入-股份公司]]>
+</WRoleNames>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.NumberCellEditorDef"><Attributes allowBlank="true" />
+<Attribute maxIntegerLength="32" maxDecimalLength="16" allowDecimals="true" allowNegative="true" minValue="-1.7976931348623157E308" maxValue="1.7976931348623157E308" />
+</CellEditorDef>
+</C>
+<C c="7" r="8" s="10"><O t="DSColumn"><Attributes dsName="ds1" columnName="Liability" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+<WRoleNames>
+<![CDATA[录入-中航鑫港担保公司.,;录入-动力能源公司.,;录入-医院.,;录入-博维公司.,;录入-商贸公司.,;录入-地产集团.,;录入-地服公司.,;录入-安保公司.,;录入-干线机场.,;录入-广告公司.,;录入-建设集团.,;录入-旅业公司.,;录入-机场综保部.,;录入-民族证券.,;录入-民航工程咨询.,;录入-物业.,;录入-航港物流.,;录入-航港科技公司.,;录入-苏州国信.,;录入-要客部.,;录入-财务公司.,;录入-配餐公司.,;录入-金元证券.,;录入-餐饮公司.,;录入-股份公司]]>
+</WRoleNames>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.NumberCellEditorDef"><Attributes allowBlank="true" />
+<Attribute maxIntegerLength="32" maxDecimalLength="16" allowDecimals="true" allowNegative="true" minValue="-1.7976931348623157E308" maxValue="1.7976931348623157E308" />
+</CellEditorDef>
+</C>
+<C c="8" r="8" s="11"><O t="Formula" class="Formula" ><Attributes><![CDATA[=G9-H9]]></Attributes></O>
+<CellWriteAttr>
+</CellWriteAttr>
+</C>
+<C c="9" r="8" s="12"><O t="DSColumn"><Attributes dsName="ds1" columnName="OperatingIncome" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+<WRoleNames>
+<![CDATA[录入-中航鑫港担保公司.,;录入-动力能源公司.,;录入-医院.,;录入-博维公司.,;录入-商贸公司.,;录入-地产集团.,;录入-地服公司.,;录入-安保公司.,;录入-干线机场.,;录入-广告公司.,;录入-建设集团.,;录入-旅业公司.,;录入-机场综保部.,;录入-民族证券.,;录入-民航工程咨询.,;录入-物业.,;录入-航港物流.,;录入-航港科技公司.,;录入-苏州国信.,;录入-要客部.,;录入-财务公司.,;录入-配餐公司.,;录入-金元证券.,;录入-餐饮公司.,;录入-股份公司]]>
+</WRoleNames>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.NumberCellEditorDef"><Attributes allowBlank="true" />
+<Attribute maxIntegerLength="32" maxDecimalLength="16" allowDecimals="true" allowNegative="true" minValue="-1.7976931348623157E308" maxValue="1.7976931348623157E308" />
+</CellEditorDef>
+</C>
+<C c="10" r="8" s="11"><O t="Formula" class="Formula" ><Attributes><![CDATA[=K9[E9:-1]+J9]]></Attributes></O>
+<CellWriteAttr>
+</CellWriteAttr>
+</C>
+<C c="11" r="8" s="13"><O t="DSColumn"><Attributes dsName="ds1" columnName="OperatingCosts" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+<CellWriteAttr appType="0" delType="1">
+<WRoleNames>
+<![CDATA[录入-中航鑫港担保公司.,;录入-动力能源公司.,;录入-医院.,;录入-博维公司.,;录入-商贸公司.,;录入-地产集团.,;录入-地服公司.,;录入-安保公司.,;录入-干线机场.,;录入-广告公司.,;录入-建设集团.,;录入-旅业公司.,;录入-机场综保部.,;录入-民族证券.,;录入-民航工程咨询.,;录入-物业.,;录入-航港物流.,;录入-航港科技公司.,;录入-苏州国信.,;录入-要客部.,;录入-财务公司.,;录入-配餐公司.,;录入-金元证券.,;录入-餐饮公司.,;录入-股份公司]]>
+</WRoleNames>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.NumberCellEditorDef"><Attributes allowBlank="true" />
+<Attribute maxIntegerLength="32" maxDecimalLength="16" allowDecimals="true" allowNegative="true" minValue="-1.7976931348623157E308" maxValue="1.7976931348623157E308" />
+</CellEditorDef>
+</C>
+<C c="12" r="8" s="11"><O t="Formula" class="Formula" ><Attributes><![CDATA[=M9[E9:-1]+L9]]></Attributes></O>
+<Expand dir="0" />
+<CellWriteAttr>
+<WRoleNames>
+<![CDATA[录入-中航鑫港担保公司.,;录入-动力能源公司.,;录入-医院.,;录入-博维公司.,;录入-商贸公司.,;录入-地产集团.,;录入-地服公司.,;录入-安保公司.,;录入-干线机场.,;录入-广告公司.,;录入-建设集团.,;录入-旅业公司.,;录入-机场综保部.,;录入-民族证券.,;录入-民航工程咨询.,;录入-物业.,;录入-航港物流.,;录入-航港科技公司.,;录入-苏州国信.,;录入-要客部.,;录入-财务公司.,;录入-配餐公司.,;录入-金元证券.,;录入-餐饮公司.,;录入-股份公司]]>
+</WRoleNames>
+</CellWriteAttr>
+</C>
+<C c="13" r="8" s="11"><O t="Formula" class="Formula" ><Attributes><![CDATA[=J9-L9]]></Attributes></O>
+<Expand dir="0" />
+<CellWriteAttr>
+<WRoleNames>
+<![CDATA[录入-中航鑫港担保公司.,;录入-动力能源公司.,;录入-医院.,;录入-博维公司.,;录入-商贸公司.,;录入-地产集团.,;录入-地服公司.,;录入-安保公司.,;录入-干线机场.,;录入-广告公司.,;录入-建设集团.,;录入-旅业公司.,;录入-机场综保部.,;录入-民族证券.,;录入-民航工程咨询.,;录入-物业.,;录入-航港物流.,;录入-航港科技公司.,;录入-苏州国信.,;录入-要客部.,;录入-财务公司.,;录入-配餐公司.,;录入-金元证券.,;录入-餐饮公司.,;录入-股份公司]]>
+</WRoleNames>
+</CellWriteAttr>
+</C>
+<C c="14" r="8" s="11"><O t="Formula" class="Formula" ><Attributes><![CDATA[=K9-M9]]></Attributes></O>
+<Expand dir="0" />
+<CellWriteAttr>
+<WRoleNames>
+<![CDATA[录入-中航鑫港担保公司.,;录入-动力能源公司.,;录入-医院.,;录入-博维公司.,;录入-商贸公司.,;录入-地产集团.,;录入-地服公司.,;录入-安保公司.,;录入-干线机场.,;录入-广告公司.,;录入-建设集团.,;录入-旅业公司.,;录入-机场综保部.,;录入-民族证券.,;录入-民航工程咨询.,;录入-物业.,;录入-航港物流.,;录入-航港科技公司.,;录入-苏州国信.,;录入-要客部.,;录入-财务公司.,;录入-配餐公司.,;录入-金元证券.,;录入-餐饮公司.,;录入-股份公司]]>
+</WRoleNames>
+</CellWriteAttr>
+</C>
+<C c="1" r="10" cs="14" s="14"><O t="S"><![CDATA[“企业上半年经营月报”表单功能应用说明：]]></O>
+</C>
+<C c="1" r="11" cs="14" s="15"><O t="S"><![CDATA[1、智能插入、删除行]]></O>
+</C>
+<C c="1" r="12" cs="14" s="15"><O t="S"><![CDATA[     该表单中，可以根据具体需求，比如需要增减企业记录，或在现有企业基础上，增加下半年每月记录，都可以在现有表单基础上通过插入、删除行实现。]]></O>
+</C>
+<C c="1" r="13" cs="14" s="15"><O t="S"><![CDATA[2、参数展现组合填报，修改数据并回填]]></O>
+</C>
+<C c="1" r="14" cs="14" s="15"><O t="S"><![CDATA[     该表单中，如果我们希望对已经从数据库中读出的数据进行修改，修改之后并回填，可以通过定义参数实现。]]></O>
+</C>
+<C c="1" r="15" cs="14" s="15"><O t="S"><![CDATA[     表单中已经定义参数，可以通过年份、月份、序号查询相关记录,在需要修改的地方进行修改，提交后即可回填到数据库中。]]></O>
+</C>
+<C c="1" r="16" cs="14" s="15"><O t="S"><![CDATA[3、公式自动计算]]></O>
+</C>
+<C c="1" r="17" cs="14" s="16"><O t="S"><![CDATA[     该报表中，所有者权益、营业收入累计、营业总成本累计包括利润总额，都不可直接填写，是根据实际公式计算所得。]]></O>
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style vertical_alignment="3" imageLayout="2">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0" vertical_alignment="3" imageLayout="2">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="16" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ImageBackground"
+ specifiedImageWidth="-1.0"
+ specifiedImageHeight="-1.0"
+ layout="2">
+<Image width="271" height="20">
+<![CDATA[mDD3s_Ctrm_#OF0>K!!9WJ6!OQ7+.ZoaQ9>0E]d2laNppWiE)!WiGp)li!RsTDPW,0?[QWIV
+_g1pu1d?NUQ%!281S82*R8))W+4
+iebJi;<TD!-WQ)u!;iUeW~
+
+]]>
+</Image>
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-852225">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-986886">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Top style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Bottom style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

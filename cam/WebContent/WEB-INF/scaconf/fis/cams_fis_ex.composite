@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<component name="fisPriceGoodsServiceDao">
+		<service name="fisPriceGoodsServiceDao">
+			<interface.java interface="com.inspur.cams.fis.ex.dao.IFisPriceGoodsServiceDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ex.dao.jdbc.FisPriceGoodsServiceDao"/>
+    </component>
+	<component name="fisPriceGoodsServiceDomain">
+		<service name="fisPriceGoodsServiceDomain">
+			<interface.java interface="com.inspur.cams.fis.ex.domain.IFisPriceGoodsServiceDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.ex.domain.support.FisPriceGoodsServiceDomain"/>
+		<reference name="fisPriceGoodsServiceDao" target="fisPriceGoodsServiceDao/fisPriceGoodsServiceDao"/>
+	</component>
+	<component name="fisPriceApplyDao">
+		<service name="fisPriceApplyDao">
+			<interface.java interface="com.inspur.cams.fis.ex.dao.IFisPriceApplyDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ex.dao.jdbc.FisPriceApplyDao"/>
+    </component>
+	<component name="fisPriceApplyDomain">
+		<service name="fisPriceApplyDomain">
+			<interface.java interface="com.inspur.cams.fis.ex.domain.IFisPriceApplyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.ex.domain.support.FisPriceApplyDomain"/>
+		<reference name="fisPriceApplyDao" target="fisPriceApplyDao/fisPriceApplyDao"/>
+		<reference name="fisPriceApplyHisDao" target="fisPriceApplyHisDao/fisPriceApplyHisDao"/>
+		<reference name="fisPriceApplyHisDomain" target="fisPriceApplyHisDomain/fisPriceApplyHisDomain"/>
+		<reference name="fisPriceGoodsServiceDao" target="fisPriceGoodsServiceDao/fisPriceGoodsServiceDao"/>
+		<reference name="fisPriceApplyAttachDao" target="fisPriceApplyAttachDao/fisPriceApplyAttachDao"/>
+	</component>
+	<component name="fisPriceApplyHisDao">
+		<service name="fisPriceApplyHisDao">
+			<interface.java interface="com.inspur.cams.fis.ex.dao.IFisPriceApplyHisDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ex.dao.jdbc.FisPriceApplyHisDao"/>
+    </component>
+	<component name="fisPriceApplyHisDomain">
+		<service name="fisPriceApplyHisDomain">
+			<interface.java interface="com.inspur.cams.fis.ex.domain.IFisPriceApplyHisDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.ex.domain.support.FisPriceApplyHisDomain"/>
+		<reference name="fisPriceApplyHisDao" target="fisPriceApplyHisDao/fisPriceApplyHisDao"/>
+	</component>
+	<component name="fisPriceApplyAttachDao">
+		<service name="fisPriceApplyAttachDao">
+			<interface.java interface="com.inspur.cams.fis.ex.dao.IFisPriceApplyAttachDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.ex.dao.jdbc.FisPriceApplyAttachDao"/>
+    </component>
+	<component name="fisPriceApplyAttachDomain">
+		<service name="fisPriceApplyAttachDomain">
+			<interface.java interface="com.inspur.cams.fis.ex.domain.IFisPriceApplyAttachDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.ex.domain.support.FisPriceApplyAttachDomain"/>
+		<reference name="fisPriceApplyAttachDao" target="fisPriceApplyAttachDao/fisPriceApplyAttachDao"/>
+	</component>
+</composite>

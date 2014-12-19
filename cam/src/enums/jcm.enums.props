@@ -1,0 +1,4 @@
+﻿#单位性质
+JCM.COMPANY_TYPE=01:机关,02:事业
+#调动状态
+JCM.TRANSFER_STATUS=0:待审批,1:已审批,2:已驳回

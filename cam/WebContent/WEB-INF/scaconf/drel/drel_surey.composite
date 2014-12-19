@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="SamEsureyFamilyDao" xmlns="http://www.loushang.com/sca/1.0">
+<!--低保、低收入核对_业务信息Dao-->
+	<component name="SamSureyDao">
+	    <service name="SamSureyDao">
+	    	<interface.java interface="com.inspur.cams.drel.surey.comm.dao.ISamSureyDao"/>
+	    	<binding.sca/>
+	    </service>
+	    <property name="dataSourceConf" value="dataSource"/>
+	    <implementation.java impl="com.inspur.cams.drel.surey.comm.dao.jdbc.SamSureyDao"/>
+	</component>
+<!--低保、低收入核对_流程信息Dao-->
+	<component name="SamSureyWfDao">
+	    <service name="SamSureyWfDao">
+	    	<interface.java interface="com.inspur.cams.drel.surey.comm.dao.ISamSureyWfDao"/>
+	    	<binding.sca/>
+	    </service>
+	    <property name="dataSourceConf" value="dataSource"/>
+	    <implementation.java impl="com.inspur.cams.drel.surey.comm.dao.jdbc.SamSureyWfDao"/>
+	</component>
+<!--低保、低收入核对_流程历史信息Dao-->
+	<component name="SamSureyWfHisDao">
+	    <service name="SamSureyWfHisDao">
+	    	<interface.java interface="com.inspur.cams.drel.surey.comm.dao.ISamSureyWfHisDao"/>
+	    	<binding.sca/>
+	    </service>
+	    <property name="dataSourceConf" value="dataSource"/>
+	    <implementation.java impl="com.inspur.cams.drel.surey.comm.dao.jdbc.SamSureyWfHisDao"/>
+	</component>
+	<!-- 核对结果dao -->
+	<component name="SamSureyAssistanceResultDao">
+		<service name="SamSureyAssistanceResultDao">
+			<interface.java interface="com.inspur.cams.drel.surey.assistance.dao.ISamSureyAssistanceResultDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.surey.assistance.dao.jdbc.SamSureyAssistanceResultDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<!-- 流程历史结果dao -->
+	<component name="SamSureyWfAssistanceHisDao">
+		<service name="SamSureyWfAssistanceHisDao">
+			<interface.java interface="com.inspur.cams.drel.surey.assistance.dao.ISamSureyWfAssistanceHisDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.surey.assistance.dao.jdbc.SamSureyWfAssistanceHisDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<!-- 流程历史结果domain -->
+	<component name="SamSureyWfAssistanceHisDomain">
+		<service name="SamSureyWfAssistanceHisDomain">
+			<interface.java interface="com.inspur.cams.drel.surey.assistance.domain.ISamSureyWfAssistanceHisDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.surey.assistance.domain.support.SamSureyWfAssistanceHisDomain"/>
+		<reference name="samSureyWfAssistanceHisDao" target="SamSureyWfAssistanceHisDao/SamSureyWfAssistanceHisDao"/>
+	</component>
+	<!-- 核对结果domain -->
+	<component name="SamSureyAssitanceResultDomain">
+		<service name="SamSureyAssitanceResultDomain">
+			<interface.java interface="com.inspur.cams.drel.surey.assistance.domain.ISamSureyAssitanceResultDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.surey.assistance.domain.support.SamSureyAssitanceResultDomain"/>
+		<reference name="samSureyAssistanceResultDao" target="SamSureyAssistanceResultDao/SamSureyAssistanceResultDao"/>
+	</component>
+	<!--低保、低收入核对_流程历史信息Domain-->
+	<component name="SamSureyWfHisDomain">
+		<service name="SamSureyWfHisDomain">
+			<interface.java interface="com.inspur.cams.drel.surey.comm.domain.ISamSureyWfHisDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.surey.comm.domain.support.SamSureyWfHisDomain"/>
+		<reference name="samSureyWfHisDao" target="SamSureyWfHisDao/SamSureyWfHisDao"/>
+	</component>
+<!--低保、低收入核对_业务Domain-->    
+    <component name="SamSureyDomain">
+	    <service name="SamSureyDomain">
+	    	<interface.java interface="com.inspur.cams.drel.surey.comm.domain.ISamSureyDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.surey.comm.domain.support.SamSureyDomain"/>
+        <reference name="samSureyDao" target="SamSureyDao/SamSureyDao"/>
+        <reference name="samSureyWfDao" target="SamSureyWfDao/SamSureyWfDao"/>
+        <reference name="samSureyWfHisDao" target="SamSureyWfHisDao/SamSureyWfHisDao"/>
+        <reference name="samEsureyPeopleDao" target="SamEsureyPeopleDao/SamEsureyPeopleDao"/>
+        <reference name="dicDetailsDao" target="DicDetailsDao/DicDetailsDao"/>
+    </component>
+    <component name="SamAssistanceDomain">
+	    <service name="SamAssistanceDomain">
+	    	<interface.java interface="com.inspur.cams.drel.surey.assistance.domain.ISamAssistanceDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.surey.assistance.domain.support.SamAssistanceDomain"/>
+        <reference name="samSureyDao" target="SamSureyDao/SamSureyDao"/>
+        <reference name="samSureyWfDao" target="SamSureyWfDao/SamSureyWfDao"/>
+        <reference name="samSureyWfHisDao" target="SamSureyWfHisDao/SamSureyWfHisDao"/>
+        <reference name="samEsureyPeopleDao" target="SamEsureyPeopleDao/SamEsureyPeopleDao"/>
+        <reference name="dicDetailsDao" target="DicDetailsDao/DicDetailsDao"/>
+         <reference name="samSureyDomain" target="SamSureyDomain/SamSureyDomain"/>
+    </component>
+<!--低保、低收入核对_流程Domain-->    
+    <component name="SamSureyWfDomain">
+	    <service name="SamSureyWfDomain">
+	    	<interface.java interface="com.inspur.cams.drel.surey.comm.domain.ISamSureyWfDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.surey.comm.domain.support.SamSureyWfDomain"/>
+		<reference name="samSureyWfDao" target="SamSureyWfDao/SamSureyWfDao"/>
+		<reference name="samSureyDao" target="SamSureyDao/SamSureyDao"/>
+		<reference name="samSureyWfHisDao" target="SamSureyWfHisDao/SamSureyWfHisDao"/>
+		<reference name="samSureyWfAssistanceHisDao" target="SamSureyWfAssistanceHisDao/SamSureyWfAssistanceHisDao"/>
+		<reference name="samSureyAssistanceResultDao" target="SamSureyAssistanceResultDao/SamSureyAssistanceResultDao"/>
+    </component>
+</composite>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+    <description>organization module</description>
+
+<!--组织结构相关配置-->
+    <component name="StruDao">
+	    <service name="StruDao">
+	    	<interface.java interface="org.loushang.bsp.organization.dao.IPubStruDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.organization.dao.StruDao"/>
+    </component>
+
+    <component name="OrganDao">
+	    <service name="OrganDao">
+	    	<interface.java interface="org.loushang.bsp.organization.dao.IPubOrganDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.organization.dao.OrganDao"/>
+    </component>
+
+     <component name="StruDomain">
+	    <service name="StruDomain">
+	    	<interface.java interface="org.loushang.bsp.organization.domain.IStruDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.organization.domain.StruDomain"/>
+        <reference name="StruDao" target="StruDao/StruDao"/>
+        <reference name="OrganDao" target="OrganDao/OrganDao"/>
+        <reference name="StruRuleDomain" target="StruRuleDomain/StruRuleDomain"/>
+        <reference name="OrganTypeDao" target="OrganTypeDao/OrganTypeDao"/>
+        <reference name="PubStruTypeDao" target="PubStruTypeDao/PubStruTypeDao"/>
+        <reference name="StruExtDao" target="StruExtDao/StruExtDao"/>
+        <reference name="userDomain" target="UserDomain/UserDomain"/>
+    </component>
+
+<!--组织类型-->
+    <component name="OrganTypeDao">
+	    <service name="OrganTypeDao">
+	    	<interface.java interface="org.loushang.bsp.organization.dao.IPubOrganTypeDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.organization.dao.OrganTypeDao"/>
+    </component>
+ <!--组织类型domain-->
+    <component name="OrganTypeDomain">
+	    <service name="OrganTypeDomain">
+	    	<interface.java interface="org.loushang.bsp.organization.domain.IOrganTypeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.organization.domain.OrganTypeDomain"/>
+    </component>
+<!--组织结构类型-->
+    <component name="PubStruTypeDao">
+	    <service name="PubStruTypeDao">
+	    	<interface.java interface="org.loushang.bsp.organization.dao.IPubStruTypeDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.organization.dao.PubStruTypeDao"/>
+    </component>
+
+    <!--组织结构类型domain-->
+    <component name="StruTypeDomain">
+	    <service name="StruTypeDomain">
+	    	<interface.java interface="org.loushang.bsp.organization.domain.IStruTypeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.organization.domain.StruTypeDomain"/>
+    </component>
+
+<!--组织结构规则-->
+    <component name="PubStruRuleDao">
+	    <service name="PubStruRuleDao">
+	    	<interface.java interface="org.loushang.bsp.organization.dao.IPubStruRuleDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.organization.dao.PubStruRuleDao"/>
+    </component>
+
+     <component name="StruRuleDomain">
+	    <service name="StruRuleDomain">
+	    	<interface.java interface="org.loushang.bsp.organization.domain.IStruRuleDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.organization.domain.StruRuleDomain"/>
+        <reference name="PubStruRuleDao" target="PubStruRuleDao/PubStruRuleDao"/>
+        <reference name="PubStruTypeDao" target="PubStruTypeDao/PubStruTypeDao"/>
+        <reference name="OrganTypeDao" target="OrganTypeDao/OrganTypeDao"/>
+    </component>
+
+<!--组织结构扩展-->
+	 <component name="StruExtDao">
+	    <service name="StruExtDao">
+	    	<interface.java interface="org.loushang.bsp.organization.dao.IStruExtDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="org.loushang.bsp.organization.dao.StruExtDao"/>
+    </component>
+<!--组织结构对外接口-->
+    <component name="OrganProvider">
+	    <service name="OrganProvider">
+	    	<interface.java interface="org.loushang.bsp.share.organization.provider.IOrganProvider"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.share.organization.provider.OrganProviderImpl"/>
+    </component>
+    <component name="OrganService">
+	    <service name="OrganService">
+	    	<interface.java interface="org.loushang.bsp.share.organization.provider.IOrganService"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.share.organization.provider.OrganServiceImpl"/>
+    </component>
+<!--组织结构对外接口-->
+</composite>

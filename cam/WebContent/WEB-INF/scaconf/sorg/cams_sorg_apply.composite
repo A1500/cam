@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--社会团体申请名称核准业务-->
+	<component name="groupNameApprovalDomain">
+		<service name="groupNameApprovalDomain">
+			<interface.java interface="com.inspur.cams.sorg.apply.group.domain.IGroupNameApprovalDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.apply.group.domain.support.GroupNameApprovalDomain"/>
+		<reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+		<reference name="somHeldPeopleDomain" target="somHeldPeopleDomain/somHeldPeopleDomain"/>
+		<reference name="somHeldOrganDomain" target="somHeldOrganDomain/somHeldOrganDomain"/>
+		<reference name="somAspchiefDomain" target="somAspchiefDomain/somAspchiefDomain"/>
+		<reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+		<reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+		<reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+	</component>
+
+	<!--民办非企业单位申请名称核准业务-->
+	<component name="ungovNameApprovalDomain">
+		<service name="ungovNameApprovalDomain">
+			<interface.java interface="com.inspur.cams.sorg.apply.ungov.domain.IUngovNameApprovalDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.apply.ungov.domain.support.UngovNameApprovalDomain"/>
+		<reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+		<reference name="somHeldPeopleDomain" target="somHeldPeopleDomain/somHeldPeopleDomain"/>
+		<reference name="somHeldOrganDomain" target="somHeldOrganDomain/somHeldOrganDomain"/>
+		<reference name="somAspchiefDomain" target="somAspchiefDomain/somAspchiefDomain"/>
+		<reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+		<reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+		<reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+	</component>
+
+	<!--基金会申请名称核准业务-->
+	<component name="fundNameApprovalDomain">
+		<service name="fundNameApprovalDomain">
+			<interface.java interface="com.inspur.cams.sorg.apply.fund.domain.IFundNameApprovalDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.apply.fund.domain.support.FundNameApprovalDomain"/>
+		<reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+		<reference name="somHeldPeopleDomain" target="somHeldPeopleDomain/somHeldPeopleDomain"/>
+		<reference name="somHeldOrganDomain" target="somHeldOrganDomain/somHeldOrganDomain"/>
+		<reference name="somAspchiefDomain" target="somAspchiefDomain/somAspchiefDomain"/>
+		<reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+		<reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+		<reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+	</component>
+
+	<!--社会团体筹备业务-->
+	<component name="groupPrepareDomain">
+		<service name="groupPrepareDomain">
+			<interface.java interface="com.inspur.cams.sorg.apply.group.domain.IGroupPrepareDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.apply.group.domain.support.GroupPrepareDomain"/>
+		<reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+		<reference name="somHeldPeopleDomain" target="somHeldPeopleDomain/somHeldPeopleDomain"/>
+		<reference name="somHeldOrganDomain" target="somHeldOrganDomain/somHeldOrganDomain"/>
+		<reference name="somAspchiefDomain" target="somAspchiefDomain/somAspchiefDomain"/>
+		<reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+		<reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+		<reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+	</component>
+	<!--社会团体流程domain-->
+    <component name="groupBuildDomain">
+	    <service name="groupBuildDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.group.domain.IGroupBuildDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.group.domain.support.GroupBuildDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somLiqpeopleDomain" target="somLiqpeopleDomain/somLiqpeopleDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somAccountDomain" target="somAccountDomain/somAccountDomain"/>
+        <reference name="somEntityDomain" target="somEntityDomain/somEntityDomain"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somOfficeDomain" target="somOfficeDomain/somOfficeDomain"/>
+        <reference name="somChangeDomain" target="somChangeDomain/somChangeDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somRuleDomain" target="somRuleDomain/somRuleDomain"/>
+        <reference name="somFeeDomain" target="somFeeDomain/somFeeDomain"/>
+        <reference name="somSessionDomain" target="somSessionDomain/somSessionDomain"/>
+        <reference name="somPartyMemberDomain" target="SomPartyMemberDomain/SomPartyMemberDomain"/>
+        <reference name="somPartyPraiseDomain" target="somPartyPraiseDomain/somPartyPraiseDomain"/>
+  <reference name="comExtUserDomain" target="comExtUserDomain/comExtUserDomain"/>
+	</component>
+	<!--社会团体注销流程-->
+    <component name="groupCancelDomain">
+	    <service name="groupCancelDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.group.domain.IGroupCancelDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.group.domain.support.GroupCancelDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somLiqpeopleDomain" target="somLiqpeopleDomain/somLiqpeopleDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+	</component>
+	<!--社会团体分支（代表）机构注销流程-->
+    <component name="groupBranchCancelDomain">
+	    <service name="groupBranchCancelDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.group.domain.IGroupBranchCancelDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.group.domain.support.GroupBranchCancelDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somLiqpeopleDomain" target="somLiqpeopleDomain/somLiqpeopleDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+	</component>
+	<!--社会团体主体变更domain-->
+ 	<component name="groupChangeDomain">
+	    <service name="groupChangeDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.group.domain.IGroupChangeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.group.domain.support.GroupChangeDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somChangeDomain" target="somChangeDomain/somChangeDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+	    <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+        <reference name="somGroupDomain" target="somGroupDomain/somGroupDomain"/>
+        <reference name="somRuleDomain" target="somRuleDomain/somRuleDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+	    <reference name="somPeopleResumeDomain" target="somPeopleResumeDomain/somPeopleResumeDomain"/>
+	    <reference name="somSessionDomain" target="somSessionDomain/somSessionDomain"/>
+	   <reference name="comExtUserDomain" target="comExtUserDomain/comExtUserDomain"/>
+	</component>
+ 	<!--社会团体分支（代表）机构变更domain-->
+ 	<component name="groupBranchChangeDomain">
+	    <service name="groupBranchChangeDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.group.domain.IGroupBranchChangeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.group.domain.support.GroupBranchChangeDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somChangeDomain" target="somChangeDomain/somChangeDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somGroupDomain" target="somGroupDomain/somGroupDomain"/>
+        <reference name="somRuleDomain" target="somRuleDomain/somRuleDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+	</component>
+	 <!--基金会流程domain-->
+    <component name="FundBuildDomain">
+	    <service name="FundBuildDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.fund.domain.IFundBuildDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.fund.domain.support.FundBuildDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+		<reference name="somHeldPeopleDomain" target="somHeldPeopleDomain/somHeldPeopleDomain"/>
+		<reference name="somHeldOrganDomain" target="somHeldOrganDomain/somHeldOrganDomain"/>
+        <reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somLiqpeopleDomain" target="somLiqpeopleDomain/somLiqpeopleDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somAccountDomain" target="somAccountDomain/somAccountDomain"/>
+        <reference name="somEntityDomain" target="somEntityDomain/somEntityDomain"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somOfficeDomain" target="somOfficeDomain/somOfficeDomain"/>
+        <reference name="somChangeDomain" target="somChangeDomain/somChangeDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somRuleDomain" target="somRuleDomain/somRuleDomain"/>
+        <reference name="somPeopleResumeDao" target="somPeopleResumeDao/somPeopleResumeDao"/>
+        <reference name="somAspchiefDomain" target="somAspchiefDomain/somAspchiefDomain"/>
+        <reference name="somPartyMemberDomain" target="SomPartyMemberDomain/SomPartyMemberDomain"/>
+        <reference name="somPartyPraiseDomain" target="somPartyPraiseDomain/somPartyPraiseDomain"/>
+          <reference name="comExtUserDomain" target="comExtUserDomain/comExtUserDomain"/>
+	</component>
+	<!--基金会主体变更domain-->
+ 	<component name="fundChangeDomain">
+	    <service name="fundChangeDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.fund.domain.IFundChangeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.fund.domain.support.FundChangeDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somChangeDomain" target="somChangeDomain/somChangeDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somFundDomain" target="somFundDomain/somFundDomain"/>
+        <reference name="somGroupDomain" target="somGroupDomain/somGroupDomain"/>
+        <reference name="somRuleDomain" target="somRuleDomain/somRuleDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somSessionDomain" target="somSessionDomain/somSessionDomain"/>
+        <reference name="somPeopleResumeDomain" target="somPeopleResumeDomain/somPeopleResumeDomain"/>
+   <reference name="comExtUserDomain" target="comExtUserDomain/comExtUserDomain"/>
+	</component>
+	<!--基金会分支（代表）机构变更domain-->
+ 	<component name="fundBranchChangeDomain">
+	    <service name="fundBranchChangeDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.fund.domain.IFundBranchChangeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.fund.domain.support.FundBranchChangeDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somChangeDomain" target="somChangeDomain/somChangeDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somFundDomain" target="somFundDomain/somFundDomain"/>
+        <reference name="somGroupDomain" target="somGroupDomain/somGroupDomain"/>
+        <reference name="somRuleDomain" target="somRuleDomain/somRuleDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+	</component>
+	<!--基金会注销流程-->
+    <component name="fundCancelDomain">
+	    <service name="fundCancelDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.fund.domain.IFundCancelDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.fund.domain.support.FundCancelDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somLiqpeopleDomain" target="somLiqpeopleDomain/somLiqpeopleDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+	</component>
+	<!--基金会分支（代表）机构注销流程-->
+    <component name="fundBranchCancelDomain">
+	    <service name="fundBranchCancelDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.fund.domain.IFundBranchCancelDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.fund.domain.support.FundBranchCancelDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somLiqpeopleDomain" target="somLiqpeopleDomain/somLiqpeopleDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+	</component>
+	<!--民办非企业单位登记立项domain-->
+	<component name="ungovPrepareDomain">
+		<service name="ungovPrepareDomain">
+			<interface.java interface="com.inspur.cams.sorg.apply.ungov.domain.IUngovPrepareDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.sorg.apply.ungov.domain.support.UngovPrepareDomain"/>
+		<reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+		<reference name="somHeldPeopleDomain" target="somHeldPeopleDomain/somHeldPeopleDomain"/>
+		<reference name="somHeldOrganDomain" target="somHeldOrganDomain/somHeldOrganDomain"/>
+		<reference name="somAspchiefDomain" target="somAspchiefDomain/somAspchiefDomain"/>
+		<reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+		<reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+		<reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+	</component>
+	<!--民办非企业单位变更domain-->
+	<component name="ungovChangeDomain">
+	    <service name="ungovChangeDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.ungov.domain.IUngovChangeDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.ungov.domain.support.UngovChangeDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somPeopleDomain" target="somPeopleDomain/somPeopleDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somChangeDomain" target="somChangeDomain/somChangeDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somFundDomain" target="somFundDomain/somFundDomain"/>
+        <reference name="somGroupDomain" target="somGroupDomain/somGroupDomain"/>
+        <reference name="somRuleDomain" target="somRuleDomain/somRuleDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somPeopleResumeDomain" target="somPeopleResumeDomain/somPeopleResumeDomain"/>
+        <reference name="somSessionDomain" target="somSessionDomain/somSessionDomain"/>
+   <reference name="comExtUserDomain" target="comExtUserDomain/comExtUserDomain"/>
+	</component>
+	<!--民办非企业单位注销流程-->
+    <component name="ungovCancelDomain">
+	    <service name="ungovCancelDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.ungov.domain.IUngovCancelDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.ungov.domain.support.UngovCancelDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somLiqpeopleDomain" target="somLiqpeopleDomain/somLiqpeopleDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+	</component>
+	<!--社会团体分支成立登记流程domain-->
+    <component name="groupBranchBuildDomain">
+	    <service name="groupBranchBuildDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.group.domain.IGroupBranchBuildDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.group.domain.support.GroupBranchBuildDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+	</component>
+	<!--基金会分支成立登记流程domain-->
+    <component name="fundBranchBuildDomain">
+	    <service name="fundBranchBuildDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.fund.domain.IFundBranchBuildDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.fund.domain.support.FundBranchBuildDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+	</component>
+	<!--民办非企业设立登记流程domain-->
+    <component name="ungovBuildDomain">
+	    <service name="ungovBuildDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.ungov.domain.IUngovBuildDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.ungov.domain.support.UngovBuildDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somHeldPeopleDomain" target="somHeldPeopleDomain/somHeldPeopleDomain"/>
+		<reference name="somHeldOrganDomain" target="somHeldOrganDomain/somHeldOrganDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somOfficeDomain" target="somOfficeDomain/somOfficeDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somRuleDomain" target="somRuleDomain/somRuleDomain"/>
+        <reference name="somHeldPeopleDomain" target="somHeldPeopleDomain/somHeldPeopleDomain"/>
+		<reference name="somHeldOrganDomain" target="somHeldOrganDomain/somHeldOrganDomain"/>
+        <reference name="somPartyMemberDomain" target="SomPartyMemberDomain/SomPartyMemberDomain"/>
+        <reference name="somPartyPraiseDomain" target="somPartyPraiseDomain/somPartyPraiseDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+         <reference name="comExtUserDomain" target="comExtUserDomain/comExtUserDomain"/>
+	</component>
+	<!--民办非企业(合伙)成立登记流程domain-->
+    <component name="ungovPartBuildDomain">
+	    <service name="ungovPartBuildDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.ungov.domain.IUngovPartBuildDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.ungov.domain.support.UngovPartBuildDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somOfficeDomain" target="somOfficeDomain/somOfficeDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somRuleDomain" target="somRuleDomain/somRuleDomain"/>
+        <reference name="somHeldPeopleDomain" target="somHeldPeopleDomain/somHeldPeopleDomain"/>
+		<reference name="somHeldOrganDomain" target="somHeldOrganDomain/somHeldOrganDomain"/>
+        <reference name="somPartyMemberDomain" target="SomPartyMemberDomain/SomPartyMemberDomain"/>
+        <reference name="somPartyPraiseDomain" target="somPartyPraiseDomain/somPartyPraiseDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+	</component>
+	<!--民办非企业(个体)成立登记流程domain-->
+    <component name="ungovIndivBuildDomain">
+	    <service name="ungovIndivBuildDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.ungov.domain.IUngovIndivBuildDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.ungov.domain.support.UngovIndivBuildDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somDutyDomain" target="somDutyDomain/somDutyDomain"/>
+        <reference name="somCertDomain" target="somCertDomain/somCertDomain"/>
+        <reference name="somOfficeDomain" target="somOfficeDomain/somOfficeDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somRuleDomain" target="somRuleDomain/somRuleDomain"/>
+        <reference name="somHeldPeopleDomain" target="somHeldPeopleDomain/somHeldPeopleDomain"/>
+		<reference name="somHeldOrganDomain" target="somHeldOrganDomain/somHeldOrganDomain"/>
+        <reference name="somPartyMemberDomain" target="SomPartyMemberDomain/SomPartyMemberDomain"/>
+        <reference name="somPartyPraiseDomain" target="somPartyPraiseDomain/somPartyPraiseDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+	</component>
+	<!--社会团体异地设立分支（代表）机构的审查domain-->
+    <component name="groupBranchAPCheckDomain">
+	    <service name="groupBranchAPCheckDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.group.domain.IGroupBranchAPCheckDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.group.domain.support.GroupBranchAPCheckDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+	</component>
+	<!--基金会异地设立分支（代表）机构的审查domain-->
+    <component name="fundBranchAPCheckDomain">
+	    <service name="fundBranchAPCheckDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.fund.domain.IFundBranchAPCheckDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.sorg.apply.fund.domain.support.FundBranchAPCheckDomain"/>
+        <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+        <reference name="somOrganDomain" target="somOrganDomain/somOrganDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+	</component>
+	<!--社会团体换届审批domain-->
+	  <component name="groupElectionApplyDomain">
+	    <service name="groupElectionApplyDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.group.domain.IGroupElectionApplyDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.apply.group.domain.support.GroupElectionApplyDomain"/>
+        <reference name="somElectionDao" target="somElectionDao/somElectionDao"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somAspchiefDomain" target="somAspchiefDomain/somAspchiefDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+         <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+    </component>
+    <!--基金会换届审批domain-->
+	  <component name="fundElectionApplyDomain">
+	    <service name="fundElectionApplyDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.fund.domain.IFundElectionApplyDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.apply.fund.domain.support.FundElectionApplyDomain"/>
+        <reference name="somElectionDao" target="somElectionDao/somElectionDao"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somAspchiefDomain" target="somAspchiefDomain/somAspchiefDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+         <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+    </component>
+	<!--社会团体延期换届审批domain-->
+	  <component name="groupElectionDelayApplyDomain">
+	    <service name="groupElectionDelayApplyDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.group.domain.IGroupElectionDelayApplyDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.apply.group.domain.support.GroupElectionDelayApplyDomain"/>
+        <reference name="somElectionDao" target="somElectionDao/somElectionDao"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somAspchiefDomain" target="somAspchiefDomain/somAspchiefDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+	    <reference name="somSessionDomain" target="somSessionDomain/somSessionDomain"/>
+	     <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+    </component>
+
+    <!--基金会延期换届审批domain-->
+	  <component name="fundElectionDelayApplyDomain">
+	    <service name="fundElectionDelayApplyDomain">
+	    	<interface.java interface="com.inspur.cams.sorg.apply.fund.domain.IFundElectionDelayApplyDomain"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.sorg.apply.fund.domain.support.FundElectionDelayApplyDomain"/>
+        <reference name="somElectionDao" target="somElectionDao/somElectionDao"/>
+        <reference name="somMeetingDomain" target="somMeetingDomain/somMeetingDomain"/>
+        <reference name="somAspchiefDomain" target="somAspchiefDomain/somAspchiefDomain"/>
+        <reference name="somApplyDomain" target="SomApplyDomain/SomApplyDomain"/>
+        <reference name="somFlowDomain" target="SomFlowDomain/SomFlowDomain"/>
+	    <reference name="somSessionDomain" target="somSessionDomain/somSessionDomain"/>
+	     <reference name="somElectronicDomain" target="somElectronicDomain/somElectronicDomain"/>
+    </component>
+</composite>

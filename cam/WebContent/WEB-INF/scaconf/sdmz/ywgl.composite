@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="ywgl" xmlns="http://www.loushang.com/sca/1.0">
+	<description>ywgl module</description>
+	<component name="YwglDao">
+		<service name="IYwglDao">
+			<interface.java interface="com.inspur.sdmz.ywgl.dao.IYwglDao"/>
+			<binding.sca/>
+	    </service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.sdmz.ywgl.dao.jdbc.YwglDao"/>	
+	</component>
+	<component name="YwglBlDao">
+		<service name="IYwglBlDao">
+			<interface.java interface="com.inspur.sdmz.ywgl.dao.IYwglBlDao"/>
+			<binding.sca/>
+	    </service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.sdmz.ywgl.dao.jdbc.YwglBlDao"/>	
+	</component>
+
+	<component name="YwglDomain">
+		<service name="YwglDomain">
+		    <interface.java interface="com.inspur.sdmz.ywgl.domain.IYwglDomain"/>
+	        <binding.sca/>
+	    </service>
+	    <implementation.java impl="com.inspur.sdmz.ywgl.domain.support.YwglDomain"/>
+		<reference name="ywglDao" target="YwglDao.IYwglDao"/>
+		<reference name="ywglBlDao" target="YwglBlDao.IYwglBlDao"/>
+	</component>
+</composite>

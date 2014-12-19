@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="fiso" xmlns="http://www.loushang.com/sca/1.0">
+	
+	<!--殡葬业务殡仪馆建筑信息表-->
+	<component name="FisFuneralOrganBuildareaDao">
+		<service name="FisFuneralOrganBuildareaDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisFuneralOrganBuildareaDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisFuneralOrganBuildareaDao"/>
+	</component>
+	<component name="FisFuneralOrganBuildareaDomain">
+		<service name="FisFuneralOrganBuildareaDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisFuneralOrganBuildareaDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisFuneralOrganBuildareaDomain"/>
+		<reference name="fisFuneralOrganBuildareaDao" target="FisFuneralOrganBuildareaDao/FisFuneralOrganBuildareaDao"/>
+	</component>
+	
+
+	<!--殡葬业务殡仪馆管理信息表 -->
+	<component name="fisFuneralOrganDao">
+		<service name="fisFuneralOrganDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisFuneralOrganDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisFuneralOrganDao"/>
+	</component>
+
+	<!--殡葬业务殡仪馆管理信息表 -->
+	<component name="FisFuneralOrganManageDao">
+		<service name="FisFuneralOrganManageDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisFuneralOrganManageDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisFuneralOrganManageDao"/>
+	</component>
+    
+	<component name="FisFuneralOrganManageDomain">
+		<service name="FisFuneralOrganManageDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisFuneralOrganManageDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisFuneralOrganManageDomain"/>
+		<reference name="fisFuneralOrganManageDao" target="FisFuneralOrganManageDao/FisFuneralOrganManageDao"/>
+	</component>
+	
+	<!--殡葬服务机构信息表-->
+	<component name="fisServicesOrganManageDao">
+		<service name="fisServicesOrganManageDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisServicesOrganManageDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisServicesOrganManageDao"/>
+	</component>
+	<component name="fisServicesOrganManageDomain">
+		<service name="fisServicesOrganManageDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisServicesOrganManageDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisServicesOrganManageDomain"/>
+		<reference name="fisServicesOrganManageDao" target="fisServicesOrganManageDao/fisServicesOrganManageDao"/>
+	</component>
+	
+	<!--殡葬服务机构工作人员信息表-->
+	<component name="fisServicesPeopleInfoDao">
+		<service name="fisServicesPeopleInfoDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisServicesPeopleInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisServicesPeopleInfoDao"/>
+	</component>
+	<component name="fisServicesPeopleInfoDomain">
+		<service name="fisServicesPeopleInfoDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisServicesPeopleInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisServicesPeopleInfoDomain"/>
+		<reference name="fisServicesPeopleInfoDao" target="fisServicesPeopleInfoDao/fisServicesPeopleInfoDao"/>
+	</component>
+	
+	<!--殡葬服务机构人员岗位信息表-->
+	<component name="fisServicesDutyInfoDao">
+		<service name="fisServicesDutyInfoDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisServicesDutyInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisServicesDutyInfoDao"/>
+	</component>
+	<component name="fisServicesDutyInfoDomain">
+		<service name="fisServicesDutyInfoDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisServicesDutyInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisServicesDutyInfoDomain"/>
+		<reference name="fisServicesDutyInfoDao" target="fisServicesDutyInfoDao/fisServicesDutyInfoDao"/>
+	</component>
+	
+	<!--殡葬业务殡仪馆数据上报逝者信息 -->
+	<component name="FisFuneralDeadInfoDao">
+		<service name="FisFuneralDeadInfoDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisFuneralDeadInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisFuneralDeadInfoDao"/>
+	</component>
+    
+	<component name="FisFuneralDeadInfoDomain">
+		<service name="FisFuneralDeadInfoDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisFuneralDeadInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisFuneralDeadInfoDomain"/>
+		<reference name="fisFuneralDeadInfoDao" target="FisFuneralDeadInfoDao/FisFuneralDeadInfoDao"/>
+	</component>
+	
+	<!--数据上报信息-->
+	<component name="fisImportDataDao">
+		<service name="fisImportDataDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisImportDataDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisImportDataDao"/>
+	</component>
+	<component name="fisImportDataDomain">
+		<service name="fisImportDataDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisImportDataDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisImportDataDomain"/>
+		<reference name="fisImportDataDao" target="fisImportDataDao/fisImportDataDao"/>
+	</component>
+	
+	<!--火化率计算表-->
+	<component name="fisCremationRateDao">
+		<service name="fisCremationRateDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCremationRateDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCremationRateDao"/>
+	</component>
+	<component name="fisCremationRateDomain">
+		<service name="fisCremationRateDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCremationRateDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCremationRateDomain"/>
+		<reference name="fisCremationRateDao" target="fisCremationRateDao/fisCremationRateDao"/>
+	</component>
+	
+	
+	
+	
+	<!--2.殡葬业务设备表-->
+	<component name="FisEquipmentInfoDao">
+		<service name="FisEquipmentInfoDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisEquipmentInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisEquipmentInfoDao"/>
+	</component>
+    
+	<component name="FisEquipmentInfoDomain">
+		<service name="FisEquipmentInfoDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisEquipmentInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisEquipmentInfoDomain"/>
+		<reference name="fisEquipmentInfoDao" target="FisEquipmentInfoDao/FisEquipmentInfoDao"/>
+		<reference name="fisResourceInfoDao" target="FisResourceInfoDao/FisResourceInfoDao"/>
+	</component>	
+	
+	
+	<!--3.殡葬业务维修记录表-->
+	<component name="FisEquipmentRepairDao">
+		<service name="FisEquipmentRepairDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisEquipmentRepairDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisEquipmentRepairDao"/>
+	</component>
+    
+	<component name="FisEquipmentRepairDomain">
+		<service name="FisEquipmentRepairDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisEquipmentRepairDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisEquipmentRepairDomain"/>
+		<reference name="fisEquipmentRepairDao" target="FisEquipmentRepairDao/FisEquipmentRepairDao"/>
+	</component>
+	
+	
+	<!--4.殡葬业务设施表-->
+	<component name="FisFacilitiesInfoDao">
+		<service name="FisFacilitiesInfoDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisFacilitiesInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisFacilitiesInfoDao"/>
+	</component>
+    
+	<component name="FisFacilitiesInfoDomain">
+		<service name="FisFacilitiesInfoDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisFacilitiesInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisFacilitiesInfoDomain"/>
+		<reference name="fisFacilitiesInfoDao" target="FisFacilitiesInfoDao/FisFacilitiesInfoDao"/>
+		<reference name="fisResourceInfoDao" target="FisResourceInfoDao/FisResourceInfoDao"/>
+	</component>
+	<!--11.殡葬业务资源规格表	-->
+	<component name="FisResourceFormatDao">
+		<service name="FisResourceFormatDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisResourceFormatDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisResourceFormatDao"/>
+	</component>
+    
+	<component name="FisResourceFormatDomain">
+		<service name="FisResourceFormatDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisResourceFormatDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisResourceFormatDomain"/>
+		<reference name="fisResourceFormatDao" target="FisResourceFormatDao/FisResourceFormatDao"/>
+	</component>
+	
+	
+	<!--12.殡葬业务资源表	-->
+	<component name="FisResourceInfoDao">
+		<service name="FisResourceInfoDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisResourceInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisResourceInfoDao"/>
+	</component>
+    
+	<component name="FisResourceInfoDomain">
+		<service name="FisResourceInfoDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisResourceInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisResourceInfoDomain"/>
+		<reference name="fisResourceInfoDao" target="FisResourceInfoDao/FisResourceInfoDao"/>
+		<reference name="fisResourceExtendDao" target="FisResourceExtendDao/FisResourceExtendDao"/>
+		<reference name="fisPriceResourceDao" target="fisPriceResourceDao/fisPriceResourceDao"/>
+	</component>
+	
+	
+	<!--13.殡葬业务资源级别定义表	-->
+	<component name="FisResourceLevelDao">
+		<service name="FisResourceLevelDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisResourceLevelDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisResourceLevelDao"/>
+	</component>
+    
+	<component name="FisResourceLevelDomain">
+		<service name="FisResourceLevelDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisResourceLevelDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisResourceLevelDomain"/>
+		<reference name="fisResourceLevelDao" target="FisResourceLevelDao/FisResourceLevelDao"/>
+	</component>
+	
+	
+	<!--14.殡葬业务资源级别规则定义表 -->
+	<component name="FisResourceRuleDao">
+		<service name="FisResourceRuleDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisResourceRuleDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisResourceRuleDao"/>
+	</component>
+    
+	<component name="FisResourceRuleDomain">
+		<service name="FisResourceRuleDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisResourceRuleDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisResourceRuleDomain"/>
+		<reference name="fisResourceRuleDao" target="FisResourceRuleDao/FisResourceRuleDao"/>
+	</component>
+	
+	
+	<!--15.殡葬业务资源分类表 -->
+	<component name="FisResourceTypeDao">
+		<service name="FisResourceTypeDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisResourceTypeDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisResourceTypeDao"/>
+	</component>
+    
+	<component name="FisResourceTypeDomain">
+		<service name="FisResourceTypeDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisResourceTypeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisResourceTypeDomain"/>
+		<reference name="fisResourceTypeDao" target="FisResourceTypeDao/FisResourceTypeDao"/>
+	</component>
+	
+	<!--20.墓位特征扩展表-->
+	<component name="FisResourceExtendDao">
+		<service name="FisResourceExtendDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisResourceExtendDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisResourceExtendDao"/>
+	</component>
+	<component name="FisResourceExtendDomain">
+		<service name="FisResourceExtendDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisResourceExtendDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisResourceExtendDomain"/>
+		<reference name="fisResourceExtendDao" target="FisResourceExtendDao/FisResourceExtendDao"/>
+	</component>
+	
+	
+	<!--殡葬业务火化证明表-->
+	<component name="FisCertCremationDao">
+		<service name="FisCertCremationDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCertCremationDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCertCremationDao"/>
+	</component>
+	<component name="FisCertCremationDomain">
+		<service name="FisCertCremationDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCertCremationDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCertCremationDomain"/>
+		<reference name="fisCertCremationDao" target="FisCertCremationDao/FisCertCremationDao"/>
+	</component>
+	
+	
+	<!--殡葬业务人员岗位信息表-->
+	<component name="FisDutyInfoDao">
+		<service name="FisDutyInfoDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisDutyInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisDutyInfoDao"/>
+	</component>
+	<component name="FisDutyInfoDomain">
+		<service name="FisDutyInfoDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisDutyInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisDutyInfoDomain"/>
+		<reference name="fisDutyInfoDao" target="FisDutyInfoDao/FisDutyInfoDao"/>
+	</component>
+	<component name="fisCremationInfoSumDao">
+		<service name="fisCremationInfoSumDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCremationInfoSumDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCremationInfoSumDao"/>
+	</component>
+	<component name="fisCremationInfoSumDomain">
+		<service name="fisCremationInfoSumDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCremationInfoSumDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCremationInfoSumDomain"/>
+		<reference name="fisCremationInfoSumDao" target="fisCremationInfoSumDao/fisCremationInfoSumDao"/>
+	</component>
+	
+	<!--殡葬业务工作人员信息表-->
+	<component name="FisPeopleInfoDao">
+		<service name="FisPeopleInfoDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisPeopleInfoDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisPeopleInfoDao"/>
+	</component>
+	<component name="FisPeopleInfoDomain">
+		<service name="FisPeopleInfoDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisPeopleInfoDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisPeopleInfoDomain"/>
+		<reference name="fisPeopleInfoDao" target="FisPeopleInfoDao/FisPeopleInfoDao"/>
+		<reference name="fisDutyInfoDomain" target="FisDutyInfoDomain/FisDutyInfoDomain"/>
+	</component>
+	
+	<!--公墓年检信息查询公墓信息表 lf-->
+	<component name="FisCemeteryOrganDao">
+		<service name="FisCemeteryOrganDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCemeteryOrganDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCemeteryOrganDao"/>
+	</component>
+	<component name="FisCemeteryOrganDomain">
+		<service name="FisCemeteryOrganDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCemeteryOrganDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCemeteryOrganDomain"/>
+		<reference name="FisCemeteryOrganDao" target="FisCemeteryOrganDao/FisCemeteryOrganDao"/>
+		<reference name="FisCemeteryOrganDomain" target="FisCemeteryOrganDomain/FisCemeteryOrganDomain"/>
+	</component>
+	<component name="fisCremationInfoParseDao">
+		<service name="fisCremationInfoParseDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCremationInfoParseDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCremationInfoParseDao"/>
+    </component>
+	<component name="fisCremationInfoParseDomain">
+		<service name="fisCremationInfoParseDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCremationInfoParseDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCremationInfoParseDomain"/>
+		<reference name="fisCremationInfoParseDao" target="fisCremationInfoParseDao/fisCremationInfoParseDao"/>
+	</component>
+	<component name="fisCremationExportBackupDao">
+		<service name="fisCremationExportBackupDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisCremationExportBackupDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisCremationExportBackupDao"/>
+    </component>
+	<component name="fisCremationExportBackupDomain">
+		<service name="fisCremationExportBackupDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisCremationExportBackupDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisCremationExportBackupDomain"/>
+		<reference name="fisCremationExportBackupDao" target="fisCremationExportBackupDao/fisCremationExportBackupDao"/>
+	</component>
+	<!--财政收支情况-->
+	<component name="fisFinancialSituationDao">
+		<service name="fisFinancialSituationDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisFinancialSituationDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisFinancialSituationDao"/>
+    </component>
+	<component name="fisFinancialSituationDomain">
+		<service name="fisFinancialSituationDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisFinancialSituationDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisFinancialSituationDomain"/>
+		<reference name="fisFinancialSituationDao" target="fisFinancialSituationDao/fisFinancialSituationDao"/>
+	</component>
+	<!--青岛逝者信息接收表-->
+	<component name="qdDeadInfoRecieveDao">
+		<service name="qdDeadInfoRecieveDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IQdDeadInfoRecieveDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.QdDeadInfoRecieveDao"/>
+    </component>
+	<component name="qdDeadInfoRecieveDomain">
+		<service name="qdDeadInfoRecieveDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IQdDeadInfoRecieveDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.QdDeadInfoRecieveDomain"/>
+		<reference name="qdDeadInfoRecieveDao" target="qdDeadInfoRecieveDao/qdDeadInfoRecieveDao"/>
+        <reference name="qdUploadErrorsDomain" target="qdUploadErrorsDomain/qdUploadErrorsDomain"/>
+		<reference name="fisCremationInfoSumDao" target="fisCremationInfoSumDao/fisCremationInfoSumDao"/>
+	</component>
+	<!--青岛数据上报错误记录-->
+	<component name="qdUploadErrorsDao">
+		<service name="qdUploadErrorsDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IQdUploadErrorsDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.QdUploadErrorsDao"/>
+    </component>
+	<component name="qdUploadErrorsDomain">
+		<service name="qdUploadErrorsDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IQdUploadErrorsDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.QdUploadErrorsDomain"/>
+		<reference name="qdUploadErrorsDao" target="qdUploadErrorsDao/qdUploadErrorsDao"/>
+	</component>
+	<!--青岛殡仪馆信息表-->
+	<component name="qdOrganInfoRecieveDao">
+		<service name="qdOrganInfoRecieveDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IQdOrganInfoRecieveDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.QdOrganInfoRecieveDao"/>
+    </component>
+	<component name="qdOrganInfoRecieveDomain">
+		<service name="qdOrganInfoRecieveDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IQdOrganInfoRecieveDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.QdOrganInfoRecieveDomain"/>
+		<reference name="qdOrganInfoRecieveDao" target="qdOrganInfoRecieveDao/qdOrganInfoRecieveDao"/>
+		<reference name="qdUploadErrorsDomain" target="qdUploadErrorsDomain/qdUploadErrorsDomain"/>
+		<reference name="fisFuneralOrganDao" target="fisFuneralOrganDao/fisFuneralOrganDao"/>
+	</component>
+	<!--殡葬馆墓一体配置-->
+	<component name="fisOrganTypeConfigDao">
+		<service name="fisOrganTypeConfigDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisOrganTypeConfigDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisOrganTypeConfigDao"/>
+    </component>
+	<component name="fisOrganTypeConfigDomain">
+		<service name="fisOrganTypeConfigDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisOrganTypeConfigDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisOrganTypeConfigDomain"/>
+		<reference name="fisOrganTypeConfigDao" target="fisOrganTypeConfigDao/fisOrganTypeConfigDao"/>
+	</component>
+	
+	<!--殡葬主管部门通知界面配置-->
+	<component name="fisMattersAttentionDao">
+		<service name="fisMattersAttentionDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisMattersAttentionDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisMattersAttentionDao"/>
+    </component>
+	<component name="fisMattersAttentionDomain">
+		<service name="fisMattersAttentionDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisMattersAttentionDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisMattersAttentionDomain"/>
+		<reference name="fisMattersAttentionDao" target="fisMattersAttentionDao/fisMattersAttentionDao"/>
+	</component>
+	<!--殡葬通知下载明细配置-->
+	<component name="fisAttentionDownloadDetailDao">
+		<service name="fisAttentionDownloadDetailDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisAttentionDownloadDetailDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisAttentionDownloadDetailDao"/>
+    </component>
+	<component name="fisAttentionDownloadDetailDomain">
+		<service name="fisAttentionDownloadDetailDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisAttentionDownloadDetailDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisAttentionDownloadDetailDomain"/>
+		<reference name="fisAttentionDownloadDetailDao" target="fisAttentionDownloadDetailDao/fisAttentionDownloadDetailDao"/>
+	</component>
+	<!--殡葬版本-->
+	<component name="fisVersionDao">
+		<service name="fisVersionDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisVersionDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisVersionDao"/>
+    </component>
+	<component name="fisVersionDomain">
+		<service name="fisVersionDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisVersionDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisVersionDomain"/>
+		<reference name="fisVersionDao" target="fisVersionDao/fisVersionDao"/>
+	</component>
+		<!--单位版本明细-->
+	<component name="fisVersionDetailDao">
+		<service name="fisVersionDetailDao">
+			<interface.java interface="com.inspur.cams.fis.base.dao.IFisVersionDetailDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.fis.base.dao.jdbc.FisVersionDetailDao"/>
+    </component>
+	<component name="fisVersionDetailDomain">
+		<service name="fisVersionDetailDomain">
+			<interface.java interface="com.inspur.cams.fis.base.domain.IFisVersionDetailDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.fis.base.domain.support.FisVersionDetailDomain"/>
+		<reference name="fisVersionDetailDao" target="fisVersionDetailDao/fisVersionDetailDao"/>
+	</component>
+</composite>	
+
+   
+   

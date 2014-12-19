@@ -1,0 +1,30 @@
+.banner {
+	background-image:url( ../images/green/banner.jpg ) !important;
+}
+.top-zs_01{
+	background-image:url( ../images/green/top-zs_01.gif ) !important;
+}
+.top-zs_02{
+	background-image:url( ../images/green/top-zs_02.gif ) !important;
+}
+.topbj{
+	background-image:url( ../images/green/topbj.jpg ) !important;
+}
+.l-panel-header {
+	color: #428201;
+	border: 1px solid #bbda96;
+	border-bottom: 0px;
+	background: transparent
+		url(../images/green/white-top-bottom.gif) repeat-x 0 -1px;
+}
+.l-panel-body{
+	border: 1px solid #bbda96;
+}
+.dot{
+	bgcolor:"#deeecb"
+}
+.topwel{
+height:29;
+color:white;
+background-image:url( ../images/green/topbj.jpg  ) !important;
+}

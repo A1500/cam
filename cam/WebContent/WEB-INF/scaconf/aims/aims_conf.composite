@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--企业填核查配置-->
+	<component name="aimOrganConfDao">
+		<service name="aimOrganConfDao">
+			<interface.java interface="com.inspur.aims.organ.base.dao.IAimOrganConfDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.aims.organ.base.dao.jdbc.AimOrganConfDao"/>
+    </component>
+	<component name="aimOrganConfDomain">
+		<service name="aimOrganConfDomain">
+			<interface.java interface="com.inspur.aims.organ.base.domain.IAimOrganConfDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.aims.organ.base.domain.support.AimOrganConfDomain"/>
+		<reference name="aimOrganConfDao" target="aimOrganConfDao/aimOrganConfDao"/>
+	</component>
+	<!--企业填核查情况表-->
+	<component name="aimOrganCheckDao">
+		<service name="aimOrganCheckDao">
+			<interface.java interface="com.inspur.aims.organ.base.dao.IAimOrganCheckDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.aims.organ.base.dao.jdbc.AimOrganCheckDao"/>
+    </component>
+	<component name="aimOrganCheckDomain">
+		<service name="aimOrganCheckDomain">
+			<interface.java interface="com.inspur.aims.organ.base.domain.IAimOrganCheckDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.aims.organ.base.domain.support.AimOrganCheckDomain"/>
+		<reference name="aimOrganCheckDao" target="aimOrganCheckDao/aimOrganCheckDao"/>
+	</component>
+</composite>

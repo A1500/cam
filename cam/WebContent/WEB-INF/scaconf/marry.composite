@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="Marry" xmlns="http://www.loushang.com/sca/1.0">
+	
+	<component name="MarrydicDao">
+		<service name="MarrydicDao">
+			<interface.java interface="com.inspur.cams.marry.base.dao.IMarrydicDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.marry.base.dao.jdbc.MarrydicDao"/>
+	</component>
+	<component name="MarrydicDomain">
+		<service name="MarrydicDomain">
+			<interface.java interface="com.inspur.cams.marry.base.domain.IMarrydicDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.marry.base.domain.support.MarrydicDomain"/>
+		<reference name="marrydicDao" target="MarrydicDao/MarrydicDao"/>
+	</component>
+	
+	<component name="MarrydeptDao">
+		<service name="MarrydeptDao">
+			<interface.java interface="com.inspur.cams.marry.dept.dao.IMarrydeptDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.marry.dept.dao.jdbc.MarrydeptDao"/>
+	</component>
+	<component name="MarrydeptDomain">
+		<service name="MarrydeptDomain">
+			<interface.java interface="com.inspur.cams.marry.dept.domain.IMarrydeptDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.marry.dept.domain.support.MarrydeptDomain"/>
+		<reference name="marrydeptDao" target="MarrydeptDao/MarrydeptDao"/>
+	</component>
+	
+	<component name="MarryregionDao">
+		<service name="MarryregionDao">
+			<interface.java interface="com.inspur.cams.marry.region.dao.IMarryregionDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.marry.region.dao.jdbc.MarryregionDao"/>
+	</component>
+	<component name="MarryregionDomain">
+		<service name="MarryregionDomain">
+			<interface.java interface="com.inspur.cams.marry.region.domain.IMarryregionDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.marry.region.domain.support.MarryregionDomain"/>
+		<reference name="marryregionDao" target="MarryregionDao/MarryregionDao"/>
+	</component>
+	
+	
+	
+	
+	<component name="MarryregDao">
+		<service name="MarryregDao">
+			<interface.java interface="com.inspur.cams.marry.reg.dao.IMarryregDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.marry.reg.dao.jdbc.MarryregDao"/>
+	</component>
+	<component name="MarryregDomain">
+		<service name="MarryregDomain">
+			<interface.java interface="com.inspur.cams.marry.reg.domain.IMarryregDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.marry.reg.domain.support.MarryregDomain"/>
+		<reference name="marryregDao" target="MarryregDao/MarryregDao"/>
+	</component>
+	
+	<component name="MarrypersonDao">
+		<service name="MarrypersonDao">
+			<interface.java interface="com.inspur.cams.marry.person.dao.IMarrypersonDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.marry.person.dao.jdbc.MarrypersonDao"/>
+	</component>
+	<component name="MarrypersonDomain">
+		<service name="MarrypersonDomain">
+			<interface.java interface="com.inspur.cams.marry.person.domain.IMarrypersonDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.marry.person.domain.support.MarrypersonDomain"/>
+		<reference name="marrypersonDao" target="MarrypersonDao/MarrypersonDao"/>
+	</component>
+</composite>

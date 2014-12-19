@@ -1,0 +1,188 @@
+.mouseout{
+	display:block; 
+	background: RGB(232,232,232); 
+	color:#000; 
+	height:auto; 
+	width:80;
+	padding:5px 10px;
+	font-size:13px;
+	!important;
+}
+.mouseover{
+	display:block; 
+	background:#C6D9EA; 
+	color:#000; 
+	height:auto; 
+	padding:5px 10px; 
+	font-size:13px;
+	width:80px;
+	cursor: hand;
+	!important;
+}
+.collapse {
+    background-image:url(../../images/live/ns-collapse.gif) !important;
+}
+.expand {
+    background-image:url(../../images/live/ns-expand.gif) !important;
+}
+
+/*消息类型图标*/
+.live_message{
+	background-image:url(../../images/live/live_message.gif) !important;
+}
+.live_mail{
+	background-image:url(../../images/live/live_mail.gif) !important;
+}
+.live_email{
+	background-image:url(../../images/live/live_email.gif) !important;
+}
+.live_sms{
+	background-image:url(../../images/live/live_sms.gif) !important;
+}
+
+/*邮件操作图标*/
+.msg_cancel{
+	background-image:url(../../images/live/msg_cancel.png) !important;
+}
+.msg_forward{
+	background-image:url(../../images/live/msg_forward.png) !important;
+}
+.msg_new{
+	background-image:url(../../images/live/msg_new.png) !important;
+}
+.msg_reply{
+	background-image:url(../../images/live/msg_reply.png) !important;
+}
+.msg_send{
+	background-image:url(../../images/live/msg_send.png) !important;
+}
+.trash_clear{
+	background-image:url(../../images/live/trash_clear.png) !important;	
+}
+.att_download{
+	background-image:url(../../images/live/att_download.png) !important;	
+}
+
+/*新修改进度条*/
+.progressBar{
+	background-color: #6787e3;
+	height:100%;
+	overflow:hidden;
+	width: 0px;
+}
+.attachmentTable{
+	background-color: #d4e1f1;
+	width: 100%;
+}
+.progressBackground{
+	background-color: white;
+	border : 1px solid white;
+	height:10px;
+	overflow:hidden;
+	display:inline-block;
+	width:100px;
+}
+
+/*附件图标列*/
+.attachIconCol{
+	width: 16px;
+	background: url(../../images/live/live-attachment.gif) no-repeat 50% 50%;	
+}
+.fileNameCol{
+	/**设置字体，颜色等等*/
+	font: 12px arial, tahoma, helvetica, sans-serif;
+}
+.fileInfoContainer{
+	width:700px;
+	height:10px;
+	border-style: solid;
+  	border-width: 1px;
+  	border-color: white;
+}
+/*删除附件链接*/
+.delLink{
+	text-decoration : none;
+	font: 12px arial, tahoma, helvetica, sans-serif;
+}
+/*下载附件链接*/
+.downloadLink{
+	font: 12px arial, tahoma, helvetica, sans-serif;
+}
+.blankCol{
+	width : 20px;
+	height : 100%;
+}
+/**关联文件类型*/
+/*媒体文件*/
+.att_type_media{
+	background: url(../../images/live/typeico/type_mov.gif) 50% 50% no-repeat;
+	width:32px;
+	height:32px;
+}
+/*word文件*/
+.att_type_doc{
+	background: url(../../images/live/typeico/type_doc.gif) 50% 50% no-repeat;
+	width:32px;
+	height:32px;
+}
+/*excel文件*/
+.att_type_xls{
+	background: url(../../images/live/typeico/type_exl.gif) 50% 50% no-repeat;
+	width:32px;
+	height:32px;	
+}
+/*ppt文件*/
+.att_type_ppt{
+	background: url(../../images/live/typeico/type_ppt.gif) 50% 50% no-repeat;
+	width:32px;
+	height:32px;	
+}
+/*pdf文件*/
+.att_type_pdf{
+	background: url(../../images/live/typeico/type_pdf.gif) 50% 50% no-repeat;
+	width:32px;
+	height:32px;
+}
+/*压缩文件*/
+.att_type_rar{
+	background: url(../../images/live/typeico/type_rar.gif) 50% 50% no-repeat;
+	width:32px;
+	height:32px;
+}
+/*文本文件*/
+.att_type_txt{
+	background: url(../../images/live/typeico/type_txt.gif) 50% 50% no-repeat;
+	width:32px;
+	height:32px;
+}
+/*未知文件*/
+.att_type_unkown{
+	background: url(../../images/live/typeico/type_unkown.gif) 50% 50% no-repeat;
+	width:32px;
+	height:32px;	
+}
+/*图片文件*/
+.att_type_img{
+	background: url(../../images/live/typeico/type_img.gif) 50% 50% no-repeat;
+	width:32px;
+	height:32px;	
+}
+/*网页文件*/
+.att_type_htm{
+	background: url(../../images/live/typeico/type_html.gif) 50% 50% no-repeat;
+	width:32px;
+	height:32px;	
+}
+/*定时器状态按钮*/
+.start{
+	background: url(../../images/live/start.png) no-repeat !important; 
+	width:16px !important; 
+	height:16px !important;
+	border: 0 !important; 
+}
+.stop{
+	background: url(../../images/live/stop.png) no-repeat !important; 
+	width:16px !important; 
+	height:16px !important; 
+	border: 0 !important; 
+}

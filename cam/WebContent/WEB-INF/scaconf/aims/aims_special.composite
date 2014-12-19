@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="common" xmlns="http://www.loushang.com/sca/1.0">
+	<!--一村一品专业乡镇/村基础表-->
+	<component name="aimSpecialVillageDao">
+		<service name="aimSpecialVillageDao">
+			<interface.java interface="com.inspur.aims.special.base.dao.IAimSpecialVillageDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.aims.special.base.dao.jdbc.AimSpecialVillageDao"/>
+    </component>
+	<component name="aimSpecialVillageDomain">
+		<service name="aimSpecialVillageDomain">
+			<interface.java interface="com.inspur.aims.special.base.domain.IAimSpecialVillageDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.aims.special.base.domain.support.AimSpecialVillageDomain"/>
+		<reference name="aimSpecialVillageDao" target="aimSpecialVillageDao/aimSpecialVillageDao"/>
+		<reference name="aimSpecialBaseHisDomain" target="aimSpecialBaseHisDomain/aimSpecialBaseHisDomain"/>
+		<reference name="aimSpecialBaseDao" target="aimSpecialBaseDao/aimSpecialBaseDao"/>
+	</component>
+	<!--一村一品县市区基本情况表-->
+	<component name="aimSpecialBaseDao">
+		<service name="aimSpecialBaseDao">
+			<interface.java interface="com.inspur.aims.special.base.dao.IAimSpecialBaseDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.aims.special.base.dao.jdbc.AimSpecialBaseDao"/>
+    </component>
+	<component name="aimSpecialBaseDomain">
+		<service name="aimSpecialBaseDomain">
+			<interface.java interface="com.inspur.aims.special.base.domain.IAimSpecialBaseDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.aims.special.base.domain.support.AimSpecialBaseDomain"/>
+		<reference name="aimSpecialBaseDao" target="aimSpecialBaseDao/aimSpecialBaseDao"/>
+	</component>
+	<!--一村一品填报单位信息-->
+	<component name="aimSpecialOrganDao">
+		<service name="aimSpecialOrganDao">
+			<interface.java interface="com.inspur.aims.special.base.dao.IAimSpecialOrganDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.aims.special.base.dao.jdbc.AimSpecialOrganDao"/>
+    </component>
+	<component name="aimSpecialOrganDomain">
+		<service name="aimSpecialOrganDomain">
+			<interface.java interface="com.inspur.aims.special.base.domain.IAimSpecialOrganDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.aims.special.base.domain.support.AimSpecialOrganDomain"/>
+		<reference name="aimSpecialOrganDao" target="aimSpecialOrganDao/aimSpecialOrganDao"/>
+	</component>
+		<!--一村一品县市区填报情况表-->
+	<component name="aimSpecialBaseHisDao">
+		<service name="aimSpecialBaseHisDao">
+			<interface.java interface="com.inspur.aims.special.base.dao.IAimSpecialBaseHisDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.aims.special.base.dao.jdbc.AimSpecialBaseHisDao"/>
+    </component>
+	<component name="aimSpecialBaseHisDomain">
+		<service name="aimSpecialBaseHisDomain">
+			<interface.java interface="com.inspur.aims.special.base.domain.IAimSpecialBaseHisDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.aims.special.base.domain.support.AimSpecialBaseHisDomain"/>
+		<reference name="aimSpecialBaseHisDao" target="aimSpecialBaseHisDao/aimSpecialBaseHisDao"/>
+		<reference name="aimSpecialVillageDao" target="aimSpecialVillageDao/aimSpecialVillageDao"/>
+	</component>
+		<!--一村一品审核历史情况表-->
+	<component name="aimExamInfoHisDao">
+		<service name="aimExamInfoHisDao">
+			<interface.java interface="com.inspur.aims.special.base.dao.IAimExamInfoHisDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.aims.special.base.dao.jdbc.AimExamInfoHisDao"/>
+    </component>
+	<component name="aimExamInfoHisDomain">
+		<service name="aimExamInfoHisDomain">
+			<interface.java interface="com.inspur.aims.special.base.domain.IAimExamInfoHisDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.aims.special.base.domain.support.AimExamInfoHisDomain"/>
+		<reference name="aimExamInfoHisDao" target="aimExamInfoHisDao/aimExamInfoHisDao"/>
+	</component>
+</composite>

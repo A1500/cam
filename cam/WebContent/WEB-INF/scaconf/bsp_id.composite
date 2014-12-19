@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+    <description>organization module</description>
+
+    <component name="pubIdTableProvider">
+	    <service name="pubIdTableProvider"> 
+	    	<interface.java interface="org.loushang.bsp.id.domain.IPubIdTableProvider"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="org.loushang.bsp.id.domain.support.PubIdTableProviderImpl"/>
+    </component>
+</composite>

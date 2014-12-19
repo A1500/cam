@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.DBTableData">
+<Parameters>
+</Parameters>
+<Attributes isCache="true" />
+<Connection class="com.fr.data.impl.NameDatabaseConnection">
+<DatabaseName><![CDATA[FRDemo]]></DatabaseName>
+</Connection><Query><![CDATA[select * from ConnectStuff]]></Query>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<DictMap>
+<NameDictionary name="省份">
+<Dictionary class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="辽宁省" value="辽宁省"/>
+<Dict key="江苏省" value="江苏省"/>
+<Dict key="浙江省" value="浙江省"/>
+<Dict key="湖北省" value="湖北省"/>
+<Dict key="福建省" value="福建省"/>
+<Dict key="广州省" value="广州省"/>
+</CustomDictAttr>
+</Dictionary>
+</NameDictionary>
+<NameDictionary name="城市">
+<Dictionary class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="沈阳" value="沈阳"/>
+<Dict key="大连" value="大连"/>
+<Dict key="鞍山" value="鞍山"/>
+<Dict key="抚顺" value="抚顺"/>
+<Dict key="本溪" value="本溪"/>
+<Dict key="丹东" value="丹东"/>
+<Dict key="锦州" value="锦州"/>
+<Dict key="营口" value="营口"/>
+<Dict key="辽阳铁岭" value="辽阳铁岭"/>
+<Dict key="朝阳" value="朝阳"/>
+<Dict key="盘锦" value="盘锦"/>
+<Dict key="葫芦岛" value="葫芦岛"/>
+<Dict key="南京" value="南京"/>
+<Dict key="无锡" value="无锡"/>
+<Dict key="常州" value="常州"/>
+<Dict key="苏州" value="苏州"/>
+<Dict key="镇江" value="镇江"/>
+<Dict key="扬州" value="扬州"/>
+<Dict key="泰州" value="泰州"/>
+<Dict key="南通" value="南通"/>
+<Dict key="盐城" value="盐城"/>
+<Dict key="淮安" value="淮安"/>
+<Dict key="连云港" value="连云港"/>
+<Dict key="宿迁" value="宿迁"/>
+<Dict key="杭州" value="杭州"/>
+<Dict key="宁波" value="宁波"/>
+<Dict key="温州" value="温州"/>
+<Dict key="嘉兴" value="嘉兴"/>
+<Dict key="湖州" value="湖州"/>
+<Dict key="绍兴" value="绍兴"/>
+<Dict key="台州" value="台州"/>
+<Dict key="金华" value="金华"/>
+<Dict key="衢州" value="衢州"/>
+<Dict key="丽水" value="丽水"/>
+<Dict key="舟山" value="舟山"/>
+<Dict key="武汉" value="武汉"/>
+<Dict key="黄石" value="黄石"/>
+<Dict key="十堰" value="十堰"/>
+<Dict key="宜昌" value="宜昌"/>
+<Dict key="襄樊" value="襄樊"/>
+<Dict key="鄂州" value="鄂州"/>
+<Dict key="孝感" value="孝感"/>
+<Dict key="荆州" value="荆州"/>
+<Dict key="黄冈" value="黄冈"/>
+<Dict key="咸宁" value="咸宁"/>
+<Dict key="恩施" value="恩施"/>
+<Dict key="仙桃" value="仙桃"/>
+<Dict key="随州" value="随州"/>
+<Dict key="福州" value="福州"/>
+<Dict key="龙岩" value="龙岩"/>
+<Dict key="厦门" value="厦门"/>
+<Dict key="南平" value="南平"/>
+<Dict key="泉州" value="泉州"/>
+<Dict key="三明" value="三明"/>
+<Dict key="漳州" value="漳州"/>
+<Dict key="莆田" value="莆田"/>
+<Dict key="宁德" value="宁德"/>
+<Dict key="东莞" value="东莞"/>
+<Dict key="广州" value="广州"/>
+<Dict key="汕头" value="汕头"/>
+<Dict key="珠海" value="珠海"/>
+<Dict key="深圳" value="深圳"/>
+<Dict key="湛江" value="湛江"/>
+<Dict key="中山" value="中山"/>
+<Dict key="肇庆" value="肇庆"/>
+</CustomDictAttr>
+</Dictionary>
+</NameDictionary>
+<NameDictionary name="省份城市">
+<Dictionary class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="沈阳" value="辽宁省"/>
+<Dict key="大连" value="辽宁省"/>
+<Dict key="鞍山" value="辽宁省"/>
+<Dict key="抚顺" value="辽宁省"/>
+<Dict key="本溪" value="辽宁省"/>
+<Dict key="丹东" value="辽宁省"/>
+<Dict key="锦州" value="辽宁省"/>
+<Dict key="营口" value="辽宁省"/>
+<Dict key="辽阳铁岭" value="辽宁省"/>
+<Dict key="朝阳" value="辽宁省"/>
+<Dict key="盘锦" value="辽宁省"/>
+<Dict key="葫芦岛" value="辽宁省"/>
+<Dict key="南京" value="江苏省"/>
+<Dict key="无锡" value="江苏省"/>
+<Dict key="常州" value="江苏省"/>
+<Dict key="苏州" value="江苏省"/>
+<Dict key="镇江" value="江苏省"/>
+<Dict key="扬州" value="江苏省"/>
+<Dict key="泰州" value="江苏省"/>
+<Dict key="南通" value="江苏省"/>
+<Dict key="盐城" value="江苏省"/>
+<Dict key="淮安" value="江苏省"/>
+<Dict key="连云港" value="江苏省"/>
+<Dict key="宿迁" value="江苏省"/>
+<Dict key="杭州" value="浙江省"/>
+<Dict key="宁波" value="浙江省"/>
+<Dict key="温州" value="浙江省"/>
+<Dict key="嘉兴" value="浙江省"/>
+<Dict key="湖州" value="浙江省"/>
+<Dict key="绍兴" value="浙江省"/>
+<Dict key="台州" value="浙江省"/>
+<Dict key="金华" value="浙江省"/>
+<Dict key="衢州" value="浙江省"/>
+<Dict key="丽水" value="浙江省"/>
+<Dict key="舟山" value="浙江省"/>
+<Dict key="武汉" value="湖北省"/>
+<Dict key="黄石" value="湖北省"/>
+<Dict key="十堰" value="湖北省"/>
+<Dict key="宜昌" value="湖北省"/>
+<Dict key="襄樊" value="湖北省"/>
+<Dict key="鄂州" value="湖北省"/>
+<Dict key="孝感" value="湖北省"/>
+<Dict key="荆州" value="湖北省"/>
+<Dict key="黄冈" value="湖北省"/>
+<Dict key="咸宁" value="湖北省"/>
+<Dict key="随州" value="湖北省"/>
+<Dict key="恩施" value="湖北省"/>
+<Dict key="仙桃" value="湖北省"/>
+<Dict key="福州" value="福建省"/>
+<Dict key="龙岩" value="福建省"/>
+<Dict key="厦门" value="福建省"/>
+<Dict key="南平" value="福建省"/>
+<Dict key="泉州" value="福建省"/>
+<Dict key="三明" value="福建省"/>
+<Dict key="漳州" value="福建省"/>
+<Dict key="莆田" value="福建省"/>
+<Dict key="宁德" value="福建省"/>
+<Dict key="东莞" value="福建省"/>
+<Dict key="广州" value="广东省"/>
+<Dict key="汕头" value="广东省"/>
+<Dict key="珠海" value="广东省"/>
+<Dict key="深圳" value="广东省"/>
+<Dict key="湛江" value="广东省"/>
+<Dict key="中山" value="广东省"/>
+<Dict key="肇庆" value="广东省"/>
+</CustomDictAttr>
+</Dictionary>
+</NameDictionary>
+</DictMap>
+<ReportSettings orientation="1" shrinkToFit="false" headerHeight="0.0" footerHeight="0.0">
+<Margin top="0.27" left="0.7499999999999999" bottom="0.27" right="0.7499999999999999" />
+</ReportSettings>
+<ReportPageAttr>
+</ReportPageAttr>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+<Submiter class="com.fr.report.write.BuiltInSQLSubmiter" name="内置SQL_1">
+<Attributes dsName="FRDemo" tableName="ConnectStuff" />
+<Column isKey="true" name="Province">
+<ColumnRow column="2" row="5"/>
+</Column>
+<Column isKey="true" name="City">
+<ColumnRow column="4" row="5"/>
+</Column>
+<Column isKey="false" name="Target">
+<ColumnRow column="1" row="7"/>
+</Column>
+<Column isKey="false" name="Amount">
+<ColumnRow column="2" row="7"/>
+</Column>
+<Column isKey="false" name="ConstructArea">
+<ColumnRow column="3" row="7"/>
+</Column>
+<Column isKey="false" name="Value">
+<ColumnRow column="4" row="7"/>
+</Column>
+<Column isKey="false" name="DoorNumber">
+<ColumnRow column="5" row="7"/>
+</Column>
+<Column isKey="false" name="Remark">
+<ColumnRow column="6" row="7"/>
+</Column>
+<Column isKey="false" name="Principal">
+<ColumnRow column="2" row="9"/>
+</Column>
+<Column isKey="false" name="SignMan">
+<ColumnRow column="4" row="9"/>
+</Column>
+<Column isKey="false" name="SignDate">
+<ColumnRow column="6" row="9"/>
+</Column>
+</Submiter>
+<NameJavaScriptGroup>
+<NameJavaScript name="success">
+</NameJavaScript>
+<NameJavaScript name="fail">
+</NameJavaScript>
+</NameJavaScriptGroup>
+</ReportWriteAttr>
+<Header reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Footer>
+<RowHeight defaultValue="19">
+<![CDATA[19,26,19,20,19,19,32,22,22,22]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[72,107,106,106,86,96,110]]>
+</ColumnWidth>
+<CellElementList>
+<C c="1" r="1" cs="6" s="0"><O t="S"><![CDATA[省辖市城镇和工况区私人建房情况]]></O>
+</C>
+<C c="1" r="3" s="1"></C>
+<C c="2" r="3" s="1"></C>
+<C c="3" r="3" s="1"></C>
+<C c="4" r="3" s="1"></C>
+<C c="5" r="3"><O t="S"><![CDATA[表   号：]]></O>
+</C>
+<C c="6" r="3"><O t="S"><![CDATA[×××表]]></O>
+</C>
+<C c="1" r="4" s="1"></C>
+<C c="2" r="4" s="1"></C>
+<C c="3" r="4" s="1"></C>
+<C c="4" r="4" s="1"><O t="S"><![CDATA[]]></O>
+</C>
+<C c="5" r="4"><O t="S"><![CDATA[制表机关：]]></O>
+</C>
+<C c="6" r="4"><O t="S"><![CDATA[国家统计局]]></O>
+</C>
+<C c="1" r="5" s="2"><O t="S"><![CDATA[省份：]]></O>
+</C>
+<C c="2" r="5" s="2"><O t="S"><![CDATA[]]></O>
+<Present class="com.fr.report.cellElement.DictPresent"><Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="辽宁省" value="辽宁省"/>
+<Dict key="江苏省" value="江苏省"/>
+<Dict key="浙江省" value="浙江省"/>
+<Dict key="湖北省" value="湖北省"/>
+<Dict key="福建省" value="福建省"/>
+<Dict key="广东省" value="广东省"/>
+</CustomDictAttr>
+</Dict></Present><CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="辽宁省" value="辽宁省"/>
+<Dict key="江苏省" value="江苏省"/>
+<Dict key="浙江省" value="浙江省"/>
+<Dict key="湖北省" value="湖北省"/>
+<Dict key="福建省" value="福建省"/>
+<Dict key="广东省" value="广东省"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</C>
+<C c="3" r="5" s="2"><O t="S"><![CDATA[省辖市：]]></O>
+</C>
+<C c="4" r="5" s="2"><O t="S"><![CDATA[]]></O>
+<Present class="com.fr.report.cellElement.DictPresent"><Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="沈阳" value="沈阳"/>
+<Dict key="大连" value="大连"/>
+<Dict key="鞍山" value="鞍山"/>
+<Dict key="抚顺" value="抚顺"/>
+<Dict key="本溪" value="本溪"/>
+<Dict key="丹东" value="丹东"/>
+<Dict key="锦州" value="锦州"/>
+<Dict key="营口" value="营口"/>
+<Dict key="辽阳铁岭" value="辽阳铁岭"/>
+<Dict key="朝阳" value="朝阳"/>
+<Dict key="盘锦" value="盘锦"/>
+<Dict key="葫芦岛" value="葫芦岛"/>
+<Dict key="南京" value="南京"/>
+<Dict key="无锡" value="无锡"/>
+<Dict key="常州" value="常州"/>
+<Dict key="苏州" value="苏州"/>
+<Dict key="镇江" value="镇江"/>
+<Dict key="扬州" value="扬州"/>
+<Dict key="泰州" value="泰州"/>
+<Dict key="南通" value="南通"/>
+<Dict key="盐城" value="盐城"/>
+<Dict key="淮安" value="淮安"/>
+<Dict key="连云港" value="连云港"/>
+<Dict key="宿迁" value="宿迁"/>
+<Dict key="杭州" value="杭州"/>
+<Dict key="宁波" value="宁波"/>
+<Dict key="温州" value="温州"/>
+<Dict key="嘉兴" value="嘉兴"/>
+<Dict key="湖州" value="湖州"/>
+<Dict key="绍兴" value="绍兴"/>
+<Dict key="台州" value="台州"/>
+<Dict key="金华" value="金华"/>
+<Dict key="衢州" value="衢州"/>
+<Dict key="丽水" value="丽水"/>
+<Dict key="舟山" value="舟山"/>
+<Dict key="武汉" value="武汉"/>
+<Dict key="黄石" value="黄石"/>
+<Dict key="十堰" value="十堰"/>
+<Dict key="宜昌" value="宜昌"/>
+<Dict key="襄樊" value="襄樊"/>
+<Dict key="鄂州" value="鄂州"/>
+<Dict key="孝感" value="孝感"/>
+<Dict key="荆州" value="荆州"/>
+<Dict key="黄冈" value="黄冈"/>
+<Dict key="咸宁" value="咸宁"/>
+<Dict key="随州" value="随州"/>
+<Dict key="恩施" value="恩施"/>
+<Dict key="仙桃" value="仙桃"/>
+<Dict key="福州" value="福州"/>
+<Dict key="龙岩" value="龙岩"/>
+<Dict key="厦门" value="厦门"/>
+<Dict key="南平" value="南平"/>
+<Dict key="泉州" value="泉州"/>
+<Dict key="三明" value="三明"/>
+<Dict key="漳州" value="漳州"/>
+<Dict key="莆田" value="莆田"/>
+<Dict key="宁德" value="宁德"/>
+<Dict key="东莞" value="东莞"/>
+<Dict key="广州" value="广州"/>
+<Dict key="汕头" value="汕头"/>
+<Dict key="珠海" value="珠海"/>
+<Dict key="深圳" value="深圳"/>
+<Dict key="湛江" value="湛江"/>
+<Dict key="中山" value="中山"/>
+<Dict key="肇庆" value="肇庆"/>
+</CustomDictAttr>
+</Dict></Present><CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="沈阳" value="沈阳"/>
+<Dict key="大连" value="大连"/>
+<Dict key="鞍山" value="鞍山"/>
+<Dict key="抚顺" value="抚顺"/>
+<Dict key="本溪" value="本溪"/>
+<Dict key="丹东" value="丹东"/>
+<Dict key="锦州" value="锦州"/>
+<Dict key="营口" value="营口"/>
+<Dict key="辽阳铁岭" value="辽阳铁岭"/>
+<Dict key="朝阳" value="朝阳"/>
+<Dict key="盘锦" value="盘锦"/>
+<Dict key="葫芦岛" value="葫芦岛"/>
+<Dict key="南京" value="南京"/>
+<Dict key="无锡" value="无锡"/>
+<Dict key="常州" value="常州"/>
+<Dict key="苏州" value="苏州"/>
+<Dict key="镇江" value="镇江"/>
+<Dict key="扬州" value="扬州"/>
+<Dict key="泰州" value="泰州"/>
+<Dict key="南通" value="南通"/>
+<Dict key="盐城" value="盐城"/>
+<Dict key="淮安" value="淮安"/>
+<Dict key="连云港" value="连云港"/>
+<Dict key="宿迁" value="宿迁"/>
+<Dict key="杭州" value="杭州"/>
+<Dict key="宁波" value="宁波"/>
+<Dict key="温州" value="温州"/>
+<Dict key="嘉兴" value="嘉兴"/>
+<Dict key="湖州" value="湖州"/>
+<Dict key="绍兴" value="绍兴"/>
+<Dict key="台州" value="台州"/>
+<Dict key="金华" value="金华"/>
+<Dict key="衢州" value="衢州"/>
+<Dict key="丽水" value="丽水"/>
+<Dict key="舟山" value="舟山"/>
+<Dict key="武汉" value="武汉"/>
+<Dict key="黄石" value="黄石"/>
+<Dict key="十堰" value="十堰"/>
+<Dict key="宜昌" value="宜昌"/>
+<Dict key="襄樊" value="襄樊"/>
+<Dict key="鄂州" value="鄂州"/>
+<Dict key="孝感" value="孝感"/>
+<Dict key="荆州" value="荆州"/>
+<Dict key="黄冈" value="黄冈"/>
+<Dict key="咸宁" value="咸宁"/>
+<Dict key="恩施" value="恩施"/>
+<Dict key="仙桃" value="仙桃"/>
+<Dict key="随州" value="随州"/>
+<Dict key="福州" value="福州"/>
+<Dict key="龙岩" value="龙岩"/>
+<Dict key="厦门" value="厦门"/>
+<Dict key="南平" value="南平"/>
+<Dict key="泉州" value="泉州"/>
+<Dict key="三明" value="三明"/>
+<Dict key="漳州" value="漳州"/>
+<Dict key="莆田" value="莆田"/>
+<Dict key="宁德" value="宁德"/>
+<Dict key="东莞" value="东莞"/>
+<Dict key="广州" value="广州"/>
+<Dict key="汕头" value="汕头"/>
+<Dict key="珠海" value="珠海"/>
+<Dict key="深圳" value="深圳"/>
+<Dict key="湛江" value="湛江"/>
+<Dict key="中山" value="中山"/>
+<Dict key="肇庆" value="肇庆"/>
+</CustomDictAttr>
+</Dict><Filter><![CDATA[=INMAP($$$,C6,"省份城市")]]></Filter></CellEditorDef>
+</C>
+<C c="5" r="5"><O t="S"><![CDATA[有效期至：]]></O>
+</C>
+<C c="6" r="5"><O t="S"><![CDATA[2007年1月1日]]></O>
+</C>
+<C c="1" r="6" s="3"><O t="S"><![CDATA[指标名称]]></O>
+</C>
+<C c="2" r="6" s="3"><O t="S"><![CDATA[城镇、工矿区个数 （个）]]></O>
+</C>
+<C c="3" r="6" s="3"><O t="S"><![CDATA[竣工房屋建筑面积（平方米）]]></O>
+</C>
+<C c="4" r="6" s="3"><O t="S"><![CDATA[竣工房屋价值（万元）]]></O>
+</C>
+<C c="5" r="6" s="3"><O t="S"><![CDATA[建房户数（户）]]></O>
+</C>
+<C c="6" r="6" s="3"><O t="S"><![CDATA[备注]]></O>
+</C>
+<C c="1" r="7" s="4"><O t="DSColumn"><Attributes dsName="ds1" columnName="Target" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="2" r="7" s="3"><O t="S"><![CDATA[]]></O>
+<CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="3" r="7" s="3"><CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="4" r="7" s="3"><CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="5" r="7" s="3"><CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="6" r="7" s="3"><Expand dir="0" />
+<CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="1" r="8" s="4"><O t="S"><![CDATA[合计：]]></O>
+</C>
+<C c="2" r="8" s="3"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(C8)]]></Attributes></O>
+</C>
+<C c="3" r="8" s="3"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(D8)]]></Attributes></O>
+</C>
+<C c="4" r="8" s="3"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(E8)]]></Attributes></O>
+</C>
+<C c="5" r="8" s="3"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(F8)]]></Attributes></O>
+</C>
+<C c="6" r="8" s="3"><O t="S"><![CDATA[]]></O>
+<CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="1" r="9" s="2"><O t="S"><![CDATA[单位负责人：]]></O>
+</C>
+<C c="2" r="9"><CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="3" r="9" s="2"><O t="S"><![CDATA[填表人：]]></O>
+</C>
+<C c="4" r="9"><CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.TextCellEditorDef"><Attributes allowBlank="true" />
+<Attr multiLine="false" /></CellEditorDef>
+</C>
+<C c="5" r="9" s="2"><O t="S"><![CDATA[填报日期：]]></O>
+</C>
+<C c="6" r="9" s="5"><O t="S"><![CDATA[]]></O>
+<CellWriteAttr>
+</CellWriteAttr>
+<CellEditorDef class="com.fr.report.cellElement.DateCellEditorDef"><Attributes allowBlank="true" />
+<Attribute format="yyyy-MM-dd" />
+</CellEditorDef>
+</C>
+<C c="1" r="10"></C>
+<C c="2" r="10"></C>
+<C c="3" r="10"></C>
+<C c="4" r="10"></C>
+<C c="5" r="10"></C>
+<C c="6" r="10"></C>
+<C c="1" r="11" cs="6" s="6"><O t="S"><![CDATA[“城镇和工矿区私人建房情况”表单功能应用说明：]]></O>
+</C>
+<C c="1" r="12" cs="6" s="7"><O t="S"><![CDATA[1、连动填报]]></O>
+</C>
+<C c="1" r="13" cs="6" s="7"><O t="S"><![CDATA[     该表单中，省份与省辖市之间设置了填报连动，选择省份之后，省辖市下拉框中的内容与该省一一对应。]]></O>
+</C>
+<C c="1" r="14" cs="6" s="7"><O t="S"><![CDATA[     如选择“江苏省”，“省辖市”下拉框中则出现江苏省“南京、无锡、苏州、常州”等12个省辖市。]]></O>
+</C>
+<C c="1" r="15" cs="6" s="8"><O t="S"><![CDATA[2、公式自动计算]]></O>
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="16" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<Format class="java.text.SimpleDateFormat"><![CDATA[yyyy-MM-dd]]>
+</Format>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Top style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328966">
+</Background>
+<Border><Bottom style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

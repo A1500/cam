@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="common" xmlns="http://www.loushang.com/sca/1.0">
+	<description>通用帮助构件</description>
+	<component name="commHelpDao">
+		<service name="commHelpDao">
+			<interface.java interface="com.inspur.cams.comm.help.dao.ICommHelpDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.comm.help.dao.jdbc.CommHelpDao"/>
+	</component>
+	<component name="commHelpDomain">
+		<service name="commHelpDomain">
+			<interface.java interface="com.inspur.cams.comm.help.domain.ICommHelpDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.comm.help.domain.support.CommHelpDomain"/>
+		<reference name="commHelpDao" target="commHelpDao/commHelpDao"/>
+	</component>
+</composite>

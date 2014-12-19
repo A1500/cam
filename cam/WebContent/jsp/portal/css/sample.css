@@ -1,0 +1,103 @@
+html, body {
+    font:normal 12px verdana;
+    margin:0;
+    padding:0;
+    border:0 none;
+    height:100%;
+}
+.dh {
+	font-family: "微软雅黑";
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFF;
+}
+.dzcss {
+	font-family: "微软雅黑";
+	font-size: 12px;
+	font-weight: bold;
+	color: #000;
+}
+
+.l-panel-body p {
+    margin:5px;
+}
+    
+.settings {
+    background-image:url( ../shared/icons/fam/folder_wrench.png ) !important;
+}
+.nav {
+    background-image:url( ../shared/icons/fam/folder_go.png ) !important;
+}
+ 
+
+.ppcontent {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+height:126px;
+padding:7px 0 0 10px;
+position:relative;
+}
+.passportc .error {
+color:#FF6000;
+height:15px;
+}
+.passportc .card {
+color:#313031;
+font-weight:normal;
+padding:0 0 0 25px;
+}
+.passportc .card li {
+margin:2px 0 7px !important;
+}
+.passportc .card li a:link, .passportc .card li a:visited {
+margin-right:27px;
+}
+.card dt {
+margin-top:7px;
+}
+.passportc .card dl {
+padding-top:10px;
+}
+.passportc .card .sign {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+border:0 none;
+color:#333333;
+font-size:12px;
+height:21px;
+padding-top:1px;
+width:70px;
+}
+.passportc .card .ppinput {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+background:#FFFFFF none repeat scroll 0 0;
+border:1px solid #FFA200;
+font-size:12px;
+height:17px;
+margin:0;
+padding:0;
+width:164px;
+}
+.card dl a:link, .card dl a:visited {
+margin-right:27px;
+}
+.card dt span {
+color:#313031;
+margin:5px 30px 0 38px;
+}
+.ppinput{
+	width: 140px;
+	border: 1px solid;	
+}
+.ppinput#j_username{
+	margin-left: 5px;
+}
+.cbcss {
+	font-family: "宋体";
+	font-size: 14px;
+	color: #000;
+}

@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WorkBook>
+<Version>6.2</Version>
+<Report class="com.fr.report.WorkSheet" name="sheet1">
+<TableDataMap>
+<NameTableData name="ds1">
+<TableData class="com.fr.data.impl.EmbeddedTableData">
+<Parameters>
+</Parameters>
+<ColumnNames><![CDATA[Province,,.,,City,,.,,Company,,.,,Save]]></ColumnNames>
+<ColumnTypes><![CDATA[java.lang.String,java.lang.String,java.lang.String,java.lang.Integer]]></ColumnTypes>
+<RowData>
+<![CDATA[D3WjPJm];4YMlZ^^4\_[l&%=(e;+X?:qT>,:^V!`>*B?G<F+A!3\U"8E3>e;hm<'*c?!;l];
+E5)U\s4o[14T"^+<jU9eNAfX$s'
+(8As??5<7?h#8h]:em`1j>`5@9i'd!nk$_\8!rlOF3-0t
+r4MeqYXeif>S;>PYF9uI6ldi^1Y"-82.Hf*Vh??Y"M_5>B;^;#n)gN
+r+iXkDCVI/a_pW`.N]
+>2n%^(l3;d[TO[,>t"l'+g3GHZIsTK5^oP8Q23)U,Q6<KqhR+;@-5MHA!o>[$F[)URnhc7\J
+#"'*>N=q
+'@^=MS)rJOk0EEbGNJHlZ(U(PLl^G3kQt)WF^cG@;HFiVpEfI'@FF8P24']#d7e#
+(rW,ep:c!>R/?5\/<`IE7B[^<U".BoLa-]#
+B+SZ&ciC_<Z;j)44hE=d&ZM\h&C4=apXq',)2
++2;#a<W;r$CEFk(IGA6uL#\,!Qn(mdBVCp.Jg^`)iFZB+[r8:XDT)(!S+To`[s
+D.pNp22@mi
+<><cr%Pul%KIK9~
+
+]]>
+</RowData>
+</TableData>
+</NameTableData>
+</TableDataMap>
+<DictMap>
+<NameDictionary name="省份城市">
+<Dictionary class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="厦门市" value="福建省"/>
+<Dict key="广州市" value="广东省"/>
+<Dict key="珠海市" value="广东省"/>
+<Dict key="长春市" value="吉林省"/>
+<Dict key="吉林市" value="吉林省"/>
+<Dict key="南京市" value="江苏省"/>
+<Dict key="苏州市" value="江苏省"/>
+<Dict key="杭州市" value="浙江省"/>
+<Dict key="宁波市" value="浙江省"/>
+<Dict key="烟台市" value="浙江省"/>
+</CustomDictAttr>
+</Dictionary>
+</NameDictionary>
+<NameDictionary name="省份">
+<Dictionary class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="福建省" value="福建省"/>
+<Dict key="广东省" value="广东省"/>
+<Dict key="吉林省" value="吉林省"/>
+<Dict key="江苏省" value="江苏省"/>
+<Dict key="浙江省" value="浙江省"/>
+</CustomDictAttr>
+</Dictionary>
+</NameDictionary>
+<NameDictionary name="城市">
+<Dictionary class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="长春市" value="长春市"/>
+<Dict key="广州市" value="广州市"/>
+<Dict key="杭州市" value="杭州市"/>
+<Dict key="吉林市" value="吉林市"/>
+<Dict key="南京市" value="南京市"/>
+<Dict key="宁波市" value="宁波市"/>
+<Dict key="苏州市" value="苏州市"/>
+<Dict key="厦门市" value="厦门市"/>
+<Dict key="烟台市" value="烟台市"/>
+<Dict key="珠海市" value="珠海市"/>
+</CustomDictAttr>
+</Dictionary>
+</NameDictionary>
+</DictMap>
+<ReportSettings shrinkToFit="false" headerHeight="0.0" footerHeight="0.0">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+<Parameter>
+<Attributes name="Province"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[江苏省]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="福建省" value="福建省"/>
+<Dict key="广东省" value="广东省"/>
+<Dict key="吉林省" value="吉林省"/>
+<Dict key="江苏省" value="江苏省"/>
+<Dict key="浙江省" value="浙江省"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</Parameter>
+<Parameter>
+<Attributes name="City"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[南京市]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="长春市" value="长春市"/>
+<Dict key="广州市" value="广州市"/>
+<Dict key="杭州市" value="杭州市"/>
+<Dict key="吉林市" value="吉林市"/>
+<Dict key="南京市" value="南京市"/>
+<Dict key="宁波市" value="宁波市"/>
+<Dict key="苏州市" value="苏州市"/>
+<Dict key="厦门市" value="厦门市"/>
+<Dict key="烟台市" value="烟台市"/>
+<Dict key="珠海市" value="珠海市"/>
+</CustomDictAttr>
+</Dict><Filter><![CDATA[=INMAP($$$,$Province,"省份城市")]]></Filter></CellEditorDef>
+</Parameter>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="1" userDefineWindow="true" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+<WorkSheet>
+<ReportSettings shrinkToFit="false" headerHeight="0.0" footerHeight="0.0">
+<Margin top="0.27" left="0.75" bottom="0.27" right="0.75" />
+</ReportSettings>
+<ReportParameterAttr>
+<Parameters>
+</Parameters>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="0" userDefineWindow="false" />
+<PWTitle><![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<Header reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Header>
+<Footer reportPageType="0">
+<Background name="NullBackground" />
+<LeftList>
+</LeftList>
+<CenterList>
+</CenterList>
+<RightList>
+</RightList>
+</Footer>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[56,50,72,50]]>
+</ColumnWidth>
+<CellElementList>
+<C c="1" r="0" s="0"><O t="S"><![CDATA[省份：]]></O>
+</C>
+<C c="2" r="0" s="1"><O t="PR" >
+<ParameterRef name="Province" />
+</O>
+</C>
+<C c="3" r="0" s="0"><O t="S"><![CDATA[城市：]]></O>
+</C>
+<C c="4" r="0" s="1"><O t="PR" >
+<ParameterRef name="City" />
+</O>
+</C>
+<C c="5" r="0" s="0"><O t="PB" >
+<ParameterButton name="查询" type="0" />
+</O>
+</C>
+</CellElementList>
+</WorkSheet>
+<PP class="com.fr.report.parameter.CustomParameterProcessor">
+<UnitProcessorMap>
+<ParameterUnitProcessor parameter="Province">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($Province=='',nofilter,$Province)]]></Attributes><Result type="String">江苏省</Result></Formula></UP>
+</ParameterUnitProcessor>
+<ParameterUnitProcessor parameter="City">
+<UP class="com.fr.report.parameter.UnitProcessor.FormulaUnitProcessor">
+<Formula><Attributes><![CDATA[=if($City=='',nofilter,$City)]]></Attributes><Result type="String">南京市</Result></Formula></UP>
+</ParameterUnitProcessor>
+</UnitProcessorMap>
+</PP>
+</ReportParameterAttr>
+<AutoRecalculate>false</AutoRecalculate>
+<DesignAttributes>
+</DesignAttributes>
+<ReportWebAttr>
+<EmailManager mailHost="" password="___" user="" fromEmailAddress="" />
+<ServerPrinter>
+</ServerPrinter>
+</ReportWebAttr>
+<ReportWriteAttr>
+</ReportWriteAttr>
+<RowHeight defaultValue="19">
+<![CDATA[]]>
+</RowHeight>
+<ColumnWidth defaultValue="72">
+<![CDATA[125,125,150,125]]>
+</ColumnWidth>
+<CellElementList>
+<C c="0" r="0" cs="4" s="2"><O t="S"><![CDATA[各省市企业节能指标查询 ]]></O>
+</C>
+<C c="0" r="1"></C>
+<C c="1" r="1"></C>
+<C c="2" r="1"></C>
+<C c="3" r="1"></C>
+<C c="0" r="2" cs="4" s="3"></C>
+<C c="0" r="3" s="4"><O t="S"><![CDATA[省份]]></O>
+</C>
+<C c="1" r="3" s="4"><O t="S"><![CDATA[城市]]></O>
+</C>
+<C c="2" r="3" s="4"><O t="S"><![CDATA[企业]]></O>
+</C>
+<C c="3" r="3" s="4"><O t="S"><![CDATA[节煤量]]></O>
+</C>
+<C c="0" r="4" rs="2" s="5"><O t="DSColumn"><Attributes dsName="ds1" columnName="Province" />
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[Province]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="Province"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[江苏省]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="福建省" value="福建省"/>
+<Dict key="广东省" value="广东省"/>
+<Dict key="吉林省" value="吉林省"/>
+<Dict key="江苏省" value="江苏省"/>
+<Dict key="浙江省" value="浙江省"/>
+</CustomDictAttr>
+</Dict></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Present class="com.fr.report.cellElement.DictPresent"><Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="福建省" value="福建省"/>
+<Dict key="广东省" value="广东省"/>
+<Dict key="吉林省" value="吉林省"/>
+<Dict key="江苏省" value="江苏省"/>
+<Dict key="浙江省" value="浙江省"/>
+</CustomDictAttr>
+</Dict></Present><Expand dir="0" />
+</C>
+<C c="1" r="4" rs="2" s="5"><O t="DSColumn"><Attributes dsName="ds1" columnName="City" />
+<Condition class="com.fr.data.condition.CommonCondition"><CNAME><![CDATA[City]]></CNAME><Compare op="0">
+<Parameter>
+<Attributes name="City"
+ type="0"
+ shown="true" />
+<O t="S"><![CDATA[南京市]]></O>
+<CellEditorDef class="com.fr.report.cellElement.ComboBoxCellEditorDef"><Attributes allowBlank="true" />
+<Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="长春市" value="长春市"/>
+<Dict key="广州市" value="广州市"/>
+<Dict key="杭州市" value="杭州市"/>
+<Dict key="吉林市" value="吉林市"/>
+<Dict key="南京市" value="南京市"/>
+<Dict key="宁波市" value="宁波市"/>
+<Dict key="苏州市" value="苏州市"/>
+<Dict key="厦门市" value="厦门市"/>
+<Dict key="烟台市" value="烟台市"/>
+<Dict key="珠海市" value="珠海市"/>
+</CustomDictAttr>
+</Dict><Filter><![CDATA[=MAP($$$,"省份城市")==$Province]]></Filter></CellEditorDef>
+</Parameter>
+</Compare>
+</Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Present class="com.fr.report.cellElement.DictPresent"><Dict class="com.fr.data.impl.CustomDictionary">
+<CustomDictAttr>
+<Dict key="长春市" value="长春市"/>
+<Dict key="广州市" value="广州市"/>
+<Dict key="杭州市" value="杭州市"/>
+<Dict key="吉林市" value="吉林市"/>
+<Dict key="南京市" value="南京市"/>
+<Dict key="宁波市" value="宁波市"/>
+<Dict key="苏州市" value="苏州市"/>
+<Dict key="厦门市" value="厦门市"/>
+<Dict key="烟台市" value="烟台市"/>
+<Dict key="珠海市" value="珠海市"/>
+</CustomDictAttr>
+</Dict></Present><Expand dir="0" />
+</C>
+<C c="2" r="4" s="5"><O t="DSColumn"><Attributes dsName="ds1" columnName="Company" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<Expand dir="0" />
+</C>
+<C c="3" r="4" s="5"><O t="DSColumn"><Attributes dsName="ds1" columnName="Save" />
+<Condition class="com.fr.data.condition.ListCondition"></Condition>
+<RG class="com.fr.report.cellElement.core.FunctionGrouper"></RG><Result><![CDATA[$$$]]></Result></O>
+<HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.ListCondition"></Condition>
+<HighlightAction class="com.fr.report.highlight.ValueHighlightAction">
+<O t="Formula" class="Formula" ><Attributes><![CDATA[=CONCATENATE($$$,"吨")]]></Attributes></O>
+</HighlightAction>
+</Highlight></HighlightList><Expand dir="0" />
+</C>
+<C c="2" r="5" s="6"><O t="S"><![CDATA[总量：]]></O>
+</C>
+<C c="3" r="5" s="6"><O t="Formula" class="Formula" ><Attributes><![CDATA[=sum(D5)]]></Attributes></O>
+<HighlightList><Highlight class="com.fr.report.highlight.DefaultHighlight"><Condition class="com.fr.data.condition.ListCondition"></Condition>
+<HighlightAction class="com.fr.report.highlight.ValueHighlightAction">
+<O t="Formula" class="Formula" ><Attributes><![CDATA[=CONCATENATE($$$,"吨")]]></Attributes></O>
+</HighlightAction>
+</Highlight></HighlightList></C>
+<C c="0" r="7" cs="4" s="7"><O t="S"><![CDATA[“各省市企业节能指标查询”的功能应用说明：]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="0" r="8" cs="4" s="8"><O t="S"><![CDATA[1、参数连动]]></O>
+<Expand leftParentDefault="false" upParentDefault="false" />
+</C>
+<C c="0" r="9" cs="4" s="9"><O t="S"><![CDATA[   “城市”下拉框中的内容会随着“省份”的选择，而与该省一一对应。]]></O>
+</C>
+</CellElementList>
+</Report>
+<StyleList>
+<Style horizontal_alignment="0" vertical_alignment="3" imageLayout="2">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style vertical_alignment="3" imageLayout="2">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="1" size="14" foreground="-16617053" />
+<Background name="NullBackground" />
+<Border><Bottom style="6" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ImageBackground"
+ specifiedImageWidth="-1.0"
+ specifiedImageHeight="-1.0"
+ layout="2">
+<Image width="271" height="20">
+<![CDATA[mDD3s_Ctrm_#OF0>K!!9WJ6!OQ7+.ZoaQ9>0E]d2laNppWiE)!WiGp)li!RsTDPW,0?[QWIV
+_g1pu1d?NUQ%!281S82*R8))W+4
+iebJi;<TD!-WQ)u!;iUeW~
+
+]]>
+</Image>
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="1" size="12" />
+<Background name="ColorBackground"
+ color="-853505">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="NullBackground" />
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style horizontal_alignment="0">
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-525313">
+</Background>
+<Border><Top style="1" color="-6894375"
+ /><Bottom style="1" color="-6894375"
+ /><Left style="1" color="-6894375"
+ /><Right style="1" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328709">
+</Background>
+<Border><Top style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328709">
+</Background>
+<Border><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+<Style>
+<FRFont name="SimSun" style="0" size="12" />
+<Background name="ColorBackground"
+ color="-328709">
+</Background>
+<Border><Bottom style="3" color="-6894375"
+ /><Left style="3" color="-6894375"
+ /><Right style="3" color="-6894375"
+ /></Border>
+</Style>
+</StyleList>
+</WorkBook>

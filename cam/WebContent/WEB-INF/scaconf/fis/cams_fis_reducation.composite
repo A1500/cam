@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="fiso" xmlns="http://www.loushang.com/sca/1.0">
+
+     <!-- 民政减免Domain-->
+    <component name="ReducationSubsidySettlementDomain">
+	    <service name="ReducationSubsidySettlementDomain">
+	    	<interface.java interface="com.inspur.cams.fis.reducation.domain.IReducationSubsidySettlementDomain"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.fis.reducation.domain.support.ReducationSubsidySettlementDomain"/>	
+    	<reference name="fisFeeReducationDomain"  target="FisFeeReducationDomain.FisFeeReducationDomain"/>
+    	<reference name="fisSubsidyPaymentDomain"  target="FisSubsidyPaymentDomain.FisSubsidyPaymentDomain"/>
+    	<reference name="fisSubsidySettlementDomain"  target="FisSubsidySettlementDomain.FisSubsidySettlementDomain"/>
+    </component> 
+    
+</composite>

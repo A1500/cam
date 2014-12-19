@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:bsp:sp-federation:config:1.0"
+	xmlns:sp="urn:bsp:sp-federation:config:1.0"
+	elementFormDefault="unqualified" version="1.0">
+
+	<complexType name="spconfigType">
+		<sequence>
+			<element name="defaultIDPEntityID" type="string" maxOccurs="1" minOccurs="1">
+				<annotation>默认的IDP EntityID</annotation>
+			</element>
+			<element name="defaultBinding" type="string" maxOccurs="1" minOccurs="1">
+				<annotation>该SP默认使用的binding</annotation>
+			</element>
+
+			<element name="integrationModel" type="string" maxOccurs="1" minOccurs="1">
+				<annotation>客户端和被集成应用的衔接模式</annotation>
+			</element>
+
+			<element name="keystorePassword" type="string" maxOccurs="1" minOccurs="0"></element>
+			<element name="samlhandlerGroup" type="sp:SamlhandlerGroupType" maxOccurs="1" minOccurs="1"></element>
+			<element name="assertionValidator" type="sp:validatorType" maxOccurs="1" minOccurs="0"></element>
+			<element name="responseValidator" type="sp:validatorType" maxOccurs="1" minOccurs="0"></element>
+			<element name="class" type="sp:classType" maxOccurs="unbounded" minOccurs="0"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="validatorType">
+		<sequence>
+			<element name="ref" type="sp:refType" maxOccurs="1" minOccurs="0"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="SamlhandlerGroupType">
+		<sequence>
+			<element name="samlhandler" type="sp:SamlhandlerType" maxOccurs="unbounded" minOccurs="1">
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="SamlhandlerType">
+		<complexContent>
+			<extension base="sp:containsType"></extension>
+		</complexContent>
+		<attribute name="id" type="string"></attribute>
+	</complexType>
+
+	<!-- for 引用 -->
+	<complexType name="containsType">
+		<sequence>
+			<element name="ref" type="sp:refType" maxOccurs="1" minOccurs="0"></element>
+		</sequence>
+		<attribute name="id" type="string"></attribute>
+	</complexType>
+
+	<complexType name="refType">
+		<attribute name="name" type="string"></attribute>
+	</complexType>
+	<!--  -->
+
+	<complexType name="classType">
+		<sequence>
+			<element name="property" type="sp:propertyType" maxOccurs="1" minOccurs="0"></element>
+		</sequence>
+		<attribute name="id" type="string"></attribute>
+		<attribute name="class" type="string"></attribute>
+	</complexType>
+
+
+	<complexType name="propertyType">
+		<sequence>
+			<element name="ref" type="sp:refType" maxOccurs="1" minOccurs="0"></element>
+			<element name="value" type="string" maxOccurs="1" minOccurs="0"></element>
+		</sequence>
+		<attribute name="value" type="string"></attribute>
+	</complexType>
+
+
+	<element name="spconfig" type="sp:spconfigType"></element>
+
+</schema>

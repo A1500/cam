@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="params" xmlns="http://www.loushang.com/sca/1.0">
+    <description> params module </description>
+	<component name="paramsDao">
+	    <service name="paramsDao">
+	    	<interface.java interface="org.loushang.live.param.dao.ILiveParmsDao"/>
+	       	<binding.sca/>
+	    </service>
+	    <implementation.java impl="org.loushang.live.param.dao.LiveParmsDao"/>	
+	</component> 
+	
+	<component name="sysParamsDao">
+	    <service name="sysParamsDao">
+	    	<interface.java interface="org.loushang.live.param.dao.ILiveSysParmsDao"/>
+	       	<binding.sca/>
+	   	</service>
+	    <implementation.java impl="org.loushang.live.param.dao.LiveSysParmsDao"/>	
+	</component> 
+	
+	<component name="userParamsDao">
+	    <service name="userParamsDao">
+	    	<interface.java interface="org.loushang.live.param.dao.ILiveUserParmsDao"/>
+	       	<binding.sca/>
+	    </service>
+	    <implementation.java impl="org.loushang.live.param.dao.LiveUserParmsDao"/>	
+	</component> 
+	
+	<component name="paramsDomain">
+	    <service name="paramsDomain">
+	    	<interface.java interface="org.loushang.live.param.domain.ILiveParmsDomain"/>
+	       	<binding.sca/>
+	    </service>
+	    <implementation.java impl="org.loushang.live.param.domain.LiveParmsDomain"/>
+	    <reference name="parmsDao" target="paramsDao/paramsDao"/>
+	    <reference name="sysParmsDao" target="sysParamsDao/sysParamsDao"/>	
+	    <reference name="userParmsDao" target="userParamsDao/userParamsDao"/>	
+	</component>        
+</composite>

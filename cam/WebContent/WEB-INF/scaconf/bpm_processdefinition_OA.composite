@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="workflow" xmlns="http://www.loushang.com/sca/1.0">
+    <description>workflow module</description>
+    
+   		<!--正文权限-->
+	<component name="actDefDocRightDao">
+		<service name="actDefDocRightDao">
+			<interface.java interface="org.loushang.workflow.processdefinition.docrelevant.dao.IActDefDocRightDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.docrelevant.dao.support.ActDefDocRightJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+		<!--正文权限-->
+	<component name="procDefHasDocDao">
+		<service name="procDefHasDocDao">
+			<interface.java interface="org.loushang.workflow.processdefinition.docrelevant.dao.IProcDefHasDocDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.docrelevant.dao.support.ProcDefHasDocJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+		<!--附件权限-->
+	<component name="actDefAdjunctRightDao">
+		<service name="actDefAdjunctRightDao">
+			<interface.java interface="org.loushang.workflow.processdefinition.adjunctrelevant.dao.IActDefAdjunctRightDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.adjunctrelevant.dao.support.ActDefAdjunctRightJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	
+	<!--jsp表单环节扩展-->
+	<component name="actBusinessExtAttrDefDao">
+		<service name="actBusinessExtAttrDefDao">
+			<interface.java interface="org.loushang.workflow.processdefinition.jspformrelevant.dao.IActBusinessExtAttrDefDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.jspformrelevant.dao.support.ActBusinessExtAttrDefJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	
+</composite>

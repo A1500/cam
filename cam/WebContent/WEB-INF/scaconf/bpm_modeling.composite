@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="workflow" xmlns="http://www.loushang.com/sca/1.0">
+    <description>workflow module</description>
+
+	<component name="processDefinitionModelingDao">
+		<service name="processDefinitionModelingDao">
+			<interface.java interface="org.loushang.workflow.modeling.definition.dao.IProcessDefinitionModelingDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.modeling.definition.dao.support.ProcessDefinitionModelingJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="processDefinitionModelingDataRefDao">
+		<service name="processDefinitionModelingDataRefDao">
+			<interface.java interface="org.loushang.workflow.modeling.definition.dao.IProcessDefinitionModelingDataRefDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.modeling.definition.dao.support.ProcessDefinitionModelingDataRefJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	
+	<component name="processDefinitionModelingDomain">
+		<service name="processDefinitionModelingDomain">
+			<interface.java interface="org.loushang.workflow.modeling.definition.domain.IProcessDefinitionModeling"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.modeling.definition.domain.support.ProcessDefinitionModelingImpl"/>
+		<reference name="processDefinitionModelingDao" target="processDefinitionModelingDao/processDefinitionModelingDao"/>
+		<reference name="processDefTransformDomain" target="processDefTransformDomain/processDefTransformDomain"/>
+		<reference name="processDefinitionDomain" target="processDefinitionDomain/processDefinitionDomain"/>
+		<reference name="processCreateDataRefDao" target="processCreateDataRefDao/processCreateDataRefDao"/>
+	</component>
+	
+	<component name="processDefinitionModelingDataRefDomain">
+		<service name="processDefinitionModelingDataRefDomain">
+			<interface.java interface="org.loushang.workflow.modeling.definition.domain.IProcessDefinitionModelingDataRef"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.modeling.definition.domain.support.ProcessDefinitionModelingDataRefImpl"/>
+		<reference name="processDefinitionModelingDataRefDao" target="processDefinitionModelingDataRefDao/processDefinitionModelingDataRefDao"/>
+	</component>
+		
+    <component name="processDefTransformDomain">
+		<service name="processDefTransformDomain">
+			<interface.java interface="org.loushang.workflow.modeling.transform.IProcessDefTransform"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.modeling.transform.ProcessDefTransform"/>
+	</component>
+	
+	<component name="processDefExchangeDomain">
+		<service name="processDefExchangeDomain">
+			<interface.java interface="org.loushang.workflow.modeling.exchange.domain.IProcessDefExchange"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.modeling.exchange.domain.support.ProcessDefExchangeImpl"/>
+		<reference name="processDefinitionModelingDomain" target="processDefinitionModelingDomain/processDefinitionModelingDomain"/>
+		<reference name="processTypeDomain" target="processTypeDomain/processTypeDomain"/>
+	</component>
+	<component name="procDefPageButtonDefDao">
+		<service name="procDefPageButtonDefDao">
+			<interface.java interface="org.loushang.workflow.processdefinition.procdefpagebuttondef.dao.IProcDefPageButtonDefDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.procdefpagebuttondef.dao.support.ProcDefPageButtonDefDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	
+	<component name="procDefPageButtonDefDomain">
+		<service name="procDefPageButtonDefDomain">
+			<interface.java interface="org.loushang.workflow.processdefinition.procdefpagebuttondef.domain.IProcDefPageButtonDefDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.procdefpagebuttondef.domain.support.ProcDefPageButtonDefDomain"/>
+		<reference name="procDefPageButtonDefDao" target="procDefPageButtonDefDao/procDefPageButtonDefDao"/>
+	</component>
+	
+	<component name="bpmnProcessDefinitionModelingDao">
+		<service name="bpmnProcessDefinitionModelingDao">
+			<interface.java interface="org.loushang.workflow.modeling.definition.dao.IBPMNProcessDefinitionModelingDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.modeling.definition.dao.support.BPMNProcessDefinitionModelingJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	
+	<component name="bpmnProcessDefinitionModelingDomain">
+		<service name="bpmnProcessDefinitionModelingDomain">
+			<interface.java interface="org.loushang.workflow.modeling.definition.domain.IBPMNProcessDefinitionModeling"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.modeling.definition.domain.support.BPMNProcessDefinitionModelingImpl"/>
+		<reference name="processDefinitionModelingDao" target="bpmnProcessDefinitionModelingDao/bpmnProcessDefinitionModelingDao"/>
+		<reference name="processDefTransformDomain" target="processDefTransformDomain/processDefTransformDomain"/>
+		<reference name="processDefinitionDomain" target="processDefinitionDomain/processDefinitionDomain"/>
+		<reference name="processCreateDataRefDao" target="processCreateDataRefDao/processCreateDataRefDao"/>
+	</component>
+
+	<component name="processPluginTypeDefDao">
+		<service name="processPluginTypeDefDao">
+			<interface.java interface="org.loushang.workflow.processdefinition.processplugintypedef.dao.IProcessPluginTypeDefDao"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.processplugintypedef.dao.support.ProcessPluginTypeDefJdbcDao"/>
+		<property name="dataSourceConf" value="dataSource"/>
+	</component>
+	<component name="processPluginTypeDefDomain">
+		<service name="processPluginTypeDefDomain">
+			<interface.java interface="org.loushang.workflow.processdefinition.processplugintypedef.domain.IProcessPluginTypeDef"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.processdefinition.processplugintypedef.domain.support.ProcessPluginTypeDefImpl"/>
+		<reference name="processPluginTypeDefDao" target="processPluginTypeDefDao/processPluginTypeDefDao"/>
+	</component>
+	
+	<component name="bpmnProcessDefExchangeDomain">
+		<service name="bpmnProcessDefExchangeDomain">
+			<interface.java interface="org.loushang.workflow.modeling.exchange.domain.IBPMNProcessDefExchange"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="org.loushang.workflow.modeling.exchange.domain.support.BPMNProcessDefExchangeImpl"/>
+		<reference name="bpmnProcessDefinitionModelingDomain" target="bpmnProcessDefinitionModelingDomain/bpmnProcessDefinitionModelingDomain"/>
+		<reference name="processTypeDomain" target="processTypeDomain/processTypeDomain"/>
+	</component>
+	
+</composite>

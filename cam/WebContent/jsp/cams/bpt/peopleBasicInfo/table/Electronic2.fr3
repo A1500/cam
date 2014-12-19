@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Version="4.0.11" DotMatrixReport="False" EngineOptions.MaxMemSize="10000000" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" PrintOptions.ShowDialog="False" ReportOptions.CreateDate="38006.7863842593" ReportOptions.Description.Text="" ReportOptions.LastChange="40883.901771875" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C656674027C03546F7003FC0008446174617365747301010C2A00000020446174615365743D22537472696E6744532220446174615365744E616D653D22537472696E674453220000095661726961626C65730100055374796C650100">
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxMasterData Name="MasterData1" Height="49.13389" Left="0" Top="298.58287" Width="718.1107" ColumnWidth="0" ColumnGap="0" DataSet="StringDS" DataSetName="StringDS" RowCount="10">
+      <TfrxMemoView Name="Memo1" Left="0" Top="0" Width="64.25201" Height="49.13389" DataField="NO" DataSet="StringDS" DataSetName="StringDS" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Color="255" Frame.Typ="15" HAlign="haCenter" ParentFont="False" Text="[StringDS.&#34;NO&#34;]"/>
+      <TfrxMemoView Name="Memo4" Left="64.25201" Top="0" Width="83.14966" Height="49.13389" DataField="fileOper" DataSet="StringDS" DataSetName="StringDS" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Color="255" Frame.Typ="15" ParentFont="False" Text="[StringDS.&#34;fileOper&#34;]"/>
+      <TfrxMemoView Name="Memo5" Left="147.40167" Top="0" Width="60.47248" Height="49.13389" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Color="255" Frame.Typ="15" ParentFont="False" Text=""/>
+      <TfrxMemoView Name="Memo7" Left="207.87415" Top="0" Width="264.5671" Height="49.13389" DataField="catalogName" DataSet="StringDS" DataSetName="StringDS" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Color="255" Frame.Typ="15" ParentFont="False" Text="[StringDS.&#34;catalogName&#34;]"/>
+      <TfrxMemoView Name="Memo9" Left="472.44125" Top="0" Width="71.81107" Height="49.13389" DataField="fileTime" DataSet="StringDS" DataSetName="StringDS" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Color="255" Frame.Typ="15" HAlign="haCenter" ParentFont="False" Text="[StringDS.&#34;fileTime&#34;]"/>
+      <TfrxMemoView Name="Memo10" Left="544.25232" Top="0" Width="71.81107" Height="49.13389" DataField="fileNumber" DataSet="StringDS" DataSetName="StringDS" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Color="255" Frame.Typ="15" HAlign="haCenter" ParentFont="False" Text="[StringDS.&#34;fileNumber&#34;]"/>
+      <TfrxMemoView Name="Memo11" Left="616.06339" Top="0" Width="102.04731" Height="49.13389" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Color="255" Frame.Typ="15" ParentFont="False" Text=""/>
+    </TfrxMasterData>
+    <TfrxPageFooter Name="PageFooter1" Height="23.67718" Left="0" Top="408.18924" Width="718.1107"/>
+    <TfrxPageHeader Name="PageHeader1" Height="107.57483" Left="0" Top="18.89765" Width="718.1107">
+      <TfrxMemoView Name="Memo29" Left="117.16543" Top="26.45671" Width="495.10898117" Height="69.57483" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="255" Font.Height="-21" Font.Name="Arial" Font.Style="1" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="[ReportName]"/>
+    </TfrxPageHeader>
+    <TfrxColumnHeader Name="ColumnHeader1" Height="86.92919" Left="0" Top="151.1812" Width="718.1107">
+      <TfrxMemoView Name="Memo8" Left="505.06277" Top="7.77953000000002" Width="195" Height="16" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="255" Font.Height="-13" Font.Name="����" Font.Style="1" Frame.Color="255" HAlign="haRight" ParentFont="False" Text="页：[Page#]/[TotalPages#]"/>
+      <TfrxShapeView Name="Shape1" Left="0" Top="30.23624" Width="718.1107" Height="56.69295" Frame.Color="255"/>
+      <TfrxShapeView Name="Shape2" Left="0" Top="30.23624" Width="64.25201" Height="56.69295" Frame.Color="255"/>
+      <TfrxShapeView Name="Shape3" Left="147.40167" Top="30.23624" Width="60.47248" Height="56.69295" Frame.Color="255"/>
+      <TfrxShapeView Name="Shape4" Left="207.87415" Top="30.23624" Width="264.5671" Height="56.69295" Frame.Color="255"/>
+      <TfrxShapeView Name="Shape5" Left="472.44125" Top="30.23624" Width="71.81107" Height="56.69295" Frame.Color="255"/>
+      <TfrxShapeView Name="Shape6" Left="544.25232" Top="30.23624" Width="71.81107" Height="56.69295" Frame.Color="255"/>
+      <TfrxShapeView Name="Shape7" Left="616.06339" Top="30.23624" Width="102.04731" Height="56.69295" Frame.Color="255"/>
+      <TfrxShapeView Name="Shape8" Left="64.25201" Top="30.23624" Width="83.14966" Height="56.69295" Frame.Color="255"/>
+      <TfrxMemoView Name="Memo2" Left="15.11812" Top="49.13389" Width="41.57483" Height="18.89765" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="255" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Color="255" ParentFont="False" Text="件号"/>
+      <TfrxMemoView Name="Memo3" Left="83.14966" Top="49.13389" Width="52.91342" Height="18.89765" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="255" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Color="255" ParentFont="False" Text="责任者"/>
+      <TfrxMemoView Name="Memo6" Left="158.74026" Top="49.13389" Width="41.57483" Height="18.89765" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="255" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Color="255" ParentFont="False" Text="文号"/>
+      <TfrxMemoView Name="Memo12" Left="291.02381" Top="52.91342" Width="94.48825" Height="18.89765" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="255" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Color="255" ParentFont="False" Text="题           名"/>
+      <TfrxMemoView Name="Memo13" Left="487.55937" Top="49.13389" Width="37.7953" Height="18.89765" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="255" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Color="255" ParentFont="False" Text="日期"/>
+      <TfrxMemoView Name="Memo14" Left="559.37044" Top="49.13389" Width="41.57483" Height="18.89765" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="255" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Color="255" ParentFont="False" Text="页数"/>
+      <TfrxMemoView Name="Memo15" Left="650.07916" Top="49.13389" Width="41.57483" Height="18.89765" DisplayFormat.DecimalSeparator="." Font.Charset="1" Font.Color="255" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Color="255" ParentFont="False" Text="备注"/>
+      <TfrxShapeView Name="Shape9" Left="0" Top="30.23624" Width="718.1107" Height="56.69295" Frame.Color="255" Frame.Width="2"/>
+    </TfrxColumnHeader>
+  </TfrxReportPage>
+</TfrxReport>

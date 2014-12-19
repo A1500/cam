@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="YgjzJtxxDao" xmlns="http://www.loushang.com/sca/1.0">
+<component name="YgjzJtxxDao">
+	    <service name="YgjzJtxxDao">
+	    	<interface.java interface="com.inspur.sdmz.jtxx.dao.IYgjzJtxxDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.sdmz.jtxx.dao.jdbc.YgjzJtxxDao"/>
+    </component>
+    <component name="YgjzJtxxCyxxDao">
+	    <service name="YgjzJtxxCyxxDao">
+	    	<interface.java interface="com.inspur.sdmz.jtxx.dao.IYgjzJtxxCyxxDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.sdmz.jtxx.dao.jdbc.YgjzJtxxCyxxDao"/>
+    </component>
+    <component name="YgjzJtxxZrzhDao">
+	    <service name="YgjzJtxxZrzhDao">
+	    	<interface.java interface="com.inspur.sdmz.jtxx.dao.IYgjzJtxxZrzhDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.sdmz.jtxx.dao.jdbc.YgjzJtxxZrzhDao"/>
+    </component>
+    <component name="YgjzJzzsDao">
+	    <service name="YgjzJzzsDao">
+	    	<interface.java interface="com.inspur.sdmz.jtxx.dao.IYgjzJzzsDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.sdmz.jtxx.dao.jdbc.YgjzJzzsDao"/>
+    </component>
+    <component name="YgjzJzzsJzfsConfDao">
+	    <service name="YgjzJzzsJzfsConfDao">
+	    	<interface.java interface="com.inspur.sdmz.jzzs.dao.IYgjzJzzsJzfsConfDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.sdmz.jzzs.dao.jdbc.YgjzJzzsJzfsConfDao"/>
+    </component>
+    <component name="YgjzJzzsConfDao">
+	    <service name="YgjzJzzsConfDao">
+	    	<interface.java interface="com.inspur.sdmz.jzzs.dao.IYgjzJzzsConfDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.sdmz.jzzs.dao.jdbc.YgjzJzzsConfDao"/>
+    </component>
+	 <component name="samFamilyAssistanceDao">
+	    <service name="samFamilyAssistanceDao">
+	    	<interface.java interface="com.inspur.cams.drel.sam.dao.ISamFamilyAssistanceDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.cams.drel.sam.dao.jdbc.SamFamilyAssistanceDao"/>
+    </component>
+    <component name="SamFamilyHouseDao">
+	    <service name="SamFamilyHouseDao">
+	    	<interface.java interface="com.inspur.sdmz.jtxx.dao.ISamFamilyHouseDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.sdmz.jtxx.dao.jdbc.SamFamilyHouseDao"/>
+    </component>
+    <component name="ComFamilyOrganDao">
+	    <service name="ComFamilyOrganDao">
+	    	<interface.java interface="com.inspur.sdmz.comFamilyOrgan.dao.IComFamilyOrganDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.sdmz.comFamilyOrgan.dao.ComFamilyOrganDao"/>
+    </component>
+     <component name="YgjzJtxxDomain">
+	    <service name="YgjzJtxxDomain">
+	    	<interface.java interface="com.inspur.sdmz.jtxx.domain.IYgjzJtxxDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.sdmz.jtxx.domain.support.YgjzJtxxDomain"/>
+        <reference name="ygjzjtxxDao" target="YgjzJtxxDao/YgjzJtxxDao"/>
+        <reference name="ygjzjtxxzrzhDao" target="YgjzJtxxZrzhDao/YgjzJtxxZrzhDao"/>
+         <reference name="samFamilyAssistanceDao" target="samFamilyAssistanceDao/samFamilyAssistanceDao"/>
+        <reference name="ygjzjzzsDao" target="YgjzJzzsDao/YgjzJzzsDao"/>
+        <reference name="ygjzjtxxcyxxDao" target="YgjzJtxxCyxxDao/YgjzJtxxCyxxDao"/>
+        <reference name="ygjzjzzsjzfsconfDao" target="YgjzJzzsJzfsConfDao/YgjzJzzsJzfsConfDao"/>
+        <reference name="ygjzjzzsconfDao" target="YgjzJzzsConfDao/YgjzJzzsConfDao"/>
+		<reference name="ygjzjtxxcyxxDomain" target="YgjzJtxxCyxxDomain/YgjzJtxxCyxxDomain"/>
+		<reference name="samfamilyHouseDao" target="SamFamilyHouseDao/SamFamilyHouseDao"/>
+		<reference name="comfamilyOrganDao" target="ComFamilyOrganDao/ComFamilyOrganDao"/>
+    </component>
+	<component name="YgjzCyxxCjxxDao">
+	    <service name="YgjzCyxxCjxxDao">
+	    	<interface.java interface="com.inspur.sdmz.jtxx.dao.IYgjzCyxxCjxxDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.sdmz.jtxx.dao.jdbc.YgjzCyxxCjxxDao"/>
+    </component>
+	<component name="YgjzCyxxJyxxDao">
+	    <service name="YgjzCyxxJyxxDao">
+	    	<interface.java interface="com.inspur.sdmz.jtxx.dao.IYgjzCyxxJyxxDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.sdmz.jtxx.dao.jdbc.YgjzCyxxJyxxDao"/>
+    </component>
+	 <component name="YgjzCyxxHbxxDao">
+	    <service name="YgjzCyxxHbxxDao">
+	    	<interface.java interface="com.inspur.sdmz.jtxx.dao.IYgjzCyxxHbxxDao"/>
+        	<binding.sca/>
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.sdmz.jtxx.dao.jdbc.YgjzCyxxHbxxDao"/>
+    </component>
+	<component name="YgjzCyxxSgxxDao">
+	    <service name="YgjzCyxxSgxxDao">
+	    	<interface.java interface="com.inspur.sdmz.jtxx.dao.IYgjzCyxxSgxxDao"/>
+        	<binding.sca/>             
+        </service>
+        <property name="dataSourceConf" value="dataSource"/>
+        <implementation.java impl="com.inspur.sdmz.jtxx.dao.jdbc.YgjzCyxxSgxxDao"/>
+    </component>	
+	
+     <component name="YgjzJtxxCyxxDomain">
+	    <service name="YgjzJtxxCyxxDomain">
+	    	<interface.java interface="com.inspur.sdmz.jtxx.domain.IYgjzJtxxCyxxDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.sdmz.jtxx.domain.support.YgjzJtxxCyxxDomain"/>
+        <reference name="ygjzjtxxcyxxDao" target="YgjzJtxxCyxxDao/YgjzJtxxCyxxDao"/>
+        <reference name="ygjzcyxxcjxxDao" target="YgjzCyxxCjxxDao/YgjzCyxxCjxxDao"/>
+		<reference name="ygjzcyxxjyxxDao" target="YgjzCyxxJyxxDao/YgjzCyxxJyxxDao"/>
+		<reference name="ygjzcyxxhbxxDao" target="YgjzCyxxHbxxDao/YgjzCyxxHbxxDao"/>
+	    <reference name="ygjzcyxxsgxxDao" target="YgjzCyxxSgxxDao/YgjzCyxxSgxxDao"/>
+	</component>
+</composite>

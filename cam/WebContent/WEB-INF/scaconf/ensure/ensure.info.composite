@@ -1,0 +1,710 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--家庭基本信息-->
+	<component name="d204a03Dao">
+		<service name="d204a03Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204a03Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204a03Dao"/>
+    </component>
+	<component name="d204a03Domain">
+		<service name="d204a03Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204a03Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204a03Domain"/>
+		<reference name="d204a03Dao" target="d204a03Dao/d204a03Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204a03TempDao" target="d204a03TempDao/d204a03TempDao"/>
+	</component>
+	<!--成员信息-->
+	<component name="d204a01Dao">
+		<service name="d204a01Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204a01Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204a01Dao"/>
+    </component>
+	<component name="d204a01Domain">
+		<service name="d204a01Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204a01Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204a01Domain"/>
+		<reference name="d204a01Dao" target="d204a01Dao/d204a01Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204a01TempDao" target="d204a01TempDao/d204a01TempDao"/>
+	</component>
+	<!--核对总体情况-->
+	<component name="d204a00Dao">
+		<service name="d204a00Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204a00Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204a00Dao"/>
+    </component>
+	<component name="d204a00Domain">
+		<service name="d204a00Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204a00Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204a00Domain"/>
+		<reference name="d204a00Dao" target="d204a00Dao/d204a00Dao"/>
+	</component>
+	<!--区划信息-->
+	<component name="d204a04Dao">
+		<service name="d204a04Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204a04Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204a04Dao"/>
+    </component>
+	<component name="d204a04Domain">
+		<service name="d204a04Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204a04Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204a04Domain"/>
+		<reference name="d204a04Dao" target="d204a04Dao/d204a04Dao"/>
+	</component>
+	<!--工资性收入-->
+	<component name="d204b11Dao">
+		<service name="d204b11Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204b11Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204b11Dao"/>
+    </component>
+	<component name="d204b11Domain">
+		<service name="d204b11Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204b11Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204b11Domain"/>
+		<reference name="d204b11Dao" target="d204b11Dao/d204b11Dao"/>
+	</component>
+	<!--经营性收入-->
+	<component name="d204b12Dao">
+		<service name="d204b12Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204b12Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204b12Dao"/>
+    </component>
+	<component name="d204b12Domain">
+		<service name="d204b12Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204b12Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204b12Domain"/>
+		<reference name="d204b12Dao" target="d204b12Dao/d204b12Dao"/>
+	</component>
+	<!--财产性收入-->
+	<component name="d204b13Dao">
+		<service name="d204b13Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204b13Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204b13Dao"/>
+    </component>
+	<component name="d204b13Domain">
+		<service name="d204b13Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204b13Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204b13Domain"/>
+		<reference name="d204b13Dao" target="d204b13Dao/d204b13Dao"/>
+	</component>
+	<!--转移性收入-->
+	<component name="d204b14Dao">
+		<service name="d204b14Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204b14Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204b14Dao"/>
+    </component>
+	<component name="d204b14Domain">
+		<service name="d204b14Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204b14Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204b14Domain"/>
+		<reference name="d204b14Dao" target="d204b14Dao/d204b14Dao"/>
+	</component>
+	<!--车辆-->
+	<component name="d204c21Dao">
+		<service name="d204c21Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204c21Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204c21Dao"/>
+    </component>
+	<component name="d204c21Domain">
+		<service name="d204c21Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204c21Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204c21Domain"/>
+		<reference name="d204c21Dao" target="d204c21Dao/d204c21Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204c21TempDao" target="d204c21TempDao/d204c21TempDao"/>
+	</component>
+	<!--户籍注销-->
+	<component name="d204c21DieDao">
+		<service name="d204c21DieDao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204c21DieDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204c21DieDao"/>
+    </component>
+	<component name="d204c21DieDomain">
+		<service name="d204c21DieDomain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204c21DieDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204c21DieDomain"/>
+		<reference name="d204c21DieDao" target="d204c21DieDao/d204c21DieDao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204c21DieTempDao" target="d204c21DieTempDao/d204c21DieTempDao"/>
+	</component>
+	<component name="d204c21DieTempDao">
+		<service name="d204c21DieTempDao">
+			<interface.java interface="com.inspur.cams.drel.temp.dao.ID204c21DieTempDao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.temp.dao.jdbc.D204c21DieTempDao"/>
+    </component>
+	<!--房产-->
+	<component name="d204c22Dao">
+		<service name="d204c22Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204c22Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204c22Dao"/>
+    </component>
+	<component name="d204c22Domain">
+		<service name="d204c22Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204c22Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204c22Domain"/>
+		<reference name="d204c22Dao" target="d204c22Dao/d204c22Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204c22TempDao" target="d204c22TempDao/d204c22TempDao"/>
+	</component>
+	<!--存款-->
+	<component name="d204c23Dao">
+		<service name="d204c23Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204c23Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204c23Dao"/>
+    </component>
+	<component name="d204c23Domain">
+		<service name="d204c23Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204c23Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204c23Domain"/>
+		<reference name="d204c23Dao" target="d204c23Dao/d204c23Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204c23TempDao" target="d204c23TempDao/d204c23TempDao"/>
+	</component>
+	<!--股票-->
+	<component name="d204c24Dao">
+		<service name="d204c24Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204c24Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204c24Dao"/>
+    </component>
+	<component name="d204c24Domain">
+		<service name="d204c24Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204c24Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204c24Domain"/>
+		<reference name="d204c24Dao" target="d204c24Dao/d204c24Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204c24TempDao" target="d204c24TempDao/d204c24TempDao"/>
+	</component>
+	<!--基金-->
+	<component name="d204c25Dao">
+		<service name="d204c25Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204c25Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204c25Dao"/>
+    </component>
+	<component name="d204c25Domain">
+		<service name="d204c25Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204c25Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204c25Domain"/>
+		<reference name="d204c25Dao" target="d204c25Dao/d204c25Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204c25TempDao" target="d204c25TempDao/d204c25TempDao"/>
+	</component>
+	<!--商业保险-->
+	<component name="d204c26Dao">
+		<service name="d204c26Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204c26Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204c26Dao"/>
+    </component>
+	<component name="d204c26Domain">
+		<service name="d204c26Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204c26Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204c26Domain"/>
+		<reference name="d204c26Dao" target="d204c26Dao/d204c26Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204c26TempDao" target="d204c26TempDao/d204c26TempDao"/>
+	</component>
+	<!--券商-->
+	<component name="d204c27Dao">
+		<service name="d204c27Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204c27Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204c27Dao"/>
+    </component>
+	<component name="d204c27Domain">
+		<service name="d204c27Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204c27Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204c27Domain"/>
+		<reference name="d204c27Dao" target="d204c27Dao/d204c27Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204c27TempDao" target="d204c27TempDao/d204c27TempDao"/>
+	</component>
+	<!--期货-->
+	<component name="d204c28Dao">
+		<service name="d204c28Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204c28Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204c28Dao"/>
+    </component>
+	<component name="d204c28Domain">
+		<service name="d204c28Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204c28Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204c28Domain"/>
+		<reference name="d204c28Dao" target="d204c28Dao/d204c28Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204c28TempDao" target="d204c28TempDao/d204c28TempDao"/>
+	</component>
+	<!--理财-->
+	<component name="d204c29Dao">
+		<service name="d204c29Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204c29Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204c29Dao"/>
+    </component>
+	<component name="d204c29Domain">
+		<service name="d204c29Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204c29Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204c29Domain"/>
+		<reference name="d204c29Dao" target="d204c29Dao/d204c29Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204c29TempDao" target="d204c29TempDao/d204c29TempDao"/>
+	</component>
+	<!--贵金属-->
+	<component name="d204c30Dao">
+		<service name="d204c30Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204c30Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204c30Dao"/>
+    </component>
+	<component name="d204c30Domain">
+		<service name="d204c30Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204c30Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204c30Domain"/>
+		<reference name="d204c30Dao" target="d204c30Dao/d204c30Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204c30TempDao" target="d204c30TempDao/d204c30TempDao"/>
+	</component>
+	<!--公共事业缴费-->
+	<component name="d204d31Dao">
+		<service name="d204d31Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204d31Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204d31Dao"/>
+    </component>
+	<component name="d204d31Domain">
+		<service name="d204d31Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204d31Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204d31Domain"/>
+		<reference name="d204d31Dao" target="d204d31Dao/d204d31Dao"/>
+	</component>
+	<!--纳税情况-->
+	<component name="d204d33Dao">
+		<service name="d204d33Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204d33Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204d33Dao"/>
+    </component>
+	<component name="d204d33Domain">
+		<service name="d204d33Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204d33Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204d33Domain"/>
+		<reference name="d204d33Dao" target="d204d33Dao/d204d33Dao"/>
+	</component>
+	<!--公积金缴纳情况-->
+	<component name="d204d34Dao">
+		<service name="d204d34Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204d34Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204d34Dao"/>
+    </component>
+	<component name="d204d34Domain">
+		<service name="d204d34Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204d34Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204d34Domain"/>
+		<reference name="d204d34Dao" target="d204d34Dao/d204d34Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204d34TempDao" target="d204d34TempDao/d204d34TempDao"/>
+	</component>
+	<!--教育信息-->
+	<component name="d204z51Dao">
+		<service name="d204z51Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204z51Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204z51Dao"/>
+    </component>
+	<component name="d204z51Domain">
+		<service name="d204z51Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204z51Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204z51Domain"/>
+		<reference name="d204z51Dao" target="d204z51Dao/d204z51Dao"/>
+	</component>
+	<!--救助信息-->
+	<component name="d204z52Dao">
+		<service name="d204z52Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204z52Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204z52Dao"/>
+    </component>
+	<component name="d204z52Domain">
+		<service name="d204z52Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204z52Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204z52Domain"/>
+		<reference name="d204z52Dao" target="d204z52Dao/d204z52Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204z52TempDao" target="d204z52TempDao/d204z52TempDao"/>
+	</component>
+	<!--司法援助信息-->
+	<component name="d204z53Dao">
+		<service name="d204z53Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204z53Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204z53Dao"/>
+    </component>
+	<component name="d204z53Domain">
+		<service name="d204z53Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204z53Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204z53Domain"/>
+		<reference name="d204z53Dao" target="d204z53Dao/d204z53Dao"/>
+	</component>
+	<!--优待抚恤信息-->
+	<component name="d204z55Dao">
+		<service name="d204z55Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204z55Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204z55Dao"/>
+    </component>
+	<component name="d204z55Domain">
+		<service name="d204z55Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204z55Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204z55Domain"/>
+		<reference name="d204z55Dao" target="d204z55Dao/d204z55Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204z55TempDao" target="d204z55TempDao/d204z55TempDao"/>
+	</component>
+	<!--社会组织管理信息-->
+	<component name="d204z54Dao">
+		<service name="d204z54Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204z54Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204z54Dao"/>
+    </component>
+	<component name="d204z54Domain">
+		<service name="d204z54Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204z54Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204z54Domain"/>
+		<reference name="d204z54Dao" target="d204z54Dao/d204z54Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204z54TempDao" target="d204z54TempDao/d204z54TempDao"/>
+	</component>
+	<!--家庭成员就业信息-->
+	<component name="d204a02Dao">
+		<service name="d204a02Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204a02Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204a02Dao"/>
+    </component>
+	<component name="d204a02Domain">
+		<service name="d204a02Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204a02Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204a02Domain"/>
+		<reference name="d204a02Dao" target="d204a02Dao/d204a02Dao"/>
+	</component>
+	<!--社会保险缴费-->
+	<component name="d204d32Dao">
+		<service name="d204d32Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204d32Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204d32Dao"/>
+    </component>
+	<component name="d204d32Domain">
+		<service name="d204d32Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204d32Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204d32Domain"/>
+		<reference name="d204d32Dao" target="d204d32Dao/d204d32Dao"/>
+		<reference name="feedBackDao" target="feedBackDao/feedBackDao"/>
+		<reference name="d204d32TempDao" target="d204d32TempDao/d204d32TempDao"/>
+	</component>
+	<!--大病支出-->
+	<component name="d204d35Dao">
+		<service name="d204d35Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204d35Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204d35Dao"/>
+    </component>
+	<component name="d204d35Domain">
+		<service name="d204d35Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204d35Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204d35Domain"/>
+		<reference name="d204d35Dao" target="d204d35Dao/d204d35Dao"/>
+	</component>
+	<!--大额支出-->
+	<component name="d204d36Dao">
+		<service name="d204d36Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204d36Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204d36Dao"/>
+    </component>
+	<component name="d204d36Domain">
+		<service name="d204d36Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204d36Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204d36Domain"/>
+		<reference name="d204d36Dao" target="d204d36Dao/d204d36Dao"/>
+	</component>
+	<!--财政供养人员工资信息-->
+	<component name="d204z57Dao">
+		<service name="d204z57Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204z57Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204z57Dao"/>
+    </component>
+	<component name="d204z57Domain">
+		<service name="d204z57Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204z57Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204z57Domain"/>
+		<reference name="d204z57Dao" target="d204z57Dao/d204z57Dao"/>
+	</component>
+	<!--涉农信息-->
+	<component name="d204z58Dao">
+		<service name="d204z58Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204z58Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204z58Dao"/>
+    </component>
+	<component name="d204z58Domain">
+		<service name="d204z58Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204z58Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204z58Domain"/>
+		<reference name="d204z58Dao" target="d204z58Dao/d204z58Dao"/>
+	</component>
+	<!--新农合信息-->
+	<component name="d204z59Dao">
+		<service name="d204z59Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204z59Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204z59Dao"/>
+    </component>
+	<component name="d204z59Domain">
+		<service name="d204z59Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204z59Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204z59Domain"/>
+		<reference name="d204z59Dao" target="d204z59Dao/d204z59Dao"/>
+	</component>
+	<!--第三方支付信息-->
+	<component name="d204z60Dao">
+		<service name="d204z60Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204z60Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204z60Dao"/>
+    </component>
+	<component name="d204z60Domain">
+		<service name="d204z60Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204z60Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204z60Domain"/>
+		<reference name="d204z60Dao" target="d204z60Dao/d204z60Dao"/>
+	</component>
+	<!--船舶信息-->
+	<component name="d204z61Dao">
+		<service name="d204z61Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204z61Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204z61Dao"/>
+    </component>
+	<component name="d204z61Domain">
+		<service name="d204z61Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204z61Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204z61Domain"/>
+		<reference name="d204z61Dao" target="d204z61Dao/d204z61Dao"/>
+	</component>
+	<!--核对统计信息-->
+	<component name="d204z56Dao">
+		<service name="d204z56Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204z56Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204z56Dao"/>
+    </component>
+	<component name="d204z56Domain">
+		<service name="d204z56Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204z56Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204z56Domain"/>
+		<reference name="d204z56Dao" target="d204z56Dao/d204z56Dao"/>
+	</component>
+	<!--殡葬信息-->
+	<component name="d204z62Dao">
+		<service name="d204z62Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204z62Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204z62Dao"/>
+    </component>
+	<component name="d204z62Domain">
+		<service name="d204z62Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204z62Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204z62Domain"/>
+		<reference name="d204z62Dao" target="d204z62Dao/d204z62Dao"/>
+	</component>
+	<!--婚姻信息-->
+	<component name="d204z63Dao">
+		<service name="d204z63Dao">
+			<interface.java interface="com.inspur.cams.drel.info.dao.ID204z63Dao"/>
+			<binding.sca/>
+		</service>
+		<property name="dataSourceConf" value="dataSource"/>
+		<implementation.java impl="com.inspur.cams.drel.info.dao.jdbc.D204z63Dao"/>
+    </component>
+	<component name="d204z63Domain">
+		<service name="d204z63Domain">
+			<interface.java interface="com.inspur.cams.drel.info.domain.ID204z63Domain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.drel.info.domain.support.D204z63Domain"/>
+		<reference name="d204z63Dao" target="d204z63Dao/d204z63Dao"/>
+	</component>
+</composite>

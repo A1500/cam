@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="Security" xmlns="http://www.loushang.com/sca/1.0">
+    <description>Security</description>
+     <component name="pubOnline">
+	    <service name="pubOnline">
+	    	<interface.java interface="org.loushang.bsp.security.audit.online.domain.IOnline"/>
+        	<binding.sca/>
+        </service>
+       <implementation.java impl="org.loushang.bsp.security.audit.online.domain.support.OnlineImpl"/>
+    </component>
+    <component name="PasswordEncoder">
+	    <service name="PasswordEncoder">
+	    	<interface.java interface="org.loushang.bsp.security.encoding.PasswordEncoder"/>
+        	<binding.sca/>
+        </service>
+       <implementation.java impl="org.loushang.bsp.security.encoding.Md5PasswordEncoder"/>
+    </component>
+    <component name="BspEncoder">
+	    <service name="BspEncoder">
+	    	<interface.java interface="org.loushang.bsp.security.encoding.IBspEncoder"/>
+        	<binding.sca/>
+        </service>
+       <implementation.java impl="org.loushang.bsp.security.encoding.BspEncoder"/>
+       <reference name="encoder" target="PasswordEncoder/PasswordEncoder"/>
+    </component>
+   <component name="securityProvider">
+	    <service name="securityProvider">
+	    	<interface.java interface="org.loushang.bsp.share.permit.security.provider.ISecurityProvider"/>
+        	<binding.sca/>
+        	<binding.ws/>
+        </service>
+       <implementation.java impl="org.loushang.bsp.share.permit.security.provider.SecurityProviderImp"/>
+    </component>
+     <component name="bsp5GetBspInfo">
+	    <service name="bsp5GetBspInfo">
+	    	<interface.java interface="org.loushang.bsp.security.context.IGetBspInfo"/>
+        	<binding.sca/>
+        </service>
+       <implementation.java impl="org.loushang.bsp.security.context.impl.Bsp5GetBspInfo"/>
+    </component>
+    <component name="securityMonitor">
+	    <service name="securityMonitor">
+	    	<interface.java interface="org.loushang.next.monitor.Monitor"/>
+        	<binding.sca/>
+        </service>
+       <implementation.java impl="org.loushang.bsp.security.audit.monitor.SecurityMonitor"/>
+    </component>
+</composite>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="dlc" xmlns="http://www.loushang.com/sca/1.0">
+    <description>dlc module</description>
+    <!-- 婚姻统计分析Dao -->	
+	 <component name="marryAnalysisDao">
+	    <service name="marryAnalysisDao">
+	    	<interface.java interface="com.inspur.cams.marry.analysis.dao.IMarryAnalysisDao"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.marry.analysis.dao.jdbc.MarryAnalysisDao"/>
+	</component>
+    <!-- 婚姻统计分析Domain -->	
+	 <component name="marryAnalysisDomain">
+	    <service name="marryAnalysisDomain">
+	    	<interface.java interface="com.inspur.cams.marry.analysis.domain.IMarryAnalysisDomain"/>
+        	<binding.sca/>
+        </service>
+        <implementation.java impl="com.inspur.cams.marry.analysis.domain.support.MarryAnalysisDomain"/>
+        <reference name="marryAnalysisDao" target="marryAnalysisDao/marryAnalysisDao"/>
+	</component>	
+</composite>

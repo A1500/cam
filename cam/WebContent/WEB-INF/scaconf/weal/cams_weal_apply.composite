@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite name="demo" xmlns="http://www.loushang.com/sca/1.0">
+	<!--假矫装配企业业务表-->
+	<component name="fitApplyDomain">
+		<service name="fitApplyDomain">
+			<interface.java interface="com.inspur.cams.welfare.prosthesis.apply.domain.IFitApplyDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.prosthesis.apply.domain.support.FitApplyDomain"/>
+		<reference name="wealFitApplysDomain" target="wealFitApplysDomain/wealFitApplysDomain"/>
+		<reference name="wealFitInfoDomain" target="wealFitInfoDomain/wealFitInfoDomain"/>	
+		<reference name="wealFitDeviceDomain" target="wealFitDeviceDomain/wealFitDeviceDomain"/> 
+		<reference name="wealFitProductivepowerDomain" target="wealFitProductivepowerDomain/wealFitProductivepowerDomain"/>
+		<reference name="wealComfortNoDomain" target="wealComfortNoDomain/wealComfortNoDomain"/>
+		<reference name="wealFitStatusDomain" target="wealFitStatusDomain/wealFitStatusDomain"/>
+		<reference name="wealWorkerDomain" target="wealWorkerDomain/wealWorkerDomain"/>
+		<reference name="wealCertDomain" target="wealCertDomain/wealCertDomain"/>
+	</component>
+	<!--职工信息查询-->
+	<component name="fitWorkerQueryDomain">
+		<service name="fitWorkerQueryDomain">
+			<interface.java interface="com.inspur.cams.welfare.prosthesis.apply.domain.IFitWorkerQueryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.prosthesis.apply.domain.support.FitWorkerQueryDomain"/>
+		<reference name="wealWorkerDomain" target="wealWorkerDomain/wealWorkerDomain"/>
+	</component>
+	<!--业务表查询domain-->
+	<component name="fitApplyQueryDomain">
+		<service name="fitApplyQueryDomain">
+			<interface.java interface="com.inspur.cams.welfare.prosthesis.apply.domain.IFitApplyQueryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.prosthesis.apply.domain.support.FitApplyQueryDomain"/>
+		<reference name="wealFitApplysDomain" target="wealFitApplysDomain/wealFitApplysDomain"/>
+		<reference name="wealFitStatusDomain" target="wealFitStatusDomain/wealFitStatusDomain"/>
+	</component>
+	<!--假矫装配企业历史数据采集-->
+	<component name="fitHistoryDomain">
+		<service name="fitHistoryDomain">
+			<interface.java interface="com.inspur.cams.welfare.prosthesis.history.domain.IFitHistoryDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.prosthesis.history.domain.support.FitHistoryDomain"/>
+		<reference name="wealFitApplysDomain" target="wealFitApplysDomain/wealFitApplysDomain"/>
+		<reference name="wealFitInfoDomain" target="wealFitInfoDomain/wealFitInfoDomain"/>	
+		<reference name="wealFitDeviceDao" target="wealFitDeviceDao/wealFitDeviceDao"/> 
+		<reference name="wealFitProductivepowerDao" target="wealFitProductivepowerDao/wealFitProductivepowerDao"/>
+		<reference name="wealComfortNoDomain" target="wealComfortNoDomain/wealComfortNoDomain"/>
+		<reference name="wealFitStatusDomain" target="wealFitStatusDomain/wealFitStatusDomain"/>
+		<reference name="wealWorkerDao" target="wealWorkerDao/wealWorkerDao"/>
+		<reference name="wealCertDomain" target="wealCertDomain/wealCertDomain"/>
+	</component>
+	<!--假矫装配企业变更-->
+	<component name="fitChangeDomain">
+		<service name="fitChangeDomain">
+			<interface.java interface="com.inspur.cams.welfare.prosthesis.change.domain.IFitChangeDomain"/>
+			<binding.sca/>
+		</service>
+		<implementation.java impl="com.inspur.cams.welfare.prosthesis.change.domain.support.FitChangeDomain"/>
+		<reference name="wealFitStatusDomain" target="wealFitStatusDomain/wealFitStatusDomain"/>
+		<reference name="wealFitApplysDomain" target="wealFitApplysDomain/wealFitApplysDomain"/>
+		<reference name="wealFitChangerecordDomain" target="wealFitChangerecordDomain/wealFitChangerecordDomain"/>
+		<reference name="wealFitChangerecordDetailDomain" target="wealFitChangerecordDetailDomain/wealFitChangerecordDetailDomain"/>
+		<reference name="wealCertDomain" target="wealCertDomain/wealCertDomain"/>
+	</component>
+</composite>

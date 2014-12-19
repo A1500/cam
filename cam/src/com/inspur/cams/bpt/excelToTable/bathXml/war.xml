@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<toTable tempName='bpt_imp_people_war' name='' makeName='bpt_imp_war_make' vailClass='com.inspur.cams.bpt.excelToTable.Validate' changeClass='com.inspur.cams.bpt.excelToTable.Change'>
+	<field name='organ_code'>
+		<vaildate name=''/>
+		<change name=''/>
+	</field>
+	
+	<field name='id_card'>
+		<vaildate name='require(身份证号)'/>
+		<vaildate name='checkIdCard()'/>
+		<vaildate name='isSameIdCard(war_flag)'/>
+		<vaildate name='lengthOf(18,身份证件号码)'/>
+		<change name=''/>
+	</field>
+	<field name='name'>
+		<vaildate name='require(姓名)'/>
+		<vaildate name='lengthOf(50,姓名)'/>
+		<change name=''/>
+	</field>
+	<field name='birthday'>
+		<vaildate name='require(出生日期)'/>
+		<vaildate name='lengthOf(10,出生日期)'/>
+		<change name='rDate(出生日期)'/>
+	</field>
+	<field name='nation'>
+		<vaildate name='require(民族)'/>
+		<change name='rCodeByDic(DIC_NATION,CODE,NAME,民族,2)'/>
+	</field>
+	<field name='sex'>
+		<vaildate name='require(性别)'/>
+		<change name='returnCode(COMM.SEX,性别,1)'/>
+	</field>
+	<field name='relationship_type'>
+		<vaildate name='require(与户主关系)'/>
+		<change name='returnCode(RELATIONSHIP.TYPE,与户主关系,2)'/>
+	</field>
+	<field name='domicile_type'>
+		<vaildate name='require(户籍类别)'/>
+		<change name='returnCode(DOMICILE.TYPE,户籍类别,2)'/>
+	</field>
+	<field name='domicile_code'>
+		<vaildate name='require(户口薄行政代码)'/>
+		<vaildate name='lengthOf(12,属地行政区划)'/>
+		<vaildate name='checkDomicile(户口薄行政代码)'/>
+		<change name=''/>
+	</field>
+	<field name='domicile_address'>
+		<vaildate name=''/>
+		<vaildate name='lengthOf(200,属地居住地址(户口簿))'/>
+		<change name=''/>
+	</field>
+	<field name='apanage_code'>
+		<vaildate name='require(实际居住行政区划代码)'/>
+		<vaildate name='lengthOf(12,住址行政区划)'/>
+		<vaildate name='checkApanageCode(实际居住地行政区划)'/>
+		<change name=''/>
+	</field>
+	<field name='address'>
+		<vaildate name='lengthOf(200,住址)'/>
+		<vaildate name=''/>
+		<change name=''/>
+	</field>
+	<field name='safeguard_type'>
+		<vaildate name='require(医疗保障方式)'/>
+		<change name='returnCode(COMM.MEDICAL_STATUS,医疗保障方式,1)'/>
+	</field>
+	<field name='medical_code'>
+		<vaildate name=''/>
+		<vaildate name='lengthOf(30,医疗保险号)'/>
+		<change name=''/>
+	</field>
+	<field name='pension_code'>
+		<vaildate name=''/>
+		<change name='returnCode(COMM.PENSION_CODE,养老保障方式,1)'/>
+	</field>
+	<field name='tel_mobile'>
+		<vaildate name='lengthOf(20,联系方式_手机)'/>
+		<vaildate name=''/>
+		<change name=''/>
+	</field>
+	<field name='tel_other'>
+		<vaildate name='lengthOf(50,联系方式_其他)'/>
+		<vaildate name=''/>
+		<change name=''/>
+	</field>
+	<field name='post_code'>
+		<vaildate name='lengthOf(6,邮政编码)'/>
+		<vaildate name=''/>
+		<change name=''/>
+	</field>
+	<field name='marriage_code'>
+		<vaildate name=''/>
+		<change name='returnCode(MARRIAGE.STATE,婚姻状况,2)'/>
+	</field>
+	<field name='edu_code'>
+		<vaildate name=''/>
+		<change name='returnCode(EDUCATION.TYPE,文化程度,2)'/>
+	</field>
+	<field name='health_code'>
+		<vaildate name=''/>
+		<change name='returnCode(HEALTH.TYPE,健康状况,2)'/>
+	</field>
+	<field name='political_code'>
+		<vaildate name=''/>
+		<change name='returnCode(POLITICAL.LANDSCAPE,政治面貌,2)'/>
+	</field>
+	<field name='employment_code'>
+		<vaildate name=''/>
+		<change name='returnCode(EMPLOYMENT.CODE,就业状况,2)'/>
+	</field>
+	<field name='income_year'>
+		<vaildate name='lengthOf(22,年收入)'/>
+		<vaildate name='checkIsNum(年收入)'/>
+		<change name=''/>
+	</field>
+	<field name='work_unit_name'>
+		<vaildate name='lengthOf(100,工作单位_名称)'/>
+		<vaildate name=''/>
+		<change name=''/>
+	</field>
+	<field name='work_unit_character'>
+		<vaildate name=''/>
+		<change name='returnCode(WORKUNIT.CHARACTER,工作单位性质,2)'/>
+	</field>
+	<field name='work_unit_tel'>
+		<vaildate name='lengthOf(20,工作单位_电话)'/>
+		<vaildate name=''/>
+		<change name=''/>
+	</field>
+	<field name='work_unit_add'>
+		<vaildate name='lengthOf(200,工作单位_地址)'/>
+		<vaildate name=''/>
+		<change name=''/>
+	</field>
+	<field name='house_status'>
+		<vaildate name=''/>
+		<change name='returnCode(BPT.HOUSE.STATUS,是否有房,2)'/>
+	</field>
+	<field name='house_quality'>
+		<vaildate name=''/>
+		<change name='returnCode(BPT.HOUSE.QUALITY,住房性质,2)'/>
+	</field>
+	<field name='house_status2'>
+		<vaildate name=''/>
+		<change name='returnCode(BPT.HOUSE.STATUS2,住房状况,1)'/>
+	</field>
+	<field name='house_structure_type'>
+		<vaildate name=''/>
+		<change name='returnCode(BPT.HOUSE.STRUCTURE.TYPE,房屋类型,1)'/>
+	</field>
+	<field name='building_structure'>
+		<vaildate name=''/>
+		<change name='returnCode(BPT.HOUSE.STRUCTURE,房屋结构,12)'/>
+	</field>
+	<field name='house_number'>
+		<vaildate name='lengthOf(2,房屋间数)'/>
+		<vaildate name='checkIsNum(房屋间数)'/>
+		<change name=''/>
+	</field>
+	<field name='building_date'>
+		<vaildate name='lengthOf(10,住房建筑时间)'/>
+		<vaildate name=''/>
+		<change name='rDate(住房建筑时间)'/>
+	</field>
+	<field name='people_num'>
+		<vaildate name='lengthOf(22,家庭人口数)'/>
+		<vaildate name='require(家庭人口数)'/>
+		<vaildate name='checkIsNum(家庭人口数)'/>
+		<change name=''/>
+	</field>
+	<field name='build_area'>
+		<vaildate name='lengthOf(22,建筑面积)'/>
+		<vaildate name='checkIsNum(建筑面积)'/>
+		<change name=''/>
+	</field>
+	<field name='build_average_area'>
+		<vaildate name='lengthOf(22,人均建筑面积)'/>
+		<vaildate name='checkIsNum(人均建筑面积)'/>
+		<change name=''/>
+	</field>
+	
+<field name='war_state_code'>
+		<vaildate name='require(优抚对象状态)'/>
+		<change name='returnCode(OBJECT.STATE,优抚对象状态,1)'/>
+	</field>
+	<field name='war_no'>
+		<vaildate name='lengthOf(40,生活补助证编号)'/>
+		<vaildate name='require(生活补助证编号)'/>
+		<change name=''/>
+	</field>
+	<field name='approval_date'>
+		<vaildate name='lengthOf(10,批准日期)'/>
+		<vaildate name='require(批准时间)'/>
+		<change name='rDate(批准日期)'/>
+	</field>
+	<field name='conscriptc_date'>
+		<vaildate name='lengthOf(10,入伍/参加工作时间)'/>
+		<vaildate name='require(入伍/参加工作时间)'/>
+		<change name='rDate(入伍/参加工作时间)'/>
+	</field>
+	<field name='decruitment_date'>
+		<vaildate name='lengthOf(10,退伍时间)'/>
+		<vaildate name='require(退伍时间)'/>
+		<change name='rDate(退伍时间)'/>
+	</field>
+	<field name='retired_date'>
+		<vaildate name='lengthOf(10,离退休时间)'/>
+		<vaildate name=''/>
+		<change name='rDate(离退休时间)'/>
+	</field>
+	<field name='asdp_no'>
+		<vaildate name='lengthOf(50,退伍证号)'/>
+		<vaildate name=''/>
+		<change name=''/>
+	</field>
+	<field name='forces_no'>
+		<vaildate name='lengthOf(100,原部队代号)'/>
+		<vaildate name=''/>
+		<change name=''/>
+	</field>
+	<field name='position'>
+		<vaildate name='lengthOf(50,职务（级别）)'/>
+		<vaildate name=''/>
+		<change name=''/>
+	</field>
+	<field name='war_type_code'>
+		<vaildate name='require(参战类别)'/>
+		<change name='returnCode(WARTYPE.CODE,参战类别,2)'/>
+	</field>
+	<field name='old_lonely_flag'>
+		<vaildate name='require(是否孤老)'/>
+		<change name='returnCode(COMM.YESORNO,是否孤老,1)'/>
+	</field>
+	<field name='insanity_flag'>
+		<vaildate name='require(是否精神病)'/>
+		<change name='returnCode(COMM.YESORNO,是否精神病,1)'/>
+	</field>
+	<field name='work_ability_code'>
+		<vaildate name='require(劳动能力)'/>
+		<change name='returnCode(WORK.ABILITY.CODE,劳动能力,1)'/>
+	</field>
+	<field name='viability_code'>
+		<vaildate name='require(生活能力)'/>
+		<change name='returnCode(VIABILITY.CODE,生活能力,1)'/>
+	</field>
+	<field name='support_pattern'>
+		<vaildate name='require(供养方式)'/>
+		<change name='returnCode(SUPPORT.PATTERN,供养方式,1)'/>
+	</field>
+	<field name='health_state_code'>
+		<vaildate name='require(健康状况)'/>
+		<change name='returnCode(HEALTH.TYPE,健康状况,2)'/>
+	</field>
+	<field name='life_state_code'>
+		<vaildate name='require(生活状况)'/>
+		<change name='returnCode(LIFE.LIFE_STATE_CODE,生活状况,1)'/>
+	</field>
+	<field name='bank'>
+		<vaildate name='require(开户银行)'/>
+		<change name='rCodeByDic(DIC_BANK,CODE,NAME,开户银行,3)'/>
+	</field>
+	<field name='account_name'>
+		<vaildate name='lengthOf(50,开户名称)'/>
+		<vaildate name='require(开户名称)'/>
+		<change name=''/>
+	</field>
+	<field name='account_code'>
+		<vaildate name='lengthOf(50,银行账号)'/>
+		<vaildate name='require(银行账号)'/>
+		<change name=''/>
+	</field>
+	<field name='note'>
+		<vaildate name=''/>
+		<change name=''/>
+	</field>
+</toTable>
